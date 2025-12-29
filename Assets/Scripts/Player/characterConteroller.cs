@@ -1,5 +1,7 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class characterConteroller : MonoBehaviour
 {
@@ -7,7 +9,6 @@ public class characterConteroller : MonoBehaviour
 
     public float playerSpeed = 5f;
     public float playerJump = 8f;
-    public float hightJump = 15f;
     public Rigidbody2D rb;
     public Collider2D cd;
     public Animator animator;
@@ -16,30 +17,38 @@ public class characterConteroller : MonoBehaviour
     public GameObject testPanel;
     public Button testUI;
 
-    public bool isJump;
-    public bool isGround;
+    private bool isJump;
+    private bool isGround;
+    private bool islocalGround;
     private bool istextUI;
-   private void Start()
+    private void Start()
     {
+        JumpButton.onClick.AddListener(() => { if (joy.Vertical < -0.7f) DownJump(); else Jump();});
         transform.localScale = new Vector3(1.5f, 1.5f, 0);
-        JumpButton.onClick.AddListener(Jump);
         testUI.onClick.AddListener(TestUI);
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
+        // PC 테스트용
+        if (Input.GetKeyDown(KeyCode.Space) && (Input.GetKey(KeyCode.DownArrow) || joy.Vertical < -0.7f))
+            DownJump();
+        else if(Input.GetKeyDown(KeyCode.Space))
             Jump();
-        }
     }
 
     private void FixedUpdate()
     {
-        charcterMovePC();
+        if(joy.Vertical > 0.7f || joy.Vertical < -0.7f)
+        {
+            Debug.Log("상하 움직임은 지원하지 않습니다.");
+        }
+        else
+          charcterMove();
+
     }
 
-    void charcterMovePC()
+    void charcterMove()
     {
         float HorizontalInput = (Input.GetAxisRaw("Horizontal") != 0) ? Input.GetAxisRaw("Horizontal") : joy.Horizontal;
         if (HorizontalInput < 0) Flip(true);
@@ -50,13 +59,9 @@ public class characterConteroller : MonoBehaviour
         transform.position += move;
 
         if (Derection != Vector3.zero)
-        {
             animator.SetBool("IsWalk", true);
-        }
         else
-        {
             animator.SetBool("IsWalk", false);
-        }
     }
 
     void Flip(bool shouldFlip)
@@ -73,8 +78,8 @@ public class characterConteroller : MonoBehaviour
 
     void Jump()
     {
-        if (!isJump && isGround)
-        { 
+        if (!isJump && (isGround || islocalGround))
+        {
             rb.velocity = Vector2.up * playerJump;
             isJump = true;
             isGround = false;
@@ -82,10 +87,22 @@ public class characterConteroller : MonoBehaviour
         }     
     }
 
+    void DownJump()
+    {
+        if (!isJump && isGround || !islocalGround)
+        {
+            isJump = true;
+            isGround = false;
+            StartCoroutine(JumpTime());
+        }
+    }
+
+
+
     IEnumerator JumpTime()
     {
         cd.enabled = false;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.8f);
         cd.enabled = true;
     }
 
@@ -108,6 +125,11 @@ public class characterConteroller : MonoBehaviour
         if (collision.gameObject.CompareTag("ground"))
         {
             isGround = true;
+            isJump = false;
+        }
+        if (collision.gameObject.CompareTag("localground"))
+        {
+            islocalGround = true;
             isJump = false;
         }
     }

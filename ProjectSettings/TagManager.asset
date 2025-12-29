@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - ground
+  - housePotar01
+  - housePotar02
+  - housePotar03
+  - localground
   layers:
   - Default
   - TransparentFX
