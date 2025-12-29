@@ -3,6 +3,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Video;
 public class characterConteroller : MonoBehaviour
 {
     public VariableJoystick joy;
@@ -14,18 +15,20 @@ public class characterConteroller : MonoBehaviour
     public Animator animator;
     public Button JumpButton;
 
-    public GameObject testPanel;
-    public Button testUI;
-
+    public GameObject ultimateVidio;
+    public Button ultimateButtonUI;
+    public VideoPlayer videoPlayer;
+    public VideoClip ultimateVidioClip;
+    private bool isultimateVidio;
     private bool isJump;
     private bool isGround;
     private bool islocalGround;
-    private bool istextUI;
+
     private void Start()
     {
-        JumpButton.onClick.AddListener(() => { if (joy.Vertical < -0.7f) DownJump(); else Jump();});
+        JumpButton.onClick.AddListener(() => { if (joy.Vertical < -0.7f) DownJump(); else Jump(); }); 
         transform.localScale = new Vector3(1.5f, 1.5f, 0);
-        testUI.onClick.AddListener(TestUI);
+        ultimateButtonUI.onClick.AddListener(Ultimate);
     }
 
     private void Update()
@@ -39,7 +42,7 @@ public class characterConteroller : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(joy.Vertical > 0.7f || joy.Vertical < -0.7f)
+        if(joy.Vertical > 0.7f || joy.Vertical < -0.7f || isultimateVidio)
         {
             Debug.Log("상하 움직임은 지원하지 않습니다.");
         }
@@ -106,18 +109,26 @@ public class characterConteroller : MonoBehaviour
         cd.enabled = true;
     }
 
-    void TestUI()
+   void Ultimate()
+   {
+        if (ultimateVidio == null) return;
+        ultimateVidio.gameObject.SetActive(true);
+
+        if (videoPlayer == null) return;
+        videoPlayer.clip = ultimateVidioClip;
+        videoPlayer.time = 0;
+        videoPlayer.Play();
+       
+       
+        StartCoroutine(ultimateVidioTime());
+   }
+
+    IEnumerator ultimateVidioTime()
     {
-        if (istextUI)
-        {
-            testPanel.gameObject.SetActive(false);
-            istextUI = false;
-        }
-        else
-        {
-            testPanel.gameObject.SetActive(true);
-            istextUI = true;
-        }
+        yield return new WaitForSeconds(8f);
+        videoPlayer.Stop();
+        ultimateVidio.gameObject.SetActive(false);
+        isultimateVidio = false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
