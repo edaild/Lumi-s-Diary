@@ -9,6 +9,8 @@ TagManager:
   - housePotar02
   - housePotar03
   - localground
+  - Localwall2
+  - Localwall
   layers:
   - Default
   - TransparentFX

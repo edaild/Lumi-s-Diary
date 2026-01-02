@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Video;
-using static UnityEngine.InputManagerEntry;
+
 public class characterConteroller : MonoBehaviour
 {
     public VariableJoystick joy;
@@ -14,12 +14,32 @@ public class characterConteroller : MonoBehaviour
     public Rigidbody2D rb;
     public Collider2D cd;
     public Animator animator;
+
+    [Header("공격 오브젝트")]
+    public GameObject iceBall;
+    public GameObject snow;
+    public GameObject crystalGardenPenel;
+
+
+    [Header("스킬 버튼")]
+    public Button AttackButton;
+    public Button SkillButton;
+    public Button TeleportButton;
     public Button JumpButton;
-   
-    public GameObject ultimateVidio;
     public Button ultimateButtonUI;
+
+    public GameObject ultimateVidio;
+
     public VideoPlayer videoPlayer;
     public VideoClip ultimateVidioClip;
+
+    public AudioSource audioSource;
+
+    [Header("공격 오디오")]
+    public AudioClip nomalAtttackVoice;
+    public AudioClip skillAttackVoice;
+    public AudioClip skillCrystarGardenVoice;
+
 
     public PortalSystem portalSystem;
     public GameObject currentPortal;
@@ -33,9 +53,16 @@ public class characterConteroller : MonoBehaviour
 
     private void Start()
     {
-        JumpButton.onClick.AddListener(() => { if (joy.Vertical < -0.7f) DownJump(); else Jump(); }); 
+        JumpButton.onClick.AddListener(() => { if (joy.Vertical < -0.7f) DownJump(); else Jump(); });
         transform.localScale = new Vector3(1.5f, 1.5f, 0);
-        ultimateButtonUI.onClick.AddListener(Ultimate);
+
+        if (SceneManager.GetActiveScene().name != "LumiHouseScene")
+        {
+            AttackButton.onClick.AddListener(Attack);
+            SkillButton.onClick.AddListener(SkillAttack);
+            ultimateButtonUI.onClick.AddListener(Ultimate);
+        }
+       
 
         if(!portalSystem)
             portalSystem = FindAnyObjectByType<PortalSystem>();
@@ -55,7 +82,7 @@ public class characterConteroller : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(joy.Vertical > 0.7f || joy.Vertical < -0.7f || isultimateVidio)
+        if(joy.Vertical > 0.7f || joy.Vertical < -0.7f)
         {
             Debug.Log("상하 움직임은 지원하지 않습니다.");
         }
@@ -113,8 +140,6 @@ public class characterConteroller : MonoBehaviour
         }
     }
 
-
-
     IEnumerator JumpTime()
     {
         cd.enabled = false;
@@ -122,25 +147,68 @@ public class characterConteroller : MonoBehaviour
         cd.enabled = true;
     }
 
-   void Ultimate()
+
+    void Attack()
+    {
+        if (!audioSource || !nomalAtttackVoice) return;
+
+        audioSource.clip = nomalAtttackVoice;
+
+        audioSource.time = 0;
+        audioSource.Play();
+
+        animator.SetBool("IsAttack", true);
+        StartCoroutine(AttackTime());
+    }
+
+    IEnumerator AttackTime()
+    {
+        yield return new WaitForSeconds(1f);
+  
+        Debug.Log("애니매이션 종료");
+        animator.SetBool("IsAttack", false);
+        yield return new WaitForSeconds(1.1f);
+        audioSource.Stop();
+    }
+
+    void SkillAttack()
+    {
+        Debug.Log("스킬 미구현");
+    }
+
+    void Ultimate()
    {
-        if (ultimateVidio == null) return;
+        if (!audioSource || !skillCrystarGardenVoice|| isultimateVidio|| !ultimateVidio || !videoPlayer) return;
+
         ultimateVidio.gameObject.SetActive(true);
 
-        if (videoPlayer == null) return;
         videoPlayer.clip = ultimateVidioClip;
         videoPlayer.time = 0;
         videoPlayer.Play();
-       
-       
+        isultimateVidio = true;
+
+        audioSource.clip = skillCrystarGardenVoice;
+        audioSource.time = 0;
+        audioSource.Play();
+
         StartCoroutine(ultimateVidioTime());
    }
 
     IEnumerator ultimateVidioTime()
     {
+        yield return new WaitForSeconds(3.2f);
+        audioSource.Stop();
         yield return new WaitForSeconds(8f);
         videoPlayer.Stop();
         ultimateVidio.gameObject.SetActive(false);
+        crystalGardenPenel.gameObject.SetActive(true);
+        Debug.Log("궁극기 패널 실행");
+        yield return new WaitForSeconds(30f);
+        Debug.Log("궁극기 종료");
+        crystalGardenPenel.gameObject.SetActive(false);
+        Debug.Log("궁극기 쿨타임 60초");
+        yield return new WaitForSeconds(60f);
+        Debug.Log("궁극기 쿨타임 종료");
         isultimateVidio = false;
     }
     
@@ -176,6 +244,14 @@ public class characterConteroller : MonoBehaviour
             Debug.Log($"이동 목적지: {portal.portalData.portalName}");
             currentPortal = collision.gameObject;
         }
+        
+        // 1차 경계선
+        if (collision.gameObject.CompareTag("Localwall"))
+            cd.enabled = true;
+
+        // 2차 경계선
+        if (collision.gameObject.CompareTag("Localwall2"))
+            transform.position = new Vector3(0, transform.position.y, 0);
     }
 
     private void OnTriggerExit2D(Collider2D collision)

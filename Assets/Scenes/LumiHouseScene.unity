@@ -1362,8 +1362,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -309, y: -396.2}
-  m_SizeDelta: {x: 120, y: 120}
+  m_AnchoredPosition: {x: -309, y: -293}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &703305426
 MonoBehaviour:
@@ -1429,7 +1429,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 54628aafa20f64b40ae661038ee7abf0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3293062838ff16d46a4b0100978f776a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2101,11 +2101,21 @@ MonoBehaviour:
   rb: {fileID: 992692710}
   cd: {fileID: 992692709}
   animator: {fileID: 992692708}
+  iceBall: {fileID: 0}
+  snow: {fileID: 0}
+  crystalGardenPenel: {fileID: 0}
+  AttackButton: {fileID: 0}
+  SkillButton: {fileID: 0}
+  TeleportButton: {fileID: 0}
   JumpButton: {fileID: 703305426}
-  ultimateVidio: {fileID: 0}
   ultimateButtonUI: {fileID: 703305426}
+  ultimateVidio: {fileID: 0}
   videoPlayer: {fileID: 0}
   ultimateVidioClip: {fileID: 0}
+  audioSource: {fileID: 0}
+  nomalAtttackVoice: {fileID: 0}
+  skillAttackVoice: {fileID: 0}
+  skillCrystarGardenVoice: {fileID: 0}
   portalSystem: {fileID: 0}
   currentPortal: {fileID: 0}
 --- !u!95 &992692708
