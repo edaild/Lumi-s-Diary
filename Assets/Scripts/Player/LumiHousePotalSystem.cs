@@ -5,14 +5,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Windows;
 
-public class PotalSystem : MonoBehaviour
+[CreateAssetMenu()]
+
+public class LumiPortalSystem : MonoBehaviour
 {
     [Header("루미집 포탈 관리")]
     public Transform Potar01;
     public Transform Potar02;
     public Transform Potar03;
     public VariableJoystick jay;
-
+ 
     public GameObject currentPortal;
 
     void Update()
@@ -23,8 +25,10 @@ public class PotalSystem : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // 루미의 집
         if ((collision.CompareTag("housePotar01") || collision.CompareTag("housePotar02") || collision.CompareTag("housePotar03")) && SceneManager.GetActiveScene().name == "LumiHouseScene")
         {
+            Debug.Log("현재씬 : 루미의 집");
             currentPortal = collision.gameObject;
         }
     }

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Video;
+using static UnityEngine.InputManagerEntry;
 public class characterConteroller : MonoBehaviour
 {
     public VariableJoystick joy;
@@ -14,21 +15,30 @@ public class characterConteroller : MonoBehaviour
     public Collider2D cd;
     public Animator animator;
     public Button JumpButton;
-
+   
     public GameObject ultimateVidio;
     public Button ultimateButtonUI;
     public VideoPlayer videoPlayer;
     public VideoClip ultimateVidioClip;
+
+    public PortalSystem portalSystem;
+    public GameObject currentPortal;
+
     private bool isultimateVidio;
     private bool isJump;
     private bool isGround;
     private bool islocalGround;
+
+
 
     private void Start()
     {
         JumpButton.onClick.AddListener(() => { if (joy.Vertical < -0.7f) DownJump(); else Jump(); }); 
         transform.localScale = new Vector3(1.5f, 1.5f, 0);
         ultimateButtonUI.onClick.AddListener(Ultimate);
+
+        if(!portalSystem)
+            portalSystem = FindAnyObjectByType<PortalSystem>();
     }
 
     private void Update()
@@ -38,6 +48,9 @@ public class characterConteroller : MonoBehaviour
             DownJump();
         else if(Input.GetKeyDown(KeyCode.Space))
             Jump();
+
+        if (currentPortal != null && joy.Vertical > 0.7f || Input.GetKeyDown(KeyCode.UpArrow))
+            MovePartal();
     }
 
     private void FixedUpdate()
@@ -130,7 +143,7 @@ public class characterConteroller : MonoBehaviour
         ultimateVidio.gameObject.SetActive(false);
         isultimateVidio = false;
     }
-
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("ground"))
@@ -144,4 +157,30 @@ public class characterConteroller : MonoBehaviour
             isJump = false;
         }
     }
+
+
+    void MovePartal()
+    {
+        if (currentPortal)
+        {
+            currentPortal.TryGetComponent<PortalSystem>(out PortalSystem portal);
+            SceneManager.LoadScene(portal.portalData.targetSceneName);
+
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.TryGetComponent<PortalSystem>(out PortalSystem portal))
+        {
+            Debug.Log($"이동 목적지: {portal.portalData.portalName}");
+            currentPortal = collision.gameObject;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        currentPortal = null;
+    }
+
 }
