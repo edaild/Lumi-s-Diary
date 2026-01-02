@@ -4330,7 +4330,8 @@ MonoBehaviour:
   ultimateButtonUI: {fileID: 1345278050}
   videoPlayer: {fileID: 785702815}
   ultimateVidioClip: {fileID: 32900000, guid: 30c83a0779919d14a82c9c74e3587949, type: 3}
-  portalSystem: {fileID: 108469652}
+  portalSystem: {fileID: 0}
+  currentPortal: {fileID: 0}
 --- !u!58 &2035983725
 CircleCollider2D:
   m_ObjectHideFlags: 0

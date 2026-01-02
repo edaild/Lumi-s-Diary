@@ -2106,6 +2106,8 @@ MonoBehaviour:
   ultimateButtonUI: {fileID: 703305426}
   videoPlayer: {fileID: 0}
   ultimateVidioClip: {fileID: 0}
+  portalSystem: {fileID: 0}
+  currentPortal: {fileID: 0}
 --- !u!95 &992692708
 Animator:
   serializedVersion: 5
@@ -2230,15 +2232,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 1499194789, guid: fbde73e0c1116a947aeaa0c7af48d5df, type: 3}
+  m_Sprite: {fileID: -1043767522, guid: b1489d37be37b5b448c7650bd2cb3f9d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.12, y: 5.12}
+  m_Size: {x: 0.84, y: 1.55}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &992692712
