@@ -21,6 +21,7 @@ public class characterConteroller : MonoBehaviour
     public GameObject crystalGardenPenel;
 
     public Transform shootPosition;
+    public enum AttackType{ Nomal, Skill}
 
 
     [Header("스킬 버튼")]
@@ -81,16 +82,6 @@ public class characterConteroller : MonoBehaviour
             Jump();
 
         if (currentPortal != null && joy.Vertical > 0.7f || Input.GetKeyDown(KeyCode.UpArrow)) MovePartal();
-
-        if (Input.GetMouseButtonDown(1))
-            NomalAttack();
-
-        if (Input.GetKeyDown(KeyCode.E))
-            SkillAttack();
-
-        if (Input.GetKeyDown(KeyCode.Q))
-            CrystarGarden();
-
     }
 
     private void FixedUpdate()
@@ -179,7 +170,7 @@ public class characterConteroller : MonoBehaviour
     IEnumerator AttackTime()
     {
         yield return new WaitForSeconds(1f);
-        Shoot();
+        Shoot(AttackType.Nomal);
         Debug.Log("애니매이션 종료");
         animator.SetBool("IsAttack", false);
         yield return new WaitForSeconds(1.01f);
@@ -205,7 +196,7 @@ public class characterConteroller : MonoBehaviour
     IEnumerator SkillAttackTime()
     {
         yield return new WaitForSeconds(1f);
-        Shoot();
+        Shoot(AttackType.Skill);
         Debug.Log("애니매이션 종료");
         animator.SetBool("IsAttack", false);
 
@@ -219,9 +210,10 @@ public class characterConteroller : MonoBehaviour
         Debug.Log("스킬 공격 재사용 가능");
     }
 
-    void Shoot()
+    void Shoot(AttackType type)
     {
-        GameObject ball = Instantiate(isNomalAttack ? iceBall : snow, shootPosition.position, shootPosition.rotation);
+        GameObject ballPrefab = (type == AttackType.Nomal) ? iceBall : snow;
+        GameObject ball = Instantiate(ballPrefab, shootPosition.position, shootPosition.rotation);
 
         float direction = transform.localScale.x > 0 ? 1f : -1f;
 
