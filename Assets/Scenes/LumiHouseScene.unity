@@ -2104,6 +2104,7 @@ MonoBehaviour:
   iceBall: {fileID: 0}
   snow: {fileID: 0}
   crystalGardenPenel: {fileID: 0}
+  shootPosition: {fileID: 0}
   AttackButton: {fileID: 0}
   SkillButton: {fileID: 0}
   TeleportButton: {fileID: 0}
@@ -2265,11 +2266,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63fa916baf3bf7e4b84673fc373ecc40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Potar01: {fileID: 788573258}
-  Potar02: {fileID: 756779957}
-  Potar03: {fileID: 246766344}
+  Portar01: {fileID: 788573258}
+  Portar02: {fileID: 756779957}
+  Portar03: {fileID: 246766344}
   jay: {fileID: 870812030}
   currentPortal: {fileID: 0}
+  isPortalMove: 0
 --- !u!1 &1088805464
 GameObject:
   m_ObjectHideFlags: 0

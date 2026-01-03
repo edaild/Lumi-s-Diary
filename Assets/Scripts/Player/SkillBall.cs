@@ -17,7 +17,7 @@ public class SkillBall : MonoBehaviour
         //if (collision.gameObject.CompareTag("Ememi"))
         //    Destroy(gameObject);
 
-        if(collision.gameObject.CompareTag("Localwall"))
+        if (collision.gameObject.CompareTag("Localwall") || collision.gameObject.CompareTag("ground"))
             Destroy(gameObject);
     }
 }

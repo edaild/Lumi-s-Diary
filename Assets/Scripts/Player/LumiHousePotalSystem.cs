@@ -10,17 +10,23 @@ using UnityEngine.Windows;
 public class LumiPortalSystem : MonoBehaviour
 {
     [Header("루미집 포탈 관리")]
-    public Transform Potar01;
-    public Transform Potar02;
-    public Transform Potar03;
+    public Transform Portar01;
+    public Transform Portar02;
+    public Transform Portar03;
     public VariableJoystick jay;
  
     public GameObject currentPortal;
+    
+    public bool isPortalMove;
 
     void Update()
     {
-        if (currentPortal != null && jay.Vertical > 0.7f || UnityEngine.Input.GetKeyDown(KeyCode.UpArrow))
+        if (!isPortalMove && (currentPortal != null && jay.Vertical > 0.7f || UnityEngine.Input.GetKeyDown(KeyCode.UpArrow)))
+        {
             Teleport();
+            isPortalMove = true;
+        }
+ 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -30,7 +36,15 @@ public class LumiPortalSystem : MonoBehaviour
         {
             Debug.Log("현재씬 : 루미의 집");
             currentPortal = collision.gameObject;
+   
+            StartCoroutine(PortalMoveRunTime());
         }
+    }
+
+    IEnumerator PortalMoveRunTime()
+    {
+        yield return new WaitForSeconds(1.5f);
+        isPortalMove = false;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -43,9 +57,9 @@ public class LumiPortalSystem : MonoBehaviour
         if(SceneManager.GetActiveScene().name == "LumiHouseScene")
         {
             if (currentPortal.CompareTag("housePotar01"))
-                transform.position = Potar02.transform.position;
+                transform.position = Portar02.transform.position;
             else if (currentPortal.CompareTag("housePotar02"))
-                transform.position = Potar01.transform.position;
+                transform.position = Portar01.transform.position;
             else if (currentPortal.CompareTag("housePotar03"))
                 SceneManager.LoadScene("GameScene");
         }
