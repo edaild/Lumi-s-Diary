@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -20,7 +21,7 @@ public class characterConteroller : MonoBehaviour
     public GameObject crystalGardenPenel;
 
     public Transform shootPosition;
-    public enum AttackType { Normal, Skill }
+
 
     [Header("스킬 버튼")]
     public Button AttackButton;
@@ -28,7 +29,6 @@ public class characterConteroller : MonoBehaviour
     public Button TeleportButton;
     public Button JumpButton;
     public Button ultimateButtonUI;
-
 
     public GameObject ultimateVidio;
 
@@ -52,6 +52,8 @@ public class characterConteroller : MonoBehaviour
     private bool islocalGround;
     private bool isNomalAttack;
     private bool isSkillAttack;
+
+
 
     private void Start()
     {
@@ -80,11 +82,14 @@ public class characterConteroller : MonoBehaviour
 
         if (currentPortal != null && joy.Vertical > 0.7f || Input.GetKeyDown(KeyCode.UpArrow)) MovePartal();
 
-        if (Input.GetMouseButtonDown(1)) NomalAttack();
+        if (Input.GetMouseButtonDown(1))
+            NomalAttack();
 
-        if (Input.GetKeyDown(KeyCode.E)) SkillAttack();
+        if (Input.GetKeyDown(KeyCode.E))
+            SkillAttack();
 
-        if (Input.GetKeyDown(KeyCode.Q)) CrystarGarden();
+        if (Input.GetKeyDown(KeyCode.Q))
+            CrystarGarden();
 
     }
 
@@ -133,7 +138,6 @@ public class characterConteroller : MonoBehaviour
         if (!isJump && (isGround || islocalGround))
         {
             rb.velocity = Vector2.up * playerJump;
-            isNomalAttack = false;
             isJump = true;
             isGround = false;
             StartCoroutine(JumpTime());
@@ -169,13 +173,13 @@ public class characterConteroller : MonoBehaviour
         audioSource.Play();
 
         animator.SetBool("IsAttack", true);
-        StartCoroutine(AttackTime(AttackType.Normal));
+        StartCoroutine(AttackTime());
     }
 
-    IEnumerator AttackTime(AttackType type)
+    IEnumerator AttackTime()
     {
         yield return new WaitForSeconds(1f);
-        //Shoot(type);
+        Shoot();
         Debug.Log("애니매이션 종료");
         animator.SetBool("IsAttack", false);
         yield return new WaitForSeconds(1.01f);
@@ -195,13 +199,13 @@ public class characterConteroller : MonoBehaviour
         audioSource.Play();
 
         animator.SetBool("IsAttack", true);
-        StartCoroutine(SkillAttackTime(AttackType.Skill));
+        StartCoroutine(SkillAttackTime());
     }
 
-    IEnumerator SkillAttackTime(AttackType type)
+    IEnumerator SkillAttackTime()
     {
         yield return new WaitForSeconds(1f);
-        //Shoot(type);
+        Shoot();
         Debug.Log("애니매이션 종료");
         animator.SetBool("IsAttack", false);
 
@@ -215,22 +219,21 @@ public class characterConteroller : MonoBehaviour
         Debug.Log("스킬 공격 재사용 가능");
     }
 
-    //void Shoot(AttackType type)
-    //{
-    //    GameObject prefab = (type == AttackType.Normal) ? iceBall : snow;
-    //    GameObject ball = Instantiate(prefab, shootPosition.position, shootPosition.rotation);
+    void Shoot()
+    {
+        GameObject ball = Instantiate(isNomalAttack ? iceBall : snow, shootPosition.position, shootPosition.rotation);
 
-    //    float direction = transform.localScale.x > 0 ? 1f : -1f;
+        float direction = transform.localScale.x > 0 ? 1f : -1f;
 
-    //    Vector3 currentScale = ball.transform.localScale;
-    //    ball.transform.localScale = new Vector3(Mathf.Abs(currentScale.x) * direction, currentScale.y, currentScale.z);
+        Vector3 currentScale = ball.transform.localScale;
+        ball.transform.localScale = new Vector3(Mathf.Abs(currentScale.x) * direction, currentScale.y, currentScale.z);
 
-    //    ball.TryGetComponent<SkillBall>(out SkillBall Boll);
+        ball.TryGetComponent<SkillBall>(out SkillBall Boll);
 
-    //    float rotationDir = (direction > 0) ? -1f : 1f;
-    //    ball.GetComponent<Rigidbody2D>().angularVelocity = Boll.BallRotageSpeed * rotationDir;
-    //    ball.GetComponent<Rigidbody2D>().velocity = new Vector2(direction * Boll.BallSpeed, 0);
-    //}
+        float rotationDir = (direction > 0) ? -1f : 1f;
+        ball.GetComponent<Rigidbody2D>().angularVelocity = Boll.BallRotageSpeed * rotationDir;
+        ball.GetComponent<Rigidbody2D>().velocity = new Vector2(direction * Boll.BallSpeed, 0);
+    }
 
     void CrystarGarden()
    {
