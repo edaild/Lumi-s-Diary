@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -20,6 +19,8 @@ public class characterConteroller : MonoBehaviour
     public GameObject snow;
     public GameObject crystalGardenPenel;
 
+    public Transform shootPosition;
+    public enum AttackType { Normal, Skill }
 
     [Header("스킬 버튼")]
     public Button AttackButton;
@@ -27,6 +28,7 @@ public class characterConteroller : MonoBehaviour
     public Button TeleportButton;
     public Button JumpButton;
     public Button ultimateButtonUI;
+
 
     public GameObject ultimateVidio;
 
@@ -48,8 +50,8 @@ public class characterConteroller : MonoBehaviour
     private bool isJump;
     private bool isGround;
     private bool islocalGround;
-
-
+    private bool isNomalAttack;
+    private bool isSkillAttack;
 
     private void Start()
     {
@@ -58,9 +60,9 @@ public class characterConteroller : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name != "LumiHouseScene")
         {
-            AttackButton.onClick.AddListener(Attack);
+            AttackButton.onClick.AddListener(NomalAttack);
             SkillButton.onClick.AddListener(SkillAttack);
-            ultimateButtonUI.onClick.AddListener(Ultimate);
+            ultimateButtonUI.onClick.AddListener(CrystarGarden);
         }
        
 
@@ -76,8 +78,14 @@ public class characterConteroller : MonoBehaviour
         else if(Input.GetKeyDown(KeyCode.Space))
             Jump();
 
-        if (currentPortal != null && joy.Vertical > 0.7f || Input.GetKeyDown(KeyCode.UpArrow))
-            MovePartal();
+        if (currentPortal != null && joy.Vertical > 0.7f || Input.GetKeyDown(KeyCode.UpArrow)) MovePartal();
+
+        if (Input.GetMouseButtonDown(1)) NomalAttack();
+
+        if (Input.GetKeyDown(KeyCode.E)) SkillAttack();
+
+        if (Input.GetKeyDown(KeyCode.Q)) CrystarGarden();
+
     }
 
     private void FixedUpdate()
@@ -94,6 +102,7 @@ public class characterConteroller : MonoBehaviour
     void charcterMove()
     {
         float HorizontalInput = (Input.GetAxisRaw("Horizontal") != 0) ? Input.GetAxisRaw("Horizontal") : joy.Horizontal;
+
         if (HorizontalInput < 0) Flip(true);
         else  Flip(false);
 
@@ -124,6 +133,7 @@ public class characterConteroller : MonoBehaviour
         if (!isJump && (isGround || islocalGround))
         {
             rb.velocity = Vector2.up * playerJump;
+            isNomalAttack = false;
             isJump = true;
             isGround = false;
             StartCoroutine(JumpTime());
@@ -148,35 +158,81 @@ public class characterConteroller : MonoBehaviour
     }
 
 
-    void Attack()
+    void NomalAttack()
     {
-        if (!audioSource || !nomalAtttackVoice) return;
+        if (!audioSource || !nomalAtttackVoice || isNomalAttack) return;
 
+        isNomalAttack = true;
         audioSource.clip = nomalAtttackVoice;
 
         audioSource.time = 0;
         audioSource.Play();
 
         animator.SetBool("IsAttack", true);
-        StartCoroutine(AttackTime());
+        StartCoroutine(AttackTime(AttackType.Normal));
     }
 
-    IEnumerator AttackTime()
+    IEnumerator AttackTime(AttackType type)
     {
         yield return new WaitForSeconds(1f);
-  
+        //Shoot(type);
         Debug.Log("애니매이션 종료");
         animator.SetBool("IsAttack", false);
-        yield return new WaitForSeconds(1.1f);
+        yield return new WaitForSeconds(1.01f);
+        isNomalAttack = false;
         audioSource.Stop();
+        audioSource.clip = null;
     }
 
     void SkillAttack()
     {
-        Debug.Log("스킬 미구현");
+        if (!audioSource || !skillAttackVoice || isSkillAttack) return;
+
+        isSkillAttack = true;
+        audioSource.clip = skillAttackVoice;
+
+        audioSource.time = 0;
+        audioSource.Play();
+
+        animator.SetBool("IsAttack", true);
+        StartCoroutine(SkillAttackTime(AttackType.Skill));
     }
 
-    void Ultimate()
+    IEnumerator SkillAttackTime(AttackType type)
+    {
+        yield return new WaitForSeconds(1f);
+        //Shoot(type);
+        Debug.Log("애니매이션 종료");
+        animator.SetBool("IsAttack", false);
+
+        yield return new WaitForSeconds(2f);
+        audioSource.Stop();
+        audioSource.clip = null;
+        Debug.Log("스킬 공격 대기 쿨타임 : 10초");
+
+        yield return new WaitForSeconds(10f);
+        isSkillAttack = false;
+        Debug.Log("스킬 공격 재사용 가능");
+    }
+
+    //void Shoot(AttackType type)
+    //{
+    //    GameObject prefab = (type == AttackType.Normal) ? iceBall : snow;
+    //    GameObject ball = Instantiate(prefab, shootPosition.position, shootPosition.rotation);
+
+    //    float direction = transform.localScale.x > 0 ? 1f : -1f;
+
+    //    Vector3 currentScale = ball.transform.localScale;
+    //    ball.transform.localScale = new Vector3(Mathf.Abs(currentScale.x) * direction, currentScale.y, currentScale.z);
+
+    //    ball.TryGetComponent<SkillBall>(out SkillBall Boll);
+
+    //    float rotationDir = (direction > 0) ? -1f : 1f;
+    //    ball.GetComponent<Rigidbody2D>().angularVelocity = Boll.BallRotageSpeed * rotationDir;
+    //    ball.GetComponent<Rigidbody2D>().velocity = new Vector2(direction * Boll.BallSpeed, 0);
+    //}
+
+    void CrystarGarden()
    {
         if (!audioSource || !skillCrystarGardenVoice|| isultimateVidio|| !ultimateVidio || !videoPlayer) return;
 
@@ -189,29 +245,42 @@ public class characterConteroller : MonoBehaviour
 
         audioSource.clip = skillCrystarGardenVoice;
         audioSource.time = 0;
-        audioSource.Play();
+ 
 
-        StartCoroutine(ultimateVidioTime());
+        StartCoroutine(CrystarGardenTime());
    }
 
-    IEnumerator ultimateVidioTime()
+    IEnumerator CrystarGardenTime()
     {
-        yield return new WaitForSeconds(3.2f);
+        ultimateVidio.gameObject.SetActive(true);
+        videoPlayer.Play();
+
+        yield return new WaitForSeconds(2f);
+        audioSource.Play(); 
+
+        yield return new WaitForSeconds(4f);
         audioSource.Stop();
-        yield return new WaitForSeconds(8f);
+
+        yield return new WaitForSeconds(1f);
+
+
         videoPlayer.Stop();
         ultimateVidio.gameObject.SetActive(false);
+
         crystalGardenPenel.gameObject.SetActive(true);
-        Debug.Log("궁극기 패널 실행");
+
+
         yield return new WaitForSeconds(30f);
-        Debug.Log("궁극기 종료");
         crystalGardenPenel.gameObject.SetActive(false);
-        Debug.Log("궁극기 쿨타임 60초");
-        yield return new WaitForSeconds(60f);
-        Debug.Log("궁극기 쿨타임 종료");
+        Debug.Log("크리스탈 가든 효과 종료");
+
+        Debug.Log("크리스탈 가든 대기 쿨타임 : 30초");
+        yield return new WaitForSeconds(30f);
+
         isultimateVidio = false;
+        Debug.Log("크리스탈 가든 재사용 가능");
     }
-    
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("ground"))
@@ -225,7 +294,6 @@ public class characterConteroller : MonoBehaviour
             isJump = false;
         }
     }
-
 
     void MovePartal()
     {
