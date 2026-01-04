@@ -5106,7 +5106,7 @@ MonoBehaviour:
   ultimateButtonUI: {fileID: 1345278050}
   ultimateVidio: {fileID: 785702811}
   videoPlayer: {fileID: 785702815}
-  ultimateVidioClip: {fileID: 32900000, guid: a4d2efdca42d3404abde5d0a44c6cc63, type: 3}
+  ultimateVidioClip: {fileID: 32900000, guid: 087c158abad9ff64dba903e4ada89867, type: 3}
   audioSource: {fileID: 1210842474}
   nomalAtttackVoice: {fileID: 8300000, guid: a007fa92780f257438a1d1160551220d, type: 3}
   skillAttackVoice: {fileID: 8300000, guid: 0dabb5b9cf1753945839a9d551735729, type: 3}
