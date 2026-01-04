@@ -53,6 +53,8 @@ public class characterConteroller : MonoBehaviour
     private bool islocalGround;
     private bool isNomalAttack;
     private bool isSkillAttack;
+    private bool isTeleport;
+    private bool isHorizontalInput_xManus;
 
 
 
@@ -65,6 +67,7 @@ public class characterConteroller : MonoBehaviour
         {
             AttackButton.onClick.AddListener(NomalAttack);
             SkillButton.onClick.AddListener(SkillAttack);
+            TeleportButton.onClick.AddListener(Teleport);
             ultimateButtonUI.onClick.AddListener(CrystarGarden);
         }
        
@@ -82,6 +85,8 @@ public class characterConteroller : MonoBehaviour
             Jump();
 
         if (currentPortal != null && joy.Vertical > 0.7f || Input.GetKeyDown(KeyCode.UpArrow)) MovePartal();
+
+
     }
 
     private void FixedUpdate()
@@ -99,14 +104,23 @@ public class characterConteroller : MonoBehaviour
     {
         float HorizontalInput = (Input.GetAxisRaw("Horizontal") != 0) ? Input.GetAxisRaw("Horizontal") : joy.Horizontal;
 
-        if (HorizontalInput < 0) Flip(true);
-        else  Flip(false);
-
         Vector3 Derection = new Vector3(HorizontalInput, 0, 0).normalized;
         Vector3 move = Derection * playerSpeed * Time.deltaTime;
         transform.position += move;
 
-        if (Derection != Vector3.zero)
+        if(HorizontalInput < -0.1f)
+        {
+            isHorizontalInput_xManus = true;
+            Flip(true);
+        }
+         
+        else if(HorizontalInput > 0.1f)
+        {
+            isHorizontalInput_xManus = false;
+            Flip(false);
+        }
+  
+        if (Derection != Vector3.zero) 
             animator.SetBool("IsWalk", true);
         else
             animator.SetBool("IsWalk", false);
@@ -226,6 +240,14 @@ public class characterConteroller : MonoBehaviour
         ball.GetComponent<Rigidbody2D>().angularVelocity = Boll.BallRotageSpeed * rotationDir;
         ball.GetComponent<Rigidbody2D>().velocity = new Vector2(direction * Boll.BallSpeed, 0);
     }
+
+    void Teleport()
+    {
+        if (isTeleport) return;
+        int offset = (isHorizontalInput_xManus == false) ? 5 : -5;
+        transform.position = new Vector3(transform.position.x + offset, transform.position.y, transform.position.z);
+    }
+
 
     void CrystarGarden()
    {
