@@ -187,7 +187,7 @@ public class characterConteroller : MonoBehaviour
         Shoot(AttackType.Nomal);
         Debug.Log("애니매이션 종료");
         animator.SetBool("IsAttack", false);
-        yield return new WaitForSeconds(1.01f);
+        yield return new WaitForSeconds(1.0001f);
         isNomalAttack = false;
         audioSource.Stop();
         audioSource.clip = null;
@@ -272,10 +272,10 @@ public class characterConteroller : MonoBehaviour
         ultimateVidio.gameObject.SetActive(true);
         videoPlayer.Play();
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         audioSource.Play(); 
 
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(6f);
         audioSource.Stop();
 
         yield return new WaitForSeconds(1f);

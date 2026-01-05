@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef1c8f23b169dca4494ac43eca8010d8, type: 3}
+  m_Name: StoryDataBase
+  m_EditorClassIdentifier: 
+  storys:
+  - Story_ID: 1
+    Speaker: "\uB8E8\uBBF8"
+    Dialogue: "\uC74C... \uBC8C\uC368 \uC544\uCE68\uC778\uAC00? \uCC3D\uBC16\uC774
+      \uC624\uB298\uB530\uB77C \uC720\uB09C\uD788 \uBC1D\uB124..."
+    Is_Image: 0
+    Image_Command: 
+    Audio: 1
+  - Story_ID: 1
+    Speaker: "\uB8E8\uBBF8"
+    Dialogue: "\uC544...! \uB9DE\uB2E4! \uC624\uB298 \uB4DC\uB514\uC5B4 \uC878\uC5C5\uC2DD\uC774\uC9C0!
+      \uC8FC\uB2C8\uC5B4 \uB9C8\uBC95\uC0AC\uAC00 \uB418\uB294 \uB0A0\uC774\uC57C!"
+    Is_Image: 0
+    Image_Command: 
+    Audio: 1
+  - Story_ID: 1
+    Speaker: "\uAD50\uC7A5 \uC120\uC0DD\uB2D8"
+    Dialogue: "\uB8E8\uBBF8 \uC591, \uCD95\uD558\uD558\uB124. \uC774\uC81C \uC790\uB124\uB294
+      \uC815\uC2DD \uC8FC\uB2C8\uC5B4 \uB9C8\uBC95\uC0AC\uC77C\uC138. \uBCA8\uB9AC\uC544\uC758
+      \uC131\uC88C\uAC00 \uADF8\uB300\uC640 \uD568\uAED8\uD558\uAE30\uB97C.\""
+    Is_Image: 1
+    Image_Command: SHOW
+    Audio: 0
+  - Story_ID: 1
+    Speaker: "\uB8E8\uBBF8"
+    Dialogue: "\uACE0, \uACE0\uB9D9\uC2B5\uB2C8\uB2E4... \uC5F4\uC2EC\uD788 \uD560\uAC8C\uC694!"
+    Is_Image: 0
+    Image_Command: KEEP
+    Audio: 1
+  - Story_ID: 1
+    Speaker: "\uB8E8\uBBF8"
+    Dialogue: "\uC18C\uC2EC\uD55C \uB098\uC9C0\uB9CC... \uD55C \uAC78\uC74C\uC529
+      \uB098\uC544\uAC00\uBA74 \uC5B8\uC820\uAC00\uB294 \uB113\uC740 \uC138\uC0C1\uC744
+      \uB2E4 \uBCFC \uC218 \uC788\uACA0\uC9C0? \uC790, \uBA3C\uC800 \uC8FC\uBBFC
+      \uC13C\uD130\uC5D0 \uAC00\uC11C \uB4F1\uB85D\uBD80\uD130 \uD558\uC790!"
+    Is_Image: 0
+    Image_Command: HIDE
+    Audio: 0
+  - Story_ID: 2
+    Speaker: "\uB8E8\uBBF8"
+    Dialogue: "\uC800... \uC800\uAE30\uC694... \uC2E4\uB840\uD569\uB2C8\uB2E4..."
+    Is_Image: 0
+    Image_Command: 
+    Audio: 1
+  - Story_ID: 2
+    Speaker: "\uC548\uB0B4\uC6D0"
+    Dialogue: "\uC5B4\uC11C \uC624\uC138\uC694! \uC624\uB298 \uC878\uC5C5\uD55C \uC8FC\uB2C8\uC5B4
+      \uB9C8\uBC95\uC0AC\uB2D8\uC774\uAD70\uC694? \uACF5\uC2DD \uB4F1\uB85D\uD558\uB7EC
+      \uC624\uC168\uB098\uC694?"
+    Is_Image: 0
+    Image_Command: 
+    Audio: 0
+  - Story_ID: 2
+    Speaker: "\uB8E8\uBBF8"
+    Dialogue: "\uC544, \uB124! \uC5EC\uAE30 \uC878\uC5C5\uC7A5\uC774\uB791... \uB4F1\uB85D
+      \uC11C\uB958\uC608\uC694. \uC774\uC81C \uC815\uB9D0 \uBAA8\uD5D8\uC744 \uB5A0\uB098\uB3C4
+      \uB418\uB294 \uAC74\uC9C0 \uD655\uC778\uBC1B\uACE0 \uC2F6\uC5B4\uC11C\uC694"
+    Is_Image: 0
+    Image_Command: 
+    Audio: 0
+  - Story_ID: 2
+    Speaker: "\uC548\uB0B4\uC6D0"
+    Dialogue: "\uADF8\uB7FC\uC694! \uC7A0\uC2DC\uB9CC\uC694... "
+    Is_Image: 0
+    Image_Command: 
+    Audio: 0
+  - Story_ID: 2
+    Speaker: "\uB8E8\uBBF8"
+    Dialogue: "\uD655\uC778\uB418\uC5C8\uC2B5\uB2C8\uB2E4. \uB8E8\uBBF8 \uB2D8, \uBCA8\uB9AC\uC544
+      \uC9C0\uC5ED \uC8FC\uB2C8\uC5B4 \uB9C8\uBC95\uC0AC\uB85C \uC815\uC2DD \uB4F1\uB85D\uB418\uC168\uC2B5\uB2C8\uB2E4!\""
+    Is_Image: 0
+    Image_Command: 
+    Audio: 0
+  - Story_ID: 2
+    Speaker: "\uB8E8\uBBF8 \uD734\uB300\uD3F0"
+    Dialogue: "(\uB760\uB9C1! \uC18C\uB9AC\uC640 \uD568\uAED8 \uB8E8\uBBF8\uC758
+      \uB9E4\uC9C0\uCEEC \uC2A4\uB9C8\uD2B8\uD3F0\uC5D0 \uC0C8\uB85C\uC6B4 \uB77C\uC774\uC120\uC2A4\uAC00
+      \uC5C5\uB370\uC774\uD2B8\uB41C\uB2E4.)"
+    Is_Image: 0
+    Image_Command: 
+    Audio: 0
+  - Story_ID: 2
+    Speaker: "\uB8E8\uBBF8"
+    Dialogue: "\uC640\uC544... \uB0B4 \uC774\uB984 \uC606\uC5D0 '\uC8FC\uB2C8\uC5B4
+      \uB9C8\uBC95\uC0AC'\uB77C\uACE0 \uC801\uD600 \uC788\uC5B4... \uC815\uB9D0 \uAFC8\uB9CC
+      \uAC19\uC544"
+    Is_Image: 0
+    Image_Command: 
+    Audio: 0
+  - Story_ID: 2
+    Speaker: "\uC548\uB0B4\uC6D0"
+    Dialogue: "\uCD95\uD558\uB4DC\uB824\uC694! \uC544, \uADF8\uB9AC\uACE0 \uB4F1\uB85D
+      \uAE30\uB150\uC73C\uB85C \uB9C8\uC744 \uC678\uACFD\uC758 \uC2AC\uB77C\uC784
+      \uCC98\uCE58 \uBBF8\uC158\uC774 \uBC1C\uAE09\uB418\uC5C8\uC5B4\uC694. \uCCAB
+      \uC2E4\uC804\uC774\uB2C8\uAE4C \uC870\uC2EC\uD558\uC2DC\uACE0\uC694!"
+    Is_Image: 0
+    Image_Command: 
+    Audio: 0
+  - Story_ID: 2
+    Speaker: "\uB8E8\uBBF8"
+    Dialogue: "\uC5D0\uC5E3? \uBC8C\uC368 \uC2E4\uC804\uC778\uAC00\uC694? \uC800...
+      \uC800 \uD63C\uC790 \uC798 \uD560 \uC218 \uC788\uC744\uAE4C\uC694...?"
+    Is_Image: 0
+    Image_Command: 
+    Audio: 0
+  - Story_ID: 2
+    Speaker: "\uC548\uB0B4\uC6D0"
+    Dialogue: "\uB8E8\uBBF8 \uB2D8\uC774\uB77C\uBA74 \uCDA9\uBD84\uD788 \uD558\uC2E4
+      \uC218 \uC788\uC744 \uAC70\uC608\uC694. \uBCA8\uB9AC\uC544\uC758 \uC131\uC88C\uAC00
+      \uC9C0\uCF1C\uC904 \uD14C\uB2C8\uAE4C\uC694!"
+    Is_Image: 0
+    Image_Command: 
+    Audio: 0
+  - Story_ID: 2
+    Speaker: "\uB8E8\uBBF8"
+    Dialogue: "\uD6C4\uC6B0... \uB124! \uD574\uBCFC\uAC8C\uC694. '\uD504\uB9AC\uC9D5
+      \uC624\uBE0C' \uC5F0\uC2B5\uD55C \uB300\uB85C\uB9CC \uD558\uBA74 \uB420 \uAC70\uC57C.
+      \uB2E4\uB140\uC624\uACA0\uC2B5\uB2C8\uB2E4!"
+    Is_Image: 0
+    Image_Command: 
+    Audio: 1

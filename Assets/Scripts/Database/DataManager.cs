@@ -1,0 +1,40 @@
+using Newtonsoft.Json;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using UnityEditor;
+using UnityEngine;
+
+public class QuestDataManager : MonoBehaviour
+{
+    public QuestDataSO questDataSO;
+
+    private void Start()
+    {
+        ConvertJsonToSO();
+    }
+    public void ConvertJsonToSO()
+    {
+        string path = Path.Combine(Application.streamingAssetsPath, "QuestData.json");
+
+        if (File.Exists(path))
+        {
+            string jsonText = File.ReadAllText(path);
+
+            List<QuestData> importedQuests = JsonConvert.DeserializeObject<List<QuestData>>(jsonText);
+
+            if (questDataSO)
+            {
+                questDataSO.quests = importedQuests;
+
+                EditorUtility.SetDirty(questDataSO);
+                AssetDatabase.SaveAssets();
+
+                Debug.Log("JSON 변환 성공");
+            }
+            else
+                Debug.Log("QuestSO 미연결");
+
+        }
+    }
+}

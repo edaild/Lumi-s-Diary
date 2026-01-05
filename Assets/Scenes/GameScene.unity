@@ -5108,9 +5108,9 @@ MonoBehaviour:
   videoPlayer: {fileID: 785702815}
   ultimateVidioClip: {fileID: 32900000, guid: 087c158abad9ff64dba903e4ada89867, type: 3}
   audioSource: {fileID: 1210842474}
-  nomalAtttackVoice: {fileID: 8300000, guid: a007fa92780f257438a1d1160551220d, type: 3}
-  skillAttackVoice: {fileID: 8300000, guid: 0dabb5b9cf1753945839a9d551735729, type: 3}
-  skillCrystarGardenVoice: {fileID: 8300000, guid: a34d3449f7d67574ea0b02773517ef83, type: 3}
+  nomalAtttackVoice: {fileID: 8300000, guid: 69432ea3e3ead854e9b3a611e3ebffad, type: 3}
+  skillAttackVoice: {fileID: 8300000, guid: 8248860c1d32ef848b24083fad425cac, type: 3}
+  skillCrystarGardenVoice: {fileID: 8300000, guid: 53ddaf1a754901a4398b1e7bd179621a, type: 3}
   portalSystem: {fileID: 0}
   currentPortal: {fileID: 0}
 --- !u!58 &2035983725

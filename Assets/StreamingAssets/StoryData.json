@@ -1,0 +1,130 @@
+[
+  {
+    "Story_ID":1,
+    "Speaker":"루미",
+    "Dialogue":"음... 벌써 아침인가? 창밖이 오늘따라 유난히 밝네...",
+    "Is_Image":false,
+    "Image_Command":"",
+    "Audio":true
+  },
+  {
+    "Story_ID":1,
+    "Speaker":"루미",
+    "Dialogue":"아...! 맞다! 오늘 드디어 졸업식이지! 주니어 마법사가 되는 날이야!",
+    "Is_Image":false,
+    "Image_Command":"",
+    "Audio":true
+  },
+  {
+    "Story_ID":1,
+    "Speaker":"교장 선생님",
+    "Dialogue":"루미 양, 축하하네. 이제 자네는 정식 주니어 마법사일세. 벨리아의 성좌가 그대와 함께하기를.\"",
+    "Is_Image":true,
+    "Image_Command":"SHOW",
+    "Audio":false
+  },
+  {
+    "Story_ID":1,
+    "Speaker":"루미",
+    "Dialogue":"고, 고맙습니다... 열심히 할게요!",
+    "Is_Image":false,
+    "Image_Command":"KEEP",
+    "Audio":true
+  },
+  {
+    "Story_ID":1,
+    "Speaker":"루미",
+    "Dialogue":"소심한 나지만... 한 걸음씩 나아가면 언젠가는 넓은 세상을 다 볼 수 있겠지? 자, 먼저 주민 센터에 가서 등록부터 하자!",
+    "Is_Image":false,
+    "Image_Command":"HIDE",
+    "Audio":false
+  },
+  {
+    "Story_ID":2,
+    "Speaker":"루미",
+    "Dialogue":"저... 저기요... 실례합니다...",
+    "Is_Image":false,
+    "Image_Command":"",
+    "Audio":true
+  },
+  {
+    "Story_ID":2,
+    "Speaker":"안내원",
+    "Dialogue":"어서 오세요! 오늘 졸업한 주니어 마법사님이군요? 공식 등록하러 오셨나요?",
+    "Is_Image":false,
+    "Image_Command":"",
+    "Audio":false
+  },
+  {
+    "Story_ID":2,
+    "Speaker":"루미",
+    "Dialogue":"아, 네! 여기 졸업장이랑... 등록 서류예요. 이제 정말 모험을 떠나도 되는 건지 확인받고 싶어서요",
+    "Is_Image":false,
+    "Image_Command":"",
+    "Audio":false
+  },
+  {
+    "Story_ID":2,
+    "Speaker":"안내원",
+    "Dialogue":"그럼요! 잠시만요... ",
+    "Is_Image":false,
+    "Image_Command":"",
+    "Audio":false
+  },
+  {
+    "Story_ID":2,
+    "Speaker":"루미",
+    "Dialogue":"확인되었습니다. 루미 님, 벨리아 지역 주니어 마법사로 정식 등록되셨습니다!\"",
+    "Is_Image":false,
+    "Image_Command":"",
+    "Audio":false
+  },
+  {
+    "Story_ID":2,
+    "Speaker":"루미 휴대폰",
+    "Dialogue":"(띠링! 소리와 함께 루미의 매지컬 스마트폰에 새로운 라이선스가 업데이트된다.)",
+    "Is_Image":false,
+    "Image_Command":"",
+    "Audio":false
+  },
+  {
+    "Story_ID":2,
+    "Speaker":"루미",
+    "Dialogue":"와아... 내 이름 옆에 '주니어 마법사'라고 적혀 있어... 정말 꿈만 같아",
+    "Is_Image":false,
+    "Image_Command":"",
+    "Audio":false
+  },
+  {
+    "Story_ID":2,
+    "Speaker":"안내원",
+    "Dialogue":"축하드려요! 아, 그리고 등록 기념으로 마을 외곽의 슬라임 처치 미션이 발급되었어요. 첫 실전이니까 조심하시고요!",
+    "Is_Image":false,
+    "Image_Command":"",
+    "Audio":false
+  },
+  {
+    "Story_ID":2,
+    "Speaker":"루미",
+    "Dialogue":"에엣? 벌써 실전인가요? 저... 저 혼자 잘 할 수 있을까요...?",
+    "Is_Image":false,
+    "Image_Command":"",
+    "Audio":false
+  },
+  {
+    "Story_ID":2,
+    "Speaker":"안내원",
+    "Dialogue":"루미 님이라면 충분히 하실 수 있을 거예요. 벨리아의 성좌가 지켜줄 테니까요!",
+    "Is_Image":false,
+    "Image_Command":"",
+    "Audio":false
+  },
+  {
+    "Story_ID":2,
+    "Speaker":"루미",
+    "Dialogue":"후우... 네! 해볼게요. '프리징 오브' 연습한 대로만 하면 될 거야. 다녀오겠습니다!",
+    "Is_Image":false,
+    "Image_Command":"",
+    "Audio":true
+  }
+]
