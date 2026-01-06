@@ -14,7 +14,7 @@ public class LumiPortalSystem : MonoBehaviour
     public Transform Portar02;
     public Transform Portar03;
     public VariableJoystick jay;
- 
+    public FadeManager FadeManager;
     public GameObject currentPortal;
     
     public bool isPortalMove;
@@ -61,7 +61,11 @@ public class LumiPortalSystem : MonoBehaviour
             else if (currentPortal.CompareTag("housePotar02"))
                 transform.position = Portar01.transform.position;
             else if (currentPortal.CompareTag("housePotar03"))
-                SceneManager.LoadScene("GameScene");
+            {
+                FadeManager.StartFadeOut(1.5f);
+                SceneManager.LoadScene("SnowVillage");
+            }
+                
         }
        
     }

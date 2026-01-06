@@ -46,6 +46,7 @@ public class characterConteroller : MonoBehaviour
 
     public PortalSystem portalSystem;
     public GameObject currentPortal;
+    public FadeManager fadeManager;
 
     private bool isultimateVidio;
     private bool isJump;
@@ -55,8 +56,6 @@ public class characterConteroller : MonoBehaviour
     private bool isSkillAttack;
     private bool isTeleport;
     private bool isHorizontalInput_xManus;
-
-
 
     private void Start()
     {
@@ -318,6 +317,8 @@ public class characterConteroller : MonoBehaviour
         {
             currentPortal.TryGetComponent<PortalSystem>(out PortalSystem portal);
             SceneManager.LoadScene(portal.portalData.targetSceneName);
+            if(SceneManager.GetActiveScene().name != "LumiHouseScene")
+            transform.position = new Vector3(portal.portalData.spawnPosition.x, transform.position.y, transform.position.z);
 
         }
     }
