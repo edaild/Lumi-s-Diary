@@ -29,8 +29,7 @@ public class QuestDataManager : MonoBehaviour
 
                 EditorUtility.SetDirty(questDataSO);
                 AssetDatabase.SaveAssets();
-
-                Debug.Log("JSON 변환 성공");
+                Debug.Log("변환 성공");
             }
             else
                 Debug.Log("QuestSO 미연결");
