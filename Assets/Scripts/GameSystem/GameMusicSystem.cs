@@ -23,6 +23,11 @@ public class GameMusicSystem : MonoBehaviour
             targetMusicName = "´«ÀÇ ¸¶À»";
         }
 
+        if(sceneName == "IcIcleCity")
+        {
+            targetMusicName = "´«ÀÇ ¸¶À» ±æ";
+        }
+
         if (string.IsNullOrEmpty(targetMusicName)) return;
 
         if (audioSource.clip == null || audioSource.clip.name != targetMusicName)

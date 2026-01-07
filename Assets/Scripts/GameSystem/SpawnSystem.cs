@@ -26,7 +26,7 @@ public class SpawnSystem : MonoBehaviour
 
     private void Start()
     {
-        //PlayerSapwn();
+        PlayerSapwn();
 
         if(questSystem == null)
             questSystem = GetComponent<QuestSystem>();
@@ -44,37 +44,37 @@ public class SpawnSystem : MonoBehaviour
 
     void IsNotInGameScene(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "LumiHouseScene" || scene.name == "MaigicurlHotal" || scene.name == "LobbyScene")
+        if (scene.name == "LumiHouseScene" || scene.name == "MaigicurlHotel" || scene.name == "LobbyScene")
             Destroy(gameObject);
       
     }
 
-    //void PlayerSapwn()
-    //{
-    //    string isSpawnPoint = "";
+    void PlayerSapwn()
+    {
+        string isSpawnPoint = "";
 
-    //    if(questSystem.playerquerstID <= 10005 || questSystem.playerLevel <= 2 || SceneManager.GetActiveScene().name == "Snowvillage" || !isPlayer)
-    //    {
-    //        isSpawnPoint = "눈의 마을 스폰 포인트";
-    //        Debug.Log("눈의 마을 스폰");
-    //    }
+        if(questSystem.playerquerstID <= 10005 || questSystem.playerLevel <= 2 || SceneManager.GetActiveScene().name == "Snowvillage" || !isPlayer)
+        {
+            isSpawnPoint = "눈의 마을 스폰 포인트";
+            Debug.Log("눈의 마을 스폰");
+        }
 
-    //    if (questSystem.playerquerstID >= 10005 || questSystem.playerLevel >= 2)
-    //    {
-    //        isSpawnPoint = "아이시클 시티";
-    //        Debug.Log("아이시클 시티 스폰 포인트");
-    //    }
+        if (questSystem.playerquerstID >= 10005 || questSystem.playerLevel >= 2)
+        {
+            isSpawnPoint = "아이시클 시티";
+            Debug.Log("아이시클 시티 스폰 포인트");
+        }
 
-    //    if (string.IsNullOrEmpty(isSpawnPoint)) return;
+        if (string.IsNullOrEmpty(isSpawnPoint)) return;
 
-    //    Transform targetSpawnPoint = spawnPont.Find(s => s.name == isSpawnPoint);
+        Transform targetSpawnPoint = spawnPont.Find(s => s.name == isSpawnPoint);
 
-    //    if(targetSpawnPoint != null)
-    //    {
-    //        Instantiate(playerPrefab,targetSpawnPoint.transform.position, Quaternion.identity);
-    //        Debug.Log($"{targetSpawnPoint} 으로 플레이어 생성");
-    //        isPlayer = true;
-    //    } 
+        if(targetSpawnPoint != null)
+        {
+            Instantiate(playerPrefab,targetSpawnPoint.transform.position, Quaternion.identity);
+            Debug.Log($"{targetSpawnPoint} 으로 플레이어 생성");
+            isPlayer = true;
+        } 
 
-    //}
+    }
 }

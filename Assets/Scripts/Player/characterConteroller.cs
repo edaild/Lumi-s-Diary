@@ -46,6 +46,7 @@ public class characterConteroller : MonoBehaviour
 
     public PortalSystem portalSystem;
     public GameObject currentPortal;
+    public FadeManager fadeManager;
 
     private bool isultimateVidio;
     private bool isJump;
@@ -56,6 +57,9 @@ public class characterConteroller : MonoBehaviour
     private bool isTeleport;
     private bool isHorizontalInput_xManus;
     private bool isNotInGameScene;
+    private bool isPotalTime;
+    private bool isFade;
+    private bool isInGameNextSceneTime;
 
     private void Start()
     {
@@ -71,6 +75,20 @@ public class characterConteroller : MonoBehaviour
         }
         if (!portalSystem)
             portalSystem = FindAnyObjectByType<PortalSystem>();
+
+        string sceneName = SceneManager.GetActiveScene().name;
+
+        if (sceneName != "LumiHouseScene" && sceneName != "MaigicurlHotel")
+        {
+            isFade = true;
+            fadeManager.StartFadeIn(1.5f);
+        }
+        else
+        {
+            isFade = false;
+            Debug.Log("현재는 루미집 또는 매직컬 센터");
+        }
+
     }
 
     private void Update()
@@ -81,8 +99,11 @@ public class characterConteroller : MonoBehaviour
         else if(Input.GetKeyDown(KeyCode.Space))
             Jump();
 
-        if (currentPortal != null && joy.Vertical > 0.7f || Input.GetKeyDown(KeyCode.UpArrow)) MovePartal();
-
+        if ((currentPortal != null && joy.Vertical > 0.7f || Input.GetKeyDown(KeyCode.UpArrow)) && !isPotalTime)
+        {
+            MovePartal();
+        }
+            
 
     }
 
@@ -110,11 +131,21 @@ public class characterConteroller : MonoBehaviour
     void IsNotInGameScene(Scene scene, LoadSceneMode mode)
     {
         string sceneName = SceneManager.GetActiveScene().name;
-        if (sceneName == "LumiHouseScene" || sceneName == "MaigicurlHotal")
-        isNotInGameScene = true;
+        if (sceneName == "LumiHouseScene" || sceneName == "MaigicurlHotel")
+        {
+            isNotInGameScene = true;
+            isFade = false;
+        }
+       
         else
+        {
             isNotInGameScene = false;
+            isFade = true;
+        }
+            
     }
+
+    
 
     void charcterMove()
     {
@@ -333,11 +364,41 @@ public class characterConteroller : MonoBehaviour
         if (currentPortal)
         {
             currentPortal.TryGetComponent<PortalSystem>(out PortalSystem portal);
-            SceneManager.LoadScene(portal.portalData.targetSceneName);
-            if(SceneManager.GetActiveScene().name != "LumiHouseScene")
-            transform.position = new Vector3(portal.portalData.spawnPosition.x, transform.position.y, transform.position.z);
-
+            string sceneName = SceneManager.GetActiveScene().name;
+            if (sceneName != "LumiHouseScene" && sceneName != "MaigicurlHotel")
+            {
+                StartCoroutine(Fade(portal));
+            }
+            else
+            {
+                SceneManager.LoadScene(portal.portalData.targetSceneName);
+            }
         }
+    }
+
+    IEnumerator Fade(PortalSystem portal)
+    {
+        fadeManager.StartFadeOut(0.5f);
+        yield return new WaitForSeconds(1f);
+
+        string sceneName = SceneManager.GetActiveScene().name;
+
+        SceneManager.LoadScene(portal.portalData.targetSceneName);
+
+        transform.position = new Vector3(portal.portalData.spawnPosition.x, transform.position.y, transform.position.z);
+
+        isInGameNextSceneTime = true;
+
+        yield return new WaitForSeconds(1.2f);
+         fadeManager.StartFadeIn(0.5f);
+
+        StartCoroutine(PartalTime());
+    }
+
+    IEnumerator PartalTime()
+    {
+        yield return new WaitForSeconds(1.5f);
+        isPotalTime = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
             isInstance = true;
         }
 
-        if (scene.name == "LumiHouseScene" || scene.name == "LobbyScene" || scene.name == "MaigicurlHotal")
+        if (scene.name == "LumiHouseScene" || scene.name == "LobbyScene" || scene.name == "MaigicurlHotel")
             Destroy(gameObject);
 
         

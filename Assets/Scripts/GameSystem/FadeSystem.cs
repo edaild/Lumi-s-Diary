@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class FadeManager : MonoBehaviour
 {
@@ -10,7 +11,16 @@ public class FadeManager : MonoBehaviour
     private void Start()
     {
         fadeImage.gameObject.SetActive(true);
-        StartFadeIn(1.5f);
+        string sceneName = SceneManager.GetActiveScene().name;
+
+        if (sceneName == "LumiHouseScene" || sceneName == "MaigicurlHotel" || sceneName == "LobbyScene" || sceneName == "RewordScene")
+        {
+            StartFadeIn(1.5f);
+        }
+        else
+        {
+            Debug.Log("ÇöÀç¾ÀÀº °íÁ¤¾À X");
+        }
     }
 
     public void StartFadeIn(float duration)

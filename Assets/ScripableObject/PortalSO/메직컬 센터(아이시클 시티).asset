@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   portalID: 1
   portalName: "\uB9E4\uC9C1\uCEEC \uC13C\uD130"
-  targetSceneName: MaigicurlHotal
+  targetSceneName: MaigicurlHotel
   spawnPosition: {x: 1.19, y: -1.48, z: 0}
