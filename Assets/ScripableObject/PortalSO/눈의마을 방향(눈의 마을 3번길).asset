@@ -15,5 +15,5 @@ MonoBehaviour:
   portalID: 3
   portalName: "\uB208\uC758\uB9C8\uC744\uAE38 3\uBC88\uC9C0 \uD3EC\uD0C8(\uB208\uC758
     \uB9C8\uC744)"
-  targetSceneName: SnowVillageRoad3
-  spawnPosition: {x: -11.64924, y: -1.48, z: 0}
+  targetSceneName: Snowvillage
+  spawnPosition: {x: 29.38, y: -1.48, z: 0}

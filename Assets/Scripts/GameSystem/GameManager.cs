@@ -7,9 +7,11 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    private bool isInstance;
     private void Awake()
     {
-        if (Instance == null)
+
+        if (Instance == null || !isInstance)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
@@ -30,7 +32,12 @@ public class GameManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if(scene.name == "LumiHouseScene" || scene.name == "LobbyScene")
+        if (Instance != null)
+        {
+            isInstance = true;
+        }
+
+        if (scene.name == "LumiHouseScene" || scene.name == "LobbyScene" || scene.name == "MaigicurlHotal")
             Destroy(gameObject);
 
         

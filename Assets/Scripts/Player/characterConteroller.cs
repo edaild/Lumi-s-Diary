@@ -46,7 +46,6 @@ public class characterConteroller : MonoBehaviour
 
     public PortalSystem portalSystem;
     public GameObject currentPortal;
-    public FadeManager fadeManager;
 
     private bool isultimateVidio;
     private bool isJump;
@@ -56,22 +55,21 @@ public class characterConteroller : MonoBehaviour
     private bool isSkillAttack;
     private bool isTeleport;
     private bool isHorizontalInput_xManus;
+    private bool isNotInGameScene;
 
     private void Start()
     {
         JumpButton.onClick.AddListener(() => { if (joy.Vertical < -0.7f) DownJump(); else Jump(); });
         transform.localScale = new Vector3(1.5f, 1.5f, 0);
 
-        if (SceneManager.GetActiveScene().name != "LumiHouseScene")
+        if (!isNotInGameScene)
         {
             AttackButton.onClick.AddListener(NomalAttack);
             SkillButton.onClick.AddListener(SkillAttack);
             TeleportButton.onClick.AddListener(Teleport);
             ultimateButtonUI.onClick.AddListener(CrystarGarden);
         }
-       
-
-        if(!portalSystem)
+        if (!portalSystem)
             portalSystem = FindAnyObjectByType<PortalSystem>();
     }
 
@@ -97,6 +95,25 @@ public class characterConteroller : MonoBehaviour
         else
           charcterMove();
 
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += IsNotInGameScene;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= IsNotInGameScene;
+    }
+
+    void IsNotInGameScene(Scene scene, LoadSceneMode mode)
+    {
+        string sceneName = SceneManager.GetActiveScene().name;
+        if (sceneName == "LumiHouseScene" || sceneName == "MaigicurlHotal")
+        isNotInGameScene = true;
+        else
+            isNotInGameScene = false;
     }
 
     void charcterMove()
