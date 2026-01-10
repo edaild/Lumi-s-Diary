@@ -15,5 +15,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   portalID: 3
   portalName: "\uB208\uC758\uB9C8\uC744\uAE38 3\uBC88\uC9C0"
-  targetSceneName: SnowVilageRoad3
+  targetSceneName: SnowVillageRoad3
   spawnPosition: {x: -29.81, y: -1.48, z: 0}

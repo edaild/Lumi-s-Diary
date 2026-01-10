@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Windows;
+//using UnityEngine.Windows;
 
 [CreateAssetMenu()]
 
@@ -21,7 +21,7 @@ public class LumiPortalSystem : MonoBehaviour
 
     void Update()
     {
-        if (!isPortalMove && (currentPortal != null && jay.Vertical > 0.7f || UnityEngine.Input.GetKeyDown(KeyCode.UpArrow)))
+        if (!isPortalMove && (currentPortal != null && jay.Vertical > 0.7f || (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))))
         {
             Teleport();
             isPortalMove = true;

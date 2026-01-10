@@ -7,6 +7,8 @@ public class GameMusicSystem : MonoBehaviour
     public AudioSource audioSource;
     public List<AudioClip> audioClips = new List<AudioClip>();
 
+    public string currentMusic;
+
     private void Update()
     {
         ChackMusic();
@@ -16,16 +18,20 @@ public class GameMusicSystem : MonoBehaviour
     {
         string targetMusicName = "";
 
-
         string sceneName = SceneManager.GetActiveScene().name;
-        if (sceneName == "SnowVillage" || sceneName == "SnowVillageRoad3" || sceneName == "SnowVillageRoad")
+        Debug.Log($"현재씬: {sceneName}");
+
+        if (sceneName == "Snowvillage" || sceneName == "SnowVillageRoad3" || sceneName == "SnowVillageRoad")
         {
             targetMusicName = "눈의 마을";
         }
-
-        if(sceneName == "IcIcleCity")
+        else if(sceneName == "IcIcleCity")
         {
             targetMusicName = "눈의 마을 길";
+        }
+        else
+        {
+            Debug.Log($"GameMusicSystem : {sceneName}씬이 존재하지 않습니다.");
         }
 
         if (string.IsNullOrEmpty(targetMusicName)) return;
@@ -38,8 +44,11 @@ public class GameMusicSystem : MonoBehaviour
             {
                 audioSource.Stop();
                 audioSource.clip = clipToPlay;
+                audioSource.time = 0;
+
                 audioSource.Play();
                 Debug.Log($"{targetMusicName} 재생 시작");
+                currentMusic = audioSource.clip.name;
             }
             else
             {

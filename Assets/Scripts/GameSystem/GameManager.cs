@@ -5,6 +5,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
+    public GameMusicSystem gameMusicSystem;
+
     public static GameManager Instance;
 
     private bool isInstance;
@@ -18,6 +20,12 @@ public class GameManager : MonoBehaviour
         }
         else 
             Destroy(Instance);  
+    }
+
+    private void Start()
+    {
+        if(!gameMusicSystem)
+            gameMusicSystem = GetComponent<GameMusicSystem>();
     }
 
     private void OnEnable()
@@ -40,6 +48,8 @@ public class GameManager : MonoBehaviour
         if (scene.name == "LumiHouseScene" || scene.name == "LobbyScene" || scene.name == "MaigicurlHotel")
             Destroy(gameObject);
 
-        
+        Debug.Log($"현재 재생 음악: {gameMusicSystem.currentMusic}");
+
+
     }
 }

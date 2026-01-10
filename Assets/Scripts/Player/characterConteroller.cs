@@ -59,7 +59,6 @@ public class characterConteroller : MonoBehaviour
     private bool isNotInGameScene;
     private bool isPotalTime;
     private bool isFade;
-    private bool isInGameNextSceneTime;
 
     private void Start()
     {
@@ -94,12 +93,32 @@ public class characterConteroller : MonoBehaviour
     private void Update()
     {
         // PC 테스트용
-        if (Input.GetKeyDown(KeyCode.Space) && (Input.GetKey(KeyCode.DownArrow) || joy.Vertical < -0.7f))
+        if (Input.GetKeyDown(KeyCode.Space) && (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) || joy.Vertical < -0.7f))
             DownJump();
         else if(Input.GetKeyDown(KeyCode.Space))
             Jump();
 
-        if ((currentPortal != null && joy.Vertical > 0.7f || Input.GetKeyDown(KeyCode.UpArrow)) && !isPotalTime)
+        else if (Input.GetMouseButtonDown(1))
+        {
+            NomalAttack();
+        }
+
+        else if (Input.GetKeyDown(KeyCode.Q))
+        {
+            CrystarGarden();
+        }
+
+        else if(Input.GetKeyDown(KeyCode.E))
+        {
+            SkillAttack();
+        }
+
+        else if (Input.GetKeyDown(KeyCode.R))
+        {
+            Teleport();
+        }
+
+        if ((currentPortal != null && joy.Vertical > 0.7f || (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && !isPotalTime))
         {
             MovePartal();
         }
@@ -387,8 +406,6 @@ public class characterConteroller : MonoBehaviour
 
         transform.position = new Vector3(portal.portalData.spawnPosition.x, transform.position.y, transform.position.z);
 
-        isInGameNextSceneTime = true;
-
         yield return new WaitForSeconds(1.2f);
          fadeManager.StartFadeIn(0.5f);
 
@@ -422,5 +439,4 @@ public class characterConteroller : MonoBehaviour
     {
         currentPortal = null;
     }
-
 }
