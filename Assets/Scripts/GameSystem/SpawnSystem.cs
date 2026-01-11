@@ -67,8 +67,11 @@ public class SpawnSystem : MonoBehaviour
         string currentScene = SceneManager.GetActiveScene().name;
         string targetPointName = "";
 
-        if (currentScene == "IcIcleCity") targetPointName = "아이시클 시티 스폰 포인트";
-        else if (currentScene == "Snowvillage") targetPointName = "눈의 마을 스폰 포인트";
+        if (currentScene == "IcIcleCity") 
+            targetPointName = "아이시클 시티 스폰 포인트";
+
+        else if (currentScene == "Snowvillage") 
+            targetPointName = "눈의 마을 스폰 포인트";
 
         if (string.IsNullOrEmpty(targetPointName)) return;
 
@@ -80,8 +83,6 @@ public class SpawnSystem : MonoBehaviour
             isPlayer = true;
         }
         else
-        {
-            Debug.LogError($"{targetPointName}을 찾을수 없음");
-        }
+            Debug.LogError($"{targetPointName} 존재 X");
     }
 }
