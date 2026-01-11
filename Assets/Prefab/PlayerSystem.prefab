@@ -291,7 +291,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 30
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3261,6 +3261,22 @@ PrefabInstance:
     - target: {fileID: 175638327031208106, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
       propertyPath: m_BoundingShape2D
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4600566414550741228, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
+      propertyPath: m_Size.x
+      value: 0.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 4600566414550741228, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
+      propertyPath: m_Size.y
+      value: 1.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 4600566414550741228, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1751886844, guid: 921955ac8bf0d394f8fdd0b75ca2a41f, type: 3}
+    - target: {fileID: 4600566414550741228, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4610690088136068200, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
       propertyPath: joy

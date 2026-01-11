@@ -11,6 +11,7 @@ TagManager:
   - localground
   - Localwall2
   - Localwall
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - UI2
   - 
   - 
   - 
@@ -47,4 +48,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: NameText
+    uniqueID: 3177368751
     locked: 0

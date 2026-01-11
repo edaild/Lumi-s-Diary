@@ -880,6 +880,7 @@ MonoBehaviour:
   audioSource: {fileID: 7057637493482747512}
   audioClips:
   - {fileID: 8300000, guid: 4a96f50b97178934f9f2e414f50fcec0, type: 3}
+  currentMusic: 
 --- !u!1 &4301448584511468738
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,7 +1436,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 30
   m_Sprite: {fileID: -1043767522, guid: b1489d37be37b5b448c7650bd2cb3f9d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -1444,7 +1445,7 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &5646065600243447361
@@ -1614,6 +1615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff250622fae38b943b56ab4e29d069db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameMusicSystem: {fileID: 0}
 --- !u!1 &5335018270658110804
 GameObject:
   m_ObjectHideFlags: 0

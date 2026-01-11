@@ -98,25 +98,25 @@ public class characterConteroller : MonoBehaviour
         else if(Input.GetKeyDown(KeyCode.Space))
             Jump();
 
-        else if (Input.GetMouseButtonDown(1))
-        {
-            NomalAttack();
-        }
+        //else if (Input.GetMouseButtonDown(1))
+        //{
+        //    NomalAttack();
+        //}
 
-        else if (Input.GetKeyDown(KeyCode.Q))
-        {
-            CrystarGarden();
-        }
+        //else if (Input.GetKeyDown(KeyCode.Q))
+        //{
+        //    CrystarGarden();
+        //}
 
-        else if(Input.GetKeyDown(KeyCode.E))
-        {
-            SkillAttack();
-        }
+        //else if(Input.GetKeyDown(KeyCode.E))
+        //{
+        //    SkillAttack();
+        //}
 
-        else if (Input.GetKeyDown(KeyCode.R))
-        {
-            Teleport();
-        }
+        //else if (Input.GetKeyDown(KeyCode.R))
+        //{
+        //    Teleport();
+        //}
 
         if ((currentPortal != null && joy.Vertical > 0.7f || (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && !isPotalTime))
         {
@@ -228,7 +228,9 @@ public class characterConteroller : MonoBehaviour
     IEnumerator JumpTime()
     {
         cd.enabled = false;
+        animator.SetBool("IsJump", true);
         yield return new WaitForSeconds(0.8f);
+        animator.SetBool("IsJump", false);
         cd.enabled = true;
     }
 
@@ -432,7 +434,10 @@ public class characterConteroller : MonoBehaviour
 
         // 2차 경계선
         if (collision.gameObject.CompareTag("Localwall2"))
+        {
             transform.position = new Vector3(0, transform.position.y, 0);
+        }
+          
     }
 
     private void OnTriggerExit2D(Collider2D collision)

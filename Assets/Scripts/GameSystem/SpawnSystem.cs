@@ -11,8 +11,6 @@ public class SpawnSystem : MonoBehaviour
     public QuestSystem questSystem;
     public bool isPlayer;
 
-    private bool isNullObjectScene;
-
     private void Awake()
     {
         if(instance == null)
@@ -26,8 +24,6 @@ public class SpawnSystem : MonoBehaviour
 
     private void Start()
     {
-        PlayerSapwn();
-
         if(questSystem == null)
             questSystem = GetComponent<QuestSystem>();
     }
@@ -44,37 +40,48 @@ public class SpawnSystem : MonoBehaviour
 
     void IsNotInGameScene(Scene scene, LoadSceneMode mode)
     {
+
         if (scene.name == "LumiHouseScene" || scene.name == "MaigicurlHotel" || scene.name == "LobbyScene")
-            Destroy(gameObject);
-      
+        {
+            isPlayer = false;
+            return;
+        }
+
+        spawnPont.Clear();
+        GameObject[] points = GameObject.FindGameObjectsWithTag("SpawnPoint");
+
+        foreach (var p in points)
+            spawnPont.Add(p.transform);
+
+        PlayerSapwn();
     }
 
     void PlayerSapwn()
     {
-        string isSpawnPoint = "";
-
-        if(questSystem.playerquerstID <= 10005 || questSystem.playerLevel <= 2 || SceneManager.GetActiveScene().name == "Snowvillage" || !isPlayer)
+        if (GameObject.FindGameObjectWithTag("Player") != null)
         {
-            isSpawnPoint = "눈의 마을 스폰 포인트";
-            Debug.Log("눈의 마을 스폰");
-        }
-
-        if (questSystem.playerquerstID >= 10005 || questSystem.playerLevel >= 2)
-        {
-            isSpawnPoint = "아이시클 시티";
-            Debug.Log("아이시클 시티 스폰 포인트");
-        }
-
-        if (string.IsNullOrEmpty(isSpawnPoint)) return;
-
-        Transform targetSpawnPoint = spawnPont.Find(s => s.name == isSpawnPoint);
-
-        if(targetSpawnPoint != null)
-        {
-            Instantiate(playerPrefab,targetSpawnPoint.transform.position, Quaternion.identity);
-            Debug.Log($"{targetSpawnPoint} 으로 플레이어 생성");
             isPlayer = true;
-        } 
+            return;
+        }
 
+        string currentScene = SceneManager.GetActiveScene().name;
+        string targetPointName = "";
+
+        if (currentScene == "IcIcleCity") targetPointName = "아이시클 시티 스폰 포인트";
+        else if (currentScene == "Snowvillage") targetPointName = "눈의 마을 스폰 포인트";
+
+        if (string.IsNullOrEmpty(targetPointName)) return;
+
+        Transform targetSpawnPoint = spawnPont.Find(s => s.name == targetPointName);
+
+        if (targetSpawnPoint != null)
+        {
+            Instantiate(playerPrefab, targetSpawnPoint.position, Quaternion.identity);
+            isPlayer = true;
+        }
+        else
+        {
+            Debug.LogError($"{targetPointName}을 찾을수 없음");
+        }
     }
 }
