@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/IcIcleCity.unity
     guid: 3bbe129a489a4e94492a1daaf214a920
+  - enabled: 1
+    path: Assets/Scenes/SnowVillageRoad.unity
+    guid: 0f90fb157cbf5b3499e9a052a5ba49ed
   m_configObjects: {}

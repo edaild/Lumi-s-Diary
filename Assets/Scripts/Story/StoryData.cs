@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 
 [Serializable]
@@ -12,4 +13,5 @@ public class StoryData
     public bool Is_Image;
     public string Image_Command;
     public bool Audio;
+    public Image Story_Image;
 }

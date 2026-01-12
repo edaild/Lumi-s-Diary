@@ -17,6 +17,7 @@ public class QuestSystem : MonoBehaviour
     public int playerLevel = 1;
     public int playerExperience = 0;
 
+    private int cuttentQuestIndex = 0;
 
     private void Awake()
     {
@@ -43,12 +44,58 @@ public class QuestSystem : MonoBehaviour
 
     void IsNotUseGameObjerct(Scene scene, LoadSceneMode mode)
     {
-        if(scene.name == "LumiHouseScene" || scene.name == "LobbyScene")
-        Destroy(gameObject);
+        if (scene.name == "LobbyScene")
+            Destroy(gameObject);
+        return;
     }
 
     private void Start()
     {
-        Debug.Log("미구현");
+        if (playerPreQuestID == 0 && questData.quests.Count > 0)
+        {
+            QuestData firstQuest = questData.quests[0];
+            playerquerstID = firstQuest.QuestID;
+            playerquestName = firstQuest.QuestName;
+        }
+        else
+        {
+            QuestData quest = questData.quests.Find(q => q.QuestID == playerquerstID);
+            if (quest != null)
+            {
+               // cuttentQuestIndex = lastQuestIndex;
+                playerquestName = quest.QuestName;
+            }
+        }
+        Debug.Log($"현재 플레이어 퀘스트 ID: {playerquerstID}, 이름: {playerquestName}");
+    }
+
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.N))
+            SuccessQuest();
+        
+    }
+    void SuccessQuest()
+    {
+        Debug.Log($"완료한 퀘스트 ID: {playerquerstID}, 이름: {playerquestName}");
+
+        cuttentQuestIndex += 1;
+
+        if(cuttentQuestIndex < questData.quests.Count)
+        {
+            QuestData nextQuest = questData.quests[cuttentQuestIndex];
+
+            playerquerstID = nextQuest.QuestID;
+            playerquestName = nextQuest.QuestName;
+
+            Debug.Log($"현재 플레이어 퀘스트 ID: {playerquerstID}, 이름: {playerquestName}");
+        }
+        else
+        {
+            Debug.Log("퀘스트 완료");
+            // 다음 퀘스트SO로 연결
+        }
     }
 }
+

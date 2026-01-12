@@ -7,3 +7,5 @@ public class QuestDataSO : ScriptableObject
 {
     public List<QuestData> quests = new List<QuestData>();
 }
+
+
