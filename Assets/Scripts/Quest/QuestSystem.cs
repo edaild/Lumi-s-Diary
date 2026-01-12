@@ -32,33 +32,20 @@ public class QuestSystem : MonoBehaviour
         }
     }
 
-    private void OnEnable()
-    {
-        SceneManager.sceneLoaded += IsNotUseGameObjerct;
-    }
-
-    private void OnDisable()
-    {
-        SceneManager.sceneLoaded -= IsNotUseGameObjerct;
-    }
-
-    void IsNotUseGameObjerct(Scene scene, LoadSceneMode mode)
-    {
-        if (scene.name == "LobbyScene")
-            Destroy(gameObject);
-        return;
-    }
 
     private void Start()
     {
+        
         if (playerPreQuestID == 0 && questData.quests.Count > 0)
         {
+            // 신규 플레이
             QuestData firstQuest = questData.quests[0];
             playerquerstID = firstQuest.QuestID;
             playerquestName = firstQuest.QuestName;
         }
         else
         {
+            // 저장 기록이 있는 플레이
             QuestData quest = questData.quests.Find(q => q.QuestID == playerquerstID);
             if (quest != null)
             {
