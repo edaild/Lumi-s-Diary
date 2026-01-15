@@ -7,7 +7,7 @@ public class QuestSystem : MonoBehaviour
 {
     public static QuestSystem instance;
     public QuestDataSO questData;
-    public StoryData storyData;
+    public StorySystem storySystem;
 
     public int playerquerstID;
     public string playerquestName;
@@ -39,7 +39,9 @@ public class QuestSystem : MonoBehaviour
 
     private void Start()
     {
-        
+        storySystem = GetComponent<StorySystem>();
+
+
         if (playerPreQuestID == 0 && questData.quests.Count > 0)
         {
             // 신규 플레이
@@ -65,7 +67,7 @@ public class QuestSystem : MonoBehaviour
             }
         }
         Debug.Log($"현재 플레이어 퀘스트 ID: {playerquerstID}, 이름: {playerquestName}, 진행될 스토리 ID: {playerStory_Id}, 처치할 몬스터 수: {playerEnemyTargetCount}");
-
+        storySystem.QuestStory(playerStory_Id);
     }
 
 
@@ -104,6 +106,7 @@ public class QuestSystem : MonoBehaviour
             playerEnemyTargetCount = nextQuest.TargetCount;
 
             Debug.Log($"현재 플레이어 퀘스트 ID: {playerquerstID}, 이름: {playerquestName}, 진행될 스토리 ID: {playerStory_Id}, 처치할 몬스터 수: {playerEnemyTargetCount}");
+            storySystem.QuestStory(playerStory_Id);
             playerquest_Is_success = false;
         }
         else

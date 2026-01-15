@@ -689,6 +689,7 @@ GameObject:
   m_Component:
   - component: {fileID: 904382658}
   - component: {fileID: 904382659}
+  - component: {fileID: 904382660}
   m_Layer: 0
   m_Name: QuestSystem
   m_TagString: Untagged
@@ -724,12 +725,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questData: {fileID: 11400000, guid: bd424e715b7a09140a085e942e61a130, type: 2}
+  storySystem: {fileID: 904382660}
   playerquerstID: 0
   playerquestName: 
   playerquest_Is_success: 0
+  playerStory_Id: 0
+  playerEnemyTargetCount: 0
   playerPreQuestID: 0
   playerLevel: 1
   playerExperience: 0
+--- !u!114 &904382660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904382657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de559b789cc1b7d44aa430109d1f549a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoryDataSO: {fileID: 11400000, guid: 4b413a6e60f4f9343bd4e0622f63beb0, type: 2}
+  questSystem: {fileID: 904382659}
+  cunnet_StoryID: 0
+  StoryUI: {fileID: 1390787590}
+  StoryDialogue: {fileID: 1390787592}
 --- !u!1 &1079598876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1311,7 +1332,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uB8E8\uBBF8 : \uD558\uC554 \uBC8C\uC368 \uC544\uCE68\uC778\uAC00?"
+  m_text: "\uBA54\uC778 \uC2A4\uD1A0\uB9AC \uC7A5"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bdd4aed063406fb44a221a070113e84d, type: 2}
   m_sharedMaterial: {fileID: 7878480566591436736, guid: bdd4aed063406fb44a221a070113e84d, type: 2}
