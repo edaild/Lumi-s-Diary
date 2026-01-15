@@ -47,9 +47,5 @@ public class GameManager : MonoBehaviour
 
         if (scene.name == "LumiHouseScene" || scene.name == "LobbyScene" || scene.name == "MaigicurlHotel")
             Destroy(gameObject);
-
-        Debug.Log($"현재 재생 음악: {gameMusicSystem.currentMusic}");
-
-
     }
 }

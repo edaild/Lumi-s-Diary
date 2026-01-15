@@ -7,10 +7,13 @@ public class QuestSystem : MonoBehaviour
 {
     public static QuestSystem instance;
     public QuestDataSO questData;
+    public StoryData storyData;
 
     public int playerquerstID;
     public string playerquestName;
     public bool playerquest_Is_success;
+    public int playerStory_Id;
+    public int playerEnemyTargetCount;
     public int playerPreQuestID;
 
 
@@ -18,6 +21,7 @@ public class QuestSystem : MonoBehaviour
     public int playerExperience = 0;
 
     private int cuttentQuestIndex = 0;
+
 
     private void Awake()
     {
@@ -42,6 +46,9 @@ public class QuestSystem : MonoBehaviour
             QuestData firstQuest = questData.quests[0];
             playerquerstID = firstQuest.QuestID;
             playerquestName = firstQuest.QuestName;
+            playerStory_Id = firstQuest.Story_ID;
+            playerEnemyTargetCount = firstQuest.TargetCount;
+           
         }
         else
         {
@@ -50,22 +57,40 @@ public class QuestSystem : MonoBehaviour
             if (quest != null)
             {
                // cuttentQuestIndex = lastQuestIndex;
+
                 playerquestName = quest.QuestName;
+                playerStory_Id = quest.Story_ID;
+                playerEnemyTargetCount = quest.TargetCount;
+                playerPreQuestID = quest.PreQuestID;
             }
         }
-        Debug.Log($"현재 플레이어 퀘스트 ID: {playerquerstID}, 이름: {playerquestName}");
+        Debug.Log($"현재 플레이어 퀘스트 ID: {playerquerstID}, 이름: {playerquestName}, 진행될 스토리 ID: {playerStory_Id}, 처치할 몬스터 수: {playerEnemyTargetCount}");
+
     }
 
 
     private void Update()
     {
+        CurrentQuest();
+    }
+
+    void CurrentQuest()
+    {
         if (Input.GetKeyDown(KeyCode.N))
+        {
             SuccessQuest();
-        
+            return;
+        }
+        else
+        {
+            Debug.Log("퀘스트 미완료");
+            return;
+        }
     }
     void SuccessQuest()
     {
-        Debug.Log($"완료한 퀘스트 ID: {playerquerstID}, 이름: {playerquestName}");
+        Debug.Log($"완료된 퀘스트 ID: {playerquerstID}, 이름: {playerquestName}, 스토리 ID: {playerStory_Id},  처리된 몬스터 수: {playerEnemyTargetCount}");
+        playerPreQuestID = playerquerstID;
 
         cuttentQuestIndex += 1;
 
@@ -75,8 +100,11 @@ public class QuestSystem : MonoBehaviour
 
             playerquerstID = nextQuest.QuestID;
             playerquestName = nextQuest.QuestName;
+            playerStory_Id = nextQuest.Story_ID;
+            playerEnemyTargetCount = nextQuest.TargetCount;
 
-            Debug.Log($"현재 플레이어 퀘스트 ID: {playerquerstID}, 이름: {playerquestName}");
+            Debug.Log($"현재 플레이어 퀘스트 ID: {playerquerstID}, 이름: {playerquestName}, 진행될 스토리 ID: {playerStory_Id}, 처치할 몬스터 수: {playerEnemyTargetCount}");
+            playerquest_Is_success = false;
         }
         else
         {
