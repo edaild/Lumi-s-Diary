@@ -112,6 +112,7 @@ public class QuestSystem : MonoBehaviour
         else
         {
             Debug.Log("퀘스트 완료");
+            storySystem.StoryUI.gameObject.SetActive(false);
             // 다음 퀘스트SO로 연결
         }
     }

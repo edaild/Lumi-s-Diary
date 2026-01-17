@@ -19,7 +19,7 @@
       "Story_ID": 10201,
       "TargetCount": 0,
       "RewardExperience": 10,
-      "PreQuestID": 1
+      "PreQuestID": 10001
     },
     {
       "QuestID": 10003,
@@ -30,7 +30,7 @@
       "Story_ID": 10301,
       "TargetCount": 0,
       "RewardExperience": 10,
-      "PreQuestID": 2
+      "PreQuestID": 10002
     },
     {
       "QuestID": 10004,
@@ -41,7 +41,7 @@
       "Story_ID": 10307,
       "TargetCount": 1,
       "RewardExperience": 10,
-      "PreQuestID": 3
+      "PreQuestID": 10003
     },
     {
       "QuestID": 10005,
@@ -52,6 +52,17 @@
       "Story_ID": 10401,
       "TargetCount": 0,
       "RewardExperience": 10,
-      "PreQuestID": 4
+      "PreQuestID": 10004
+    },
+    {
+      "QuestID": 10006,
+      "QuestName": "1장 모험의 시작 종료",
+      "QuestLevel": 2,
+      "Is_success": false,
+      "QuestDescription": "1장 모험의 시작 종료",
+      "Story_ID": 0,
+      "TargetCount": 0,
+      "RewardExperience": 0,
+      "PreQuestID": 10005
     }
-]
+  ]

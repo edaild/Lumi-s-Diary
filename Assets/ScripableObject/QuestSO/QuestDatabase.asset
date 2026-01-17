@@ -31,7 +31,7 @@ MonoBehaviour:
     Story_ID: 10201
     TargetCount: 0
     RewardExperience: 10
-    PreQuestID: 1
+    PreQuestID: 10001
   - QuestID: 10003
     QuestName: "\uB208\uC758 \uB9C8\uC744\uAE38 3\uBC88\uC9C0\uB85C \uAC00\uAE30"
     QuestLevel: 1
@@ -40,7 +40,7 @@ MonoBehaviour:
     Story_ID: 10301
     TargetCount: 0
     RewardExperience: 10
-    PreQuestID: 2
+    PreQuestID: 10002
   - QuestID: 10004
     QuestName: "\uB208 \uD1A0\uB07C \uCC98\uCE58\uD558\uAE30"
     QuestLevel: 1
@@ -50,7 +50,7 @@ MonoBehaviour:
     Story_ID: 10307
     TargetCount: 1
     RewardExperience: 10
-    PreQuestID: 3
+    PreQuestID: 10003
   - QuestID: 10005
     QuestName: "\uB208\uC758 \uB9C8\uC744\uAE38 \uAC00\uAE30"
     QuestLevel: 1
@@ -59,4 +59,13 @@ MonoBehaviour:
     Story_ID: 10401
     TargetCount: 0
     RewardExperience: 10
-    PreQuestID: 4
+    PreQuestID: 10004
+  - QuestID: 10006
+    QuestName: "1\uC7A5 \uBAA8\uD5D8\uC758 \uC2DC\uC791 \uC885\uB8CC"
+    QuestLevel: 2
+    Is_success: 0
+    QuestDescription: "1\uC7A5 \uBAA8\uD5D8\uC758 \uC2DC\uC791 \uC885\uB8CC"
+    Story_ID: 0
+    TargetCount: 0
+    RewardExperience: 0
+    PreQuestID: 10005
