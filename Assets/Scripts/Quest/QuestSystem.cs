@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class QuestSystem : MonoBehaviour
 {
@@ -15,10 +16,14 @@ public class QuestSystem : MonoBehaviour
     public int playerStory_Id;
     public int playerEnemyTargetCount;
     public int playerPreQuestID;
+    public int giftExperience;
 
-
+    [Header("플레이어 정보")]
     public int playerLevel = 1;
     public int playerExperience = 0;
+
+    [Header("퀘스트 UI")]
+    public TextMeshProUGUI questText;
 
     private int cuttentQuestIndex = 0;
 
@@ -64,10 +69,12 @@ public class QuestSystem : MonoBehaviour
                 playerStory_Id = quest.Story_ID;
                 playerEnemyTargetCount = quest.TargetCount;
                 playerPreQuestID = quest.PreQuestID;
+                giftExperience = quest.RewardExperience;
             }
         }
         Debug.Log($"현재 플레이어 퀘스트 ID: {playerquerstID}, 이름: {playerquestName}, 진행될 스토리 ID: {playerStory_Id}, 처치할 몬스터 수: {playerEnemyTargetCount}");
         storySystem.QuestStory(playerStory_Id);
+        questText.text = playerquestName;
     }
 
 
@@ -91,8 +98,10 @@ public class QuestSystem : MonoBehaviour
     }
     void SuccessQuest()
     {
-        Debug.Log($"완료된 퀘스트 ID: {playerquerstID}, 이름: {playerquestName}, 스토리 ID: {playerStory_Id},  처리된 몬스터 수: {playerEnemyTargetCount}");
         playerPreQuestID = playerquerstID;
+        playerExperience += giftExperience;
+        Debug.Log($"완료된 퀘스트 ID: {playerquerstID}, 이름: {playerquestName}, 스토리 ID: {playerStory_Id},  처리된 몬스터 수: {playerEnemyTargetCount}");
+        Debug.Log($" 경험치 {giftExperience} 만큼 증가");
 
         cuttentQuestIndex += 1;
 
@@ -104,10 +113,13 @@ public class QuestSystem : MonoBehaviour
             playerquestName = nextQuest.QuestName;
             playerStory_Id = nextQuest.Story_ID;
             playerEnemyTargetCount = nextQuest.TargetCount;
+            giftExperience = nextQuest.RewardExperience;
 
+            questText.text = playerquestName;
             Debug.Log($"현재 플레이어 퀘스트 ID: {playerquerstID}, 이름: {playerquestName}, 진행될 스토리 ID: {playerStory_Id}, 처치할 몬스터 수: {playerEnemyTargetCount}");
             storySystem.QuestStory(playerStory_Id);
             playerquest_Is_success = false;
+      
         }
         else
         {

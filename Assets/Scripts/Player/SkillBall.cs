@@ -8,13 +8,10 @@ public class SkillBall : MonoBehaviour
     public string BallName;
     public float BallSpeed;
     public float BallRotageSpeed;
-    public float BallDamage;
+    public int BallDamage;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //if (collision.gameObject.CompareTag("Ememi"))
-        //    Destroy(gameObject);
-
         if (collision.gameObject.CompareTag("Localwall") || collision.gameObject.CompareTag("ground"))
             Destroy(gameObject);
     }

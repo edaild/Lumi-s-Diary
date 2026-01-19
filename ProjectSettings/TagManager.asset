@@ -12,6 +12,8 @@ TagManager:
   - Localwall2
   - Localwall
   - SpawnPoint
+  - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX

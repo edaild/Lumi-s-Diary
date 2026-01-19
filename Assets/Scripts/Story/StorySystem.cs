@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using Newtonsoft.Json.Bson;
 
 public class StorySystem : MonoBehaviour
 {
@@ -65,13 +64,14 @@ public class StorySystem : MonoBehaviour
         StoryDialogue.text = $"{nextStory.Speaker} : {nextStory.Dialogue}";
         cunnet_StoryID = nextStory.Story_ID;
 
-        Debug.Log($"현재 스토리 아이디: {cunnet_StoryID}");
+        Debug.Log($"현재 스토리 아이디: {cunnet_StoryID}, 엔드 포인트 여부: {nextStory.EndPoint}");
 
-        if(nextStory.EndPoint == true)
+
+        if (nextStory.EndPoint == true)
         {
             StoryUI.gameObject.SetActive(false);
             Debug.Log($"현재 퀘스트 스토리 종료");
-
+            return;
         }
     }
 }

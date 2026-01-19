@@ -3432,13 +3432,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8410579061621507659}
     - target: {fileID: 4610690088136068200, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
+      propertyPath: skillAttackVoice
+      value: 
+      objectReference: {fileID: 8300000, guid: 43b18e7087cbda54c8d907cc99d771ea, type: 3}
+    - target: {fileID: 4610690088136068200, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
       propertyPath: ultimateButtonUI
       value: 
       objectReference: {fileID: 930712422581427307}
     - target: {fileID: 4610690088136068200, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
+      propertyPath: nomalAtttackVoice
+      value: 
+      objectReference: {fileID: 8300000, guid: 0cec2f073cdcfdc41931fc1d32d8292b, type: 3}
+    - target: {fileID: 4610690088136068200, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
       propertyPath: crystalGardenPenel
       value: 
       objectReference: {fileID: 420883212339663872}
+    - target: {fileID: 4610690088136068200, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
+      propertyPath: skillCrystarGardenVoice
+      value: 
+      objectReference: {fileID: 8300000, guid: 97adcda27b8b6ef4588733d0b6874a5d, type: 3}
     - target: {fileID: 4947641272234384741, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
       propertyPath: m_Name
       value: Player

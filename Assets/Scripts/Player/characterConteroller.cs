@@ -98,25 +98,25 @@ public class characterConteroller : MonoBehaviour
         else if(Input.GetKeyDown(KeyCode.Space))
             Jump();
 
-        //else if (Input.GetMouseButtonDown(1))
-        //{
-        //    NomalAttack();
-        //}
+        else if (Input.GetMouseButtonDown(1))
+        {
+            NomalAttack();
+        }
 
-        //else if (Input.GetKeyDown(KeyCode.Q))
-        //{
-        //    CrystarGarden();
-        //}
+        else if (Input.GetKeyDown(KeyCode.Q))
+        {
+            CrystarGarden();
+        }
 
-        //else if(Input.GetKeyDown(KeyCode.E))
-        //{
-        //    SkillAttack();
-        //}
+        else if (Input.GetKeyDown(KeyCode.E))
+        {
+            SkillAttack();
+        }
 
-        //else if (Input.GetKeyDown(KeyCode.R))
-        //{
-        //    Teleport();
-        //}
+        else if (Input.GetKeyDown(KeyCode.R))
+        {
+            Teleport();
+        }
 
         if ((currentPortal != null && joy.Vertical > 0.7f || (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && !isPotalTime))
         {
@@ -343,7 +343,7 @@ public class characterConteroller : MonoBehaviour
         yield return new WaitForSeconds(1f);
         audioSource.Play(); 
 
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(3f);
         audioSource.Stop();
 
         yield return new WaitForSeconds(1f);
