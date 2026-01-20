@@ -9,6 +9,7 @@ public class QuestData
 {
     public int QuestID;
     public string QuestName;
+    public string QuestType;
     public int QuestLevel;
     public bool Is_success;
     public string QuestDescription;
@@ -16,4 +17,5 @@ public class QuestData
     public int TargetCount;
     public int RewardExperience;
     public int PreQuestID;
+    public string FinishchackScene;
 }

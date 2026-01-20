@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c4718c0c50a90194d8af775834845dbb, type: 3}
-  m_Name: QuestDatabase
+  m_Name: "1\uC7A5 \uBAA8\uD5D8\uC758 \uC2DC\uC791"
   m_EditorClassIdentifier: 
   quests:
   - QuestID: 10001
     QuestName: "\uB8E8\uBBF8\uC758 \uC9D1"
+    QuestType: Story
     QuestLevel: 1
     Is_success: 0
     QuestDescription: "\uB8E8\uBBF8\uAC00 \uCE68\uB300\uC5D0\uC11C \uC77C\uC5B4\uB09C\uD6C4
@@ -23,49 +24,103 @@ MonoBehaviour:
     TargetCount: 0
     RewardExperience: 0
     PreQuestID: 0
+    FinishchackScene: 
   - QuestID: 10002
     QuestName: "\uC8FC\uBBFC\uC13C\uD130\uB85C \uAC00\uAE30"
+    QuestType: Move
     QuestLevel: 1
     Is_success: 0
     QuestDescription: "\uC774\uB3D9\uC744 \uBC30\uC6B4\uB2E4"
-    Story_ID: 10201
+    Story_ID: 0
     TargetCount: 0
     RewardExperience: 10
     PreQuestID: 10001
+    FinishchackScene: Communitycenter
   - QuestID: 10003
+    QuestName: "\uC9C1\uC6D0\uACFC \uB300\uD654\uD558\uAE30"
+    QuestType: Story
+    QuestLevel: 1
+    Is_success: 0
+    QuestDescription: "\uC9C1\uC6D0\uACFC \uB300\uD654\uD558\uAE30"
+    Story_ID: 10201
+    TargetCount: 0
+    RewardExperience: 0
+    PreQuestID: 10002
+    FinishchackScene: 
+  - QuestID: 10004
     QuestName: "\uB208\uC758 \uB9C8\uC744\uAE38 3\uBC88\uC9C0\uB85C \uAC00\uAE30"
+    QuestType: Move
     QuestLevel: 1
     Is_success: 0
     QuestDescription: "\uB208\uC758 \uB9C8\uC744\uAE38 3\uBC88\uC9C0\uB85C \uC774\uB3D9\uD55C\uB2E4"
+    Story_ID: 0
+    TargetCount: 0
+    RewardExperience: 10
+    PreQuestID: 10003
+    FinishchackScene: SnowVillageRoad3
+  - QuestID: 10005
+    QuestName: 
+    QuestType: Story
+    QuestLevel: 1
+    Is_success: 0
+    QuestDescription: "\uC2A4\uD1A0\uB9AC \uC9C4\uD589 \uD018\uC2A4\uD2B8"
     Story_ID: 10301
     TargetCount: 0
     RewardExperience: 10
-    PreQuestID: 10002
-  - QuestID: 10004
+    PreQuestID: 10004
+    FinishchackScene: 
+  - QuestID: 10006
     QuestName: "\uB208 \uD1A0\uB07C \uCC98\uCE58\uD558\uAE30"
+    QuestType: Battle
     QuestLevel: 1
     Is_success: 0
-    QuestDescription: "\uC804\uD22C\uB97C \uBC30\uC6B4\uB2E4(\uD06C\uB9AC\uC2A4\uD0C8
-      \uAC00\uB4E0 \uC81C\uC678)"
-    Story_ID: 10307
+    QuestDescription: "\uC804\uD22C\uB97C \uBC30\uC6B4\uB2E4"
+    Story_ID: 0
     TargetCount: 1
     RewardExperience: 10
-    PreQuestID: 10003
-  - QuestID: 10005
+    PreQuestID: 10005
+    FinishchackScene: 
+  - QuestID: 10007
+    QuestName: 
+    QuestType: Story
+    QuestLevel: 1
+    Is_success: 0
+    QuestDescription: "\uC2A4\uD1A0\uB9AC \uC9C4\uD589 \uD018\uC2A4\uD2B8"
+    Story_ID: 10307
+    TargetCount: 0
+    RewardExperience: 0
+    PreQuestID: 10006
+    FinishchackScene: 
+  - QuestID: 10008
     QuestName: "\uB208\uC758 \uB9C8\uC744\uAE38 \uAC00\uAE30"
+    QuestType: Move
     QuestLevel: 1
     Is_success: 0
     QuestDescription: "\uB208\uC758 \uB9C8\uC744\uAE38 \uB85C \uC774\uB3D9\uD55C\uB2E4."
-    Story_ID: 10401
+    Story_ID: 0
     TargetCount: 0
     RewardExperience: 10
-    PreQuestID: 10004
-  - QuestID: 10006
+    PreQuestID: 10007
+    FinishchackScene: SnowVillageRoad
+  - QuestID: 10009
+    QuestName: 
+    QuestType: Story
+    QuestLevel: 1
+    Is_success: 0
+    QuestDescription: "\uC2A4\uD1A0\uB9AC \uC9C4\uD589 \uD018\uC2A4\uD2B8"
+    Story_ID: 10401
+    TargetCount: 0
+    RewardExperience: 0
+    PreQuestID: 10008
+    FinishchackScene: 
+  - QuestID: 10010
     QuestName: "1\uC7A5 \uBAA8\uD5D8\uC758 \uC2DC\uC791 \uC885\uB8CC"
-    QuestLevel: 2
+    QuestType: Finish
+    QuestLevel: 1
     Is_success: 0
     QuestDescription: "1\uC7A5 \uBAA8\uD5D8\uC758 \uC2DC\uC791 \uC885\uB8CC"
     Story_ID: 0
     TargetCount: 0
-    RewardExperience: 0
-    PreQuestID: 10005
+    RewardExperience: 50
+    PreQuestID: 10009
+    FinishchackScene: 

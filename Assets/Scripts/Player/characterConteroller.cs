@@ -92,12 +92,12 @@ public class characterConteroller : MonoBehaviour
 
     private void Update()
     {
-        // PC 테스트용
         if (Input.GetKeyDown(KeyCode.Space) && (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) || joy.Vertical < -0.7f))
             DownJump();
         else if(Input.GetKeyDown(KeyCode.Space))
             Jump();
 
+        // PC 테스트용 스킬
         else if (Input.GetMouseButtonDown(1))
         {
             NomalAttack();
@@ -122,8 +122,6 @@ public class characterConteroller : MonoBehaviour
         {
             MovePartal();
         }
-            
-
     }
 
     private void FixedUpdate()
@@ -163,8 +161,6 @@ public class characterConteroller : MonoBehaviour
         }
             
     }
-
-    
 
     void charcterMove()
     {

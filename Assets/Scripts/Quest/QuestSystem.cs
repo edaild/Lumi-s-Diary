@@ -17,6 +17,7 @@ public class QuestSystem : MonoBehaviour
     public int playerEnemyTargetCount;
     public int playerPreQuestID;
     public int giftExperience;
+    public bool finishQuest;
 
     [Header("플레이어 정보")]
     public int playerLevel = 1;
@@ -25,7 +26,13 @@ public class QuestSystem : MonoBehaviour
     [Header("퀘스트 UI")]
     public TextMeshProUGUI questText;
 
-    private int cuttentQuestIndex = 0;
+    [Header("퀘스트와 스토리 교체 관련 리스트")]
+    public List<QuestDataSO> QuestDataSOs = new List<QuestDataSO>();
+    public List<StoryDataSO> storyDataSOs = new List<StoryDataSO>();
+
+    private int currentQuestIndex = 0;
+    private int currentQuestSOIndex = 0;
+    private int currentStoryIndex = 0;
 
 
     private void Awake()
@@ -85,7 +92,7 @@ public class QuestSystem : MonoBehaviour
 
     void CurrentQuest()
     {
-        if (Input.GetKeyDown(KeyCode.N))
+        if (playerquest_Is_success == true || Input.GetKeyDown(KeyCode.N))
         {
             SuccessQuest();
             return;
@@ -103,11 +110,11 @@ public class QuestSystem : MonoBehaviour
         Debug.Log($"완료된 퀘스트 ID: {playerquerstID}, 이름: {playerquestName}, 스토리 ID: {playerStory_Id},  처리된 몬스터 수: {playerEnemyTargetCount}");
         Debug.Log($" 경험치 {giftExperience} 만큼 증가");
 
-        cuttentQuestIndex += 1;
+        currentQuestIndex += 1;
 
-        if(cuttentQuestIndex < questData.quests.Count)
+        if(currentQuestIndex < questData.quests.Count)
         {
-            QuestData nextQuest = questData.quests[cuttentQuestIndex];
+            QuestData nextQuest = questData.quests[currentQuestIndex];
 
             playerquerstID = nextQuest.QuestID;
             playerquestName = nextQuest.QuestName;
@@ -124,8 +131,8 @@ public class QuestSystem : MonoBehaviour
         else
         {
             Debug.Log("퀘스트 완료");
+            finishQuest = true;
             storySystem.StoryUI.gameObject.SetActive(false);
-            // 다음 퀘스트SO로 연결
         }
     }
 }

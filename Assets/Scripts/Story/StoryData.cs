@@ -14,5 +14,6 @@ public class StoryData
     public string Image_Command;
     public bool Audio;
     public bool EndPoint;
-    public Image Story_Image;
+    public string TargetImageName;
+    public string TargetAudio;
 }

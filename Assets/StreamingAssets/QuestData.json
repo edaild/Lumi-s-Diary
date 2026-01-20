@@ -1,68 +1,132 @@
- [
+[
     {
       "QuestID": 10001,
       "QuestName": "루미의 집",
+      "QuestType": "Story",
       "QuestLevel": 1,
       "Is_success": false,
       "QuestDescription": "루미가 침대에서 일어난후 진행되는 스토리 퀘스트",
       "Story_ID": 10101,
       "TargetCount": 0,
       "RewardExperience": 0,
-      "PreQuestID": 0
+      "PreQuestID": 0,
+      "FinishchackScene": null
     },
     {
       "QuestID": 10002,
       "QuestName": "주민센터로 가기",
+      "QuestType": "Move",
       "QuestLevel": 1,
       "Is_success": false,
       "QuestDescription": "이동을 배운다",
-      "Story_ID": 10201,
+      "Story_ID": 0,
       "TargetCount": 0,
       "RewardExperience": 10,
-      "PreQuestID": 10001
+      "PreQuestID": 10001,
+      "FinishchackScene": "Communitycenter"
     },
     {
       "QuestID": 10003,
-      "QuestName": "눈의 마을길 3번지로 가기",
+      "QuestName": "직원과 대화하기",
+      "QuestType": "Story",
       "QuestLevel": 1,
       "Is_success": false,
-      "QuestDescription": "눈의 마을길 3번지로 이동한다",
-      "Story_ID": 10301,
+      "QuestDescription": "직원과 대화하기",
+      "Story_ID": 10201,
       "TargetCount": 0,
-      "RewardExperience": 10,
-      "PreQuestID": 10002
+      "RewardExperience": 0,
+      "PreQuestID": 10002,
+      "FinishchackScene": null
     },
     {
       "QuestID": 10004,
-      "QuestName": "눈 토끼 처치하기",
+      "QuestName": "눈의 마을길 3번지로 가기",
+      "QuestType": "Move",
       "QuestLevel": 1,
       "Is_success": false,
-      "QuestDescription": "전투를 배운다(크리스탈 가든 제외)",
-      "Story_ID": 10307,
-      "TargetCount": 1,
+      "QuestDescription": "눈의 마을길 3번지로 이동한다",
+      "Story_ID": 0,
+      "TargetCount": 0,
       "RewardExperience": 10,
-      "PreQuestID": 10003
+      "PreQuestID": 10003,
+      "FinishchackScene": "SnowVillageRoad3"
     },
     {
       "QuestID": 10005,
-      "QuestName": "눈의 마을길 가기",
+      "QuestName": null,
+      "QuestType": "Story",
       "QuestLevel": 1,
       "Is_success": false,
-      "QuestDescription": "눈의 마을길 로 이동한다.",
-      "Story_ID": 10401,
+      "QuestDescription": "스토리 진행 퀘스트",
+      "Story_ID": 10301,
       "TargetCount": 0,
       "RewardExperience": 10,
-      "PreQuestID": 10004
+      "PreQuestID": 10004,
+      "FinishchackScene": null
     },
     {
       "QuestID": 10006,
+      "QuestName": "눈 토끼 처치하기",
+      "QuestType": "Battle",
+      "QuestLevel": 1,
+      "Is_success": false,
+      "QuestDescription": "전투를 배운다",
+      "Story_ID": 0,
+      "TargetCount": 1,
+      "RewardExperience": 10,
+      "PreQuestID": 10005,
+      "FinishchackScene": null
+    },
+    {
+      "QuestID": 10007,
+      "QuestName": null,
+      "QuestType": "Story",
+      "QuestLevel": 1,
+      "Is_success": false,
+      "QuestDescription": "스토리 진행 퀘스트",
+      "Story_ID": 10307,
+      "TargetCount": 0,
+      "RewardExperience": 0,
+      "PreQuestID": 10006,
+      "FinishchackScene": null
+    },
+    {
+      "QuestID": 10008,
+      "QuestName": "눈의 마을길 가기",
+      "QuestType": "Move",
+      "QuestLevel": 1,
+      "Is_success": false,
+      "QuestDescription": "눈의 마을길 로 이동한다.",
+      "Story_ID": 0,
+      "TargetCount": 0,
+      "RewardExperience": 10,
+      "PreQuestID": 10007,
+      "FinishchackScene": "SnowVillageRoad"
+    },
+    {
+      "QuestID": 10009,
+      "QuestName": null,
+      "QuestType": "Story",
+      "QuestLevel": 1,
+      "Is_success": false,
+      "QuestDescription": "스토리 진행 퀘스트",
+      "Story_ID": 10401,
+      "TargetCount": 0,
+      "RewardExperience": 0,
+      "PreQuestID": 10008,
+      "FinishchackScene": null
+    },
+    {
+      "QuestID": 10010,
       "QuestName": "1장 모험의 시작 종료",
-      "QuestLevel": 2,
+      "QuestType": "Finish",
+      "QuestLevel": 1,
       "Is_success": false,
       "QuestDescription": "1장 모험의 시작 종료",
       "Story_ID": 0,
       "TargetCount": 0,
-      "RewardExperience": 0,
-      "PreQuestID": 10005
+      "RewardExperience": 50,
+      "PreQuestID": 10009,
+      "FinishchackScene": null
     }
   ]

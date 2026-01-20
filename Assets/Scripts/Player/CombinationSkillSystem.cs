@@ -30,11 +30,9 @@ public class CombinationSkillSystem : MonoBehaviour
         {
             videoPlayer.clip = currentcombinationAttack;
             videoPlayer.Play();
-            Debug.Log("협동 공격 비디오 제생");
+            Debug.Log("협동 공격 비디오 재생");
             CombinationAttackCullVideoTime();
         }
-    
-
     }
 
     IEnumerator CombinationAttackCullVideoTime()

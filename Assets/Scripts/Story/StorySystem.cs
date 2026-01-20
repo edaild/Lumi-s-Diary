@@ -23,7 +23,7 @@ public class StorySystem : MonoBehaviour
 
     public void QuestStory(int StoryID)
     {
-        if(StoryID == 0)
+        if(StoryID == 0 && questSystem.finishQuest == false)
         {
             Debug.Log("전투 및 이동 퀘스트 진행중");
             return;

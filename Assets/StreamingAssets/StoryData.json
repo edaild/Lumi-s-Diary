@@ -1,5 +1,4 @@
-
-  [
+[
     {
       "Story_ID": 10101,
       "Speaker": "루미",
@@ -7,7 +6,9 @@
       "Is_Image": false,
       "Image_Command": null,
       "Audio": true,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10102,
@@ -16,7 +17,9 @@
       "Is_Image": false,
       "Image_Command": null,
       "Audio": true,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10103,
@@ -25,7 +28,9 @@
       "Is_Image": true,
       "Image_Command": "SHOW",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": "학위 수여식",
+      "TargetAudio": null
     },
     {
       "Story_ID": 10104,
@@ -34,7 +39,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": true,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10105,
@@ -43,7 +50,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10106,
@@ -52,9 +61,10 @@
       "Is_Image": false,
       "Image_Command": "HIDE",
       "Audio": false,
-      "EndPoint": true
+      "EndPoint": true,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
-  
     {
       "Story_ID": 10201,
       "Speaker": "루미",
@@ -62,7 +72,9 @@
       "Is_Image": true,
       "Image_Command": "SHOW",
       "Audio": true,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": "주민센터",
+      "TargetAudio": null
     },
     {
       "Story_ID": 10202,
@@ -71,7 +83,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": true,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10203,
@@ -80,7 +94,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10204,
@@ -89,7 +105,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10205,
@@ -98,7 +116,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10206,
@@ -107,7 +127,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10207,
@@ -116,7 +138,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10208,
@@ -125,7 +149,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10209,
@@ -134,7 +160,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10210,
@@ -143,7 +171,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10211,
@@ -152,7 +182,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": true,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10212,
@@ -161,9 +193,10 @@
       "Is_Image": false,
       "Image_Command": "HIDE",
       "Audio": false,
-      "EndPoint": true
+      "EndPoint": true,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
-   
     {
       "Story_ID": 10301,
       "Speaker": "루미",
@@ -171,7 +204,9 @@
       "Is_Image": true,
       "Image_Command": "SHOW",
       "Audio": true,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": "눈토끼와 첫만남",
+      "TargetAudio": null
     },
     {
       "Story_ID": 10302,
@@ -180,7 +215,9 @@
       "Is_Image": false,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10303,
@@ -189,7 +226,9 @@
       "Is_Image": false,
       "Image_Command": "HIDE",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10304,
@@ -198,7 +237,9 @@
       "Is_Image": false,
       "Image_Command": null,
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10305,
@@ -207,7 +248,9 @@
       "Is_Image": false,
       "Image_Command": null,
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10306,
@@ -216,16 +259,20 @@
       "Is_Image": false,
       "Image_Command": null,
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10307,
       "Speaker": "눈덩이 토끼",
-      "Dialogue": "큐우우!",
+      "Dialogue": "큐우!",
       "Is_Image": false,
       "Image_Command": null,
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10308,
@@ -234,7 +281,9 @@
       "Is_Image": false,
       "Image_Command": null,
       "Audio": true,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10309,
@@ -242,8 +291,10 @@
       "Dialogue": "큐큐큐큐큐 큐우우우 큐큐큐큐 큐우큐우",
       "Is_Image": true,
       "Image_Command": "SHOW",
-      "Audio": false,
-      "EndPoint": false
+      "Audio": true,
+      "EndPoint": false,
+      "TargetImageName": "눈토끼때1",
+      "TargetAudio": null
     },
     {
       "Story_ID": 10310,
@@ -252,7 +303,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": true,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10311,
@@ -261,16 +314,20 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": true,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10312,
       "Speaker": "루미",
-      "Dialogue": "한두 마리가 아니라 엄청 많아! 이게 다 뭐야! 으아앙, 살려주세요!",
+      "Dialogue": "한두 마리가 아니라 엄청 많아! 이게 다 뭐야!",
       "Is_Image": true,
       "Image_Command": "CHANG",
       "Audio": true,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": "눈토끼때2",
+      "TargetAudio": null
     },
     {
       "Story_ID": 10313,
@@ -279,7 +336,9 @@
       "Is_Image": true,
       "Image_Command": "CHANG",
       "Audio": true,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": "전기구이",
+      "TargetAudio": null
     },
     {
       "Story_ID": 10314,
@@ -288,7 +347,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": true,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10315,
@@ -297,7 +358,9 @@
       "Is_Image": true,
       "Image_Command": "CHANG",
       "Audio": true,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": "루미 라이와 첫만남",
+      "TargetAudio": null
     },
     {
       "Story_ID": 10316,
@@ -306,7 +369,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": true,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10317,
@@ -315,7 +380,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": true,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10318,
@@ -324,7 +391,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": true,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10319,
@@ -333,9 +402,10 @@
       "Is_Image": false,
       "Image_Command": "HIDE",
       "Audio": false,
-      "EndPoint": true
+      "EndPoint": true,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
-   
     {
       "Story_ID": 10401,
       "Speaker": "라이",
@@ -343,7 +413,9 @@
       "Is_Image": true,
       "Image_Command": "SHOW",
       "Audio": true,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": "루미 라이",
+      "TargetAudio": null
     },
     {
       "Story_ID": 10402,
@@ -352,7 +424,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10403,
@@ -361,7 +435,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10404,
@@ -370,7 +446,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10405,
@@ -379,7 +457,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10406,
@@ -388,7 +468,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": true,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10407,
@@ -397,7 +479,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": true,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10408,
@@ -406,7 +490,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": true,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10409,
@@ -415,7 +501,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10410,
@@ -424,7 +512,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10411,
@@ -433,7 +523,9 @@
       "Is_Image": true,
       "Image_Command": "CHANG",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": "텐트 설치",
+      "TargetAudio": null
     },
     {
       "Story_ID": 10412,
@@ -442,7 +534,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10413,
@@ -451,7 +545,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10414,
@@ -460,7 +556,9 @@
       "Is_Image": true,
       "Image_Command": "CHANG",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": "루미 신발의 비밀",
+      "TargetAudio": null
     },
     {
       "Story_ID": 10415,
@@ -469,7 +567,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10416,
@@ -478,7 +578,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10417,
@@ -487,7 +589,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10418,
@@ -496,7 +600,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10419,
@@ -505,7 +611,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10420,
@@ -514,7 +622,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10421,
@@ -523,7 +633,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10422,
@@ -532,7 +644,9 @@
       "Is_Image": true,
       "Image_Command": "CHANG",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": "루미의 요리",
+      "TargetAudio": null
     },
     {
       "Story_ID": 10423,
@@ -541,7 +655,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10424,
@@ -550,7 +666,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10425,
@@ -559,16 +677,20 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10426,
       "Speaker": null,
-      "Dialogue": "마법으로 음식을 만드는 게 아니라, 버너의 불꽃 위에서 보글보글 끓어오르는 스프의 소리와 김이 텐트 안을 가득 채웁니다. 루미는 국자로 정성스럽게 저으며 간을 봅니다.",
+      "Dialogue": "버너의 불꽃 위에서 보글보글 끓어오르는 스프의 소리와 김이 텐트 안을 가득 채웁니다. 루미는 국자로 정성스럽게 저으며 간을 봅니다.",
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10427,
@@ -577,7 +699,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10428,
@@ -586,7 +710,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10429,
@@ -595,7 +721,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10430,
@@ -604,7 +732,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10431,
@@ -613,7 +743,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10432,
@@ -622,7 +754,9 @@
       "Is_Image": true,
       "Image_Command": "CHANG",
       "Audio": true,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10433,
@@ -631,7 +765,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": true,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10434,
@@ -640,7 +776,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": true,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10435,
@@ -649,7 +787,9 @@
       "Is_Image": true,
       "Image_Command": "CHANG",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10436,
@@ -658,7 +798,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": true,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": "텐트 소동",
+      "TargetAudio": null
     },
     {
       "Story_ID": 10437,
@@ -667,7 +809,9 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": true,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10438,
@@ -676,16 +820,20 @@
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10439,
       "Speaker": "라이",
       "Dialogue": "에엣? 그건 안 돼! 알았어, 언니. 이제 진짜 잘게. 내일 스프 꼭 해줘야 해? 약속!",
       "Is_Image": true,
-      "Image_Command": "CHANG",
+      "Image_Command": "KEEP",
       "Audio": false,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": null,
+      "TargetAudio": null
     },
     {
       "Story_ID": 10440,
@@ -694,7 +842,9 @@
       "Is_Image": true,
       "Image_Command": "CHANG",
       "Audio": true,
-      "EndPoint": false
+      "EndPoint": false,
+      "TargetImageName": "모험의 첫날 밤",
+      "TargetAudio": null
     },
     {
       "Story_ID": 10441,
@@ -703,6 +853,8 @@
       "Is_Image": false,
       "Image_Command": "HIDE",
       "Audio": false,
-      "EndPoint": true
+      "EndPoint": true,
+      "TargetImageName": null,
+      "TargetAudio": null
     }
   ]
