@@ -19,6 +19,10 @@ public class QuestSystem : MonoBehaviour
     public int giftExperience;
     public bool finishQuest;
 
+    public string currnetQuestType;
+    public string FinishchackScene;
+    public int playerEnmeyDieCount;
+
     [Header("플레이어 정보")]
     public int playerLevel = 1;
     public int playerExperience = 0;
@@ -62,7 +66,10 @@ public class QuestSystem : MonoBehaviour
             playerquestName = firstQuest.QuestName;
             playerStory_Id = firstQuest.Story_ID;
             playerEnemyTargetCount = firstQuest.TargetCount;
-           
+            currnetQuestType = firstQuest.QuestType;
+            FinishchackScene = firstQuest.FinishchackScene;
+
+
         }
         else
         {
@@ -77,6 +84,8 @@ public class QuestSystem : MonoBehaviour
                 playerEnemyTargetCount = quest.TargetCount;
                 playerPreQuestID = quest.PreQuestID;
                 giftExperience = quest.RewardExperience;
+                currnetQuestType = quest.QuestType;
+                FinishchackScene = quest.FinishchackScene;
             }
         }
         Debug.Log($"현재 플레이어 퀘스트 ID: {playerquerstID}, 이름: {playerquestName}, 진행될 스토리 ID: {playerStory_Id}, 처치할 몬스터 수: {playerEnemyTargetCount}");
@@ -87,22 +96,49 @@ public class QuestSystem : MonoBehaviour
 
     private void Update()
     {
-        CurrentQuest();
-    }
+        SuccessChack();
 
-    void CurrentQuest()
-    {
-        if (playerquest_Is_success == true || Input.GetKeyDown(KeyCode.N))
+        if (Input.GetKeyDown(KeyCode.N))
         {
             SuccessQuest();
-            return;
-        }
-        else
-        {
-            Debug.Log("퀘스트 미완료");
-            return;
+            Debug.Log("치트 사용으로 현재 퀘스트 완료 처리");
         }
     }
+
+    void SuccessChack()
+    {
+        switch (currnetQuestType)
+        {
+            case "Story":
+                if(storySystem.isFinishStory == true)
+                {
+                    SuccessQuest();
+                    storySystem.isFinishStory = false;
+                }
+                break;
+
+            case "Move":
+                if (SceneManager.GetActiveScene().name == FinishchackScene)
+                {
+                    SuccessQuest();
+                }
+                break;
+
+            case "Battle":
+                if(playerEnmeyDieCount == playerEnemyTargetCount)
+                {
+                    SuccessQuest();
+                    playerEnmeyDieCount = 0;
+                }
+                break;
+
+            case "Finish":
+                SuccessQuest();
+                Debug.Log($"{playerquestName} 종료");
+                break;
+        }
+    }
+
     void SuccessQuest()
     {
         playerPreQuestID = playerquerstID;
@@ -121,12 +157,14 @@ public class QuestSystem : MonoBehaviour
             playerStory_Id = nextQuest.Story_ID;
             playerEnemyTargetCount = nextQuest.TargetCount;
             giftExperience = nextQuest.RewardExperience;
-
+            currnetQuestType = nextQuest.QuestType;
+            FinishchackScene = nextQuest.FinishchackScene;
             questText.text = playerquestName;
+            playerEnmeyDieCount = 0;
             Debug.Log($"현재 플레이어 퀘스트 ID: {playerquerstID}, 이름: {playerquestName}, 진행될 스토리 ID: {playerStory_Id}, 처치할 몬스터 수: {playerEnemyTargetCount}");
             storySystem.QuestStory(playerStory_Id);
             playerquest_Is_success = false;
-      
+   
         }
         else
         {

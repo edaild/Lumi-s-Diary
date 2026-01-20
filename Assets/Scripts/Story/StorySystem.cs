@@ -10,6 +10,8 @@ public class StorySystem : MonoBehaviour
     public int cunnet_StoryID;
     public int cunnet_StoryCount;
 
+    public bool isFinishStory;
+
     [Header("스토리 UI")]
     public GameObject StoryUI;
     public TextMeshProUGUI StoryDialogue;
@@ -71,6 +73,7 @@ public class StorySystem : MonoBehaviour
         {
             StoryUI.gameObject.SetActive(false);
             Debug.Log($"현재 퀘스트 스토리 종료");
+            isFinishStory = true;
             return;
         }
     }
