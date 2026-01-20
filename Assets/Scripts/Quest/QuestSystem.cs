@@ -38,6 +38,9 @@ public class QuestSystem : MonoBehaviour
     private int currentQuestSOIndex = 0;
     private int currentStoryIndex = 0;
 
+    // 추후 저장시스탬 구연후 사용
+    private int lastQuestIndex;
+
 
     private void Awake()
     {
@@ -77,8 +80,7 @@ public class QuestSystem : MonoBehaviour
             QuestData quest = questData.quests.Find(q => q.QuestID == playerquerstID);
             if (quest != null)
             {
-               // cuttentQuestIndex = lastQuestIndex;
-
+                currentQuestIndex = lastQuestIndex;
                 playerquestName = quest.QuestName;
                 playerStory_Id = quest.Story_ID;
                 playerEnemyTargetCount = quest.TargetCount;
