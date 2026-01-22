@@ -342,9 +342,7 @@ public class characterConteroller : MonoBehaviour
         yield return new WaitForSeconds(3f);
         audioSource.Stop();
 
-        yield return new WaitForSeconds(1f);
-
-
+        yield return new WaitForSeconds(5f);
         videoPlayer.Stop();
         ultimateVidio.gameObject.SetActive(false);
 

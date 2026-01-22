@@ -3546,6 +3546,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 0cec2f073cdcfdc41931fc1d32d8292b, type: 3}
     - target: {fileID: 4610690088136068200, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
+      propertyPath: ultimateVidioClip
+      value: 
+      objectReference: {fileID: 32900000, guid: d0ab12eef51f6d0438e416015d06297f, type: 3}
+    - target: {fileID: 4610690088136068200, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
       propertyPath: crystalGardenPenel
       value: 
       objectReference: {fileID: 5447769386474541447}

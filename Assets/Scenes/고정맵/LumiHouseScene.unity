@@ -742,7 +742,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.22745098}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1325,7 +1325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 503946844}
   - component: {fileID: 503946846}
-  - component: {fileID: 503946845}
+  - component: {fileID: 503946847}
   m_Layer: 5
   m_Name: StoryImage
   m_TagString: Untagged
@@ -1352,7 +1352,15 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 2340, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &503946845
+--- !u!222 &503946846
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503946843}
+  m_CullTransparentMesh: 1
+--- !u!114 &503946847
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1361,7 +1369,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 503946843}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -1372,24 +1380,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: eda37845b42dfea4a95daaefc2500080, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &503946846
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 503946843}
-  m_CullTransparentMesh: 1
+  m_Texture: {fileID: 0}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!1 &531257692
 GameObject:
   m_ObjectHideFlags: 0
@@ -1764,7 +1761,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.22745098}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2024,7 +2021,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.22745098}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3170,7 +3167,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1711151262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3206,7 +3203,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1711151261}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c65e16f3dc3a0d4db286208d780bcb9, type: 3}
   m_Name: 
@@ -3637,7 +3634,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bd424e715b7a09140a085e942e61a130, type: 2}
   storyDataSOs:
   - {fileID: 11400000, guid: 4b413a6e60f4f9343bd4e0622f63beb0, type: 2}
-  - {fileID: 0}
 --- !u!4 &1930947428
 Transform:
   m_ObjectHideFlags: 0
@@ -3668,8 +3664,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StoryDataSO: {fileID: 11400000, guid: 4b413a6e60f4f9343bd4e0622f63beb0, type: 2}
   questSystem: {fileID: 1930947427}
-  cunnet_StoryID: 0
-  cunnet_StoryCount: 0
+  current_StoryID: 0
+  current_StoryCount: 0
+  iscurrent_StoryImage: 0
+  current_ImageCommand: 
+  current_ImageName: 
+  storyImageGameObejct: {fileID: 1264772185}
+  storyImageTextor: {fileID: 503946847}
   isFinishStory: 0
   StoryUI: {fileID: 562885664}
   StoryDialogue: {fileID: 562885665}

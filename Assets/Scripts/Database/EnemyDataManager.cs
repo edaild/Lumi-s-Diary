@@ -27,8 +27,8 @@ public class EnemyDataManager : MonoBehaviour
             {
                 enemySO.Enemys = importedEnemy;
 
-                EditorUtility.SetDirty(enemySO);
-                AssetDatabase.SaveAssets();
+                //EditorUtility.SetDirty(enemySO);
+                //AssetDatabase.SaveAssets();
 
                 Debug.Log("JSON 변환 성공");
             }
