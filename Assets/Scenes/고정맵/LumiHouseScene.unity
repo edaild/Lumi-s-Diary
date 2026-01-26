@@ -3295,7 +3295,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1711151262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3744,7 +3744,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questData: {fileID: 11400000, guid: bd424e715b7a09140a085e942e61a130, type: 2}
   storySystem: {fileID: 1930947429}
-  dubbingDatabase: {fileID: 0}
   playerquerstID: 0
   playerquestName: 
   playerquest_Is_success: 0
@@ -3763,6 +3762,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bd424e715b7a09140a085e942e61a130, type: 2}
   storyDataSOs:
   - {fileID: 11400000, guid: 4b413a6e60f4f9343bd4e0622f63beb0, type: 2}
+  dubbingDatabases:
+  - {fileID: 11400000, guid: e21dd0df687bb094b9c9e36445ab645b, type: 2}
 --- !u!4 &1930947428
 Transform:
   m_ObjectHideFlags: 0

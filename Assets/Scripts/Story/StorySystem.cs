@@ -21,6 +21,7 @@ public class StorySystem : MonoBehaviour
     public GameObject storyImageGameObejct;
     public RawImage storyImageTextor;
 
+    public bool isStoryEndPoint;
     public bool isFinishStory;
     public string current_TargetAudio;
 
@@ -61,6 +62,7 @@ public class StorySystem : MonoBehaviour
             int currnetstoryIdCount = StoryDataSO.storys.FindIndex(sid => sid.Story_ID == current_StoryID);
             Debug.Log($"현재 스토리 아이디: {current_StoryID} 스토리 아이디의 인덱스: {currnetstoryIdCount}");
             current_StoryCount = currnetstoryIdCount;
+            isStoryEndPoint = false;
         }
     }
 
@@ -73,7 +75,9 @@ public class StorySystem : MonoBehaviour
     }
 
     void NextStory()
-    {
+    {   
+        if (isStoryEndPoint == true) return;
+
         Debug.Log($"이전 스토리 아이디: {current_StoryID}");
 
         current_StoryCount += 1;
@@ -94,6 +98,7 @@ public class StorySystem : MonoBehaviour
             StoryUI.gameObject.SetActive(false);
             Debug.Log($"현재 퀘스트 스토리 종료");
             isFinishStory = true;
+            isStoryEndPoint = true;
             return;
         }
     }

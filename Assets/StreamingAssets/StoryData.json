@@ -1,4 +1,4 @@
-  [
+   [
     {
       "Story_ID": 10101,
       "Speaker": "루미",
@@ -8,7 +8,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "음... 벌써 아침인가? 창밖이 오늘따라 유난히 밝네..."
+      "TargetAudio": "1장 1.음... 벌써 아침인가"
     },
     {
       "Story_ID": 10102,
@@ -19,13 +19,13 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "아...! 맞다! 오늘 드디어 졸업식이지! 주니어 마법사가 되는 날이야!"
+      "TargetAudio": "1장 2.맞다! 오늘 드디어 졸업식이지"
     },
     {
       "Story_ID": 10103,
       "Speaker": "교장 선생님",
       "Dialogue": "루미 양, 축하하네. 이제 자네는 정식 주니어 마법사일세. 벨리아의 성좌가 그대와 함께하기를.\"",
-      "Is_Image": false,
+      "Is_Image": true,
       "Image_Command": "SHOW",
       "Audio": false,
       "EndPoint": false,
@@ -41,7 +41,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "고, 고맙습니다... 열심히 할게요!"
+      "TargetAudio": "1장 3.고, 고맙습니다... 열심히 할게요"
     },
     {
       "Story_ID": 10105,
@@ -75,7 +75,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": "1장 2.주민센터",
-      "TargetAudio": "저... 저기요... 실례합니다..."
+      "TargetAudio": "1장 4.저... 저기요... 실례합니다..."
     },
     {
       "Story_ID": 10202,
@@ -86,7 +86,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "어서 오세요!"
+      "TargetAudio": "1장 5.어서 오세요!"
     },
     {
       "Story_ID": 10203,
@@ -185,7 +185,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "후우... 네! 해볼게요. 다녀오겠습니다!"
+      "TargetAudio": "1장 6.후우... 네! 해볼게요. 다녀오겠습니다!"
     },
     {
       "Story_ID": 10212,
@@ -198,7 +198,7 @@
       "TargetImageName": null,
       "TargetAudio": null
     },
-       {
+    {
       "Story_ID": 10301,
       "Speaker": "루미",
       "Dialogue": "와... 정말 귀엽게 생겼어. 하지만 주민센터에서 배운 대로 해야 해. 저 아이가 내 마력을 시험해 줄 첫 상대구나!",
@@ -207,17 +207,17 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": "1장 3.눈토끼와 첫만남",
-      "TargetAudio": "와... 정말 귀엽게 생겼어. 저 아이가 내 마력을 시험해 줄 첫 상대구나!"
+      "TargetAudio": "1장 7.와... 정말 귀엽게 생겼어. 저 아이가 내 마력을 시험해 줄 첫 상대구나!"
     },
     {
       "Story_ID": 10302,
       "Speaker": "눈덩이 토끼",
       "Dialogue": "큐우",
       "Is_Image": true,
-      "Image_Command": "KEEP",
+      "Image_Command": "CHANG",
       "Audio": false,
       "EndPoint": false,
-      "TargetImageName": null,
+      "TargetImageName": "1장 3-1.눈토끼와 전투",
       "TargetAudio": null
     },
     {
@@ -225,7 +225,7 @@
       "Speaker": "루미",
       "Dialogue": "좋아, 루미. 당황하지 말고... 하체를 고정하고! 목표 확인!",
       "Is_Image": true,
-      "Image_Command": "HIDE",
+      "Image_Command": "KEEP",
       "Audio": false,
       "EndPoint": false,
       "TargetImageName": null,
@@ -235,8 +235,8 @@
       "Story_ID": 10304,
       "Speaker": "루미",
       "Dialogue": "이건 아픈 게 아니라 마력을 전달하는 거야! 간다!",
-      "Is_Image": false,
-      "Image_Command": null,
+      "Is_Image": true,
+      "Image_Command": "KEEP",
       "Audio": false,
       "EndPoint": false,
       "TargetImageName": null,
@@ -246,8 +246,8 @@
       "Story_ID": 10305,
       "Speaker": "눈덩이 토끼",
       "Dialogue": "큐우우?!",
-      "Is_Image": false,
-      "Image_Command": null,
+      "Is_Image": true,
+      "Image_Command": "KEEP",
       "Audio": false,
       "EndPoint": false,
       "TargetImageName": null,
@@ -257,8 +257,8 @@
       "Story_ID": 10306,
       "Speaker": "루미",
       "Dialogue": "앗, 맞았어! 한 번 더... 이번엔 조금 더 집중해서!",
-      "Is_Image": false,
-      "Image_Command": null,
+      "Is_Image": true,
+      "Image_Command": "KEEP",
       "Audio": false,
       "EndPoint": false,
       "TargetImageName": null,
@@ -269,21 +269,21 @@
       "Speaker": null,
       "Dialogue": null,
       "Is_Image": false,
-      "Image_Command": null,
+      "Image_Command": "HIDE",
       "Audio": false,
       "EndPoint": true,
       "TargetImageName": null,
       "TargetAudio": null
     },
-     {
+    {
       "Story_ID": 10401,
       "Speaker": "눈덩이 토끼",
       "Dialogue": "큐우!",
-      "Is_Image": false,
-      "Image_Command": null,
+      "Is_Image": true,
+      "Image_Command": "SHOW",
       "Audio": false,
       "EndPoint": false,
-      "TargetImageName": null,
+      "TargetImageName": "1장 3-2.눈토끼 사망",
       "TargetAudio": null
     },
     {
@@ -291,18 +291,18 @@
       "Speaker": "루미",
       "Dialogue": "후우... 정말 긴장됐어.  나... 정말 마법사가 된 것 같아!",
       "Is_Image": false,
-      "Image_Command": null,
+      "Image_Command": "KEEP",
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "후우... 정말 긴장됐어"
+      "TargetAudio": "1장 8.후우... 정말 긴장됐어"
     },
     {
       "Story_ID": 10403,
       "Speaker": "토끼떄들",
       "Dialogue": "큐큐큐큐큐 큐우우우 큐큐큐큐 큐우큐우",
       "Is_Image": true,
-      "Image_Command": "SHOW",
+      "Image_Command": "CHANG",
       "Audio": false,
       "EndPoint": false,
       "TargetImageName": "1장 4.눈토끼때1",
@@ -339,7 +339,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": "1장 5.눈토끼때2",
-      "TargetAudio": "이게 다 뭐야!"
+      "TargetAudio": "1장 9.이게 다 뭐야!"
     },
     {
       "Story_ID": 10407,
@@ -350,7 +350,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": "1장 6.전기구이",
-      "TargetAudio": "헤헤! 찌릿찌릿한 번개 맛 좀 봤나?"
+      "TargetAudio": "1장 10.헤헤! 찌릿찌릿한 번개 맛 좀 봤나? 거기 얼음 덩어리 언니, 괜찮아"
     },
     {
       "Story_ID": 10408,
@@ -361,7 +361,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "어...? 번개...?"
+      "TargetAudio": "1장 11.어...? 번개..."
     },
     {
       "Story_ID": 10409,
@@ -372,7 +372,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": "1장 7.루미 라이와 첫만남",
-      "TargetAudio": "난 라이!"
+      "TargetAudio": "1장 12.난 라이야! 잘부탁해"
     },
     {
       "Story_ID": 10410,
@@ -383,7 +383,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "라이 네가 구해준 거야? 정말 고마워..."
+      "TargetAudio": "1장 13.라이 네가 구해준 거야? 정말 고마워..."
     },
     {
       "Story_ID": 10411,
@@ -394,7 +394,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "내 옆에 딱 붙어 있어! 내가 언니 지켜줄게!"
+      "TargetAudio": "1장 14.내 옆에 딱 붙어 있어! 내가 언니 지켜줄게!"
     },
     {
       "Story_ID": 10412,
@@ -405,7 +405,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "푸흐... 고마워 라이"
+      "TargetAudio": "1장 15.푸흐... 고마워 라이"
     },
     {
       "Story_ID": 10413,
@@ -418,7 +418,7 @@
       "TargetImageName": null,
       "TargetAudio": null
     },
-     {
+    {
       "Story_ID": 10501,
       "Speaker": "라이",
       "Dialogue": "근데 루미 언니, 진짜 궁금해서 그러는데... 그 맨발, 안 시려? 눈 위를 계속 걸으면 발가락이 꽁꽁 얼어버릴 것 같은데!",
@@ -427,7 +427,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": "1장 8,루미 라이",
-      "TargetAudio": "근데 루미 언니, 진짜 궁금해서 그러는데... 그 맨발, 안 시려?"
+      "TargetAudio": "1장 16.근데 루미 언니, 진짜 궁금해서 그러는데... 그 맨발, 안 시려"
     },
     {
       "Story_ID": 10502,
@@ -438,7 +438,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "응... 처음엔 조금 차가웠는데, 지금은 괜찮아."
+      "TargetAudio": "1장 17.처음엔 조금 차가웠는데, 지금은 괜찮아."
     },
     {
       "Story_ID": 10503,
@@ -482,7 +482,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "라이 네가 너무 겁이 없는 거야..."
+      "TargetAudio": "1장 18.라이 네가 너무 겁이 없는 거야..."
     },
     {
       "Story_ID": 10507,
@@ -493,7 +493,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "사실 언니가 너무 맛있어 보여서 쫓아온 거 아닐까? 꼭 솜사탕 같거든!"
+      "TargetAudio": "1장 19.사실 언니가 너무 맛있어 보여서 쫓아온 거 아닐까? 꼭 솜사탕 같거든!"
     },
     {
       "Story_ID": 10508,
@@ -504,7 +504,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "놀리지 마...!"
+      "TargetAudio": "1장 20.놀리지 마...!"
     },
     {
       "Story_ID": 10509,
@@ -569,7 +569,7 @@
       "Image_Command": "CHANG",
       "Audio": false,
       "EndPoint": false,
-      "TargetImageName": "1징 10.루미 신발의 비밀",
+      "TargetImageName": "1장 10.루미 신발의 비밀",
       "TargetAudio": null
     },
     {
@@ -768,7 +768,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "음... 라이, 이제 자야지... 내일은 더 멀리 가야 하잖아..."
+      "TargetAudio": "1장 21라이, 이제 자야지... 내일은 더 멀리 가야 하잖아..."
     },
     {
       "Story_ID": 10533,
@@ -779,7 +779,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "언니, 자? 나 아까부터 궁금한 게 있었는데..."
+      "TargetAudio": "1장 22.언니, 자? 나 아까부터 궁금한 게 있었는데..."
     },
     {
       "Story_ID": 10534,
@@ -790,7 +790,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "앗! 라, 라이! 갑자기 뭐야..."
+      "TargetAudio": "1장 23.앗! 라, 라이! 갑자기 뭐야..."
     },
     {
       "Story_ID": 10535,
@@ -809,10 +809,10 @@
       "Dialogue": "아하하하! 라이, 제발! 아하하! 그만, 그만해! 나 숨 넘어가겠어...! 으아앙!",
       "Is_Image": true,
       "Image_Command": "KEEP",
-      "Audio": true,
+      "Audio": false,
       "EndPoint": false,
       "TargetImageName": "1장 13.텐트 소동",
-      "TargetAudio": "아하하하!"
+      "TargetAudio": null
     },
     {
       "Story_ID": 10537,
@@ -820,10 +820,10 @@
       "Dialogue": "아하하! 언니 웃는 소리 진짜 웃겨! 솜사탕이 막 흔들리는 것 같아!",
       "Is_Image": true,
       "Image_Command": "KEEP",
-      "Audio": true,
+      "Audio": false,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "언니 웃는 소리 진짜 웃겨!"
+      "TargetAudio": null
     },
     {
       "Story_ID": 10538,
@@ -856,7 +856,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": "1장 14.모험의 첫날 밤",
-      "TargetAudio": "잘 자, 라이."
+      "TargetAudio": "1장 24.잘 자, 라이."
     },
     {
       "Story_ID": 10541,

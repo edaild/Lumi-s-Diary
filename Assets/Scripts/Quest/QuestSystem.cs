@@ -38,6 +38,7 @@ public class QuestSystem : MonoBehaviour
     private int currentQuestIndex = 0;
     private int currentQuestSOIndex = 0;
     private int currentStoryIndex = 0;
+    private int currentStorySOIndex = 0;
 
     // 추후 저장시스탬 구연후 사용
     private int lastQuestIndex;
