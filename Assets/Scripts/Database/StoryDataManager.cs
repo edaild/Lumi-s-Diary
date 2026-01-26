@@ -27,9 +27,10 @@ public class StoryDataManager : MonoBehaviour
             {
                storyDataSO.storys = importedStorys;
 
-                //EditorUtility.SetDirty(storyDataSO);
-                //AssetDatabase.SaveAssets();
-
+# if UNITY_EDITOR
+                EditorUtility.SetDirty(storyDataSO);
+                AssetDatabase.SaveAssets();
+#endif
                 Debug.Log("JSON 변환 성공");
             }
             else

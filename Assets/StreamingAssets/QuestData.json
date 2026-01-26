@@ -1,4 +1,4 @@
-[
+ [
     {
       "QuestID": 10001,
       "QuestName": "루미의 집",
@@ -84,7 +84,7 @@
       "QuestLevel": 1,
       "Is_success": false,
       "QuestDescription": "스토리 진행 퀘스트",
-      "Story_ID": 10307,
+      "Story_ID": 10401,
       "TargetCount": 0,
       "RewardExperience": 0,
       "PreQuestID": 10006,
@@ -110,7 +110,7 @@
       "QuestLevel": 1,
       "Is_success": false,
       "QuestDescription": "스토리 진행 퀘스트",
-      "Story_ID": 10401,
+      "Story_ID": 10501,
       "TargetCount": 0,
       "RewardExperience": 0,
       "PreQuestID": 10008,

@@ -25,9 +25,10 @@ public class QuestDataManager : MonoBehaviour
             if (questDataSO)
             {
                 questDataSO.quests = importedQuests;
-
-                //EditorUtility.SetDirty(questDataSO);
-                //AssetDatabase.SaveAssets();
+# if UNITY_EDITOR
+                EditorUtility.SetDirty(questDataSO);
+                AssetDatabase.SaveAssets();
+#endif
                 Debug.Log("변환 성공");
             }
             else

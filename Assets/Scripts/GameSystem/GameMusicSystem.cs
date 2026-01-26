@@ -27,7 +27,7 @@ public class GameMusicSystem : MonoBehaviour
         }
         else if(sceneName == "IcIcleCity")
         {
-            targetMusicName = "눈의 마을 길";
+            targetMusicName = "아이시클 시티";
         }
         else
         {

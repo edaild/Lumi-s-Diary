@@ -26,10 +26,10 @@ public class EnemyDataManager : MonoBehaviour
             if(enemySO != null)
             {
                 enemySO.Enemys = importedEnemy;
-
-                //EditorUtility.SetDirty(enemySO);
-                //AssetDatabase.SaveAssets();
-
+#if UNITY_EDITOR
+                EditorUtility.SetDirty(enemySO);
+                AssetDatabase.SaveAssets();
+#endif
                 Debug.Log("JSON 변환 성공");
             }
             else

@@ -86,7 +86,7 @@ MonoBehaviour:
     QuestLevel: 1
     Is_success: 0
     QuestDescription: "\uC2A4\uD1A0\uB9AC \uC9C4\uD589 \uD018\uC2A4\uD2B8"
-    Story_ID: 10307
+    Story_ID: 10401
     TargetCount: 0
     RewardExperience: 0
     PreQuestID: 10006
@@ -108,7 +108,7 @@ MonoBehaviour:
     QuestLevel: 1
     Is_success: 0
     QuestDescription: "\uC2A4\uD1A0\uB9AC \uC9C4\uD589 \uD018\uC2A4\uD2B8"
-    Story_ID: 10401
+    Story_ID: 10501
     TargetCount: 0
     RewardExperience: 0
     PreQuestID: 10008
