@@ -26,6 +26,8 @@ public class QuestSystem : MonoBehaviour
 
     public Button questSkipButton;
 
+    public GameObject QuestCanavarse;
+
     [Header("플레이어 정보")]
     public int playerLevel = 1;
     public int playerExperience = 0;
@@ -57,6 +59,28 @@ public class QuestSystem : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += IsNotGameScene;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= IsNotGameScene;
+    }
+
+    private void IsNotGameScene(Scene scene, LoadSceneMode mode)
+    {
+       if(scene.name == "LobbyScene"|| scene.name == "RewordScene")
+       {
+            QuestCanavarse.gameObject.SetActive(false);
+       }
+        else
+        {
+            QuestCanavarse.gameObject.SetActive(true);
         }
     }
 

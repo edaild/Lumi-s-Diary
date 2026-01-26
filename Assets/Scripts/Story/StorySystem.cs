@@ -68,15 +68,6 @@ public class StorySystem : MonoBehaviour
         }
     }
 
-    public void Update()
-    {
-        // PC 테스트용
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            NextStory();
-        }
-    }
-
     void NextStory()
     {   
         if (isStoryEndPoint == true) return;

@@ -4057,6 +4057,7 @@ MonoBehaviour:
   FinishchackScene: 
   playerEnmeyDieCount: 0
   questSkipButton: {fileID: 1734642471}
+  QuestCanavarse: {fileID: 2115651284}
   playerLevel: 1
   playerExperience: 0
   questText: {fileID: 103143824}
