@@ -814,10 +814,10 @@ MonoBehaviour:
       \uC73C\uC544\uC559!"
     Is_Image: 1
     Image_Command: KEEP
-    Audio: 0
+    Audio: 1
     EndPoint: 0
     TargetImageName: "1\uC7A5 13.\uD150\uD2B8 \uC18C\uB3D9"
-    TargetAudio: 
+    TargetAudio: "1\uC7A5 24.\uD558\uC9C0\uB9C8! \uAC04\uC9C0\uB7FD\uB2E4\uACE0!"
   - Story_ID: 10537
     Speaker: "\uB77C\uC774"
     Dialogue: "\uC544\uD558\uD558! \uC5B8\uB2C8 \uC6C3\uB294 \uC18C\uB9AC \uC9C4\uC9DC
@@ -860,7 +860,7 @@ MonoBehaviour:
     Audio: 1
     EndPoint: 0
     TargetImageName: "1\uC7A5 14.\uBAA8\uD5D8\uC758 \uCCAB\uB0A0 \uBC24"
-    TargetAudio: "1\uC7A5 24.\uC798 \uC790, \uB77C\uC774."
+    TargetAudio: "1\uC7A5 25.\uC798 \uC790, \uB77C\uC774."
   - Story_ID: 10541
     Speaker: 
     Dialogue: 
