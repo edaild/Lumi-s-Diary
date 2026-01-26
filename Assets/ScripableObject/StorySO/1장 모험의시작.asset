@@ -22,8 +22,7 @@ MonoBehaviour:
     Audio: 1
     EndPoint: 0
     TargetImageName: 
-    TargetAudio: "\uC74C... \uBC8C\uC368 \uC544\uCE68\uC778\uAC00? \uCC3D\uBC16\uC774
-      \uC624\uB298\uB530\uB77C \uC720\uB09C\uD788 \uBC1D\uB124..."
+    TargetAudio: "1\uC7A5 1.\uC74C... \uBC8C\uC368 \uC544\uCE68\uC778\uAC00"
   - Story_ID: 10102
     Speaker: "\uB8E8\uBBF8"
     Dialogue: "\uC544...! \uB9DE\uB2E4! \uC624\uB298 \uB4DC\uB514\uC5B4 \uC878\uC5C5\uC2DD\uC774\uC9C0!
@@ -33,8 +32,7 @@ MonoBehaviour:
     Audio: 1
     EndPoint: 0
     TargetImageName: 
-    TargetAudio: "\uC544...! \uB9DE\uB2E4! \uC624\uB298 \uB4DC\uB514\uC5B4 \uC878\uC5C5\uC2DD\uC774\uC9C0!
-      \uC8FC\uB2C8\uC5B4 \uB9C8\uBC95\uC0AC\uAC00 \uB418\uB294 \uB0A0\uC774\uC57C!"
+    TargetAudio: "1\uC7A5 2.\uB9DE\uB2E4! \uC624\uB298 \uB4DC\uB514\uC5B4 \uC878\uC5C5\uC2DD\uC774\uC9C0"
   - Story_ID: 10103
     Speaker: "\uAD50\uC7A5 \uC120\uC0DD\uB2D8"
     Dialogue: "\uB8E8\uBBF8 \uC591, \uCD95\uD558\uD558\uB124. \uC774\uC81C \uC790\uB124\uB294
@@ -54,7 +52,8 @@ MonoBehaviour:
     Audio: 1
     EndPoint: 0
     TargetImageName: 
-    TargetAudio: "\uACE0, \uACE0\uB9D9\uC2B5\uB2C8\uB2E4... \uC5F4\uC2EC\uD788 \uD560\uAC8C\uC694!"
+    TargetAudio: "1\uC7A5 3.\uACE0, \uACE0\uB9D9\uC2B5\uB2C8\uB2E4... \uC5F4\uC2EC\uD788
+      \uD560\uAC8C\uC694"
   - Story_ID: 10105
     Speaker: "\uB8E8\uBBF8"
     Dialogue: "\uC18C\uC2EC\uD55C \uB098\uC9C0\uB9CC... \uD55C \uAC78\uC74C\uC529
@@ -84,7 +83,7 @@ MonoBehaviour:
     Audio: 1
     EndPoint: 0
     TargetImageName: "1\uC7A5 2.\uC8FC\uBBFC\uC13C\uD130"
-    TargetAudio: "\uC800... \uC800\uAE30\uC694... \uC2E4\uB840\uD569\uB2C8\uB2E4..."
+    TargetAudio: "1\uC7A5 4.\uC800... \uC800\uAE30\uC694... \uC2E4\uB840\uD569\uB2C8\uB2E4..."
   - Story_ID: 10202
     Speaker: "\uC548\uB0B4\uC6D0"
     Dialogue: "\uC5B4\uC11C \uC624\uC138\uC694! \uC624\uB298 \uC878\uC5C5\uD55C \uC8FC\uB2C8\uC5B4
@@ -95,7 +94,7 @@ MonoBehaviour:
     Audio: 1
     EndPoint: 0
     TargetImageName: 
-    TargetAudio: "\uC5B4\uC11C \uC624\uC138\uC694!"
+    TargetAudio: "1\uC7A5 5.\uC5B4\uC11C \uC624\uC138\uC694!"
   - Story_ID: 10203
     Speaker: "\uB8E8\uBBF8"
     Dialogue: "\uC544, \uB124! \uC5EC\uAE30 \uC878\uC5C5\uC7A5\uC774\uB791... \uB4F1\uB85D

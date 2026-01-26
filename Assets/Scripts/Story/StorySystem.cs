@@ -4,11 +4,13 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEditor;
+using System;
 
 public class StorySystem : MonoBehaviour
 {
     public StoryDataSO StoryDataSO;
     public QuestSystem questSystem;
+    public DubbingDatabase DubbingDatabase;
 
     public int current_StoryID;
     public int current_StoryCount;
@@ -20,10 +22,13 @@ public class StorySystem : MonoBehaviour
     public RawImage storyImageTextor;
 
     public bool isFinishStory;
+    public string current_TargetAudio;
 
     [Header("스토리 UI")]
     public GameObject StoryUI;
     public TextMeshProUGUI StoryDialogue;
+
+    public AudioSource storyDubbingAudioSource;
 
     private void Start()
     {
@@ -47,9 +52,10 @@ public class StorySystem : MonoBehaviour
                 StoryDialogue.text = $"{story.Speaker} : {story.Dialogue}";
                 current_StoryID = StoryID;
                 iscurrent_StoryImage = story.Is_Image;
+                current_TargetAudio = story.TargetAudio;
                 current_ImageCommand = story.Image_Command;
                 current_ImageName = story.TargetImageName;
-                ShowImage();
+                CurrentStoryAsset();
             }
 
             int currnetstoryIdCount = StoryDataSO.storys.FindIndex(sid => sid.Story_ID == current_StoryID);
@@ -76,9 +82,10 @@ public class StorySystem : MonoBehaviour
         StoryDialogue.text = $"{nextStory.Speaker} : {nextStory.Dialogue}";
         current_StoryID = nextStory.Story_ID;
         iscurrent_StoryImage = nextStory.Is_Image;
+        current_TargetAudio = nextStory.TargetAudio;
         current_ImageCommand = nextStory.Image_Command;
         current_ImageName = nextStory.TargetImageName;
-        ShowImage();
+        CurrentStoryAsset();
         Debug.Log($"현재 스토리 아이디: {current_StoryID}, 엔드 포인트 여부: {nextStory.EndPoint}");
 
 
@@ -89,6 +96,12 @@ public class StorySystem : MonoBehaviour
             isFinishStory = true;
             return;
         }
+    }
+
+    void CurrentStoryAsset()
+    {
+        ShowImage();
+        PlayDubbing();
     }
 
     void ShowImage()
@@ -110,6 +123,19 @@ public class StorySystem : MonoBehaviour
         else
         {
             storyImageGameObejct.SetActive(false);
+        }
+    }
+
+    void PlayDubbing()
+    {
+        if (current_TargetAudio == null) return;
+
+        AudioClip DubbingAudio = DubbingDatabase.dubbingaudioClip.Find(Do => Do.name == current_TargetAudio);
+
+        if(DubbingAudio != null)
+        {
+            storyDubbingAudioSource.clip = DubbingAudio;
+            storyDubbingAudioSource.Play();
         }
     }
 }

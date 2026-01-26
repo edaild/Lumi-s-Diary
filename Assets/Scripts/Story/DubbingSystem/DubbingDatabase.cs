@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Security.Policy;
 using UnityEngine;
 
-public class DubbingDatabase : MonoBehaviour
+[CreateAssetMenu(fileName = "DubbingData", menuName = "LumiProject/DubbingData")]
+public class DubbingDatabase : ScriptableObject
 {
-    public AudioSource audioSource;
     public List<AudioClip> dubbingaudioClip = new List<AudioClip>();
 }

@@ -9,6 +9,7 @@ public class QuestSystem : MonoBehaviour
     public static QuestSystem instance;
     public QuestDataSO questData;
     public StorySystem storySystem;
+    public DubbingDatabase dubbingDatabase;
 
     public int playerquerstID;
     public string playerquestName;
