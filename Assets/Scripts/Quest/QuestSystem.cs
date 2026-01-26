@@ -9,7 +9,6 @@ public class QuestSystem : MonoBehaviour
     public static QuestSystem instance;
     public QuestDataSO questData;
     public StorySystem storySystem;
-    public DubbingDatabase dubbingDatabase;
 
     public int playerquerstID;
     public string playerquestName;
@@ -34,6 +33,7 @@ public class QuestSystem : MonoBehaviour
     [Header("퀘스트와 스토리 교체 관련 리스트")]
     public List<QuestDataSO> QuestDataSOs = new List<QuestDataSO>();
     public List<StoryDataSO> storyDataSOs = new List<StoryDataSO>();
+    public List<DubbingDatabase> dubbingDatabases = new List<DubbingDatabase>();
 
     private int currentQuestIndex = 0;
     private int currentQuestSOIndex = 0;
