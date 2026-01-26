@@ -27,6 +27,7 @@ public class StorySystem : MonoBehaviour
 
     [Header("스토리 UI")]
     public GameObject StoryUI;
+    public Button StoryButton;
     public TextMeshProUGUI StoryDialogue;
 
     public AudioSource storyDubbingAudioSource;
@@ -34,6 +35,7 @@ public class StorySystem : MonoBehaviour
     private void Start()
     {
         questSystem = GetComponent<QuestSystem>();
+        StoryButton.onClick.AddListener(NextStory);
     }
 
     public void QuestStory(int StoryID)
@@ -68,7 +70,8 @@ public class StorySystem : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyUp(KeyCode.M))
+        // PC 테스트용
+        if (Input.GetKeyUp(KeyCode.Space))
         {
             NextStory();
         }

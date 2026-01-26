@@ -98,25 +98,25 @@ public class characterConteroller : MonoBehaviour
             Jump();
 
         // PC 테스트용 스킬
-        else if (Input.GetMouseButtonDown(1))
-        {
-            NomalAttack();
-        }
+        //else if (Input.GetMouseButtonDown(1))
+        //{
+        //    NomalAttack();
+        //}
 
-        else if (Input.GetKeyDown(KeyCode.Q))
-        {
-            CrystarGarden();
-        }
+        //else if (Input.GetKeyDown(KeyCode.Q))
+        //{
+        //    CrystarGarden();
+        //}
 
-        else if (Input.GetKeyDown(KeyCode.E))
-        {
-            SkillAttack();
-        }
+        //else if (Input.GetKeyDown(KeyCode.E))
+        //{
+        //    SkillAttack();
+        //}
 
-        else if (Input.GetKeyDown(KeyCode.R))
-        {
-            Teleport();
-        }
+        //else if (Input.GetKeyDown(KeyCode.R))
+        //{
+        //    Teleport();
+        //}
 
         if ((currentPortal != null && joy.Vertical > 0.7f || (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && !isPotalTime))
         {

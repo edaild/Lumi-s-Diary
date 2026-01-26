@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class QuestSystem : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class QuestSystem : MonoBehaviour
     public string currnetQuestType;
     public string FinishchackScene;
     public int playerEnmeyDieCount;
+
+    public Button questSkipButton;
 
     [Header("플레이어 정보")]
     public int playerLevel = 1;
@@ -62,6 +65,7 @@ public class QuestSystem : MonoBehaviour
     {
         storySystem = GetComponent<StorySystem>();
 
+        questSkipButton.onClick.AddListener(SuccessQuest);
 
         if (playerPreQuestID == 0 && questData.quests.Count > 0)
         {
