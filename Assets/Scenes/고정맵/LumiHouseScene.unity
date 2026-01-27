@@ -1635,7 +1635,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uBA54\uC778 \uC2A4\uD1A0\uB9AC \uC7A5"
+  m_text: "\uBA54\uC778 \uC2A4\uD1A0\uB9AC \uB300\uD654\uCC3D"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bdd4aed063406fb44a221a070113e84d, type: 2}
   m_sharedMaterial: {fileID: 7878480566591436736, guid: bdd4aed063406fb44a221a070113e84d, type: 2}
@@ -2406,7 +2406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.1882353}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.11764706}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4580,7 +4580,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: fce7b44258963834da3a370af5e08973, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0

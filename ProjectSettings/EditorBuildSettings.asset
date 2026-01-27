@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SnowVillageRoad.unity
     guid: 0f90fb157cbf5b3499e9a052a5ba49ed
+  - enabled: 1
+    path: "Assets/Scenes/\uBBF8\uB2C8\uAC8C\uC784/MathScene.unity"
+    guid: 0c4cf8a0851dd6042a699cc1fb3ab0bd
   m_configObjects: {}

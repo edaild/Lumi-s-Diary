@@ -74,7 +74,7 @@ public class QuestSystem : MonoBehaviour
 
     private void IsNotGameScene(Scene scene, LoadSceneMode mode)
     {
-       if(scene.name == "LobbyScene"|| scene.name == "RewordScene")
+       if(scene.name == "LobbyScene"|| scene.name == "RewordScene" || scene.name == "MathScene")
        {
             QuestCanavarse.gameObject.SetActive(false);
        }
