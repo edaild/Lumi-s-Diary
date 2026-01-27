@@ -22,7 +22,7 @@ MonoBehaviour:
     Audio: 1
     EndPoint: 0
     TargetImageName: 
-    TargetAudio: "1\uC7A5 1.\uC74C... \uBC8C\uC368 \uC544\uCE68\uC778\uAC00"
+    TargetAudio: 
   - Story_ID: 10102
     Speaker: "\uB8E8\uBBF8"
     Dialogue: "\uC544...! \uB9DE\uB2E4! \uC624\uB298 \uB4DC\uB514\uC5B4 \uC878\uC5C5\uC2DD\uC774\uC9C0!
@@ -32,7 +32,7 @@ MonoBehaviour:
     Audio: 1
     EndPoint: 0
     TargetImageName: 
-    TargetAudio: "1\uC7A5 2.\uB9DE\uB2E4! \uC624\uB298 \uB4DC\uB514\uC5B4 \uC878\uC5C5\uC2DD\uC774\uC9C0"
+    TargetAudio: 
   - Story_ID: 10103
     Speaker: "\uAD50\uC7A5 \uC120\uC0DD\uB2D8"
     Dialogue: "\uB8E8\uBBF8 \uC591, \uCD95\uD558\uD558\uB124. \uC774\uC81C \uC790\uB124\uB294
@@ -52,8 +52,7 @@ MonoBehaviour:
     Audio: 1
     EndPoint: 0
     TargetImageName: 
-    TargetAudio: "1\uC7A5 3.\uACE0, \uACE0\uB9D9\uC2B5\uB2C8\uB2E4... \uC5F4\uC2EC\uD788
-      \uD560\uAC8C\uC694"
+    TargetAudio: 
   - Story_ID: 10105
     Speaker: "\uB8E8\uBBF8"
     Dialogue: "\uC18C\uC2EC\uD55C \uB098\uC9C0\uB9CC... \uD55C \uAC78\uC74C\uC529
@@ -190,7 +189,7 @@ MonoBehaviour:
     Audio: 1
     EndPoint: 0
     TargetImageName: 
-    TargetAudio: "1\uC7A5 6.\uD6C4\uC6B0... \uB124! \uD574\uBCFC\uAC8C\uC694. \uB2E4\uB140\uC624\uACA0\uC2B5\uB2C8\uB2E4!"
+    TargetAudio: 
   - Story_ID: 10212
     Speaker: 
     Dialogue: 
@@ -211,9 +210,7 @@ MonoBehaviour:
     Audio: 1
     EndPoint: 0
     TargetImageName: "1\uC7A5 3.\uB208\uD1A0\uB07C\uC640 \uCCAB\uB9CC\uB0A8"
-    TargetAudio: "1\uC7A5 7.\uC640... \uC815\uB9D0 \uADC0\uC5FD\uAC8C \uC0DD\uACBC\uC5B4.
-      \uC800 \uC544\uC774\uAC00 \uB0B4 \uB9C8\uB825\uC744 \uC2DC\uD5D8\uD574 \uC904
-      \uCCAB \uC0C1\uB300\uAD6C\uB098!"
+    TargetAudio: 
   - Story_ID: 10302
     Speaker: "\uB208\uB369\uC774 \uD1A0\uB07C"
     Dialogue: "\uD050\uC6B0"
@@ -482,8 +479,7 @@ MonoBehaviour:
     Audio: 1
     EndPoint: 0
     TargetImageName: 
-    TargetAudio: "1\uC7A5 18.\uB77C\uC774 \uB124\uAC00 \uB108\uBB34 \uAC81\uC774
-      \uC5C6\uB294 \uAC70\uC57C..."
+    TargetAudio: 
   - Story_ID: 10507
     Speaker: "\uB77C\uC774"
     Dialogue: "\uB2F9\uC5F0\uD558\uC9C0! \uC774 \uCC9C\uC7AC \uB9C8\uBC95\uC0AC \uB77C\uC774
@@ -497,8 +493,8 @@ MonoBehaviour:
     EndPoint: 0
     TargetImageName: 
     TargetAudio: "1\uC7A5 19.\uC0AC\uC2E4 \uC5B8\uB2C8\uAC00 \uB108\uBB34 \uB9DB\uC788\uC5B4
-      \uBCF4\uC5EC\uC11C \uCAD3\uC544\uC628 \uAC70 \uC544\uB2D0\uAE4C? \uAF2D \uC19C\uC0AC\uD0D5
-      \uAC19\uAC70\uB4E0!"
+      \uBCF4\uC5EC\uC11C \uCAD3\uC544\uC628 \uAC70 \uC544\uB2D0\uAE4C \uAF2D \uC19C\uC0AC\uD0D5
+      \uAC19\uAC70\uB4E0"
   - Story_ID: 10508
     Speaker: "\uB8E8\uBBF8"
     Dialogue: "\uB180\uB9AC\uC9C0 \uB9C8...!"
