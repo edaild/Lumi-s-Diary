@@ -920,7 +920,7 @@ MonoBehaviour:
   fade: {fileID: 735372278}
   videoPlayer: {fileID: 406596486}
   Lobbyclip: {fileID: 32900000, guid: 7e07a5e6ac2ddbf4ab4e9abb0022f050, type: 3}
-  OPclip: {fileID: 32900000, guid: f6fae243b06fd4c4e8e98246e5743833, type: 3}
+  OPclip: {fileID: 32900000, guid: 1a48839eaf7b6c048b871f6f323c5ea8, type: 3}
   LobbyMusic: {fileID: 2123926225}
 --- !u!4 &1685936281
 Transform:
