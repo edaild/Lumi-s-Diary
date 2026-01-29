@@ -16,6 +16,10 @@ public class EnemySystem : MonoBehaviour
     public float _EnemySpeed;
     public int _GiftCoin;
 
+    public int _currentHealth;
+    public characterConteroller _characterConteroller;
+    public QuestSystem _questSystem;
+
     private void Start()
     {
         EnemyData Enemy = enmeySO.Enemys.Find(e => e.EnemyID == _EnemyID);
@@ -30,6 +34,11 @@ public class EnemySystem : MonoBehaviour
 
 
         Debug.Log($"현재 몬스터 아이디: {_EnemyID}, 이름: {_EnemyName}");
+
+        _characterConteroller = UnityEngine.Object.FindAnyObjectByType<characterConteroller>();
+        _questSystem = UnityEngine.Object.FindAnyObjectByType<QuestSystem>();
+
+        _currentHealth = _EnemyHealth;
     }
    
     private void OnCollisionEnter2D(Collision2D collision)
@@ -39,15 +48,19 @@ public class EnemySystem : MonoBehaviour
 
             collision.gameObject.TryGetComponent<SkillBall>(out SkillBall ball);
 
-            int Health = _EnemyHealth;
-            Debug.Log(Health);
-
-
-            Health -= ball.BallDamage;
-            Debug.Log(Health);
+            Debug.Log(_currentHealth);
+            if (!_characterConteroller.isCrystarGarden)
+                _currentHealth -= ball.BallDamage;
+            else
+            {
+                int isCrystarGardDamage = ball.BallDamage += 100;
+                _currentHealth -= isCrystarGardDamage;
+                Debug.Log("크리스탈 가든 버프 적용");
+            }   
+            Debug.Log(_currentHealth);
             Destroy(collision.gameObject);
 
-            if (Health <= 0)
+            if (_currentHealth <= 0)
                 DIe();
             else
                 return;
@@ -55,9 +68,9 @@ public class EnemySystem : MonoBehaviour
         }
     }
 
-
     void DIe()
     {
+        _questSystem.playerEnmeyDieCount++;
         Destroy(gameObject);
         Debug.Log($"{_EnemyName} 처치 완료. 루나 {_GiftCoin} 만큼 증가");
     }

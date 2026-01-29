@@ -48,6 +48,8 @@ public class characterConteroller : MonoBehaviour
     public GameObject currentPortal;
     public FadeManager fadeManager;
 
+    public bool isCrystarGarden;
+
     private bool isultimateVidio;
     private bool isJump;
     private bool isGround;
@@ -59,6 +61,7 @@ public class characterConteroller : MonoBehaviour
     private bool isNotInGameScene;
     private bool isPotalTime;
     private bool isFade;
+    
 
     private void Start()
     {
@@ -323,11 +326,8 @@ public class characterConteroller : MonoBehaviour
         videoPlayer.time = 0;
         videoPlayer.Play();
         isultimateVidio = true;
-
-        audioSource.clip = skillCrystarGardenVoice;
-        audioSource.time = 0;
- 
-
+        playerSpeed = 8f;
+        isCrystarGarden = true;
         StartCoroutine(CrystarGardenTime());
    }
 
@@ -336,29 +336,25 @@ public class characterConteroller : MonoBehaviour
         ultimateVidio.gameObject.SetActive(true);
         videoPlayer.Play();
 
-        yield return new WaitForSeconds(1f);
-        audioSource.Play(); 
-
-        yield return new WaitForSeconds(3f);
-        audioSource.Stop();
-
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(8.1f);
         videoPlayer.Stop();
         ultimateVidio.gameObject.SetActive(false);
 
         crystalGardenPenel.gameObject.SetActive(true);
 
-
         yield return new WaitForSeconds(30f);
         crystalGardenPenel.gameObject.SetActive(false);
+        isCrystarGarden = false;
         Debug.Log("크리스탈 가든 효과 종료");
 
-        Debug.Log("크리스탈 가든 대기 쿨타임 : 30초");
         yield return new WaitForSeconds(30f);
-
+        Debug.Log("크리스탈 가든 대기 쿨타임 : 30초");
         isultimateVidio = false;
+        playerSpeed = 5f;
         Debug.Log("크리스탈 가든 재사용 가능");
     }
+
+    
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

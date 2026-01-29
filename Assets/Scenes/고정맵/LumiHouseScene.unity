@@ -3140,7 +3140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 021e2fd809eaabc48a774c62435d6740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 2660178315423621530, guid: e4f0da9087ff6c54d817c48a45a6ebf2, type: 3}
+  playerPrefab: {fileID: 1817963537369520360, guid: 56985fe0845ab1843a8f32a59a7db6d3, type: 3}
   spawnPont:
   - {fileID: 530171047336438979, guid: c2fcc3bae21df804aaa3b18b976806e7, type: 3}
   - {fileID: 3728950367295839018, guid: fe67930d57ccd4a49bb3649619ad23dd, type: 3}

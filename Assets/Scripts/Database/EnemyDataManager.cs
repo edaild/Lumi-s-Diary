@@ -30,7 +30,7 @@ public class EnemyDataManager : MonoBehaviour
                 EditorUtility.SetDirty(enemySO);
                 AssetDatabase.SaveAssets();
 #endif
-                Debug.Log("JSON 변환 성공");
+                Debug.Log("EnemyData JSON 변환 성공");
             }
             else
                 Debug.Log("EnemySO 미연결");

@@ -31,7 +31,7 @@ public class StoryDataManager : MonoBehaviour
                 EditorUtility.SetDirty(storyDataSO);
                 AssetDatabase.SaveAssets();
 #endif
-                Debug.Log("JSON 변환 성공");
+                Debug.Log("StoyrData JSON 변환 성공");
             }
             else
                 Debug.Log("StorySO 미연결");
