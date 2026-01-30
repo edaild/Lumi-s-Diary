@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-public class characterConteroller : MonoBehaviour
+public class CharacterMoveSystem : MonoBehaviour
 {
     public VariableJoystick joy;
 

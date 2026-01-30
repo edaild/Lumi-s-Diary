@@ -31,7 +31,7 @@ public class CharacterSkillSystem : MonoBehaviour
     public AudioClip skillAttackVoice;
     public AudioClip skillCrystarGardenVoice;
 
-    public characterConteroller _characterConteroller;
+    public CharacterMoveSystem _characterMoveSystem;
 
     public bool isCrystarGarden;
 
@@ -43,9 +43,9 @@ public class CharacterSkillSystem : MonoBehaviour
 
     private void Start()
     {
-        _characterConteroller = UnityEngine.Object.FindAnyObjectByType<characterConteroller>();
+        _characterMoveSystem = UnityEngine.Object.FindAnyObjectByType<CharacterMoveSystem>();
 
-        if (!_characterConteroller.isNotInGameScene)
+        if (!_characterMoveSystem.isNotInGameScene)
         {
             AttackButton.onClick.AddListener(NomalAttack);
             SkillButton.onClick.AddListener(SkillAttack);
@@ -86,7 +86,7 @@ public class CharacterSkillSystem : MonoBehaviour
         audioSource.time = 0;
         audioSource.Play();
 
-        _characterConteroller.animator.SetBool("IsAttack", true);
+        _characterMoveSystem.animator.SetBool("IsAttack", true);
         StartCoroutine(AttackTime());
     }
 
@@ -95,7 +95,7 @@ public class CharacterSkillSystem : MonoBehaviour
         yield return new WaitForSeconds(1f);
         Shoot(AttackType.Nomal);
         Debug.Log("애니매이션 종료");
-        _characterConteroller.animator.SetBool("IsAttack", false);
+        _characterMoveSystem.animator.SetBool("IsAttack", false);
         yield return new WaitForSeconds(1.0001f);
         isNomalAttack = false;
         audioSource.Stop();
@@ -112,7 +112,7 @@ public class CharacterSkillSystem : MonoBehaviour
         audioSource.time = 0;
         audioSource.Play();
 
-        _characterConteroller.animator.SetBool("IsAttack", true);
+        _characterMoveSystem.animator.SetBool("IsAttack", true);
         StartCoroutine(SkillAttackTime());
     }
 
@@ -121,7 +121,7 @@ public class CharacterSkillSystem : MonoBehaviour
         yield return new WaitForSeconds(1f);
         Shoot(AttackType.Skill);
         Debug.Log("애니매이션 종료");
-        _characterConteroller.animator.SetBool("IsAttack", false);
+        _characterMoveSystem.animator.SetBool("IsAttack", false);
 
         yield return new WaitForSeconds(2f);
         audioSource.Stop();
@@ -153,7 +153,7 @@ public class CharacterSkillSystem : MonoBehaviour
     void Teleport()
     {
         if (isTeleport) return;
-        int offset = (_characterConteroller.isHorizontalInput_xManus == false) ? 5 : -5;
+        int offset = (_characterMoveSystem.isHorizontalInput_xManus == false) ? 5 : -5;
         transform.position = new Vector3(transform.position.x + offset, transform.position.y, transform.position.z);
     }
 
@@ -167,7 +167,7 @@ public class CharacterSkillSystem : MonoBehaviour
         videoPlayer.time = 0;
         videoPlayer.Play();
         isultimateVidio = true;
-        _characterConteroller.playerSpeed = 8f;
+        _characterMoveSystem.playerSpeed = 8f;
         isCrystarGarden = true;
         StartCoroutine(CrystarGardenTime());
     }
@@ -186,7 +186,7 @@ public class CharacterSkillSystem : MonoBehaviour
         yield return new WaitForSeconds(30f);
         crystalGardenPenel.gameObject.SetActive(false);
         isCrystarGarden = false;
-        _characterConteroller.playerSpeed = 5f;
+        _characterMoveSystem.playerSpeed = 5f;
         Debug.Log("크리스탈 가든 효과 종료");
 
         yield return new WaitForSeconds(30f);
