@@ -3195,7 +3195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 885533398079439769}
   m_Layer: 5
-  m_Name: BottonButton
+  m_Name: Botton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3723,8 +3723,7 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8131024399605240162, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5576993903520407002, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
     - {fileID: 2522361384833579100, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
@@ -3733,10 +3732,68 @@ PrefabInstance:
     - {fileID: 8918793600978455218, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
     - {fileID: 3863355146380073238, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4947641272234384741, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7101529564807993760}
   m_SourcePrefab: {fileID: 100100000, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
+--- !u!114 &1165744753825571110 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4610690088136068200, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
+  m_PrefabInstance: {fileID: 3445808528987499854}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7744068323689115691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0f7c1fbb53fe7645b3c7704da29394b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1972242303596426156 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3787306788543749858, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
+  m_PrefabInstance: {fileID: 3445808528987499854}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &4526433280815392981 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1225233702373442971, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
+  m_PrefabInstance: {fileID: 3445808528987499854}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5713724583792260427 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6961090188904044549, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
   m_PrefabInstance: {fileID: 3445808528987499854}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7744068323689115691 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4947641272234384741, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
+  m_PrefabInstance: {fileID: 3445808528987499854}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7101529564807993760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7744068323689115691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c82ebab79393a58448396fad0a9a103f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iceBall: {fileID: 9109014032353307666, guid: c45055c48f2316d47a5a73c1cc73ff37, type: 3}
+  snow: {fileID: 9109014032353307666, guid: 40bf5ef27dfd53c4cb9aa98dd65febd3, type: 3}
+  crystalGardenPenel: {fileID: 1601671158475482497}
+  shootPosition: {fileID: 1972242303596426156}
+  AttackButton: {fileID: 5913476899953999223}
+  SkillButton: {fileID: 8180818010545102795}
+  TeleportButton: {fileID: 5965761233582893679}
+  ultimateButtonUI: {fileID: 1373735037853500627}
+  ultimateVidio: {fileID: 4138168513350288218}
+  videoPlayer: {fileID: 734443498927509927}
+  ultimateVidioClip: {fileID: 32900000, guid: b903142f91e061f4581663fa6cdda882, type: 3}
+  audioSource: {fileID: 4526433280815392981}
+  nomalAtttackVoice: {fileID: 8300000, guid: 0cec2f073cdcfdc41931fc1d32d8292b, type: 3}
+  skillAttackVoice: {fileID: 8300000, guid: 43b18e7087cbda54c8d907cc99d771ea, type: 3}
+  skillCrystarGardenVoice: {fileID: 8300000, guid: 1a2ec32cc066d0a49ac9f6354d15493a, type: 3}
+  _characterConteroller: {fileID: 1165744753825571110}
+  isCrystarGarden: 0
