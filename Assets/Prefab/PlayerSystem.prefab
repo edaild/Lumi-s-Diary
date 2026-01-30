@@ -2710,7 +2710,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3813739545331636277
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3737,17 +3737,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 7101529564807993760}
   m_SourcePrefab: {fileID: 100100000, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
---- !u!114 &1165744753825571110 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4610690088136068200, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
-  m_PrefabInstance: {fileID: 3445808528987499854}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7744068323689115691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f7c1fbb53fe7645b3c7704da29394b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1972242303596426156 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3787306788543749858, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
@@ -3795,5 +3784,5 @@ MonoBehaviour:
   nomalAtttackVoice: {fileID: 8300000, guid: 0cec2f073cdcfdc41931fc1d32d8292b, type: 3}
   skillAttackVoice: {fileID: 8300000, guid: 43b18e7087cbda54c8d907cc99d771ea, type: 3}
   skillCrystarGardenVoice: {fileID: 8300000, guid: 1a2ec32cc066d0a49ac9f6354d15493a, type: 3}
-  _characterConteroller: {fileID: 1165744753825571110}
+  _characterMoveSystem: {fileID: 0}
   isCrystarGarden: 0

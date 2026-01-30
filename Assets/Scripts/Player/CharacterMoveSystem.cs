@@ -17,7 +17,6 @@ public class CharacterMoveSystem : MonoBehaviour
     public GameObject currentPortal;
     public FadeManager fadeManager;
 
-    public bool isCrystarGarden;
     public bool isHorizontalInput_xManus;
     public bool isNotInGameScene;
 
@@ -208,7 +207,7 @@ public class CharacterMoveSystem : MonoBehaviour
 
         transform.position = new Vector3(portal.portalData.spawnPosition.x, transform.position.y, transform.position.z);
 
-        yield return new WaitForSeconds(1.2f);
+        yield return new WaitForSeconds(1f);
          fadeManager.StartFadeIn(0.5f);
 
         StartCoroutine(PartalTime());

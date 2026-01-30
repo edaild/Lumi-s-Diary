@@ -35,17 +35,9 @@ public class QuestSystem : MonoBehaviour
     [Header("퀘스트 UI")]
     public TextMeshProUGUI questText;
 
-    [Header("퀘스트와 스토리 교체 관련 리스트")]
-    public List<QuestDataSO> QuestDataSOs = new List<QuestDataSO>();
-    public List<StoryDataSO> storyDataSOs = new List<StoryDataSO>();
-    public List<DubbingDatabase> dubbingDatabases = new List<DubbingDatabase>();
-
     private int currentQuestIndex = 0;
-    private int currentQuestSOIndex = 0;
-    private int currentStoryIndex = 0;
-    private int currentStorySOIndex = 0;
 
-    // 추후 저장시스탬 구연후 사용
+    // 추후 저장 시스탬 구연후 사용
     private int lastQuestIndex;
 
 

@@ -32,6 +32,8 @@ public class StorySystem : MonoBehaviour
 
     public AudioSource storyDubbingAudioSource;
 
+    private bool isStoryTIme;
+
     private void Start()
     {
         questSystem = GetComponent<QuestSystem>();
@@ -70,7 +72,7 @@ public class StorySystem : MonoBehaviour
 
     void NextStory()
     {   
-        if (isStoryEndPoint == true) return;
+        if (isStoryEndPoint == true || isStoryTIme) return;
 
         Debug.Log($"이전 스토리 아이디: {current_StoryID}");
 
@@ -83,9 +85,10 @@ public class StorySystem : MonoBehaviour
         current_TargetAudio = nextStory.TargetAudio;
         current_ImageCommand = nextStory.Image_Command;
         current_ImageName = nextStory.TargetImageName;
-        CurrentStoryAsset();
         Debug.Log($"현재 스토리 아이디: {current_StoryID}, 엔드 포인트 여부: {nextStory.EndPoint}");
+        CurrentStoryAsset();
 
+        
 
         if (nextStory.EndPoint == true)
         {
@@ -101,6 +104,14 @@ public class StorySystem : MonoBehaviour
     {
         ShowImage();
         PlayDubbing();
+        StartCoroutine(NextStoryTime());
+    }
+
+    IEnumerator NextStoryTime()
+    {
+        isStoryTIme = true;
+        yield return new WaitForSeconds(1f);
+        isStoryTIme = false;
     }
 
     void ShowImage()

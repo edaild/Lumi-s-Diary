@@ -2032,7 +2032,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 562885665}
+  m_TargetGraphic: {fileID: 2071640744}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
@@ -2747,26 +2747,13 @@ MonoBehaviour:
   rb: {fileID: 992692710}
   cd: {fileID: 992692709}
   animator: {fileID: 992692708}
-  iceBall: {fileID: 0}
-  snow: {fileID: 0}
-  crystalGardenPenel: {fileID: 0}
-  shootPosition: {fileID: 0}
-  AttackButton: {fileID: 0}
-  SkillButton: {fileID: 0}
-  TeleportButton: {fileID: 0}
   JumpButton: {fileID: 308579660}
-  ultimateButtonUI: {fileID: 0}
-  ultimateVidio: {fileID: 0}
-  videoPlayer: {fileID: 0}
-  ultimateVidioClip: {fileID: 0}
-  audioSource: {fileID: 0}
-  nomalAtttackVoice: {fileID: 0}
-  skillAttackVoice: {fileID: 0}
-  skillCrystarGardenVoice: {fileID: 0}
   portalSystem: {fileID: 0}
   currentPortal: {fileID: 0}
   fadeManager: {fileID: 0}
   isCrystarGarden: 0
+  isHorizontalInput_xManus: 0
+  isNotInGameScene: 0
 --- !u!95 &992692708
 Animator:
   serializedVersion: 5
@@ -4824,12 +4811,6 @@ MonoBehaviour:
   playerLevel: 1
   playerExperience: 0
   questText: {fileID: 103143824}
-  QuestDataSOs:
-  - {fileID: 11400000, guid: bd424e715b7a09140a085e942e61a130, type: 2}
-  storyDataSOs:
-  - {fileID: 11400000, guid: 4b413a6e60f4f9343bd4e0622f63beb0, type: 2}
-  dubbingDatabases:
-  - {fileID: 11400000, guid: e21dd0df687bb094b9c9e36445ab645b, type: 2}
 --- !u!4 &1930947428
 Transform:
   m_ObjectHideFlags: 0

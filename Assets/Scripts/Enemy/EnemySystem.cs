@@ -17,7 +17,7 @@ public class EnemySystem : MonoBehaviour
     public int _GiftCoin;
 
     public int _currentHealth;
-    public CharacterMoveSystem _characterMoveSystem;
+    public CharacterSkillSystem _characterSkillSystem;
     public QuestSystem _questSystem;
 
     private void Start()
@@ -35,7 +35,7 @@ public class EnemySystem : MonoBehaviour
 
         Debug.Log($"현재 몬스터 아이디: {_EnemyID}, 이름: {_EnemyName}");
 
-        _characterMoveSystem = UnityEngine.Object.FindAnyObjectByType<CharacterMoveSystem>();
+        _characterSkillSystem = UnityEngine.Object.FindAnyObjectByType<CharacterSkillSystem>();
         _questSystem = UnityEngine.Object.FindAnyObjectByType<QuestSystem>();
 
         _currentHealth = _EnemyHealth;
@@ -49,7 +49,7 @@ public class EnemySystem : MonoBehaviour
             collision.gameObject.TryGetComponent<SkillBall>(out SkillBall ball);
 
             Debug.Log(_currentHealth);
-            if (!_characterMoveSystem.isCrystarGarden)
+            if (!_characterSkillSystem.isCrystarGarden)
                 _currentHealth -= ball.BallDamage;
             else
             {
