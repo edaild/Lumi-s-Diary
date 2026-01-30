@@ -41,7 +41,7 @@ public class SpawnSystem : MonoBehaviour
     void IsNotInGameScene(Scene scene, LoadSceneMode mode)
     {
 
-        if (scene.name == "LumiHouseScene" || scene.name == "MaigicurlHotel" || scene.name == "LobbyScene")
+        if (scene.name == "LumiHouseScene" || scene.name == "MaigicurlHotel" || scene.name == "LobbyScene" || scene.name == "Communitycenter")
         {
             isPlayer = false;
             return;

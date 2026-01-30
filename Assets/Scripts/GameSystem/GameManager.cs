@@ -5,8 +5,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
-    public GameMusicSystem gameMusicSystem;
-
     public static GameManager Instance;
 
     private bool isInstance;
@@ -20,12 +18,6 @@ public class GameManager : MonoBehaviour
         }
         else 
             Destroy(Instance);  
-    }
-
-    private void Start()
-    {
-        if(!gameMusicSystem)
-            gameMusicSystem = GetComponent<GameMusicSystem>();
     }
 
     private void OnEnable()
@@ -45,7 +37,7 @@ public class GameManager : MonoBehaviour
             isInstance = true;
         }
 
-        if (scene.name == "LumiHouseScene" || scene.name == "LobbyScene" || scene.name == "MaigicurlHotel")
+        if (scene.name == "LumiHouseScene" || scene.name == "LobbyScene" || scene.name == "MaigicurlHotel" || scene.name == "Communitycenter")
             Destroy(gameObject);
     }
 }

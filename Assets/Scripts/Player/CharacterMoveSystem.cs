@@ -36,7 +36,7 @@ public class CharacterMoveSystem : MonoBehaviour
 
         string sceneName = SceneManager.GetActiveScene().name;
 
-        if (sceneName != "LumiHouseScene" && sceneName != "MaigicurlHotel")
+        if (sceneName != "LumiHouseScene" && sceneName != "MaigicurlHotel" && sceneName != "Communitycenter")
         {
             isFade = true;
             fadeManager.StartFadeIn(1.5f);
@@ -185,7 +185,7 @@ public class CharacterMoveSystem : MonoBehaviour
         {
             currentPortal.TryGetComponent<PortalSystem>(out PortalSystem portal);
             string sceneName = SceneManager.GetActiveScene().name;
-            if (sceneName != "LumiHouseScene" && sceneName != "MaigicurlHotel")
+            if (sceneName != "LumiHouseScene" && sceneName != "MaigicurlHotel" && sceneName != "Communitycenter")
             {
                 StartCoroutine(Fade(portal));
             }

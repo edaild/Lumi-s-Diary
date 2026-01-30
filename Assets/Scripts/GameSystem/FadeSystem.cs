@@ -13,7 +13,7 @@ public class FadeManager : MonoBehaviour
         fadeImage.gameObject.SetActive(true);
         string sceneName = SceneManager.GetActiveScene().name;
 
-        if (sceneName == "LumiHouseScene" || sceneName == "MaigicurlHotel" || sceneName == "LobbyScene" || sceneName == "RewordScene" || sceneName == "MathScene")
+        if (sceneName == "LumiHouseScene" || sceneName == "MaigicurlHotel" || sceneName == "LobbyScene" || sceneName == "RewordScene" || sceneName == "MathScene" || sceneName == "Communitycenter")
         {
             StartFadeIn(1.5f);
         }
