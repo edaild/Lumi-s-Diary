@@ -198,8 +198,8 @@ public class QuestSystem : MonoBehaviour
         else
         {
             Debug.Log("챕터 완료");
-            //finishQuest = true;
-            //storySystem.StoryUI.gameObject.SetActive(false);
+            finishQuest = true;
+            storySystem.StoryUI.gameObject.SetActive(false);
             ChangeQuest();
         }
     }
@@ -217,23 +217,24 @@ public class QuestSystem : MonoBehaviour
             {
                 questData = nextQuest;
                 currentQuestIndex = 0;
-                Debug.Log($"{nextQuest.name}으로 퀘스트 변경 완료");
+                Debug.Log($"{nextQuest.name} 으로 쳅터 변경 완료");
                 finishQuest = false;
 
-                //StoryDataSO nextStory = _questAndStoryDatabase.storyDataSOs[currentQuestAndSotorys];
-                //if (nextStory != null)
-                //{
-                //    storySystem.StoryDataSO = nextStory;
-                //    Debug.Log($"{nextStory.name}으로 스토리 변경 완료");
-                //    storySystem.isFinishStory = false;
-                //}
+                StoryDataSO nextStory = _questAndStoryDatabase.storyDataSOs[currentQuestAndSotorys];
+                if (nextStory != null)
+                {
+                    storySystem.StoryDataSO = nextStory;
+                    storySystem.current_StoryCount = 0;
+                    Debug.Log($"{nextStory.name}으로 스토리 변경 완료");
+                    storySystem.isFinishStory = false;
+                }
 
-                //DubbingDatabase nextDubbing = _questAndStoryDatabase.DubbingDatabases[currentQuestAndSotorys];
-                //if( nextDubbing != null )
-                //{
-                //    storySystem.DubbingDatabase = nextDubbing;
-                //    Debug.Log($"{nextDubbing.name}으로 스토리 더빙 변경 완료");
-                //}
+                DubbingDatabase nextDubbing = _questAndStoryDatabase.DubbingDatabases[currentQuestAndSotorys];
+                if (nextDubbing != null)
+                {
+                    storySystem.DubbingDatabase = nextDubbing;
+                    Debug.Log($"{nextDubbing.name}으로 스토리 더빙 변경 완료");
+                }
             }
         }
         else
