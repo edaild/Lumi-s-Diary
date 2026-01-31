@@ -1,4 +1,5 @@
- [
+ 
+    [
     {
       "QuestID": 10001,
       "QuestName": "루미의 집",
@@ -66,7 +67,7 @@
     },
     {
       "QuestID": 10006,
-      "QuestName": "눈 토끼 처치하기",
+      "QuestName": "눈 토끼 1마리 처치하기",
       "QuestType": "Battle",
       "QuestLevel": 1,
       "Is_success": false,
@@ -130,3 +131,4 @@
       "FinishchackScene": null
     }
   ]
+  

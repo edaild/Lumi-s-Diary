@@ -70,7 +70,7 @@ MonoBehaviour:
     PreQuestID: 10004
     FinishchackScene: 
   - QuestID: 10006
-    QuestName: "\uB208 \uD1A0\uB07C \uCC98\uCE58\uD558\uAE30"
+    QuestName: "\uB208 \uD1A0\uB07C 1\uB9C8\uB9AC \uCC98\uCE58\uD558\uAE30"
     QuestType: Battle
     QuestLevel: 1
     Is_success: 0
