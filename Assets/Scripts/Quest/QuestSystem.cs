@@ -37,10 +37,12 @@ public class QuestSystem : MonoBehaviour
 
     private int currentQuestIndex = 0;
 
+    public QuestAndStoryDatabase _questAndStoryDatabase;
+
     // 추후 저장 시스탬 구연후 사용
     private int lastQuestIndex;
 
-
+    public int currentQuestAndSotorys;
     private void Awake()
     {
         if (instance == null)
@@ -120,12 +122,15 @@ public class QuestSystem : MonoBehaviour
 
     private void Update()
     {
-        SuccessChack();
-
-        if (Input.GetKeyDown(KeyCode.N))
+        if (!finishQuest)
         {
-            SuccessQuest();
-            Debug.Log("치트 사용으로 현재 퀘스트 완료 처리");
+            SuccessChack();
+
+            if (Input.GetKeyDown(KeyCode.N))
+            {
+                SuccessQuest();
+                Debug.Log("치트 사용으로 현재 퀘스트 완료 처리");
+            }
         }
     }
 
@@ -157,6 +162,7 @@ public class QuestSystem : MonoBehaviour
                 break;
 
             case "Finish":
+                finishQuest = true;
                 SuccessQuest();
                 Debug.Log($"{playerquestName} 종료");
                 break;
@@ -175,7 +181,6 @@ public class QuestSystem : MonoBehaviour
         if(currentQuestIndex < questData.quests.Count)
         {
             QuestData nextQuest = questData.quests[currentQuestIndex];
-
             playerquerstID = nextQuest.QuestID;
             playerquestName = nextQuest.QuestName;
             playerStory_Id = nextQuest.Story_ID;
@@ -188,13 +193,52 @@ public class QuestSystem : MonoBehaviour
             Debug.Log($"현재 플레이어 퀘스트 ID: {playerquerstID}, 이름: {playerquestName}, 진행될 스토리 ID: {playerStory_Id}, 처치할 몬스터 수: {playerEnemyTargetCount}");
             storySystem.QuestStory(playerStory_Id);
             playerquest_Is_success = false;
-   
+            finishQuest = false;
         }
         else
         {
-            Debug.Log("퀘스트 완료");
+            Debug.Log("챕터 완료");
+            //finishQuest = true;
+            //storySystem.StoryUI.gameObject.SetActive(false);
+            ChangeQuest();
+        }
+    }
+
+    void ChangeQuest()
+    {
+        currentQuestAndSotorys += 1;
+
+        int nextIndex = currentQuestAndSotorys;
+        if (_questAndStoryDatabase != null && nextIndex < _questAndStoryDatabase.questDataSOs.Count)
+        {
+          
+            QuestDataSO nextQuest = _questAndStoryDatabase.questDataSOs[currentQuestAndSotorys];
+            if (nextQuest != null)
+            {
+                questData = nextQuest;
+                currentQuestIndex = 0;
+                Debug.Log($"{nextQuest.name}으로 퀘스트 변경 완료");
+                finishQuest = false;
+
+                //StoryDataSO nextStory = _questAndStoryDatabase.storyDataSOs[currentQuestAndSotorys];
+                //if (nextStory != null)
+                //{
+                //    storySystem.StoryDataSO = nextStory;
+                //    Debug.Log($"{nextStory.name}으로 스토리 변경 완료");
+                //    storySystem.isFinishStory = false;
+                //}
+
+                //DubbingDatabase nextDubbing = _questAndStoryDatabase.DubbingDatabases[currentQuestAndSotorys];
+                //if( nextDubbing != null )
+                //{
+                //    storySystem.DubbingDatabase = nextDubbing;
+                //    Debug.Log($"{nextDubbing.name}으로 스토리 더빙 변경 완료");
+                //}
+            }
+        }
+        else
+        {
             finishQuest = true;
-            storySystem.StoryUI.gameObject.SetActive(false);
         }
     }
 }

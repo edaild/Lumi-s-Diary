@@ -110,7 +110,7 @@ MonoBehaviour:
     QuestDescription: "\uC2A4\uD1A0\uB9AC \uC9C4\uD589 \uD018\uC2A4\uD2B8"
     Story_ID: 10501
     TargetCount: 0
-    RewardExperience: 0
+    RewardExperience: 50
     PreQuestID: 10008
     FinishchackScene: 
   - QuestID: 10010
@@ -121,6 +121,6 @@ MonoBehaviour:
     QuestDescription: "1\uC7A5 \uBAA8\uD5D8\uC758 \uC2DC\uC791 \uC885\uB8CC"
     Story_ID: 0
     TargetCount: 0
-    RewardExperience: 50
+    RewardExperience: 0
     PreQuestID: 10009
     FinishchackScene: 

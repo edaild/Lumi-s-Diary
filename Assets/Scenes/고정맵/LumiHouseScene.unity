@@ -4773,6 +4773,7 @@ GameObject:
   - component: {fileID: 1930947428}
   - component: {fileID: 1930947427}
   - component: {fileID: 1930947429}
+  - component: {fileID: 1930947430}
   m_Layer: 0
   m_Name: QuestSystem
   m_TagString: Untagged
@@ -4810,6 +4811,8 @@ MonoBehaviour:
   playerLevel: 1
   playerExperience: 0
   questText: {fileID: 103143824}
+  _questAndStoryDatabase: {fileID: 1930947430}
+  currentQuestAndSotorys: 0
 --- !u!4 &1930947428
 Transform:
   m_ObjectHideFlags: 0
@@ -4856,6 +4859,23 @@ MonoBehaviour:
   StoryButton: {fileID: 562885668}
   StoryDialogue: {fileID: 562885665}
   storyDubbingAudioSource: {fileID: 1446063466}
+--- !u!114 &1930947430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930947426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5341e7f3bfef1cf4ba34975925f531ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questDataSOs:
+  - {fileID: 11400000, guid: bd424e715b7a09140a085e942e61a130, type: 2}
+  - {fileID: 11400000, guid: 91cb0de37a1deb74986e9dcf0757d1fe, type: 2}
+  storyDataSOs: []
+  DubbingDatabases: []
 --- !u!1 &1942412054
 GameObject:
   m_ObjectHideFlags: 0

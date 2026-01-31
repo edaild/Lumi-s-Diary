@@ -104,7 +104,7 @@ public class StorySystem : MonoBehaviour
     {
         ShowImage();
         PlayDubbing();
-        StartCoroutine(NextStoryTime());
+        //StartCoroutine(NextStoryTime());
     }
 
     IEnumerator NextStoryTime()
