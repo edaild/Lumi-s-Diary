@@ -24,7 +24,10 @@ public class QuestSystem : MonoBehaviour
     public string FinishchackScene;
     public int playerEnmeyDieCount;
 
+    [Header("치트키")]
     public Button questSkipButton;
+    public Button fastStoryButton;
+
 
     public GameObject QuestCanavarse;
 
@@ -84,6 +87,7 @@ public class QuestSystem : MonoBehaviour
         storySystem = GetComponent<StorySystem>();
 
         questSkipButton.onClick.AddListener(SuccessQuest);
+        fastStoryButton.onClick.AddListener(FastStory);
 
         if (playerPreQuestID == 0 && questData.quests.Count > 0)
         {
@@ -240,6 +244,20 @@ public class QuestSystem : MonoBehaviour
         else
         {
             finishQuest = true;
+        }
+    }
+
+    void FastStory()
+    {
+        if (!storySystem.isNotStoryTimedelay)
+        {
+            storySystem.isNotStoryTimedelay = true;
+            Debug.Log("스토리 넘기기 대기시간 해제");
+        }
+        else
+        {
+            storySystem.isNotStoryTimedelay = false;
+            Debug.Log("스토리 넘기기 대기시간 적용");
         }
     }
 }

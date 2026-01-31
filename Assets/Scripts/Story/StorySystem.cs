@@ -33,6 +33,7 @@ public class StorySystem : MonoBehaviour
     public AudioSource storyDubbingAudioSource;
 
     private bool isStoryTIme;
+    public bool isNotStoryTimedelay;
 
     private void Start()
     {
@@ -104,7 +105,11 @@ public class StorySystem : MonoBehaviour
     {
         ShowImage();
         PlayDubbing();
-        //StartCoroutine(NextStoryTime());
+        if (!isNotStoryTimedelay)
+        {
+            StartCoroutine(NextStoryTime());
+        }
+
     }
 
     IEnumerator NextStoryTime()
