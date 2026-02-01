@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public bool isInGame;
+
     private bool isInstance;
     private void Awake()
     {
@@ -32,12 +34,16 @@ public class GameManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        isInGame = true;
+
         if (Instance != null)
-        {
             isInstance = true;
-        }
 
         if (scene.name == "LumiHouseScene" || scene.name == "LobbyScene" || scene.name == "MaigicurlHotel" || scene.name == "Communitycenter")
+        {
+            isInGame = false;
             Destroy(gameObject);
+        }
+           
     }
 }

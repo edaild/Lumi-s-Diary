@@ -1362,10 +1362,11 @@ GameObject:
   - component: {fileID: 4600566414550741228}
   - component: {fileID: 5646065600243447361}
   - component: {fileID: 3297273615862723942}
+  - component: {fileID: 1939577931357924838}
   - component: {fileID: 5824370255646349190}
   - component: {fileID: 4610690088136068200}
-  - component: {fileID: 1939577931357924838}
   - component: {fileID: 8131024399605240162}
+  - component: {fileID: 2546512632192941825}
   m_Layer: 5
   m_Name: Player
   m_TagString: Player
@@ -1510,6 +1511,41 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.45, y: 1.52}
   m_Direction: 0
+--- !u!58 &1939577931357924838
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4947641272234384741}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.00000023841858}
+  serializedVersion: 2
+  m_Radius: 0.805
 --- !u!95 &5824370255646349190
 Animator:
   serializedVersion: 5
@@ -1549,60 +1585,12 @@ MonoBehaviour:
   rb: {fileID: 5646065600243447361}
   cd: {fileID: 3297273615862723942}
   animator: {fileID: 5824370255646349190}
-  iceBall: {fileID: 9109014032353307666, guid: c45055c48f2316d47a5a73c1cc73ff37, type: 3}
-  snow: {fileID: 9109014032353307666, guid: 40bf5ef27dfd53c4cb9aa98dd65febd3, type: 3}
-  crystalGardenPenel: {fileID: 4689112322790902763}
-  shootPosition: {fileID: 3787306788543749858}
-  AttackButton: {fileID: 6653256716096876013}
-  SkillButton: {fileID: 1853288462467463572}
-  TeleportButton: {fileID: 4219169684532449213}
   JumpButton: {fileID: 6390599627275816104}
-  ultimateButtonUI: {fileID: 6216550111480615332}
-  ultimateVidio: {fileID: 4301448584511468738}
-  videoPlayer: {fileID: 3325503016720804326}
-  ultimateVidioClip: {fileID: 32900000, guid: 087c158abad9ff64dba903e4ada89867, type: 3}
-  audioSource: {fileID: 1225233702373442971}
-  nomalAtttackVoice: {fileID: 8300000, guid: 69432ea3e3ead854e9b3a611e3ebffad, type: 3}
-  skillAttackVoice: {fileID: 8300000, guid: 8248860c1d32ef848b24083fad425cac, type: 3}
-  skillCrystarGardenVoice: {fileID: 8300000, guid: 53ddaf1a754901a4398b1e7bd179621a, type: 3}
   portalSystem: {fileID: 0}
   currentPortal: {fileID: 0}
   fadeManager: {fileID: 0}
---- !u!58 &1939577931357924838
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4947641272234384741}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.00000023841858}
-  serializedVersion: 2
-  m_Radius: 0.805
+  isHorizontalInput_xManus: 0
+  isNotInGameScene: 0
 --- !u!114 &8131024399605240162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1615,7 +1603,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff250622fae38b943b56ab4e29d069db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameMusicSystem: {fileID: 0}
+  isInGame: 0
+--- !u!114 &2546512632192941825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4947641272234384741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57ba418781132e3488b9211d9812015d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character_Health: 1000
+  character_stemina: 1000
+  current_Character_Health: 0
+  current_Character_stemina: 0
+  HeaderUI: {fileID: 6578681338672260661}
+  character_health_slider: {fileID: 7518053396550779428}
+  character_stemina_slider: {fileID: 5660483761201832130}
+  DieAudio: {fileID: 0}
+  _questSystem: {fileID: 0}
+  _characterMoveSystem: {fileID: 0}
+  _characterSkillSystem: {fileID: 0}
+  Quest1_lastQuest: 10010
 --- !u!1 &5335018270658110804
 GameObject:
   m_ObjectHideFlags: 0

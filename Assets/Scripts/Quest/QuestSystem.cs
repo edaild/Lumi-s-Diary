@@ -41,6 +41,7 @@ public class QuestSystem : MonoBehaviour
     private int currentQuestIndex = 0;
 
     public QuestAndStoryDatabase _questAndStoryDatabase;
+    public CharacterLevelSystem _characterLevelSystem;
 
     // 추후 저장 시스탬 구연후 사용
     private int lastQuestIndex;
@@ -85,6 +86,7 @@ public class QuestSystem : MonoBehaviour
     private void Start()
     {
         storySystem = GetComponent<StorySystem>();
+        _characterLevelSystem = GetComponent<CharacterLevelSystem>();
 
         questSkipButton.onClick.AddListener(SuccessQuest);
         fastStoryButton.onClick.AddListener(FastStory);
@@ -204,6 +206,7 @@ public class QuestSystem : MonoBehaviour
             Debug.Log("챕터 완료");
             finishQuest = true;
             storySystem.StoryUI.gameObject.SetActive(false);
+            _characterLevelSystem.UpdateLevel();
             ChangeQuest();
         }
     }

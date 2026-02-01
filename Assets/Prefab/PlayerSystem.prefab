@@ -578,7 +578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff250622fae38b943b56ab4e29d069db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameMusicSystem: {fileID: 3676829401523887325}
+  isInGame: 0
 --- !u!1 &2093888852135686170
 GameObject:
   m_ObjectHideFlags: 0
@@ -3587,6 +3587,22 @@ PrefabInstance:
       propertyPath: m_BoundingShape2D
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2546512632192941825, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
+      propertyPath: HeaderUI
+      value: 
+      objectReference: {fileID: 4467455396207387457}
+    - target: {fileID: 2546512632192941825, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
+      propertyPath: Quest1_lastQuest
+      value: 20004
+      objectReference: {fileID: 0}
+    - target: {fileID: 2546512632192941825, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
+      propertyPath: character_health_slider
+      value: 
+      objectReference: {fileID: 8812464261314072620}
+    - target: {fileID: 2546512632192941825, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
+      propertyPath: character_stemina_slider
+      value: 
+      objectReference: {fileID: 3116654802810537493}
     - target: {fileID: 4600566414550741228, guid: fac5b75566fffb84da7dd22d0288c8a9, type: 3}
       propertyPath: m_Size.x
       value: 0.99
