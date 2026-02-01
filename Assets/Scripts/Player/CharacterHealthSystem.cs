@@ -38,11 +38,6 @@ public class CharacterHealthSystem : MonoBehaviour
     private void Update()
     {
         ShowHeader();
-
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            Die();
-        }
     }
     void ShowHeader()
     {
