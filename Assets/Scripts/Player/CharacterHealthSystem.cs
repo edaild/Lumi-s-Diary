@@ -23,6 +23,7 @@ public class CharacterHealthSystem : MonoBehaviour
     public CharacterMoveSystem _characterMoveSystem;
     public CharacterSkillSystem _characterSkillSystem;
 
+
     [Tooltip("2장 바이탈 벤드 수령  퀘스트")] public int Quest1_lastQuest = 20004;
 
     private void Start()
@@ -70,14 +71,12 @@ public class CharacterHealthSystem : MonoBehaviour
         current_Character_stemina = character_stemina;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy")/* && other.gameObject.CompareTag("EnmeyAttackCollider")*/)
         {
             other.gameObject.TryGetComponent<EnemySystem>(out EnemySystem enemy);
             MinusHeath(enemy);
-
-            Debug.Log("충돌");
         }
     }
 

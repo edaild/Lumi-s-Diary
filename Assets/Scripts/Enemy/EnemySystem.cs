@@ -59,8 +59,7 @@ public class EnemySystem : MonoBehaviour
 
     }
 
-       
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
@@ -75,7 +74,7 @@ public class EnemySystem : MonoBehaviour
                 int isCrystarGardDamage = ball.BallDamage += 100;
                 _currentHealth -= isCrystarGardDamage;
                 Debug.Log("크리스탈 가든 버프 적용");
-            }   
+            }
             Debug.Log(_currentHealth);
             Destroy(collision.gameObject);
 
@@ -83,7 +82,6 @@ public class EnemySystem : MonoBehaviour
                 DIe();
             else
                 return;
-            
         }
     }
 
@@ -102,7 +100,8 @@ public class EnemySystem : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
@@ -139,9 +138,15 @@ public class EnemySystem : MonoBehaviour
         Transform targetPlayer = player.gameObject.transform;
 
         if (!_storySystem || !_storySystem.isStoryEndPoint || isPlayer) return;
+        float Distance = 2f;
 
-        Vector2 targetDirection = (targetPlayer.position - transform.position).normalized;
-        float enemyMoveX = targetDirection.x * _EnemySpeed * Time.deltaTime;
-        transform.position = new Vector3(transform.position.x + enemyMoveX, transform.position.y, 0);
+        float currentDistance = Vector2.Distance(targetPlayer.position, transform.position);
+
+        //if (currentDistance > Distance)
+        //{
+            Vector2 targetDirection = (targetPlayer.position - transform.position).normalized;
+            float enemyMoveX = targetDirection.x * _EnemySpeed * Time.deltaTime;
+            transform.position = new Vector3(transform.position.x + enemyMoveX, transform.position.y, 0);
+        //}
     }
 }
