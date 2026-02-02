@@ -135,7 +135,6 @@ public class EnemySystem : MonoBehaviour
         if (!_storySystem || !_storySystem.isStoryEndPoint || isPlayer) return;
 
         Vector2 targetDirection = (targetPlayer.position - transform.position).normalized;
-
         float enemyMoveX = targetDirection.x * _EnemySpeed * Time.deltaTime;
         transform.position = new Vector3(transform.position.x + enemyMoveX, transform.position.y, 0);
     }

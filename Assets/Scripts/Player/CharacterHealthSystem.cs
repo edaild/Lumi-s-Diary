@@ -48,26 +48,26 @@ public class CharacterHealthSystem : MonoBehaviour
     }
     void Die()
     {
-        if (/*_questSystem.playerLevel >= 2 ||*/ !_characterMoveSystem || !_characterSkillSystem ||current_Character_Health >= 0) return;
-        //_characterMoveSystem.animator.SetBool("isDie", true);
-        //_characterSkillSystem.audioSource.clip = DieAudio;
+        if (_questSystem.playerLevel >= 2 || !_characterMoveSystem || !_characterSkillSystem ||current_Character_Health >= 0) return;
+        _characterMoveSystem.animator.SetBool("isDie", true);
+        _characterSkillSystem.audioSource.clip = DieAudio;
 
-        //_characterSkillSystem.audioSource.Play();
+        _characterSkillSystem.audioSource.Play();
         StartCoroutine(DiePlayer());
     }
 
     IEnumerator DiePlayer()
     {
         yield return new WaitForSeconds(1f);
-        //_characterMoveSystem.animator.SetBool("isDie", false);
-        //_characterSkillSystem.audioSource.Stop();
-        //_characterSkillSystem.audioSource.clip = null;
+        _characterMoveSystem.animator.SetBool("isDie", false);
+        _characterSkillSystem.audioSource.Stop();
+        _characterSkillSystem.audioSource.clip = null;
         _characterMoveSystem.fadeManager.StartFadeOut(1.5f);
 
          yield return new WaitForSeconds(3f);
         SceneManager.LoadScene("MaigicurlHotel");
-        //current_Character_Health = character_Health;
-        //current_Character_stemina = character_stemina;
+        current_Character_Health = character_Health;
+        current_Character_stemina = character_stemina;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -83,18 +83,21 @@ public class CharacterHealthSystem : MonoBehaviour
 
     void MinusHeath(EnemySystem Enemy)
     {
-        if (current_Character_Health >= 0 /*|| _questSystem.playerLevel >= 2*/)
+        if (_questSystem.playerLevel < 2)
+        {
+            Debug.Log("현재 플레이어 체력 감소 전투 시스템 미오픈 (레벨 2 이상 필요)");
+        }
+        else if (current_Character_Health > 0)
         {
             current_Character_Health -= Enemy._EnemyDamage;
-            Debug.Log($"적에게  - {current_Character_Health -= Enemy._EnemyDamage} 만큼에 데미지 공격을 받음, 남은 체력 : {current_Character_Health}");
-        }
-        else if (_questSystem.playerLevel >= 2)
-        {
-            Debug.Log("현제 플레이어 체력 감소 전투시스탬 미오픈");
-        }
-        else
-        {
-            Die();
+
+            Debug.Log($"적에게 {Enemy._EnemyDamage}만큼 데미지를 받음. 남은 체력: {current_Character_Health}");
+
+            if (current_Character_Health <= 0)
+            {
+                current_Character_Health = 0;
+                Die();
+            }
         }
     }
 }
