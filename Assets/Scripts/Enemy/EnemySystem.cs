@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Drawing.Design;
 using UnityEngine;
+using TMPro;
 
 public class EnemySystem : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class EnemySystem : MonoBehaviour
     public int _GiftCoin;
 
     public int _currentHealth;
+    public TextMeshProUGUI EnemyName;
+    public Animator EnemyAnimator;
+
     public CharacterSkillSystem _characterSkillSystem;
     public QuestSystem _questSystem;
     public StorySystem _storySystem;
@@ -51,6 +55,8 @@ public class EnemySystem : MonoBehaviour
         _currentHealth = _EnemyHealth;
 
         player = _characterSkillSystem.gameObject;
+        EnemyName.text = _EnemyName;
+
     }
 
        
