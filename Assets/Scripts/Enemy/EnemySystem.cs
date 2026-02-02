@@ -19,6 +19,16 @@ public class EnemySystem : MonoBehaviour
     public int _currentHealth;
     public CharacterSkillSystem _characterSkillSystem;
     public QuestSystem _questSystem;
+    public StorySystem _storySystem;
+
+    public GameObject AttackCollider;
+
+    private GameObject player;
+    private bool isPlayer;
+    private bool isPlayerAttack;
+
+    private bool isFollowing = false;
+    private Coroutine stopCoroutine;
 
     private void Start()
     {
@@ -37,10 +47,13 @@ public class EnemySystem : MonoBehaviour
 
         _characterSkillSystem = UnityEngine.Object.FindAnyObjectByType<CharacterSkillSystem>();
         _questSystem = UnityEngine.Object.FindAnyObjectByType<QuestSystem>();
-
+        _storySystem = UnityEngine.Object.FindAnyObjectByType<StorySystem>();
         _currentHealth = _EnemyHealth;
+
+        player = _characterSkillSystem.gameObject;
     }
-   
+
+       
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
@@ -73,5 +86,57 @@ public class EnemySystem : MonoBehaviour
         _questSystem.playerEnmeyDieCount++;
         Destroy(gameObject);
         Debug.Log($"{_EnemyName} 처치 완료. 루나 {_GiftCoin} 만큼 증가");
+    }
+
+    private void Update()
+    {
+        if (isFollowing && player != null)
+        {
+            FollowPlayer();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            if (stopCoroutine != null)
+            {
+                StopCoroutine(stopCoroutine);
+                stopCoroutine = null;
+            }
+            isFollowing = true;
+        }
+            
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player") || player != null)
+        {
+            if (stopCoroutine != null) StopCoroutine(stopCoroutine);
+            stopCoroutine = StartCoroutine(StopFollowingAfterDelay());
+        }
+    }
+
+    IEnumerator StopFollowingAfterDelay()
+    {
+        yield return new WaitForSeconds(8f);
+
+        isFollowing = false;
+        stopCoroutine = null;
+        Debug.Log("추적 중지");
+    }
+
+    void FollowPlayer()
+    {
+        Transform targetPlayer = player.gameObject.transform;
+
+        if (!_storySystem || !_storySystem.isStoryEndPoint || isPlayer) return;
+
+        Vector2 targetDirection = (targetPlayer.position - transform.position).normalized;
+
+        float enemyMoveX = targetDirection.x * _EnemySpeed * Time.deltaTime;
+        transform.position = new Vector3(transform.position.x + enemyMoveX, transform.position.y, 0);
     }
 }

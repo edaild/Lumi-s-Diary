@@ -18,5 +18,5 @@ MonoBehaviour:
     EnemyLevel: 1
     EnmeyHP: 300
     EnemyDamage: 10
-    EnemySpeed: 0
+    EnemySpeed: 3
     GiftCoin: 100

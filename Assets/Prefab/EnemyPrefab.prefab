@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 7108067694184590871}
   - component: {fileID: 5392603681340304227}
   - component: {fileID: 6759566860335136326}
+  - component: {fileID: -3111637529683067931}
   m_Layer: 0
   m_Name: EnemyPrefab
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,6 +108,11 @@ MonoBehaviour:
   _EnemyDamage: 0
   _EnemySpeed: 0
   _GiftCoin: 0
+  _currentHealth: 0
+  _characterSkillSystem: {fileID: 0}
+  _questSystem: {fileID: 0}
+  _storySystem: {fileID: 0}
+  AttackCollider: {fileID: 0}
 --- !u!58 &5392603681340304227
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -141,7 +147,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.8
+  m_Radius: 2
 --- !u!61 &6759566860335136326
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -187,3 +193,30 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &-3111637529683067931
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3907691084054333568}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 6
