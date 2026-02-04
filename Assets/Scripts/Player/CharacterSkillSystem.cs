@@ -55,25 +55,25 @@ public class CharacterSkillSystem : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetMouseButtonDown(1))
-        {
-            NomalAttack();
-        }
+        //if (Input.GetMouseButtonDown(1))
+        //{
+        //    NomalAttack();
+        //}
 
-        else if (Input.GetKeyDown(KeyCode.Q))
-        {
-            CrystarGarden();
-        }
+        //else if (Input.GetKeyDown(KeyCode.Q))
+        //{
+        //    CrystarGarden();
+        //}
 
-        else if (Input.GetKeyDown(KeyCode.E))
-        {
-            SkillAttack();
-        }
+        //else if (Input.GetKeyDown(KeyCode.E))
+        //{
+        //    SkillAttack();
+        //}
 
-        else if (Input.GetKeyDown(KeyCode.R))
-        {
-            Teleport();
-        }
+        //else if (Input.GetKeyDown(KeyCode.R))
+        //{
+        //    Teleport();
+        //}
     }
 
     void NomalAttack()

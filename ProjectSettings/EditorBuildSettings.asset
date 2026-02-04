@@ -24,9 +24,6 @@ EditorBuildSettings:
     path: Assets/Scenes/SnowVillageRoad3.unity
     guid: 0b25f69e371370e488c2ab47ee122b12
   - enabled: 1
-    path: "Assets/Scenes/\uC778\uAC8C\uC784 \uC678/EndingScene.unity"
-    guid: 3e52d7dfc5acda545a2b19014eba6cf0
-  - enabled: 1
     path: "Assets/Scenes/\uACE0\uC815\uB9F5/MaigicurlHotel.unity"
     guid: ec3051a1b2b0ec146a07f18218095d65
   - enabled: 1
@@ -38,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/\uBBF8\uB2C8\uAC8C\uC784/MathScene.unity"
     guid: 0c4cf8a0851dd6042a699cc1fb3ab0bd
+  - enabled: 1
+    path: "Assets/Scenes/\uC778\uAC8C\uC784 \uC678/EndingScene.unity"
+    guid: 3e52d7dfc5acda545a2b19014eba6cf0
   m_configObjects: {}
