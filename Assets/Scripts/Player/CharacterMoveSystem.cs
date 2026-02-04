@@ -36,7 +36,7 @@ public class CharacterMoveSystem : MonoBehaviour
 
         string sceneName = SceneManager.GetActiveScene().name;
 
-        if (sceneName != "LumiHouseScene" && sceneName != "MaigicurlHotel" && sceneName != "Communitycenter")
+        if (sceneName != "LumiHouseScene" && sceneName != "MaigicurlHotel" && sceneName != "Communitycenter" && sceneName != "EndingScene")
         {
             isFade = true;
             fadeManager.StartFadeIn(1.5f);

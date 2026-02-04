@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: test
   m_EditorClassIdentifier: 
   portalID: 2
-  portalName: "\uB85C\uBE44\uB85C \uB098\uAC00\uAE30"
-  targetSceneName: LobbyScene
+  portalName: "\uC5D4\uB529 \uD14C\uC2A4\uD2B8"
+  targetSceneName: EndingScene
   spawnPosition: {x: 1.19, y: -1.48, z: 0}

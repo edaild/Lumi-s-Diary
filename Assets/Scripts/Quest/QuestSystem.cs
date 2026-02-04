@@ -72,7 +72,7 @@ public class QuestSystem : MonoBehaviour
 
     private void IsNotGameScene(Scene scene, LoadSceneMode mode)
     {
-       if(scene.name == "LobbyScene"|| scene.name == "RewordScene" || scene.name == "MathScene")
+       if(scene.name == "LobbyScene"|| scene.name == "RewordScene" || scene.name == "MathScene" || scene.name == "EndingScene")
        {
             QuestCanavarse.gameObject.SetActive(false);
        }
@@ -242,6 +242,11 @@ public class QuestSystem : MonoBehaviour
                     storySystem.DubbingDatabase = nextDubbing;
                     Debug.Log($"{nextDubbing.name}으로 스토리 더빙 변경 완료");
                 }
+            }
+            else if(nextQuest == null)
+            {
+                Debug.Log("모든 퀘스트 클리어 엔딩 시작");
+                SceneManager.LoadScene("EndingScene");
             }
         }
         else
