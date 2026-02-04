@@ -1,1 +1,2 @@
 *.mp4 filter=lfs diff=lfs merge=lfs -text
+Assets/Vidio/Character/루미/루미[[:space:]]궁극기[[:space:]]더빙본.mp4 filter=lfs diff=lfs merge=lfs -text
