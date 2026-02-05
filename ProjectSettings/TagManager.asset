@@ -15,6 +15,7 @@ TagManager:
   - Enemy
   - Bullet
   - EnemyAttackCollider
+  - Navi
   layers:
   - Default
   - TransparentFX

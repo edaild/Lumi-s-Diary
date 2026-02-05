@@ -27,12 +27,14 @@ public class EnemySystem : MonoBehaviour
 
     public GameObject AttackCollider;
 
+    public Transform startPoition;
     private GameObject player;
     private bool isPlayer;
     private bool isPlayerAttack;
-
+    private bool isBackPoition;
     private bool isFollowing = false;
     private Coroutine stopCoroutine;
+
 
     private void Start()
     {
@@ -57,39 +59,7 @@ public class EnemySystem : MonoBehaviour
         player = _characterSkillSystem.gameObject;
         EnemyName.text = _EnemyName;
 
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Bullet"))
-        {
-
-            collision.gameObject.TryGetComponent<SkillBall>(out SkillBall ball);
-
-            Debug.Log(_currentHealth);
-            if (!_characterSkillSystem.isCrystarGarden)
-                _currentHealth -= ball.BallDamage;
-            else
-            {
-                int isCrystarGardDamage = ball.BallDamage += 100;
-                _currentHealth -= isCrystarGardDamage;
-                Debug.Log("크리스탈 가든 버프 적용");
-            }
-            Debug.Log(_currentHealth);
-            Destroy(collision.gameObject);
-
-            if (_currentHealth <= 0)
-                DIe();
-            else
-                return;
-        }
-    }
-
-    void DIe()
-    {
-        _questSystem.playerEnmeyDieCount++;
-        Destroy(gameObject);
-        Debug.Log($"{_EnemyName} 처치 완료. 루나 {_GiftCoin} 만큼 증가");
+        startPoition.position = transform.position;
     }
 
     private void Update()
@@ -97,6 +67,11 @@ public class EnemySystem : MonoBehaviour
         if (isFollowing && player != null)
         {
             FollowPlayer();
+        }
+
+        if(isBackPoition && player != null)
+        {
+            BackPoition();
         }
     }
 
@@ -111,6 +86,13 @@ public class EnemySystem : MonoBehaviour
                 stopCoroutine = null;
             }
             isFollowing = true;
+        }
+
+        if (other.gameObject.CompareTag("Navi"))
+        {
+            isFollowing = false;
+            isBackPoition = true;
+            Debug.Log("Enemy 이동 제한 구간 진입");
         }
             
     }
@@ -137,16 +119,26 @@ public class EnemySystem : MonoBehaviour
     {
         Transform targetPlayer = player.gameObject.transform;
 
-        if (!_storySystem || !_storySystem.isStoryEndPoint || isPlayer) return;
+        if (!_storySystem || !_storySystem.isStoryEndPoint || isPlayer || isBackPoition) return;
         float Distance = 2f;
 
         float currentDistance = Vector2.Distance(targetPlayer.position, transform.position);
 
-        //if (currentDistance > Distance)
-        //{
+        if (currentDistance > Distance)
+        {
             Vector2 targetDirection = (targetPlayer.position - transform.position).normalized;
             float enemyMoveX = targetDirection.x * _EnemySpeed * Time.deltaTime;
             transform.position = new Vector3(transform.position.x + enemyMoveX, transform.position.y, 0);
-        //}
+        }
+    }
+
+    void BackPoition()
+    {
+        Vector2 targetBackDirection = (startPoition.position - transform.position).normalized;
+        float enemyMoveX = targetBackDirection.x * _EnemySpeed * Time.deltaTime;
+        transform.position = new Vector3(transform.position.x + enemyMoveX, transform.position.y, 0);
+
+        if (transform.position == startPoition.position)
+            isBackPoition = false;
     }
 }
