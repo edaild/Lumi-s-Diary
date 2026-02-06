@@ -21,9 +21,13 @@ public class GameMusicSystem : MonoBehaviour
         string sceneName = SceneManager.GetActiveScene().name;
         Debug.Log($"ÇöÀç¾À: {sceneName}");
 
-        if (sceneName == "Snowvillage" || sceneName == "SnowVillageRoad3" || sceneName == "SnowVillageRoad")
+        if (sceneName == "Snowvillage")
         {
             targetMusicName = "´«ÀÇ ¸¶À»";
+        }
+        else if(sceneName == "SnowVillageRoad" || sceneName == "SnowVillageRoad3")
+        {
+            targetMusicName = "´«ÀÇ ¸¶À» ±æ";
         }
         else if(sceneName == "IcIcleCity")
         {
