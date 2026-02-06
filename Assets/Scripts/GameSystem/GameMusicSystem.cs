@@ -21,7 +21,7 @@ public class GameMusicSystem : MonoBehaviour
 
     private void IsNotInGameScene(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "LumiHouseScene" || scene.name == "Communitycenter" || scene.name == "LobbyScene" || scene.name == "MathScene")
+        if (scene.name == "LumiHouseScene" || scene.name == "Communitycenter" || scene.name == "LobbyScene" || scene.name == "MathScene"|| scene.name == "EndingScene")
         {
             audioSource.Stop();
             audioSource.clip = null;
