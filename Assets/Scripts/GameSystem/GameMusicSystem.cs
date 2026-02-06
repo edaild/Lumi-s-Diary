@@ -9,9 +9,29 @@ public class GameMusicSystem : MonoBehaviour
 
     public string currentMusic;
 
-    private void Update()
+    private void OnEnable()
     {
-        ChackMusic();
+        SceneManager.sceneLoaded += IsNotInGameScene;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= IsNotInGameScene;
+    }
+
+    private void IsNotInGameScene(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "LumiHouseScene" || scene.name == "Communitycenter" || scene.name == "LobbyScene" || scene.name == "MathScene")
+        {
+            audioSource.Stop();
+            audioSource.clip = null;
+            Debug.Log("현재씬 음악 시스탬 필요 여부 X");
+        }
+        else
+        {
+            ChackMusic();
+        }
+ 
     }
 
     public void ChackMusic() 
@@ -24,6 +44,10 @@ public class GameMusicSystem : MonoBehaviour
         if (sceneName == "Snowvillage")
         {
             targetMusicName = "눈의 마을";
+        }
+        else if(sceneName == "MaigicurlHotel")
+        {
+            targetMusicName = "매직컬센터";
         }
         else if(sceneName == "SnowVillageRoad" || sceneName == "SnowVillageRoad3")
         {
