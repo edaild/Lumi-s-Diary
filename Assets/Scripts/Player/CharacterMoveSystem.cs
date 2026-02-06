@@ -85,7 +85,7 @@ public class CharacterMoveSystem : MonoBehaviour
     void IsNotInGameScene(Scene scene, LoadSceneMode mode)
     {
         string sceneName = SceneManager.GetActiveScene().name;
-        if (sceneName == "LumiHouseScene" || sceneName == "MaigicurlHotel")
+        if (sceneName == "LumiHouseScene" || sceneName == "MaigicurlHotel" || sceneName == "Communitycenter" || sceneName == "MathScene")
         {
             isNotInGameScene = true;
             isFade = false;

@@ -14,7 +14,7 @@ public class GameMusicSystem : MonoBehaviour
         ChackMusic();
     }
 
-    private void ChackMusic() 
+    public void ChackMusic() 
     {
         string targetMusicName = "";
 

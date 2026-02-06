@@ -11,6 +11,7 @@ public class StorySystem : MonoBehaviour
     public StoryDataSO StoryDataSO;
     public QuestSystem questSystem;
     public DubbingDatabase DubbingDatabase;
+    public GameMusicSystem _gameMusicSystem;
 
     public int current_StoryID;
     public int current_StoryCount;
@@ -24,6 +25,7 @@ public class StorySystem : MonoBehaviour
     public bool isStoryEndPoint;
     public bool isFinishStory;
     public string current_TargetAudio;
+    public string current_TargetMusic;
 
     [Header("스토리 UI")]
     public GameObject StoryUI;
@@ -38,6 +40,7 @@ public class StorySystem : MonoBehaviour
     private void Start()
     {
         questSystem = GetComponent<QuestSystem>();
+        _gameMusicSystem = UnityEngine.Object.FindAnyObjectByType<GameMusicSystem>();
         StoryButton.onClick.AddListener(NextStory);
     }
 
@@ -61,6 +64,7 @@ public class StorySystem : MonoBehaviour
                 current_TargetAudio = story.TargetAudio;
                 current_ImageCommand = story.Image_Command;
                 current_ImageName = story.TargetImageName;
+                current_TargetMusic = story.TargetMusic;
                 CurrentStoryAsset();
             }
 
@@ -86,6 +90,7 @@ public class StorySystem : MonoBehaviour
         current_TargetAudio = nextStory.TargetAudio;
         current_ImageCommand = nextStory.Image_Command;
         current_ImageName = nextStory.TargetImageName;
+        current_TargetMusic = nextStory.TargetMusic;
         Debug.Log($"현재 스토리 아이디: {current_StoryID}, 엔드 포인트 여부: {nextStory.EndPoint}");
         CurrentStoryAsset();
 
@@ -105,6 +110,7 @@ public class StorySystem : MonoBehaviour
     {
         ShowImage();
         PlayDubbing();
+        PlayTargetMusic();
         if (!isNotStoryTimedelay)
         {
             StartCoroutine(NextStoryTime());
@@ -151,6 +157,25 @@ public class StorySystem : MonoBehaviour
         {
             storyDubbingAudioSource.clip = DubbingAudio;
             storyDubbingAudioSource.Play();
+        }
+    }
+
+    void PlayTargetMusic()
+    {
+        if (current_TargetMusic != null && _gameMusicSystem && !isStoryEndPoint)
+        {
+            AudioClip ChnageMusic = _gameMusicSystem.audioClips.Find(gm => gm.name == current_TargetMusic);
+
+            if (ChnageMusic != null)
+            {
+                _gameMusicSystem.audioSource.Stop();
+                _gameMusicSystem.audioSource.clip = ChnageMusic;
+                _gameMusicSystem.audioSource.Play();
+            }
+        }
+        else if (isStoryEndPoint && _gameMusicSystem)
+        {
+            _gameMusicSystem.ChackMusic();
         }
     }
 }
