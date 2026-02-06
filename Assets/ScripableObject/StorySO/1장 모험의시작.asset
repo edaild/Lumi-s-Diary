@@ -369,10 +369,10 @@ MonoBehaviour:
       \uC4F4 \uAC70\uB2C8? \uD639\uC2DC... \uB9C8\uBC95\uC0AC\uC57C?"
     Is_Image: 1
     Image_Command: KEEP
-    Audio: 1
+    Audio: 0
     EndPoint: 0
     TargetImageName: 
-    TargetAudio: "1\uC7A5 11.\uC5B4...? \uBC88\uAC1C..."
+    TargetAudio: 
     TargetMusic: 
   - Story_ID: 10409
     Speaker: "\uB77C\uC774"
@@ -873,9 +873,7 @@ MonoBehaviour:
     TargetMusic: 
   - Story_ID: 10536
     Speaker: "\uB8E8\uBBF8"
-    Dialogue: "\uC544\uD558\uD558\uD558! \uB77C\uC774, \uC81C\uBC1C! \uC544\uD558\uD558!
-      \uADF8\uB9CC, \uADF8\uB9CC\uD574! \uB098 \uC228 \uB118\uC5B4\uAC00\uACA0\uC5B4...!
-      \uC73C\uC544\uC559!"
+    Dialogue: "\uD558\uC9C0\uB9C8! \uAC04\uC9C0\uB7FD\uB2E4\uACE0!!"
     Is_Image: 1
     Image_Command: KEEP
     Audio: 1
@@ -885,9 +883,8 @@ MonoBehaviour:
     TargetMusic: 
   - Story_ID: 10537
     Speaker: "\uB77C\uC774"
-    Dialogue: "\uC544\uD558\uD558! \uC5B8\uB2C8 \uC6C3\uB294 \uC18C\uB9AC \uC9C4\uC9DC
-      \uC6C3\uACA8! \uC19C\uC0AC\uD0D5\uC774 \uB9C9 \uD754\uB4E4\uB9AC\uB294 \uAC83
-      \uAC19\uC544!"
+    Dialogue: "\uC5B8\uB2C8 \uC6C3\uB294 \uC18C\uB9AC \uC9C4\uC9DC \uC6C3\uACA8!
+      \uC19C\uC0AC\uD0D5\uC774 \uB9C9 \uD754\uB4E4\uB9AC\uB294 \uAC83 \uAC19\uC544!"
     Is_Image: 1
     Image_Command: KEEP
     Audio: 0
