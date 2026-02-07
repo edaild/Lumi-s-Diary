@@ -12,4 +12,106 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4718c0c50a90194d8af775834845dbb, type: 3}
   m_Name: "2\uC7A5 \uC544\uC774\uC2DC\uD074 \uC2DC\uD2F0"
   m_EditorClassIdentifier: 
-  quests: []
+  quests:
+  - QuestID: 20001
+    QuestName: "\uB8E8\uBBF8\uB97C \uAE68\uC6B0\uB294 \uB77C\uC774"
+    QuestType: Story
+    QuestLevel: 2
+    Is_success: 0
+    QuestDescription: "\uB8E8\uBBF8\uB97C \uAE68\uC6B0\uB294 \uB77C\uC774"
+    Story_ID: 20001
+    TargetCount: 0
+    RewardExperience: 0
+    PreQuestID: 10010
+    FinishchackScene: 
+  - QuestID: 20002
+    QuestName: "\uC544\uC774\uC2DC\uD074 \uC2DC\uD2F0 \uAC00\uAE30"
+    QuestType: Move
+    QuestLevel: 2
+    Is_success: 0
+    QuestDescription: "\uC544\uC774\uC2DC\uD074 \uC2DC\uD2F0\uB85C \uAC04\uB2E4."
+    Story_ID: 0
+    TargetCount: 0
+    RewardExperience: 0
+    PreQuestID: 20101
+    FinishchackScene: IcIcleCity
+  - QuestID: 20003
+    QuestName: "\uB9E4\uC9C1\uCEEC \uC13C\uD130 \uAC00\uAE30"
+    QuestType: Move
+    QuestLevel: 2
+    Is_success: 0
+    QuestDescription: "\uB9E4\uC9C0\uCEEC \uC13C\uD130\uB85C \uAC04\uB2E4."
+    Story_ID: 0
+    TargetCount: 0
+    RewardExperience: 0
+    PreQuestID: 20002
+    FinishchackScene: MaigicurlHotel
+  - QuestID: 20004
+    QuestName: "\uC138\uB9AC\uC640 \uB300\uD654 \uD558\uAE30"
+    QuestType: Story
+    QuestLevel: 2
+    Is_success: 0
+    QuestDescription: "\uC138\uB9AC\uB791 \uB300\uD654\uB97C \uD55C\uB2E4."
+    Story_ID: 20101
+    TargetCount: 0
+    RewardExperience: 10
+    PreQuestID: 20003
+    FinishchackScene: 
+  - QuestID: 20005
+    QuestName: "\uBA54\uC9C1\uCEEC \uC13C\uD130 \uB098\uAC00\uAE30"
+    QuestType: Move
+    QuestLevel: 2
+    Is_success: 0
+    QuestDescription: "\uBA54\uC9C1\uCEEC \uC13C\uD130\uB97C \uB098\uAC04\uB2E4."
+    Story_ID: 0
+    TargetCount: 0
+    RewardExperience: 0
+    PreQuestID: 20004
+    FinishchackScene: IcIcleCity
+  - QuestID: 20006
+    QuestName: "\uC544\uC774\uB9AC\uC2A4\uC640 \uC7AC\uD68C"
+    QuestType: Story
+    QuestLevel: 2
+    Is_success: 0
+    QuestDescription: "\uB8E8\uBBF8\uC758 \uC120\uBC30 \uC544\uC774\uB9AC\uC2A4"
+    Story_ID: 20201
+    TargetCount: 0
+    RewardExperience: 10
+    PreQuestID: 20005
+    FinishchackScene: 
+  - QuestID: 20007
+    QuestName: "\uBA54\uC9C0\uCEEC \uC13C\uD130 \uB4E4\uC5B4\uAC00\uAE30"
+    QuestType: Move
+    QuestLevel: 2
+    Is_success: 0
+    QuestDescription: "\uB9E4\uC9C0\uCEEC \uC13C\uD130\uC5D0 \uB2E4\uC2DC \uB4E4\uC5B4\uAC04\uB2E4"
+    Story_ID: 0
+    TargetCount: 0
+    RewardExperience: 10
+    PreQuestID: 20006
+    FinishchackScene: MaigicurlHotel
+  - QuestID: 20008
+    QuestName: "\uD638\uD154\uBC29 \uAD6C\uACBD"
+    QuestType: Story
+    QuestLevel: 2
+    Is_success: 0
+    QuestDescription: "\uB8E8\uBBF8\uC640 \uB77C\uC774\uB294 \uD638\uD154\uBC29\uAD6C\uACBD\uACFC
+      \uC810\uC2DC\uC2DC\uAC04\uC744 \uB2E4\uB8E8\uB294 \uC2A4\uD1A0\uB9AC"
+    Story_ID: 20301
+    TargetCount: 0
+    RewardExperience: 10
+    PreQuestID: 20007
+    FinishchackScene: 
+  - QuestID: 20009
+    QuestName: "2\uC7A5 \uB208\uC758\uB3C4\uC2DC \uC544\uC774\uC2DC\uD074 \uC2DC\uD2F0
+      \uC885\uB8CC"
+    QuestType: Finish
+    QuestLevel: 2
+    Is_success: 0
+    QuestDescription: "2\uC7A5 \uB208\uC758\uB3C4\uC2DC \uC544\uC774\uC2DC\uD074
+      \uC2DC\uD2F0 \uC885\uB8CC"
+    Story_ID: 0
+    TargetCount: 0
+    RewardExperience: 0
+    PreQuestID: 20008
+    FinishchackScene: 

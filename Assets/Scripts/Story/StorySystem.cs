@@ -46,6 +46,7 @@ public class StorySystem : MonoBehaviour
 
     public void QuestStory(int StoryID)
     {
+        Debug.Log("함수 실행");
         if (StoryID == 0 && questSystem.finishQuest == false)
         {
             Debug.Log("전투 및 이동 퀘스트 진행중");
@@ -67,6 +68,10 @@ public class StorySystem : MonoBehaviour
                 current_TargetMusic = story.TargetMusic;
                 CurrentStoryAsset();
             }
+            else
+            {
+                Debug.Log("스토리 아이디를 못찾음");
+            }
 
             int currnetstoryIdCount = StoryDataSO.storys.FindIndex(sid => sid.Story_ID == current_StoryID);
             Debug.Log($"현재 스토리 아이디: {current_StoryID} 스토리 아이디의 인덱스: {currnetstoryIdCount}");
@@ -77,7 +82,7 @@ public class StorySystem : MonoBehaviour
 
     void NextStory()
     {   
-        if (isStoryEndPoint == true || isStoryTIme) return;
+        if (isStoryEndPoint == true || isStoryTIme || isFinishStory) return;
 
         Debug.Log($"이전 스토리 아이디: {current_StoryID}");
 
@@ -93,8 +98,6 @@ public class StorySystem : MonoBehaviour
         current_TargetMusic = nextStory.TargetMusic;
         Debug.Log($"현재 스토리 아이디: {current_StoryID}, 엔드 포인트 여부: {nextStory.EndPoint}");
         CurrentStoryAsset();
-
-        
 
         if (nextStory.EndPoint == true)
         {
@@ -115,7 +118,6 @@ public class StorySystem : MonoBehaviour
         {
             StartCoroutine(NextStoryTime());
         }
-
     }
 
     IEnumerator NextStoryTime()

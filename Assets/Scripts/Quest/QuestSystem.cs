@@ -182,33 +182,41 @@ public class QuestSystem : MonoBehaviour
         Debug.Log($"완료된 퀘스트 ID: {playerquerstID}, 이름: {playerquestName}, 스토리 ID: {playerStory_Id},  처리된 몬스터 수: {playerEnemyTargetCount}");
         Debug.Log($" 경험치 {giftExperience} 만큼 증가");
 
-        currentQuestIndex += 1;
-
-        if(currentQuestIndex < questData.quests.Count)
+        if (!finishQuest)
         {
-            QuestData nextQuest = questData.quests[currentQuestIndex];
-            playerquerstID = nextQuest.QuestID;
-            playerquestName = nextQuest.QuestName;
-            playerStory_Id = nextQuest.Story_ID;
-            playerEnemyTargetCount = nextQuest.TargetCount;
-            giftExperience = nextQuest.RewardExperience;
-            currnetQuestType = nextQuest.QuestType;
-            FinishchackScene = nextQuest.FinishchackScene;
-            questText.text = playerquestName;
-            playerEnmeyDieCount = 0;
-            Debug.Log($"현재 플레이어 퀘스트 ID: {playerquerstID}, 이름: {playerquestName}, 진행될 스토리 ID: {playerStory_Id}, 처치할 몬스터 수: {playerEnemyTargetCount}");
-            storySystem.QuestStory(playerStory_Id);
-            playerquest_Is_success = false;
-            finishQuest = false;
+            currentQuestIndex += 1;
+
+            if (currentQuestIndex < questData.quests.Count)
+            {
+                QuestData nextQuest = questData.quests[currentQuestIndex];
+                playerquerstID = nextQuest.QuestID;
+                playerquestName = nextQuest.QuestName;
+                playerStory_Id = nextQuest.Story_ID;
+                playerEnemyTargetCount = nextQuest.TargetCount;
+                giftExperience = nextQuest.RewardExperience;
+                currnetQuestType = nextQuest.QuestType;
+                FinishchackScene = nextQuest.FinishchackScene;
+                questText.text = playerquestName;
+                playerEnmeyDieCount = 0;
+                Debug.Log($"현재 플레이어 퀘스트 ID: {playerquerstID}, 이름: {playerquestName}, 진행될 스토리 ID: {playerStory_Id}, 처치할 몬스터 수: {playerEnemyTargetCount}");
+                storySystem.QuestStory(playerStory_Id);
+                playerquest_Is_success = false;
+                finishQuest = false;
+            }
+            else
+            {
+                Debug.Log("챕터 완료");
+                finishQuest = true;
+                storySystem.StoryUI.gameObject.SetActive(false);
+                _characterLevelSystem.UpdateLevel();
+                
+            }
         }
         else
         {
-            Debug.Log("챕터 완료");
-            finishQuest = true;
-            storySystem.StoryUI.gameObject.SetActive(false);
-            _characterLevelSystem.UpdateLevel();
             ChangeQuest();
         }
+      
     }
 
     void ChangeQuest()
@@ -218,30 +226,39 @@ public class QuestSystem : MonoBehaviour
         int nextIndex = currentQuestAndSotorys;
         if (_questAndStoryDatabase != null && nextIndex < _questAndStoryDatabase.questDataSOs.Count)
         {
-          
+            StoryDataSO nextStory = _questAndStoryDatabase.storyDataSOs[currentQuestAndSotorys];
+            if (nextStory != null)
+            {
+                storySystem.StoryDataSO = nextStory;
+                storySystem.current_StoryCount = 0;
+                Debug.Log($"{nextStory.name}으로 스토리 변경 완료");
+                storySystem.isFinishStory = false;
+            }
+
+            DubbingDatabase nextDubbing = _questAndStoryDatabase.DubbingDatabases[currentQuestAndSotorys];
+            if (nextDubbing != null)
+            {
+                storySystem.DubbingDatabase = nextDubbing;
+                Debug.Log($"{nextDubbing.name}으로 스토리 더빙 변경 완료");
+            }
+
             QuestDataSO nextQuest = _questAndStoryDatabase.questDataSOs[currentQuestAndSotorys];
             if (nextQuest != null)
             {
                 questData = nextQuest;
+                QuestData ChangeFirstQuest = questData.quests[0];
+                playerquerstID = ChangeFirstQuest.QuestID;
+                playerquestName = ChangeFirstQuest.QuestName;
+                playerStory_Id = ChangeFirstQuest.Story_ID;
+                playerEnemyTargetCount = ChangeFirstQuest.TargetCount;
+                currnetQuestType = ChangeFirstQuest.QuestType;
+                FinishchackScene = ChangeFirstQuest.FinishchackScene;
                 currentQuestIndex = 0;
                 Debug.Log($"{nextQuest.name} 으로 쳅터 변경 완료");
                 finishQuest = false;
-
-                StoryDataSO nextStory = _questAndStoryDatabase.storyDataSOs[currentQuestAndSotorys];
-                if (nextStory != null)
-                {
-                    storySystem.StoryDataSO = nextStory;
-                    storySystem.current_StoryCount = 0;
-                    Debug.Log($"{nextStory.name}으로 스토리 변경 완료");
-                    storySystem.isFinishStory = false;
-                }
-
-                DubbingDatabase nextDubbing = _questAndStoryDatabase.DubbingDatabases[currentQuestAndSotorys];
-                if (nextDubbing != null)
-                {
-                    storySystem.DubbingDatabase = nextDubbing;
-                    Debug.Log($"{nextDubbing.name}으로 스토리 더빙 변경 완료");
-                }
+                Debug.Log($"현재 플레이어 퀘스트 ID: {playerquerstID}, 이름: {playerquestName}, 진행될 스토리 ID: {playerStory_Id}, 처치할 몬스터 수: {playerEnemyTargetCount}");
+                storySystem.QuestStory(playerStory_Id);
+                questText.text = playerquestName;
             }
             else if(nextQuest == null)
             {

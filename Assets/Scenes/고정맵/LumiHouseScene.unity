@@ -4643,7 +4643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4981266b090932498bb85e4b5d1b571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questDataSO: {fileID: 11400000, guid: bd424e715b7a09140a085e942e61a130, type: 2}
+  questDataSO: {fileID: 11400000, guid: 91cb0de37a1deb74986e9dcf0757d1fe, type: 2}
 --- !u!4 &1711151263
 Transform:
   m_ObjectHideFlags: 0
@@ -4671,7 +4671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c65e16f3dc3a0d4db286208d780bcb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storyDataSO: {fileID: 11400000, guid: 10060d7aab827644688d0ea2f454e6e5, type: 2}
+  storyDataSO: {fileID: 11400000, guid: ac36a81950512064e96f1fdb74e773b9, type: 2}
 --- !u!114 &1711151265
 MonoBehaviour:
   m_ObjectHideFlags: 0
