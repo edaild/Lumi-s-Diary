@@ -49,11 +49,15 @@ public class GameMusicSystem : MonoBehaviour
         {
             targetMusicName = "매직컬센터";
         }
-        else if(sceneName == "SnowVillageRoad" || sceneName == "SnowVillageRoad3")
+        else if(sceneName == "Melodya")
+        {
+            targetMusicName = "멜로디아";
+        }
+        else if (sceneName == "SnowVillageRoad" || sceneName == "SnowVillageRoad3")
         {
             targetMusicName = "눈의 마을 길";
         }
-        else if(sceneName == "IcIcleCity")
+        else if (sceneName == "IcIcleCity")
         {
             targetMusicName = "아이시클 시티";
         }

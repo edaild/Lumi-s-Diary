@@ -38,4 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/\uC778\uAC8C\uC784 \uC678/EndingScene.unity"
     guid: 3e52d7dfc5acda545a2b19014eba6cf0
+  - enabled: 1
+    path: Assets/Scenes/Melodya.unity
+    guid: 0555046de816f1c48b78549a7a7e3086
   m_configObjects: {}
