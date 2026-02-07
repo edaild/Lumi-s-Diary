@@ -106,7 +106,6 @@ public class QuestSystem : MonoBehaviour
         }
         else
         {
-            // 저장 기록이 있는 플레이
             QuestData quest = questData.quests.Find(q => q.QuestID == playerquerstID);
             if (quest != null)
             {

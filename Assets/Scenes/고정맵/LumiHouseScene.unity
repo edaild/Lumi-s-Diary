@@ -4638,12 +4638,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1711151261}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4981266b090932498bb85e4b5d1b571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questDataSO: {fileID: 11400000, guid: 91cb0de37a1deb74986e9dcf0757d1fe, type: 2}
+  questDataSO: {fileID: 11400000, guid: 31147ae4b3d9d9145984b14169ba783d, type: 2}
 --- !u!4 &1711151263
 Transform:
   m_ObjectHideFlags: 0
