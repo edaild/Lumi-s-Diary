@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef1c8f23b169dca4494ac43eca8010d8, type: 3}
+  m_Script: {fileID: 11500000, guid: c4718c0c50a90194d8af775834845dbb, type: 3}
   m_Name: "3\uC7A5 \uC6D4\uB4DC\uCC54\uD53C\uC5B8\uC758 \uAFC8\uACFC \uCD08\uCF5C\uB9BF
-    \uD50C\uB799\uC2A4"
+    \uD50C\uB809\uC2A4"
   m_EditorClassIdentifier: 
-  storys: []
+  quests: []
