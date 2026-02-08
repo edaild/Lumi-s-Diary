@@ -5547,12 +5547,15 @@ MonoBehaviour:
   questDataSOs:
   - {fileID: 11400000, guid: bd424e715b7a09140a085e942e61a130, type: 2}
   - {fileID: 11400000, guid: 91cb0de37a1deb74986e9dcf0757d1fe, type: 2}
+  - {fileID: 11400000, guid: 2cabd90f79d55bf4cbb89e26725d0357, type: 2}
   storyDataSOs:
   - {fileID: 11400000, guid: 4b413a6e60f4f9343bd4e0622f63beb0, type: 2}
   - {fileID: 11400000, guid: ac36a81950512064e96f1fdb74e773b9, type: 2}
+  - {fileID: 11400000, guid: d02d7c2cbf22d8a46805e8dbd347ae04, type: 2}
   DubbingDatabases:
   - {fileID: 11400000, guid: e21dd0df687bb094b9c9e36445ab645b, type: 2}
   - {fileID: 11400000, guid: 80f0d3bb72adeb44d841391bd42f7d63, type: 2}
+  - {fileID: 11400000, guid: 609d392c60a8f12418d82c9e29be3975, type: 2}
 --- !u!114 &1930947431
 MonoBehaviour:
   m_ObjectHideFlags: 0
