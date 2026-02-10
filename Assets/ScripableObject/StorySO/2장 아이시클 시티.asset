@@ -27,7 +27,7 @@ MonoBehaviour:
     Speaker: "\uB8E8\uBBF8"
     Dialogue: "\uD558\uD568 \uBC8C\uC368 \uC544\uCE68\uC774\uC57C? \uC88B\uC740 \uC544\uCE68\uC774\uC57C
       \uB77C\uC774"
-    Is_Image: 0
+    Is_Image: 1
     Image_Command: KEEP
     Audio: 1
     EndPoint: 0
@@ -39,7 +39,7 @@ MonoBehaviour:
     Speaker: "\uB77C\uC774"
     Dialogue: "\uBE68\uB9AC \uC900\uBE44\uD574 \uC624\uB298 \uC544\uC774\uC2DC\uD074
       \uC2DC\uD2F0 \uAC00\uB294 \uB0A0\uC774\uC796\uC544"
-    Is_Image: 0
+    Is_Image: 1
     Image_Command: KEEP
     Audio: 1
     EndPoint: 0
