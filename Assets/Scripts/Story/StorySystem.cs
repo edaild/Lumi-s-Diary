@@ -164,8 +164,9 @@ public class StorySystem : MonoBehaviour
 
     void PlayTargetMusic()
     {
-        if (current_TargetMusic != null && _gameMusicSystem && !isStoryEndPoint)
+        if (!string.IsNullOrEmpty(current_TargetMusic))
         {
+            Debug.Log($"{current_TargetMusic} 존재여분 확인");
             AudioClip ChnageMusic = _gameMusicSystem.audioClips.Find(gm => gm.name == current_TargetMusic);
 
             if (ChnageMusic != null)
@@ -174,10 +175,10 @@ public class StorySystem : MonoBehaviour
                 _gameMusicSystem.audioSource.clip = ChnageMusic;
                 _gameMusicSystem.audioSource.Play();
             }
-        }
-        else if (isStoryEndPoint && _gameMusicSystem)
-        {
-            _gameMusicSystem.ChackMusic();
+            else
+            {
+                Debug.Log($"{current_TargetMusic}의 이름의 오디오 클립 미존재");
+            }
         }
     }
 }

@@ -1085,6 +1085,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 209507834650cf840aa2cae76dfdf76b, type: 3}
   - {fileID: 8300000, guid: 612bf4dd782c9644fb32a5669219ead8, type: 3}
   - {fileID: 8300000, guid: 23041552f1991594ca3645d64d48f576, type: 3}
+  - {fileID: 8300000, guid: d6392a382217388498c8df0d4c9e9989, type: 3}
   currentMusic: 
 --- !u!4 &233521371
 Transform:
@@ -4630,7 +4631,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1711151262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4666,12 +4667,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1711151261}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c65e16f3dc3a0d4db286208d780bcb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storyDataSO: {fileID: 11400000, guid: ac36a81950512064e96f1fdb74e773b9, type: 2}
+  storyDataSO: {fileID: 11400000, guid: d02d7c2cbf22d8a46805e8dbd347ae04, type: 2}
 --- !u!114 &1711151265
 MonoBehaviour:
   m_ObjectHideFlags: 0
