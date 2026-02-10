@@ -20,7 +20,7 @@ MonoBehaviour:
     Image_Command: SHOW
     Audio: 1
     EndPoint: 0
-    TargetImageName: 
+    TargetImageName: "2\uC7A5 \uB8E8\uBBF8\uB97C \uAE68\uC6B0\uB294 \uB77C\uC774"
     TargetAudio: "\uC5B8\uB2C8 \uC77C\uC5B4\uB098"
     TargetMusic: 
   - Story_ID: 20002
@@ -68,7 +68,7 @@ MonoBehaviour:
     Image_Command: SHOW
     Audio: 0
     EndPoint: 0
-    TargetImageName: 
+    TargetImageName: "2\uC7A5 1.\uC138\uB9AC\uC640\uC758 \uB300\uD654"
     TargetAudio: 
     TargetMusic: 
   - Story_ID: 20102
@@ -375,16 +375,6 @@ MonoBehaviour:
     TargetAudio: "\uD5E4\uD5E4"
     TargetMusic: 
   - Story_ID: 20126
-    Speaker: "\uB8E8\uBBF8"
-    Dialogue: 
-    Is_Image: 1
-    Image_Command: KEEP
-    Audio: 0
-    EndPoint: 0
-    TargetImageName: 
-    TargetAudio: 
-    TargetMusic: 
-  - Story_ID: 20127
     Speaker: 
     Dialogue: 
     Is_Image: 0
@@ -510,7 +500,7 @@ MonoBehaviour:
     Image_Command: CHANG
     Audio: 0
     EndPoint: 0
-    TargetImageName: "2\uC7A5 3.\uC5D0\uD3A0 \uB9C8\uBC95\uD0D1\uACE0 \uCCB4\uC721\uAD00"
+    TargetImageName: "2\uC7A5 3.\uC5D0\uD3A0 \uB9C8\uBC95\uD0D1"
     TargetAudio: 
     TargetMusic: 
   - Story_ID: 20211
@@ -538,20 +528,6 @@ MonoBehaviour:
     TargetAudio: 
     TargetMusic: 
   - Story_ID: 20213
-    Speaker: "\uC544\uC774\uB9AC\uC2A4"
-    Dialogue: "\uADF8\uB9AC\uACE0 \uC5EC\uAE30\uAC00 \uC9C0\uAE08 \uC6B4\uC601 \uC911\uC778
-      \uCCB4\uC721\uAD00\uC774\uC57C. \uB0B4\uC77C \uB124\uAC00 \uCCAB \uAC8C\uC784
-      \uB6F8 \uACF3\uC774\uC9C0. \uC791\uC544 \uBCF4\uC5EC\uB3C4 \uBB34\uC2DC\uD558\uBA74
-      \uC548 \uB3FC. \uC5EC\uAE30\uC11C \uCC54\uD53C\uC5B8\uB4E4\uC774 \uC3DF\uC544\uC838
-      \uB098\uC654\uC73C\uB2C8\uAE4C.\""
-    Is_Image: 1
-    Image_Command: KEEP
-    Audio: 0
-    EndPoint: 0
-    TargetImageName: 
-    TargetAudio: 
-    TargetMusic: 
-  - Story_ID: 20214
     Speaker: "\uB77C\uC774"
     Dialogue: "\uC5B8\uB2C8! \uADFC\uB370 \uC800 \uAC74\uB108\uD3B8\uC5D0 \uC5C4\uCCAD
       \uD06C\uAC8C \uC9D3\uACE0 \uC788\uB294 \uAC74 \uBB50\uC57C? \uC800\uAC8C \uD6E8\uC52C
@@ -564,7 +540,7 @@ MonoBehaviour:
       \uC2A4\uD0C0\uB514\uC6C0"
     TargetAudio: 
     TargetMusic: 
-  - Story_ID: 20215
+  - Story_ID: 20214
     Speaker: "\uC544\uC774\uB9AC\uC2A4"
     Dialogue: "\uC800\uAC74 **'\uC544\uC774\uC2DC\uD074 \uC2A4\uD0C0\uB514\uC6C0'**\uC774\uC57C.
       \uC544\uC9C1 \uACF5\uC0AC \uC911\uC774\uB77C \uBABB \uB4E4\uC5B4\uAC00\uC9C0\uB9CC,
@@ -577,7 +553,7 @@ MonoBehaviour:
     TargetImageName: 
     TargetAudio: 
     TargetMusic: 
-  - Story_ID: 20216
+  - Story_ID: 20215
     Speaker: "\uC544\uC774\uB9AC\uC2A4"
     Dialogue: "\uC5EC\uAE30\uAC00 \uBC14\uB85C \uBCA8\uB9AC\uC544 \uB300\uB959\uC5D0\uC11C
       10\uB144 \uB9CC\uC5D0 \uC5F4\uB9AC\uB294 '\uC6D4\uB4DC\uCC54\uD53C\uC5B8\uC2ED
@@ -589,7 +565,7 @@ MonoBehaviour:
     TargetImageName: 
     TargetAudio: 
     TargetMusic: 
-  - Story_ID: 20217
+  - Story_ID: 20216
     Speaker: "\uB8E8\uBBF8"
     Dialogue: "\uC6B0\uC640... \uADF8\uB7FC \uC5B8\uB2C8\uB3C4 \uC800 \uB300\uD68C\uC5D0
       \uB098\uAC00\uB294 \uAC70\uC57C? \uC5B8\uB2C8 \uC2E4\uB825\uC774\uBA74 \uCDA9\uBD84\uD788
@@ -598,10 +574,10 @@ MonoBehaviour:
     Image_Command: CHANG
     Audio: 0
     EndPoint: 0
-    TargetImageName: "2\uC7A5 5.\uB8E8\uBBF8, \uB77C\uC774, \uC544\uC77C\uB9AC\uC2A4"
+    TargetImageName: "2\uC7A5 5.\uB8E8\uBBF8, \uB77C\uC774, \uC544\uC774\uB9AC\uC2A4"
     TargetAudio: 
     TargetMusic: 
-  - Story_ID: 20218
+  - Story_ID: 20217
     Speaker: "\uC544\uC774\uB9AC\uC2A4"
     Dialogue: "\uD558\uD56B, \uB098\uB294 \uC608\uC804\uC5D0 \uBCA8\uB9AC\uC544\uCEF5\uC5D0\uC11C
       \uC900\uC6B0\uC2B9\uD55C \uAC78\uB85C \uB9CC\uC871\uD574. \uC9C0\uAE08\uC740
@@ -618,7 +594,7 @@ MonoBehaviour:
     TargetImageName: 
     TargetAudio: 
     TargetMusic: 
-  - Story_ID: 20219
+  - Story_ID: 20218
     Speaker: "\uB77C\uC774"
     Dialogue: "\uC624~ \uC5B8\uB2C8 \uB9C8\uBC95\uB9CC \uC798 \uC4F0\uB294 \uAC8C
       \uC544\uB2C8\uB77C \uC758\uC0AC \uC120\uC0DD\uB2D8 \uAC19\uC544! \uBA4B\uC9C0\uB2E4!"
@@ -629,7 +605,7 @@ MonoBehaviour:
     TargetImageName: 
     TargetAudio: 
     TargetMusic: 
-  - Story_ID: 20220
+  - Story_ID: 20219
     Speaker: "\uC544\uC774\uB9AC\uC2A4"
     Dialogue: "\uADF8\uB807\uC9C0? \uC774 \uC5B8\uB2C8\uAC00 \uC880 \uB2E4\uC7AC\uB2E4\uB2A5\uD574!
       \uADF8\uB7EC\uB2C8\uAE4C \uB8E8\uBBF8, \uB108\uB3C4 \uB098\uC911\uC5D0 \uC800
@@ -643,7 +619,7 @@ MonoBehaviour:
     TargetImageName: 
     TargetAudio: 
     TargetMusic: 
-  - Story_ID: 20221
+  - Story_ID: 20220
     Speaker: "\uB8E8\uBBF8"
     Dialogue: "\uC751! \uC5B8\uB2C8\uAC00 \uADF8\uB807\uAC8C \uB9D0\uD574\uC8FC\uB2C8\uAE4C
       \uC9C4\uC9DC \uC790\uC2E0\uAC10\uC774 \uC0DD\uACA8. \uB098 \uAF2D \uC800 \uBB34\uB300\uC5D0
@@ -655,7 +631,7 @@ MonoBehaviour:
     TargetImageName: 
     TargetAudio: 
     TargetMusic: 
-  - Story_ID: 20222
+  - Story_ID: 20221
     Speaker: 
     Dialogue: "\uC544\uC774\uB9AC\uC2A4\uC758 \uC2A4\uB9C8\uD2B8\uD3F0\uC774 \uC694\uB780\uD558\uAC8C
       \uC6B8\uB9B0\uB2E4. \uBB38\uC790\uB97C \uD655\uC778\uD55C \uC544\uC774\uB9AC\uC2A4\uAC00
@@ -667,7 +643,7 @@ MonoBehaviour:
     TargetImageName: "2\uC7A5 6.\uD734\uB300\uD3F0\uC744 \uBCF4\uB294 \uC544\uC774\uB9AC\uC2A4"
     TargetAudio: 
     TargetMusic: 
-  - Story_ID: 20223
+  - Story_ID: 20222
     Speaker: "\uC544\uC774\uB9AC\uC2A4"
     Dialogue: "\uC544, \uC774\uB7F0! \uBC8C\uC368 \uC2DC\uAC04\uC774 \uC774\uB807\uAC8C
       \uB410\uC5B4? \uB140\uC11D, \uC131\uACA9 \uAE09\uD558\uAE34 \uC9C4\uC9DC..."
@@ -678,7 +654,7 @@ MonoBehaviour:
     TargetImageName: 
     TargetAudio: 
     TargetMusic: 
-  - Story_ID: 20224
+  - Story_ID: 20223
     Speaker: "\uB8E8\uBBF8"
     Dialogue: "\uC5B8\uB2C8, \uBB34\uC2A8 \uC77C \uC788\uC5B4? \uB204\uAD6C\uC57C?"
     Is_Image: 1
@@ -688,7 +664,7 @@ MonoBehaviour:
     TargetImageName: 
     TargetAudio: 
     TargetMusic: 
-  - Story_ID: 20225
+  - Story_ID: 20224
     Speaker: "\uC544\uC774\uB9AC\uC2A4"
     Dialogue: "\uC544\uD558\uD558, \uBBF8\uC548! \uB098 \uC0AC\uC2E4 \uC5EC\uAE30\uC11C
       \uC7A0\uAE50 '\uC54C\uBC14' \uD558\uB294 \uAC8C \uC788\uAC70\uB4E0. \uC0AC\uC7A5\uB2D8\uC774
@@ -701,7 +677,7 @@ MonoBehaviour:
     TargetImageName: 
     TargetAudio: 
     TargetMusic: 
-  - Story_ID: 20226
+  - Story_ID: 20225
     Speaker: "\uB77C\uC774"
     Dialogue: "\uCE58~ \uC544\uC27D\uB2E4! \uBB34\uC2A8 \uC54C\uBC14\uC778\uB370
       \uADF8\uB807\uAC8C \uBC14\uBE60?"
@@ -712,7 +688,7 @@ MonoBehaviour:
     TargetImageName: 
     TargetAudio: 
     TargetMusic: 
-  - Story_ID: 20227
+  - Story_ID: 20226
     Speaker: "\uB8E8\uBBF8"
     Dialogue: "\uC544, \uC5B8\uB2C8! \uC7A0\uAE50\uB9CC! \uC774\uAC70 \uBC1B\uC544.
       \uB0B4\uAC00 \uBBF8\uB9AC \uC608\uC57D\uD574\uB454 \uC6B0\uB9AC \uBC29 \uD0A4
@@ -724,7 +700,7 @@ MonoBehaviour:
     TargetImageName: 
     TargetAudio: 
     TargetMusic: 
-  - Story_ID: 20228
+  - Story_ID: 20227
     Speaker: "\uC544\uC774\uB9AC\uC2A4"
     Dialogue: "\uC5B4? \uB098\uD55C\uD14C \uC8FC\uB294 \uAC70\uC57C? \uACE0\uB9C8\uC6CC
       \uB8E8\uBBF8! \uADF8\uB7FC \uC774\uAC74 \uB0B4\uAC00 \uC798 \uBCF4\uAD00\uD560\uAC8C.
@@ -738,7 +714,7 @@ MonoBehaviour:
     TargetImageName: 
     TargetAudio: 
     TargetMusic: 
-  - Story_ID: 20229
+  - Story_ID: 20228
     Speaker: "\uB8E8\uBBF8"
     Dialogue: "\uADF8\uB798! \uC5B8\uB2C8\uAC00 \uAC16\uACE0 \uC788\uC73C\uBA74 \uB4E0\uB4E0\uD558\uC9C0.
       \uC870\uC2EC\uD788 \uB2E4\uB140\uC640!"
@@ -751,7 +727,7 @@ MonoBehaviour:
     TargetAudio: "\uADF8\uB798! \uC5B8\uB2C8\uAC00 \uAC16\uACE0 \uC788\uC73C\uBA74
       \uB4E0\uB4E0\uD558\uC9C0. \uC870\uC2EC\uD788 \uB2E4\uB140\uC640!"
     TargetMusic: 
-  - Story_ID: 20230
+  - Story_ID: 20229
     Speaker: "\uC544\uC774\uB9AC\uC2A4"
     Dialogue: "\uB8E8\uBBF8, \uC774\uC81C\uBD80\uD134 \uB108\uD76C\uB07C\uB9AC \uC798
       \uD574\uBD10\uC57C \uD574. \uD544\uB4DC \uC704\uC5D0\uC11C\uB294 \uB108\uB791
@@ -766,7 +742,7 @@ MonoBehaviour:
       \uC798 \uD574\uBD10\uC57C \uD574. \uD544\uB4DC \uC704\uC5D0\uC11C\uB294 \uB108\uB791
       \uD30C\uD2B8\uB108\uB9CC \uBBFF\uB294 \uAC70\uC57C. \uC54C\uC558\uC9C0?"
     TargetMusic: 
-  - Story_ID: 20231
+  - Story_ID: 20230
     Speaker: "\uB8E8\uBBF8"
     Dialogue: "\uB77C\uC774 \uC77C\uB2E8 \uC6B0\uB9AC\uB3C4 \uD638\uD154\uBC29\uC5D0
       \uAC00\uC11C \uC9D0\uBD80\uD130 \uD480\uC790"
@@ -777,7 +753,7 @@ MonoBehaviour:
     TargetImageName: 
     TargetAudio: 
     TargetMusic: 
-  - Story_ID: 20232
+  - Story_ID: 20231
     Speaker: "\uB77C\uC774"
     Dialogue: "\uAD81\uAE08\uD574, \uAD81\uAE08\uD574! \uC548\uC774 \uC5B4\uB5BB\uAC8C
       \uC0DD\uACBC\uC744\uAE4C? \uB9C9 \uCE68\uB300\uAC00 \uAD6C\uB984\uC73C\uB85C
@@ -790,7 +766,7 @@ MonoBehaviour:
     TargetImageName: 
     TargetAudio: 
     TargetMusic: 
-  - Story_ID: 20233
+  - Story_ID: 20232
     Speaker: 
     Dialogue: 
     Is_Image: 0
@@ -1059,7 +1035,7 @@ MonoBehaviour:
     Image_Command: CHANG
     Audio: 0
     EndPoint: 0
-    TargetImageName: "2\uC7A5 11.\uC5D8\uB808\uBCA0\uC774\uD130"
+    TargetImageName: 
     TargetAudio: 
     TargetMusic: 
   - Story_ID: 20322
@@ -1075,22 +1051,19 @@ MonoBehaviour:
     TargetMusic: 
   - Story_ID: 20323
     Speaker: "\uC138\uB9AC"
-    Dialogue: "\uB3C4\uCC29\uD588\uC2B5\uB2C8\uB2E4. \uAD6C\uB984 \uC704\uC5D0\uC11C
-      \uC2DD\uC0AC\uD558\uB294 \uAE30\uBD84\uC744 \uB290\uB084 \uC218 \uC788\uB294
-      \uACF3\uC774\uC8E0. \uD3B8\uD558\uC2E0 \uCC3D\uAC00 \uC790\uB9AC\uC5D0 \uC549\uC73C\uC2DC\uBA74
-      \uB429\uB2C8\uB2E4."
+    Dialogue: "\uB3C4\uCC29\uD588\uC2B5\uB2C8\uB2E4. \uD3B8\uD558\uC2E0 \uCC3D\uAC00
+      \uC790\uB9AC\uC5D0 \uC549\uC73C\uC2DC\uBA74 \uB429\uB2C8\uB2E4."
     Is_Image: 1
     Image_Command: CHANG
     Audio: 0
     EndPoint: 0
-    TargetImageName: "2\uC7A5 12.\uB8E8\uD504\uD0D1"
+    TargetImageName: "2\uC7A5 11.\uB8E8\uD504\uD0D1"
     TargetAudio: 
     TargetMusic: 
   - Story_ID: 20324
     Speaker: "\uB77C\uC774"
     Dialogue: "\uB8E8\uBBF8\uC5B8\uB2C8! \uC5EC\uAE30\uC57C \uC5EC\uAE30! \uC5EC\uAE30\uAC00
-      \uC81C\uC77C \uBA85\uB2F9\uC774\uC57C! \uAD6C\uB984\uC774 \uBC14\uB85C \uC606\uC5D0\uC11C
-      \uC9C0\uB098\uAC00!"
+      \uC81C\uC77C \uBA85\uB2F9\uC774\uC57C!"
     Is_Image: 1
     Image_Command: KEEP
     Audio: 0
@@ -1135,7 +1108,8 @@ MonoBehaviour:
     Image_Command: CHANG
     Audio: 1
     EndPoint: 0
-    TargetImageName: "2\uC7A5 13.\uC990\uAC70\uC6B4 \uC800\uB1411"
+    TargetImageName: "2\uC7A5 12.\uC74C\uC2DD\uC744 \uACE0\uB974\uB294 \uB8E8\uBBF8\uC640
+      \uB77C\uC774"
     TargetAudio: "\uC6B0\uC640! \uC5EC\uAE30 \uC9C4\uC9DC \uCC9C\uAD6D\uC778\uAC00
       \uBD10!"
     TargetMusic: 
@@ -1189,7 +1163,7 @@ MonoBehaviour:
     Image_Command: CHANG
     Audio: 1
     EndPoint: 0
-    TargetImageName: "2\uC7A5 14.\uC990\uAC70\uC6B4 \uC800\uB1412"
+    TargetImageName: "2\uC7A5 13.\uC990\uAC70\uC6B4 \uC800\uB1412"
     TargetAudio: "...\uC815\uB9D0 \uBABB \uB9D0\uB9B0\uB2E4\uB2C8\uAE4C. \uB77C\uC774,
       \uADF8\uB7EC\uB2E4 \uB098\uC911\uC5D0 \uBC30 \uC544\uD504\uB2E4\uACE0 \uC6B8\uBA74
       \uC548 \uB41C\uB2E4?"
@@ -1254,10 +1228,10 @@ MonoBehaviour:
       \uC5B8\uB2C8, \uD55C\uC785 \uBA39\uC5B4\uBD10. \uAE30\uC6B4\uC774 \uD30D\uD30D
       \uB0A0 \uAC70\uC57C!"
     Is_Image: 1
-    Image_Command: CHANG
+    Image_Command: KEEP
     Audio: 0
     EndPoint: 0
-    TargetImageName: "2\uC7A5 15.\uC990\uAC70\uC6B4 \uC800\uB1413"
+    TargetImageName: 
     TargetAudio: "\uD5E4\uD5E4, \uB0B4\uC77C\uC740 \uB354 \uB300\uB2E8\uD560\uAC78?
       \uC6B0\uB9AC\uAC00 \uC544\uC774\uC2DC\uD074 \uC2DC\uD2F0\uB97C \uC815\uBCF5\uD558\uB294
       \uAC70\uC57C!"

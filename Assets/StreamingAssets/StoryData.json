@@ -1,4 +1,4 @@
- [
+[
     {
       "Story_ID": 20001,
       "Speaker": "라이",
@@ -7,7 +7,7 @@
       "Image_Command": "SHOW",
       "Audio": true,
       "EndPoint": false,
-      "TargetImageName": null,
+      "TargetImageName": "2장 루미를 깨우는 라이",
       "TargetAudio": "언니 일어나",
       "TargetMusic": null
     },
@@ -47,7 +47,6 @@
       "TargetAudio": null,
       "TargetMusic": null
     },
- 
     {
       "Story_ID": 20101,
       "Speaker": "라이",
@@ -56,7 +55,7 @@
       "Image_Command": "SHOW",
       "Audio": false,
       "EndPoint": false,
-      "TargetImageName": null,
+      "TargetImageName": "2장 1.세리와의 대화",
       "TargetAudio": null,
       "TargetMusic": null
     },
@@ -350,18 +349,6 @@
     },
     {
       "Story_ID": 20126,
-      "Speaker": "루미",
-      "Dialogue": null,
-      "Is_Image": true,
-      "Image_Command": "KEEP",
-      "Audio": false,
-      "EndPoint": false,
-      "TargetImageName": null,
-      "TargetAudio": null,
-      "TargetMusic": null
-    },
-    {
-      "Story_ID": 20127,
       "Speaker": null,
       "Dialogue": null,
       "Is_Image": false,
@@ -489,7 +476,7 @@
       "Image_Command": "CHANG",
       "Audio": false,
       "EndPoint": false,
-      "TargetImageName": "2장 3.에펠 마법탑고 체육관",
+      "TargetImageName": "2장 3.에펠 마법탑",
       "TargetAudio": null,
       "TargetMusic": null
     },
@@ -519,18 +506,6 @@
     },
     {
       "Story_ID": 20213,
-      "Speaker": "아이리스",
-      "Dialogue": "그리고 여기가 지금 운영 중인 체육관이야. 내일 네가 첫 게임 뛸 곳이지. 작아 보여도 무시하면 안 돼. 여기서 챔피언들이 쏟아져 나왔으니까.\"",
-      "Is_Image": true,
-      "Image_Command": "KEEP",
-      "Audio": false,
-      "EndPoint": false,
-      "TargetImageName": null,
-      "TargetAudio": null,
-      "TargetMusic": null
-    },
-    {
-      "Story_ID": 20214,
       "Speaker": "라이",
       "Dialogue": "언니! 근데 저 건너편에 엄청 크게 짓고 있는 건 뭐야? 저게 훨씬 멋있는데!",
       "Is_Image": true,
@@ -542,7 +517,7 @@
       "TargetMusic": null
     },
     {
-      "Story_ID": 20215,
+      "Story_ID": 20214,
       "Speaker": "아이리스",
       "Dialogue": "저건 **'아이시클 스타디움'**이야. 아직 공사 중이라 못 들어가지만, 완공되면 진짜 어마어마한 전장이 될 거야.",
       "Is_Image": true,
@@ -554,7 +529,7 @@
       "TargetMusic": null
     },
     {
-      "Story_ID": 20216,
+      "Story_ID": 20215,
       "Speaker": "아이리스",
       "Dialogue": "여기가 바로 벨리아 대륙에서 10년 만에 열리는 '월드챔피언십 마스터 토너먼트' 개최지거든!",
       "Is_Image": true,
@@ -566,19 +541,19 @@
       "TargetMusic": null
     },
     {
-      "Story_ID": 20217,
+      "Story_ID": 20216,
       "Speaker": "루미",
       "Dialogue": "우와... 그럼 언니도 저 대회에 나가는 거야? 언니 실력이면 충분히 우승할 것 같은데!",
       "Is_Image": true,
       "Image_Command": "CHANG",
       "Audio": false,
       "EndPoint": false,
-      "TargetImageName": "2장 5.루미, 라이, 아일리스",
+      "TargetImageName": "2장 5.루미, 라이, 아이리스",
       "TargetAudio": null,
       "TargetMusic": null
     },
     {
-      "Story_ID": 20218,
+      "Story_ID": 20217,
       "Speaker": "아이리스",
       "Dialogue": "하핫, 나는 예전에 벨리아컵에서 준우승한 걸로 만족해. 지금은 직접 뛰는 것보다, 너희 같은 루키들이 다치지 않게 케어해주고 최상의 컨디션으로 배틀할 수 있게 도와주는 게 더 보람차거든. 마법 배틀은 체력과 의료 관리도 실력만큼 중요하니까!",
       "Is_Image": true,
@@ -590,7 +565,7 @@
       "TargetMusic": null
     },
     {
-      "Story_ID": 20219,
+      "Story_ID": 20218,
       "Speaker": "라이",
       "Dialogue": "오~ 언니 마법만 잘 쓰는 게 아니라 의사 선생님 같아! 멋지다!",
       "Is_Image": true,
@@ -602,7 +577,7 @@
       "TargetMusic": null
     },
     {
-      "Story_ID": 20220,
+      "Story_ID": 20219,
       "Speaker": "아이리스",
       "Dialogue": "그렇지? 이 언니가 좀 다재다능해! 그러니까 루미, 너도 나중에 저 무대 위에 서게 되면 몸 관리 잘해야 해. 알았지? 너라면 분명 저 화려한 조명 아래 당당하게 서게 될 거야",
       "Is_Image": true,
@@ -614,7 +589,7 @@
       "TargetMusic": null
     },
     {
-      "Story_ID": 20221,
+      "Story_ID": 20220,
       "Speaker": "루미",
       "Dialogue": "응! 언니가 그렇게 말해주니까 진짜 자신감이 생겨. 나 꼭 저 무대에 서고 싶어!",
       "Is_Image": true,
@@ -626,7 +601,7 @@
       "TargetMusic": null
     },
     {
-      "Story_ID": 20222,
+      "Story_ID": 20221,
       "Speaker": null,
       "Dialogue": "아이리스의 스마트폰이 요란하게 울린다. 문자를 확인한 아이리스가 당황한다.",
       "Is_Image": true,
@@ -638,7 +613,7 @@
       "TargetMusic": null
     },
     {
-      "Story_ID": 20223,
+      "Story_ID": 20222,
       "Speaker": "아이리스",
       "Dialogue": "아, 이런! 벌써 시간이 이렇게 됐어? 녀석, 성격 급하긴 진짜...",
       "Is_Image": true,
@@ -650,7 +625,7 @@
       "TargetMusic": null
     },
     {
-      "Story_ID": 20224,
+      "Story_ID": 20223,
       "Speaker": "루미",
       "Dialogue": "언니, 무슨 일 있어? 누구야?",
       "Is_Image": true,
@@ -662,7 +637,7 @@
       "TargetMusic": null
     },
     {
-      "Story_ID": 20225,
+      "Story_ID": 20224,
       "Speaker": "아이리스",
       "Dialogue": "아하하, 미안! 나 사실 여기서 잠깐 '알바' 하는 게 있거든. 사장님이 빨리 안 오면 월급 깎는다고 난리네. 오늘은 아쉽지만 여기까지 해야겠다!",
       "Is_Image": true,
@@ -674,7 +649,7 @@
       "TargetMusic": null
     },
     {
-      "Story_ID": 20226,
+      "Story_ID": 20225,
       "Speaker": "라이",
       "Dialogue": "치~ 아쉽다! 무슨 알바인데 그렇게 바빠?",
       "Is_Image": true,
@@ -686,7 +661,7 @@
       "TargetMusic": null
     },
     {
-      "Story_ID": 20227,
+      "Story_ID": 20226,
       "Speaker": "루미",
       "Dialogue": "아, 언니! 잠깐만! 이거 받아. 내가 미리 예약해둔 우리 방 키 카드 하나 더 있어.",
       "Is_Image": true,
@@ -698,7 +673,7 @@
       "TargetMusic": null
     },
     {
-      "Story_ID": 20228,
+      "Story_ID": 20227,
       "Speaker": "아이리스",
       "Dialogue": "어? 나한테 주는 거야? 고마워 루미! 그럼 이건 내가 잘 보관할게. 너희 혹시라도 길 잃어버리거나 키 잃어버리면 내가 바로 열어주러 갈 수 있으니까, 그치?",
       "Is_Image": true,
@@ -710,7 +685,7 @@
       "TargetMusic": null
     },
     {
-      "Story_ID": 20229,
+      "Story_ID": 20228,
       "Speaker": "루미",
       "Dialogue": "그래! 언니가 갖고 있으면 든든하지. 조심히 다녀와!",
       "Is_Image": true,
@@ -722,7 +697,7 @@
       "TargetMusic": null
     },
     {
-      "Story_ID": 20230,
+      "Story_ID": 20229,
       "Speaker": "아이리스",
       "Dialogue": "루미, 이제부턴 너희끼리 잘 해봐야 해. 필드 위에서는 너랑 파트너만 믿는 거야. 알았지? 진지하게 해라! 나중에 호텔에서 봐!",
       "Is_Image": true,
@@ -734,7 +709,7 @@
       "TargetMusic": null
     },
     {
-      "Story_ID": 20231,
+      "Story_ID": 20230,
       "Speaker": "루미",
       "Dialogue": "라이 일단 우리도 호텔방에 가서 짐부터 풀자",
       "Is_Image": true,
@@ -746,7 +721,7 @@
       "TargetMusic": null
     },
     {
-      "Story_ID": 20232,
+      "Story_ID": 20231,
       "Speaker": "라이",
       "Dialogue": "궁금해, 궁금해! 안이 어떻게 생겼을까? 막 침대가 구름으로 되어 있는 거 아냐? 얼른 매지컬 센터로 가자!",
       "Is_Image": true,
@@ -758,7 +733,7 @@
       "TargetMusic": null
     },
     {
-      "Story_ID": 20233,
+      "Story_ID": 20232,
       "Speaker": null,
       "Dialogue": null,
       "Is_Image": false,
@@ -769,6 +744,7 @@
       "TargetAudio": null,
       "TargetMusic": null
     },
+
     {
       "Story_ID": 20301,
       "Speaker": "세리:",
@@ -1017,7 +993,7 @@
       "Image_Command": "CHANG",
       "Audio": false,
       "EndPoint": false,
-      "TargetImageName": "2장 11.엘레베이터",
+      "TargetImageName": null,
       "TargetAudio": null,
       "TargetMusic": null
     },
@@ -1036,19 +1012,19 @@
     {
       "Story_ID": 20323,
       "Speaker": "세리",
-      "Dialogue": "도착했습니다. 구름 위에서 식사하는 기분을 느낄 수 있는 곳이죠. 편하신 창가 자리에 앉으시면 됩니다.",
+      "Dialogue": "도착했습니다. 편하신 창가 자리에 앉으시면 됩니다.",
       "Is_Image": true,
       "Image_Command": "CHANG",
       "Audio": false,
       "EndPoint": false,
-      "TargetImageName": "2장 12.루프탑",
+      "TargetImageName": "2장 11.루프탑",
       "TargetAudio": null,
       "TargetMusic": null
     },
     {
       "Story_ID": 20324,
       "Speaker": "라이",
-      "Dialogue": "루미언니! 여기야 여기! 여기가 제일 명당이야! 구름이 바로 옆에서 지나가!",
+      "Dialogue": "루미언니! 여기야 여기! 여기가 제일 명당이야!",
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": false,
@@ -1089,7 +1065,7 @@
       "Image_Command": "CHANG",
       "Audio": true,
       "EndPoint": false,
-      "TargetImageName": "2장 13.즐거운 저녁1",
+      "TargetImageName": "2장 12.음식을 고르는 루미와 라이",
       "TargetAudio": "우와! 여기 진짜 천국인가 봐!",
       "TargetMusic": null
     },
@@ -1137,7 +1113,7 @@
       "Image_Command": "CHANG",
       "Audio": true,
       "EndPoint": false,
-      "TargetImageName": "2장 14.즐거운 저녁2",
+      "TargetImageName": "2장 13.즐거운 저녁2",
       "TargetAudio": "...정말 못 말린다니까. 라이, 그러다 나중에 배 아프다고 울면 안 된다?",
       "TargetMusic": null
     },
@@ -1194,10 +1170,10 @@
       "Speaker": "라이",
       "Dialogue": "헤헤, 내일은 더 대단할걸? 우리가 아이시클 시티를 정복하는 거야! 자, 이건 내 특별 서비스! 언니, 한입 먹어봐. 기운이 팍팍 날 거야!",
       "Is_Image": true,
-      "Image_Command": "CHANG",
+      "Image_Command": "KEEP",
       "Audio": false,
       "EndPoint": false,
-      "TargetImageName": "2장 15.즐거운 저녁3",
+      "TargetImageName": null,
       "TargetAudio": "헤헤, 내일은 더 대단할걸? 우리가 아이시클 시티를 정복하는 거야!",
       "TargetMusic": null
     },
