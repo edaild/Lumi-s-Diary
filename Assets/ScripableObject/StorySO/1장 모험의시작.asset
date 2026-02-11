@@ -532,7 +532,7 @@ MonoBehaviour:
     EndPoint: 0
     TargetImageName: 
     TargetAudio: "1\uC7A5 19.\uC0AC\uC2E4 \uC5B8\uB2C8\uAC00 \uB108\uBB34 \uB9DB\uC788\uC5B4
-      \uBCF4\uC5EC\uC11C \uCAD3\uC544\uC628 \uAC70 \uC544\uB2D0\uAE4C? \uAF2D \uC19C\uC0AC\uD0D5
+      \uBCF4\uC5EC\uC11C \uCAD3\uC544\uC628 \uAC70 \uC544\uB2D0\uAE4C \uAF2D \uC19C\uC0AC\uD0D5
       \uAC19\uAC70\uB4E0!"
     TargetMusic: 
   - Story_ID: 10508
@@ -861,15 +861,14 @@ MonoBehaviour:
     TargetMusic: 
   - Story_ID: 10535
     Speaker: "\uB77C\uC774"
-    Dialogue: "\uD5E4\uD5E4, \uC5ED\uC2DC! \uC5BC\uC74C \uACF5\uC8FC \uC5B8\uB2C8\uC758
-      \uC57D\uC810\uC744 \uCC3E\uC558\uB2E4!"
+    Dialogue: "\uD5E4\uD5E4, \uC5BC\uC74C \uACF5\uC8FC \uC5B8\uB2C8\uC758 \uC57D\uC810\uC744
+      \uCC3E\uC558\uB2E4!"
     Is_Image: 1
     Image_Command: CHANG
-    Audio: 1
+    Audio: 0
     EndPoint: 0
     TargetImageName: 
-    TargetAudio: "1\uC7A5 24.\uD5E4\uD5E4, \uC5ED\uC2DC! \uC5BC\uC74C \uACF5\uC8FC
-      \uC5B8\uB2C8\uC758 \uC57D\uC810\uC744 \uCC3E\uC558\uB2E4!"
+    TargetAudio: 
     TargetMusic: 
   - Story_ID: 10536
     Speaker: "\uB8E8\uBBF8"

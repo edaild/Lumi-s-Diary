@@ -3,36 +3,36 @@
       "Story_ID": 20001,
       "Speaker": "라이",
       "Dialogue": "언니 일어나 벌서 아침이야",
-      "Is_Image": false,
+      "Is_Image": true,
       "Image_Command": "SHOW",
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": "2장 루미를 깨우는 라이",
-      "TargetAudio": "언니 일어나",
+      "TargetAudio": "2장 1.언니 일어나",
       "TargetMusic": null
     },
     {
       "Story_ID": 20002,
       "Speaker": "루미",
       "Dialogue": "하함 벌써 아침이야? 좋은 아침이야 라이",
-      "Is_Image": false,
+      "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "하함 벌써 아침이야? 좋은 아침이야 라이",
+      "TargetAudio": "2장 2.벌써 아침이야 좋은 아침이야 라이",
       "TargetMusic": null
     },
     {
       "Story_ID": 20003,
       "Speaker": "라이",
       "Dialogue": "빨리 준비해 오늘 아이시클 시티 가는 날이잖아",
-      "Is_Image": false,
+      "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "빨리 준비해 오늘 아이시클 시티 가는 날이잖아",
+      "TargetAudio": "2장 3.빨리 준비해 오늘 아이시클 시티 가는 날이잖아",
       "TargetMusic": null
     },
     {
@@ -47,6 +47,7 @@
       "TargetAudio": null,
       "TargetMusic": null
     },
+ 
     {
       "Story_ID": 20101,
       "Speaker": "라이",
@@ -80,19 +81,19 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "어서 오세요~! 아이시클 시티 매지컬 센터에 오신 걸 환영해요!",
+      "TargetAudio": "2장 3.어서 오세요~! 아이시클 시티 매지컬 센터에 오신 걸 환영해요!",
       "TargetMusic": null
     },
     {
       "Story_ID": 20104,
       "Speaker": "루미",
-      "Dialogue": "아... 안녕하세요, 세리 언니! 저는 눈의 마을에서 온 루미라고 해요. 오늘 정식 모험가 등록을 하러 왔어요.",
+      "Dialogue": "안녕하세요, 세리 언니! 저는 눈의 마을에서 온 루미라고 해요. 오늘 정식 모험가 등록을 하러 왔어요.",
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "아... 안녕하세요, 세리 언니!",
+      "TargetAudio": "2장 4.아... 안녕하세요, 세리 언니!",
       "TargetMusic": null
     },
     {
@@ -104,7 +105,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "반가워요, 루미 양! 그리고 라이 양!",
+      "TargetAudio": "2장 5.반가워요, 루미 양! 그리고 라이 양!",
       "TargetMusic": null
     },
     {
@@ -224,7 +225,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "단, 주의사항!",
+      "TargetAudio": "2장 6.단, 주의사항!",
       "TargetMusic": null
     },
     {
@@ -248,7 +249,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "으아...",
+      "TargetAudio": "2장 7.으아...",
       "TargetMusic": null
     },
     {
@@ -260,7 +261,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "후훗,",
+      "TargetAudio": "2장 8.후훗, 하지만 너무 겁먹을 필요는 없어요.",
       "TargetMusic": null
     },
     {
@@ -284,7 +285,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "정말요?",
+      "TargetAudio": "2장 9.정말요",
       "TargetMusic": null
     },
     {
@@ -296,7 +297,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "맞아요",
+      "TargetAudio": "2장 10.맞아요",
       "TargetMusic": null
     },
     {
@@ -308,7 +309,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "하지만 걱정 마세요.",
+      "TargetAudio": "2장 11.하지만 걱정 마세요.",
       "TargetMusic": null
     },
     {
@@ -341,10 +342,10 @@
       "Dialogue": "헤헤, 빨리 가서 룸서비스 시켜 먹자! 루미 언니, 가자!",
       "Is_Image": true,
       "Image_Command": "KEEP",
-      "Audio": true,
+      "Audio": false,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "헤헤",
+      "TargetAudio": null,
       "TargetMusic": null
     },
     {
@@ -369,8 +370,8 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": "2장 2.아이리스와 만남",
-      "TargetAudio": "에엥 너는 마법학교 얼음마법 전공 루미아니야? 오랜만이야 만나서 방가워",
-      "TargetMusic": "아이리스 테마"
+      "TargetAudio": "2장 12.에엥 너는 마법학교 얼음마법 전공 루미아니야 오랜만이야 만나서 방가워",
+      "TargetMusic": "아이시클 시티 공원"
     },
     {
       "Story_ID": 20202,
@@ -381,7 +382,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "어! 아이리스 언니! 여기서 또 보네. 여전히 예쁘다! 아, 언니! 인사해. 내 파트너 라이야.",
+      "TargetAudio": "2장 13.어! 아이리스 언니! 여기서 또 보네. 여전히 예쁘다! 아, 언니! 인사해. 내 파트너 라이야.",
       "TargetMusic": null
     },
     {
@@ -393,7 +394,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "우와! 언니 진짜 화려하다! 루미 언니 선배라고? 언니도 번개 마법 써?",
+      "TargetAudio": "2장 13.우와! 언니 진짜 화려하다! 루미 언니 선배라고 언니도 번개 마법 써",
       "TargetMusic": null
     },
     {
@@ -406,7 +407,7 @@
       "EndPoint": false,
       "TargetImageName": null,
       "TargetAudio": null,
-      "TargetMusic": "아이시클 시티"
+      "TargetMusic": null
     },
     {
       "Story_ID": 20205,
@@ -465,8 +466,8 @@
       "Audio": false,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "그럼 내가 오늘 아이시클 시티 제대로 구경시켜 줄게. 이 언니만 믿고 따라와!",
-      "TargetMusic": "아이시클 시티"
+      "TargetAudio": "2장 14.그럼 내가 오늘 아이시클 시티 제대로 구경시켜 줄게. 이 언니만 믿고 따라와!",
+      "TargetMusic": null
     },
     {
       "Story_ID": 20210,
@@ -693,7 +694,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": "2장 7.아이리스와 해어지는 루미와 라이",
-      "TargetAudio": "그래! 언니가 갖고 있으면 든든하지. 조심히 다녀와!",
+      "TargetAudio": "2장 15.그래! 언니가 갖고 있으면 든든하지. 조심히 다녀와!",
       "TargetMusic": null
     },
     {
@@ -705,7 +706,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "루미, 이제부턴 너희끼리 잘 해봐야 해. 필드 위에서는 너랑 파트너만 믿는 거야. 알았지?",
+      "TargetAudio": "2장 16.루미, 이제부턴 너희끼리 잘 해봐야 해. 필드 위에서는 너랑 파트너만 믿는 거야. 알았지",
       "TargetMusic": null
     },
     {
@@ -742,7 +743,7 @@
       "EndPoint": true,
       "TargetImageName": null,
       "TargetAudio": null,
-      "TargetMusic": null
+      "TargetMusic": "아이시클 시티"
     },
 
     {
@@ -754,8 +755,8 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": "2장 8.호텔방 입장",
-      "TargetAudio": "세 분이 함께 묵으실 곳은 23층 디럭스 룸입니다.",
-      "TargetMusic": null
+      "TargetAudio": "2장 17.세 분이 함께 묵으실 곳은 23층 디럭스 룸입니다.",
+      "TargetMusic": "매직컬센터 오후"
     },
     {
       "Story_ID": 20302,
@@ -766,7 +767,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "루미언니 여기 좀 봐! 밑에 지나다니는 사람들이 개미보다 더 작아!",
+      "TargetAudio": "2장 18.루미언니 여기 좀 봐! 밑에 지나다니는 사람들이 개미보다 더 작아!",
       "TargetMusic": null
     },
     {
@@ -778,7 +779,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "너무... 너무 높아요... 라이, 너무 가까이 가지 마... 떨어지면 어떡해...",
+      "TargetAudio": "2장 19.너무... 너무 높아요... 라이, 너무 가까이 가지 마... 떨어지면 어떡해...",
       "TargetMusic": null
     },
     {
@@ -862,7 +863,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": "2장 9.짐정리",
-      "TargetAudio": "얏호! 드디어 짐더미에서 해방이다!",
+      "TargetAudio": "2장 20.얏호! 드디어 짐더미에서 해방이다!",
       "TargetMusic": null
     },
     {
@@ -874,7 +875,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "아, 라이! 그렇게 다 쏟아버리면 나중에 찾기 힘들잖아...",
+      "TargetAudio": "2장 21.라이! 그렇게 다 쏟아버리면 나중에 찾기 힘들잖아...",
       "TargetMusic": null
     },
     {
@@ -958,7 +959,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": "2장 10.식당으로 이동",
-      "TargetAudio": "짐 정리는 잘 끝내셨나요? 이제 저녁 식사를 하러 가시죠.",
+      "TargetAudio": "2장 21.짐 정리는 잘 끝내셨나요 이제 저녁 식사를 하러 가시죠.",
       "TargetMusic": null
     },
     {
@@ -970,19 +971,19 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "와! 30층?! 아까 우리 방보다 훨씬 더 높잖아!",
+      "TargetAudio": "2장 22.와! 30층! 아까 우리 방보다 훨씬 더 높잖아!",
       "TargetMusic": null
     },
     {
       "Story_ID": 20320,
       "Speaker": "루미",
-      "Dialogue": "아, 라이... 같이 가... 세리 씨, 죄송해요. 라이가 워낙 들떠서...",
+      "Dialogue": "라이... 같이 가... 세리 씨, 죄송해요. 라이가 워낙 들떠서...",
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "아, 라이... 같이 가... 세리 씨, 죄송해요. 라이가 워낙 들떠서...",
+      "TargetAudio": "2장 23.라이... 같이 가... 세리 씨, 죄송해요. 라이가 워낙 들떠서...",
       "TargetMusic": null
     },
     {
@@ -1066,7 +1067,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": "2장 12.음식을 고르는 루미와 라이",
-      "TargetAudio": "우와! 여기 진짜 천국인가 봐!",
+      "TargetAudio": "2장 24.우와! 여기 진짜 천국인가 봐!",
       "TargetMusic": null
     },
     {
@@ -1078,7 +1079,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "라이, 너무 고기만 담는 거 아냐?",
+      "TargetAudio": "2장 25.라이, 너무 고기만 담는 거 아냐 저기 있는 신선한 샐러드도 좀 먹어야지. 몸에 좋은 것도 챙겨 먹어야 키가 쑥쑥 크지...",
       "TargetMusic": null
     },
     {
@@ -1090,7 +1091,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "라이 님, 바이탈 밴드 데이터에 영양 불균형 경고가 뜰지도 모르겠네요.",
+      "TargetAudio": "2장 26.라이 님, 바이탈 밴드 데이터에 영양 불균형 경고가 뜰지도 모르겠네요.",
       "TargetMusic": null
     },
     {
@@ -1114,19 +1115,19 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": "2장 13.즐거운 저녁2",
-      "TargetAudio": "...정말 못 말린다니까. 라이, 그러다 나중에 배 아프다고 울면 안 된다?",
+      "TargetAudio": "2장 27....정말 못 말린다니까. 라이, 그러다 나중에 배 아프다고 울면 안 된다",
       "TargetMusic": null
     },
     {
       "Story_ID": 20332,
       "Speaker": "라이",
-      "Dialogue": "휴~ 세리 씨 앞이라 조금 긴장했는데, 이제야 좀 살 것 같다! 루미 언니, 이 리조또 진짜 대박이야. 입안에서 치즈가 폭발해!",
+      "Dialogue": "휴~ 세리 언니 앞이라 조금 긴장했는데, 이제야 좀 살 것 같다! 루미 언니, 이 리조또 진짜 대박이야. 입안에서 치즈가 폭발해!",
       "Is_Image": true,
       "Image_Command": "KEEP",
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "휴~ 세리 씨 앞이라 조금 긴장했는데, 이제야 좀 살 것 같다",
+      "TargetAudio": "2장 28.휴~ 세리 언니 앞이라 조금 긴장했는데, 이제야 좀 살 것 같다! 루미 언니, 이 리조또 진짜 대박이야. 입안에서 치즈가 폭발해!",
       "TargetMusic": null
     },
     {
@@ -1174,7 +1175,7 @@
       "Audio": false,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "헤헤, 내일은 더 대단할걸? 우리가 아이시클 시티를 정복하는 거야!",
+      "TargetAudio": null,
       "TargetMusic": null
     },
     {
@@ -1198,7 +1199,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": "2장 14.호텔방에서 휴식",
-      "TargetAudio": "아~ 배부르다! 루미 언니, 나 진짜 배 터질 것 같아.",
+      "TargetAudio": "2장 29.아~ 배부르다! 루미 언니, 나 진짜 배 터질 것 같아.",
       "TargetMusic": null
     },
     {
@@ -1210,7 +1211,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "라이, 방금 먹고 바로 누우면 안 돼. 소화 안 된다니까.",
+      "TargetAudio": "2장 30.라이, 방금 먹고 바로 누우면 안 돼. 소화 안 된다니까.",
       "TargetMusic": null
     },
     {
@@ -1294,7 +1295,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": "2장 15. 침대에 누은 루미와 라이",
-      "TargetAudio": "와아... 루미 언니, 이 침대 진짜 마법 침대 같아. 눕자마자 몸이 녹아내리는 것 같아.",
+      "TargetAudio": "2장 31.와아... 루미 언니, 이 침대 진짜 마법 침대 같아. 눕자마자 몸이 녹아내리는 것 같아.",
       "TargetMusic": null
     },
     {
@@ -1306,7 +1307,7 @@
       "Audio": true,
       "EndPoint": false,
       "TargetImageName": null,
-      "TargetAudio": "응, 정말 푹신하다. 라이, 오늘 하루는 어땠어?",
+      "TargetAudio": "2장 32.응, 정말 푹신하다. 라이, 오늘 하루는 어땠어",
       "TargetMusic": null
     },
     {
