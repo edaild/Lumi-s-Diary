@@ -1086,6 +1086,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 612bf4dd782c9644fb32a5669219ead8, type: 3}
   - {fileID: 8300000, guid: 23041552f1991594ca3645d64d48f576, type: 3}
   - {fileID: 8300000, guid: d6392a382217388498c8df0d4c9e9989, type: 3}
+  - {fileID: 8300000, guid: 94ea787d65e0c1f45bb38aa6355bf53e, type: 3}
   currentMusic: 
 --- !u!4 &233521371
 Transform:
