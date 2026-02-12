@@ -14,6 +14,7 @@ public class QuestData
     public bool Is_success;
     public string QuestDescription;
     public int Story_ID;
+    public string TargetName;
     public int TargetCount;
     public int RewardExperience;
     public int PreQuestID;

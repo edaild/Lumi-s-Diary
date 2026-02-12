@@ -22,7 +22,6 @@ public class CharacterHealthSystem : MonoBehaviour
     public QuestSystem _questSystem;
     public CharacterMoveSystem _characterMoveSystem;
     public CharacterSkillSystem _characterSkillSystem;
-    public BossSceneSystem _bossSceneSystem;
 
 
     [Tooltip("2장 바이탈 벤드 수령  퀘스트")] public int Quest1_lastQuest = 20004;
@@ -66,20 +65,10 @@ public class CharacterHealthSystem : MonoBehaviour
         _characterSkillSystem.audioSource.clip = null;
         _characterMoveSystem.fadeManager.StartFadeOut(1.5f);
 
-         yield return new WaitForSeconds(3f);
-        if (!_bossSceneSystem.isBossScene)
-        {
-            SceneManager.LoadScene("MaigicurlHotel");
-            current_Character_Health = character_Health;
-            current_Character_stemina = character_stemina;
-        }
-        else
-        {
-            Debug.Log("보스 재시작 클리어 전까지 못나감");
-            _characterMoveSystem.fadeManager.StartFadeIn(1.5f);
-            current_Character_Health = character_Health;
-            current_Character_stemina = character_stemina;
-        }
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("MaigicurlHotel");
+        current_Character_Health = character_Health;
+        current_Character_stemina = character_stemina;
     }
 
     private void OnTriggerStay2D(Collider2D other)

@@ -5,11 +5,13 @@ using UnityEngine;
 public class EnemyHealthSystem : MonoBehaviour
 {
     public EnemySystem _enemySystem;
+    public QuestSystem _questSystem;
 
     void Start()
     {
         if( _enemySystem == null )
         _enemySystem = GetComponent<EnemySystem>();
+        _questSystem = Object.FindAnyObjectByType<QuestSystem>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -40,8 +42,11 @@ public class EnemyHealthSystem : MonoBehaviour
 
     void DIe()
     {
-        _enemySystem._questSystem.playerEnmeyDieCount++;
+        
         Destroy(_enemySystem.gameObject);
         Debug.Log($"{_enemySystem._EnemyName} 처치 완료. 루나 {_enemySystem._GiftCoin} 만큼 증가");
+
+        if(_questSystem.playerTargetName == _enemySystem._EnemyName)
+            _enemySystem._questSystem.playerEnmeyDieCount++;
     }
 }

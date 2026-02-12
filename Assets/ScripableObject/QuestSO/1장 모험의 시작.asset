@@ -21,6 +21,7 @@ MonoBehaviour:
     QuestDescription: "\uB8E8\uBBF8\uAC00 \uCE68\uB300\uC5D0\uC11C \uC77C\uC5B4\uB09C\uD6C4
       \uC9C4\uD589\uB418\uB294 \uC2A4\uD1A0\uB9AC \uD018\uC2A4\uD2B8"
     Story_ID: 10101
+    TargetName: 
     TargetCount: 0
     RewardExperience: 0
     PreQuestID: 0
@@ -32,6 +33,7 @@ MonoBehaviour:
     Is_success: 0
     QuestDescription: "\uC774\uB3D9\uC744 \uBC30\uC6B4\uB2E4"
     Story_ID: 0
+    TargetName: 
     TargetCount: 0
     RewardExperience: 10
     PreQuestID: 10001
@@ -43,6 +45,7 @@ MonoBehaviour:
     Is_success: 0
     QuestDescription: "\uC9C1\uC6D0\uACFC \uB300\uD654\uD558\uAE30"
     Story_ID: 10201
+    TargetName: 
     TargetCount: 0
     RewardExperience: 0
     PreQuestID: 10002
@@ -54,6 +57,7 @@ MonoBehaviour:
     Is_success: 0
     QuestDescription: "\uB208\uC758 \uB9C8\uC744\uAE38 3\uBC88\uC9C0\uB85C \uC774\uB3D9\uD55C\uB2E4"
     Story_ID: 0
+    TargetName: 
     TargetCount: 0
     RewardExperience: 10
     PreQuestID: 10003
@@ -65,6 +69,7 @@ MonoBehaviour:
     Is_success: 0
     QuestDescription: "\uC2A4\uD1A0\uB9AC \uC9C4\uD589 \uD018\uC2A4\uD2B8"
     Story_ID: 10301
+    TargetName: 
     TargetCount: 0
     RewardExperience: 10
     PreQuestID: 10004
@@ -76,6 +81,7 @@ MonoBehaviour:
     Is_success: 0
     QuestDescription: "\uC804\uD22C\uB97C \uBC30\uC6B4\uB2E4"
     Story_ID: 0
+    TargetName: "\uB208\uD1A0\uB07C"
     TargetCount: 1
     RewardExperience: 10
     PreQuestID: 10005
@@ -87,6 +93,7 @@ MonoBehaviour:
     Is_success: 0
     QuestDescription: "\uC2A4\uD1A0\uB9AC \uC9C4\uD589 \uD018\uC2A4\uD2B8"
     Story_ID: 10401
+    TargetName: 
     TargetCount: 0
     RewardExperience: 0
     PreQuestID: 10006
@@ -98,6 +105,7 @@ MonoBehaviour:
     Is_success: 0
     QuestDescription: "\uB208\uC758 \uB9C8\uC744\uAE38 \uB85C \uC774\uB3D9\uD55C\uB2E4."
     Story_ID: 0
+    TargetName: 
     TargetCount: 0
     RewardExperience: 10
     PreQuestID: 10007
@@ -109,8 +117,9 @@ MonoBehaviour:
     Is_success: 0
     QuestDescription: "\uC2A4\uD1A0\uB9AC \uC9C4\uD589 \uD018\uC2A4\uD2B8"
     Story_ID: 10501
+    TargetName: 
     TargetCount: 0
-    RewardExperience: 50
+    RewardExperience: 0
     PreQuestID: 10008
     FinishchackScene: 
   - QuestID: 10010
@@ -120,7 +129,8 @@ MonoBehaviour:
     Is_success: 0
     QuestDescription: "1\uC7A5 \uBAA8\uD5D8\uC758 \uC2DC\uC791 \uC885\uB8CC"
     Story_ID: 0
+    TargetName: 
     TargetCount: 0
-    RewardExperience: 0
+    RewardExperience: 50
     PreQuestID: 10009
     FinishchackScene: 

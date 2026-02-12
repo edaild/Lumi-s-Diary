@@ -61,6 +61,10 @@ public class GameMusicSystem : MonoBehaviour
         {
             targetMusicName = "아이시클 시티";
         }
+        else if(sceneName == "IcIcleCityPark1")
+        {
+            targetMusicName = "아이시클 시티 공원";
+        }
         else
         {
             Debug.Log($"GameMusicSystem : {sceneName}씬이 존재하지 않습니다.");

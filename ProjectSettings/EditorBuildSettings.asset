@@ -15,23 +15,26 @@ EditorBuildSettings:
     path: "Assets/Scenes/\uACE0\uC815\uB9F5/LumiHouseScene.unity"
     guid: 24a1754539226d84389999d913f15fe8
   - enabled: 1
-    path: Assets/Scenes/Snowvillage.unity
+    path: "Assets/Scenes/\uB208\uC758 \uB9C8\uC744/Snowvillage.unity"
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: "Assets/Scenes/\uACE0\uC815\uB9F5/Communitycenter.unity"
     guid: d189d97688580de408c05de50faf9dd8
   - enabled: 1
-    path: Assets/Scenes/SnowVillageRoad3.unity
+    path: "Assets/Scenes/\uB208\uC758 \uB9C8\uC744/SnowVillageRoad3.unity"
     guid: 0b25f69e371370e488c2ab47ee122b12
   - enabled: 1
     path: "Assets/Scenes/\uACE0\uC815\uB9F5/MaigicurlHotel.unity"
     guid: ec3051a1b2b0ec146a07f18218095d65
   - enabled: 1
-    path: Assets/Scenes/IcIcleCity.unity
+    path: "Assets/Scenes/\uC544\uC774\uC2DC\uD074 \uC2DC\uD2F0/IcIcleCity.unity"
     guid: 3bbe129a489a4e94492a1daaf214a920
   - enabled: 1
-    path: Assets/Scenes/SnowVillageRoad.unity
+    path: "Assets/Scenes/\uB208\uC758 \uB9C8\uC744/SnowVillageRoad.unity"
     guid: 0f90fb157cbf5b3499e9a052a5ba49ed
+  - enabled: 1
+    path: "Assets/Scenes/\uC544\uC774\uC2DC\uD074 \uC2DC\uD2F0/IcIcleCityPark1.unity"
+    guid: a58e903ca980aac43bc8f113f59cf40b
   - enabled: 1
     path: "Assets/Scenes/\uBBF8\uB2C8\uAC8C\uC784/MathScene.unity"
     guid: 0c4cf8a0851dd6042a699cc1fb3ab0bd
@@ -39,6 +42,6 @@ EditorBuildSettings:
     path: "Assets/Scenes/\uC778\uAC8C\uC784 \uC678/EndingScene.unity"
     guid: 3e52d7dfc5acda545a2b19014eba6cf0
   - enabled: 1
-    path: Assets/Scenes/Melodya.unity
+    path: "Assets/Scenes/\uBA5C\uB85C\uB514\uC544/Melodya.unity"
     guid: 0555046de816f1c48b78549a7a7e3086
   m_configObjects: {}

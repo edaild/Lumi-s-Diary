@@ -15,6 +15,7 @@ public class QuestSystem : MonoBehaviour
     public string playerquestName;
     public bool playerquest_Is_success;
     public int playerStory_Id;
+    public string playerTargetName;
     public int playerEnemyTargetCount;
     public int playerPreQuestID;
     public int giftExperience;
@@ -98,6 +99,7 @@ public class QuestSystem : MonoBehaviour
             playerquerstID = firstQuest.QuestID;
             playerquestName = firstQuest.QuestName;
             playerStory_Id = firstQuest.Story_ID;
+            playerTargetName = firstQuest.TargetName;
             playerEnemyTargetCount = firstQuest.TargetCount;
             currnetQuestType = firstQuest.QuestType;
             FinishchackScene = firstQuest.FinishchackScene;
@@ -112,6 +114,7 @@ public class QuestSystem : MonoBehaviour
                 currentQuestIndex = lastQuestIndex;
                 playerquestName = quest.QuestName;
                 playerStory_Id = quest.Story_ID;
+                playerTargetName = quest.TargetName;
                 playerEnemyTargetCount = quest.TargetCount;
                 playerPreQuestID = quest.PreQuestID;
                 giftExperience = quest.RewardExperience;
@@ -191,6 +194,7 @@ public class QuestSystem : MonoBehaviour
                 playerquerstID = nextQuest.QuestID;
                 playerquestName = nextQuest.QuestName;
                 playerStory_Id = nextQuest.Story_ID;
+                playerTargetName = nextQuest.TargetName;
                 playerEnemyTargetCount = nextQuest.TargetCount;
                 giftExperience = nextQuest.RewardExperience;
                 currnetQuestType = nextQuest.QuestType;
@@ -249,6 +253,7 @@ public class QuestSystem : MonoBehaviour
                 playerquerstID = ChangeFirstQuest.QuestID;
                 playerquestName = ChangeFirstQuest.QuestName;
                 playerStory_Id = ChangeFirstQuest.Story_ID;
+                playerTargetName = ChangeFirstQuest.TargetName;
                 playerEnemyTargetCount = ChangeFirstQuest.TargetCount;
                 currnetQuestType = ChangeFirstQuest.QuestType;
                 FinishchackScene = ChangeFirstQuest.FinishchackScene;
