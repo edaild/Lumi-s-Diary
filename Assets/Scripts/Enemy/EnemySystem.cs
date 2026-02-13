@@ -27,14 +27,14 @@ public class EnemySystem : MonoBehaviour
 
     public GameObject AttackCollider;
 
-    public Transform startPoition;
+
     private GameObject player;
     private bool isPlayer;
     private bool isPlayerAttack;
+    private bool isPlayerAttackTime;
     private bool isBackPoition;
     private bool isFollowing = false;
     private Coroutine stopCoroutine;
-
 
     private void Start()
     {
@@ -57,9 +57,7 @@ public class EnemySystem : MonoBehaviour
         _currentHealth = _EnemyHealth;
 
         player = _characterSkillSystem.gameObject;
-        EnemyName.text = _EnemyName;
-
-        startPoition.position = transform.position;
+        AttackCollider.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -67,11 +65,6 @@ public class EnemySystem : MonoBehaviour
         if (isFollowing && player != null)
         {
             FollowPlayer();
-        }
-
-        if(isBackPoition && player != null)
-        {
-            BackPoition();
         }
     }
 
@@ -86,15 +79,15 @@ public class EnemySystem : MonoBehaviour
                 stopCoroutine = null;
             }
             isFollowing = true;
+            AttackPlayer();
         }
 
         if (other.gameObject.CompareTag("Navi"))
         {
             isFollowing = false;
-            isBackPoition = true;
+            isPlayerAttack = false;
             Debug.Log("Enemy 이동 제한 구간 진입");
         }
-            
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -104,12 +97,17 @@ public class EnemySystem : MonoBehaviour
             if (stopCoroutine != null) StopCoroutine(stopCoroutine);
             stopCoroutine = StartCoroutine(StopFollowingAfterDelay());
         }
+
+        if (AttackCollider.gameObject.CompareTag("Player"))
+        {
+            isPlayerAttack = false;
+        }
     }
 
     IEnumerator StopFollowingAfterDelay()
     {
         yield return new WaitForSeconds(8f);
-
+        EnemyAnimator.SetBool("isMove", false);
         isFollowing = false;
         stopCoroutine = null;
         Debug.Log("추적 중지");
@@ -120,7 +118,8 @@ public class EnemySystem : MonoBehaviour
         Transform targetPlayer = player.gameObject.transform;
 
         if (!_storySystem || !_storySystem.isStoryEndPoint || isPlayer || isBackPoition) return;
-        float Distance = 2f;
+
+        float Distance = 0.5f;
 
         float currentDistance = Vector2.Distance(targetPlayer.position, transform.position);
 
@@ -129,16 +128,38 @@ public class EnemySystem : MonoBehaviour
             Vector2 targetDirection = (targetPlayer.position - transform.position).normalized;
             float enemyMoveX = targetDirection.x * _EnemySpeed * Time.deltaTime;
             transform.position = new Vector3(transform.position.x + enemyMoveX, transform.position.y, 0);
+            EnemyAnimator.SetBool("isMove", true);
+            if (targetDirection.x > 0) Flip(true);
+            else Flip(false);
         }
     }
 
-    void BackPoition()
+    void Flip(bool shouldFlip)
     {
-        Vector2 targetBackDirection = (startPoition.position - transform.position).normalized;
-        float enemyMoveX = targetBackDirection.x * _EnemySpeed * Time.deltaTime;
-        transform.position = new Vector3(transform.position.x + enemyMoveX, transform.position.y, 0);
+        Vector3 scale = transform.localScale;
 
-        if (transform.position == startPoition.position)
-            isBackPoition = false;
+        if (shouldFlip)
+            scale.x = -Mathf.Abs(scale.x);
+        else
+            scale.x = Mathf.Abs(scale.x);
+
+        transform.localScale = scale;
+    }
+
+    void AttackPlayer()
+    {
+        if (isPlayerAttackTime) return;
+
+        isPlayerAttackTime = true;
+        StartCoroutine(AttackPlayerTime());
+    }
+    IEnumerator AttackPlayerTime()
+    {
+        yield return new WaitForSeconds(0.5f);
+        AttackCollider.gameObject.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        AttackCollider.gameObject.SetActive(false);
+        yield return new WaitForSeconds(0.5f);
+        isPlayerAttackTime = false;
     }
 }

@@ -73,7 +73,7 @@ public class CharacterHealthSystem : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Enemy")/* && other.gameObject.CompareTag("EnmeyAttackCollider")*/)
+        if (other.gameObject.CompareTag("EnemyAttackCollider"))
         {
             other.gameObject.TryGetComponent<EnemySystem>(out EnemySystem enemy);
             MinusHeath(enemy);
