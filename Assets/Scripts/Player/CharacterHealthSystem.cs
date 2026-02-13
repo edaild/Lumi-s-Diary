@@ -47,7 +47,7 @@ public class CharacterHealthSystem : MonoBehaviour
         else
             HeaderUI.gameObject.SetActive(false);
     }
-    void Die()
+    public void Die()
     {
         Debug.Log("Die 호출 확인");
         if (_questSystem.playerLevel >= 2 && current_Character_Health > 0) return;
@@ -69,37 +69,5 @@ public class CharacterHealthSystem : MonoBehaviour
         SceneManager.LoadScene("MaigicurlHotel");
         current_Character_Health = character_Health;
         current_Character_stemina = character_stemina;
-    }
-
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            other.gameObject.TryGetComponent<EnemySystem>(out EnemySystem enemy);
-            if (other.gameObject.CompareTag("EnemyAttackCollider"))
-            {
-                MinusHeath(enemy);
-            }
-        }
-    }
-
-    void MinusHeath(EnemySystem Enemy)
-    {
-        if (_questSystem.playerLevel < 2)
-        {
-            Debug.Log("현재 플레이어 체력 감소 전투 시스템 미오픈 (레벨 2 이상 필요)");
-        }
-        else if (current_Character_Health > 0)
-        {
-            current_Character_Health -= Enemy._EnemyDamage;
-
-            Debug.Log($"적에게 {Enemy._EnemyDamage}만큼 데미지를 받음. 남은 체력: {current_Character_Health}");
-
-            if (current_Character_Health <= 0)
-            {
-                current_Character_Health = 0;
-                Die();
-            }
-        }
     }
 }

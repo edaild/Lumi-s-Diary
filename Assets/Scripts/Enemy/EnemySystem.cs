@@ -2,8 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing.Design;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class EnemySystem : MonoBehaviour
 {
@@ -22,15 +23,14 @@ public class EnemySystem : MonoBehaviour
     public Animator EnemyAnimator;
 
     public CharacterSkillSystem _characterSkillSystem;
+    public CharacterHealthSystem _characterHealthSystem;
     public QuestSystem _questSystem;
     public StorySystem _storySystem;
 
-    public GameObject AttackCollider;
-
+    public bool isPlayerAttack;
 
     private GameObject player;
     private bool isPlayer;
-    private bool isPlayerAttack;
     private bool isPlayerAttackTime;
     private bool isBackPoition;
     private bool isFollowing = false;
@@ -54,10 +54,10 @@ public class EnemySystem : MonoBehaviour
         _characterSkillSystem = UnityEngine.Object.FindAnyObjectByType<CharacterSkillSystem>();
         _questSystem = UnityEngine.Object.FindAnyObjectByType<QuestSystem>();
         _storySystem = UnityEngine.Object.FindAnyObjectByType<StorySystem>();
+        _characterHealthSystem = UnityEngine.Object.FindAnyObjectByType<CharacterHealthSystem>();
         _currentHealth = _EnemyHealth;
 
         player = _characterSkillSystem.gameObject;
-        AttackCollider.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -79,7 +79,6 @@ public class EnemySystem : MonoBehaviour
                 stopCoroutine = null;
             }
             isFollowing = true;
-            AttackPlayer();
         }
 
         if (other.gameObject.CompareTag("Navi"))
@@ -96,11 +95,6 @@ public class EnemySystem : MonoBehaviour
         {
             if (stopCoroutine != null) StopCoroutine(stopCoroutine);
             stopCoroutine = StartCoroutine(StopFollowingAfterDelay());
-        }
-
-        if (AttackCollider.gameObject.CompareTag("Player"))
-        {
-            isPlayerAttack = false;
         }
     }
 
@@ -119,7 +113,7 @@ public class EnemySystem : MonoBehaviour
 
         if (!_storySystem || !_storySystem.isStoryEndPoint || isPlayer || isBackPoition) return;
 
-        float Distance = 0.5f;
+        float Distance = 1f;
 
         float currentDistance = Vector2.Distance(targetPlayer.position, transform.position);
 
@@ -131,6 +125,11 @@ public class EnemySystem : MonoBehaviour
             EnemyAnimator.SetBool("isMove", true);
             if (targetDirection.x > 0) Flip(true);
             else Flip(false);
+        }
+        else
+        {
+            EnemyAnimator.SetBool("isMove", false);
+            AttackPlayer();
         }
     }
 
@@ -150,16 +149,43 @@ public class EnemySystem : MonoBehaviour
     {
         if (isPlayerAttackTime) return;
 
+        Debug.Log("플레이어 공격");
         isPlayerAttackTime = true;
+        EnemyAnimator.SetBool("isAttack", true);
         StartCoroutine(AttackPlayerTime());
     }
     IEnumerator AttackPlayerTime()
     {
+        Debug.Log("플레이어 공격 코루틴 정상 작동 확인");
         yield return new WaitForSeconds(0.5f);
-        AttackCollider.gameObject.SetActive(true);
+        PlayerAttack();
+        isPlayerAttack = true;
         yield return new WaitForSeconds(0.5f);
-        AttackCollider.gameObject.SetActive(false);
+        isPlayerAttack = false;
+        EnemyAnimator.SetBool("isAttack", false);
         yield return new WaitForSeconds(0.5f);
         isPlayerAttackTime = false;
+    }
+
+    void PlayerAttack()
+    {
+
+        if (isPlayerAttack) return;
+        if (_questSystem.playerLevel < 2)
+        {
+            Debug.Log("현재 플레이어 체력 감소 전투 시스템 미오픈 (레벨 2 이상 필요)");
+        }
+        else if (_characterHealthSystem.current_Character_Health > 0)
+        {
+            _characterHealthSystem.current_Character_Health -= _EnemyDamage;
+
+            Debug.Log($"적에게 {_EnemyDamage}만큼 데미지를 받음. 남은 체력: {_characterHealthSystem.current_Character_Health}");
+
+            if (_characterHealthSystem.current_Character_Health <= 0)
+            {
+                _characterHealthSystem.current_Character_Health = 0;
+                _characterHealthSystem.Die();
+            }
+        }
     }
 }

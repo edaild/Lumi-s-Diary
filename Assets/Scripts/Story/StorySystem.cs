@@ -116,16 +116,16 @@ public class StorySystem : MonoBehaviour
         PlayTargetMusic();
         if (!isNotStoryTimedelay)
         {
-            StartCoroutine(NextStoryTime());
+            //StartCoroutine(NextStoryTime());
         }
     }
 
-    IEnumerator NextStoryTime()
-    {
-        isStoryTIme = true;
-        yield return new WaitForSeconds(1.5f);
-        isStoryTIme = false;
-    }
+    //IEnumerator NextStoryTime()
+    //{
+    //    isStoryTIme = true;
+    //    yield return new WaitForSeconds(1.5f);
+    //    isStoryTIme = false;
+    //}
 
     void ShowImage()
     {

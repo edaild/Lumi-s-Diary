@@ -218,7 +218,7 @@ MonoBehaviour:
     FinishchackScene: 
   - QuestID: 30017
     QuestName: "\uB208\uD1A0\uB07C 8\uB9C8\uB9AC \uC7A1\uAE30"
-    QuestType: Move
+    QuestType: Battle
     QuestLevel: 3
     Is_success: 0
     QuestDescription: "\uBCF5\uBD80 \uACF5\uACA9\uC744 \uBC1B\uC740 \uB8E8\uBBF8\uB294
@@ -264,20 +264,20 @@ MonoBehaviour:
     TargetCount: 0
     RewardExperience: 0
     PreQuestID: 30019
-    FinishchackScene: 
+    FinishchackScene: MaigicurlHotel
   - QuestID: 30021
     QuestName: "\uC810\uC2EC\uC744 \uBA39\uB294 \uB8E8\uBBF8\uC640 \uB77C\uC774"
     QuestType: Story
     QuestLevel: 3
     Is_success: 0
     QuestDescription: "\uC810\uC2EC\uC744 \uBA39\uC73C\uBA74\uC11C \uB8E8\uBBF8\uB294
-      \uC790\uC2E0\uC758 \uAC00\uD2B8 \uC794\uACE0\uB97C \uC870\uD68C\uD55C\uB2E4."
+      \uC790\uC2E0\uC758 \uCE74\uB4DC \uC794\uACE0\uB97C \uC870\uD68C\uD55C\uB2E4."
     Story_ID: 30701
     TargetName: 
     TargetCount: 0
     RewardExperience: 60
     PreQuestID: 30020
-    FinishchackScene: MaigicurlHotel
+    FinishchackScene: 
   - QuestID: 30022
     QuestName: "3\uC7A5 \uC6D4\uB4DC \uCC54\uD53C\uC5B8\uC758 \uAFC8\uACFC \uCD08\uCF5C\uB9BF
       \uD50C\uB799\uC2A4 \uC885\uB8CC"
