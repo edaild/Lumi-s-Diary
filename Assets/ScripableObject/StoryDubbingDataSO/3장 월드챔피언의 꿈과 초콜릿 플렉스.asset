@@ -15,7 +15,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dubbingaudioClip:
   - {fileID: 8300000, guid: dc96c0e4891e45c4d9811921d20d2784, type: 3}
-  - {fileID: 8300000, guid: 899fc27b1fb41da4e841858f7e7dd7b6, type: 3}
   - {fileID: 8300000, guid: 68e1d9fe4bdeaac4c8de6c76656d2dce, type: 3}
   - {fileID: 8300000, guid: 7579053474229de48abe1a4788ef1c21, type: 3}
   - {fileID: 8300000, guid: 892dac370aca1684fbb02c080258bf7b, type: 3}
