@@ -61,7 +61,7 @@ public class GameMusicSystem : MonoBehaviour
         {
             targetMusicName = "아이시클 시티";
         }
-        else if(sceneName == "IcIcleCityPark1")
+        else if(sceneName == "IcIcleCityPark1" || sceneName == "IcIcleCityParkSquare" || sceneName == "IcIcleCityPark2")
         {
             targetMusicName = "아이시클 시티 공원";
         }

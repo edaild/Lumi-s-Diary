@@ -13,4 +13,282 @@ MonoBehaviour:
   m_Name: "3\uC7A5 \uC6D4\uB4DC\uCC54\uD53C\uC5B8\uC758 \uAFC8\uACFC \uCD08\uCF5C\uB9BF
     \uD50C\uB809\uC2A4"
   m_EditorClassIdentifier: 
-  quests: []
+  quests:
+  - QuestID: 30001
+    QuestName: "\uB8E8\uBBF8\uC640 \uB77C\uC758 \uB300\uD654"
+    QuestType: Story
+    QuestLevel: 3
+    Is_success: 0
+    QuestDescription: "\uB8E8\uBBF8\uC640 \uB77C\uC774\uAC00TV\uB97C \uBCF4\uBA74\uC11C
+      \uB300\uD654\uB97C \uD55C\uB2E4."
+    Story_ID: 30001
+    TargetName: 
+    TargetCount: 0
+    RewardExperience: 0
+    PreQuestID: 20009
+    FinishchackScene: 
+  - QuestID: 30002
+    QuestName: "\uC138\uB9AC\uC640 \uB300\uD654 \uD558\uAE30"
+    QuestType: Story
+    QuestLevel: 3
+    Is_success: 0
+    QuestDescription: "\uC6D4\uB4DC\uCC54\uD53C\uC5B8\uC2ED \uB4F1\uB85D\uC744 \uC704\uD574
+      \uC138\uB9AC\uC640 \uB300\uD654\uD55C\uB2E4."
+    Story_ID: 30101
+    TargetName: 
+    TargetCount: 0
+    RewardExperience: 0
+    PreQuestID: 30001
+    FinishchackScene: 
+  - QuestID: 30003
+    QuestName: "\uC544\uC774\uC2DC\uD074\uACF5\uC6D01\uB85C \uAC00\uAE30"
+    QuestType: Move
+    QuestLevel: 3
+    Is_success: 0
+    QuestDescription: "\uC544\uC774\uC2DC\uD074\uACF5\uC6D01\uB85C \uAC04\uB2E4."
+    Story_ID: 0
+    TargetName: 
+    TargetCount: 0
+    RewardExperience: 0
+    PreQuestID: 30002
+    FinishchackScene: IcIcleCityPark1
+  - QuestID: 30004
+    QuestName: "\uB77C\uC774\uC640 \uB300\uD654 \uD558\uAE30"
+    QuestType: Story
+    QuestLevel: 3
+    Is_success: 0
+    QuestDescription: "\uC544\uC774\uC2DC\uD074 \uACF5\uC6D0\uC5D0 \uB3C4\uCC29\uD55C
+      \uB8E8\uBBF8\uB294 \uC138\uB9AC\uC758 \uB9D0\uC744 \uC5BB\uC774\uACE0 \uADC0\uC5EC\uC6B4
+      \uB208\uD1A0\uB07C\uB97C \uB04C\uC5B4 \uC548\uB294\uB2E4."
+    Story_ID: 30201
+    TargetName: 
+    TargetCount: 0
+    RewardExperience: 0
+    PreQuestID: 30003
+    FinishchackScene: 
+  - QuestID: 30005
+    QuestName: "\uB208\uD1A0\uB07C 8\uB9C8\uB9AC \uC7A1\uAE30"
+    QuestType: Battle
+    QuestLevel: 3
+    Is_success: 0
+    QuestDescription: "\uBCF5\uBD80 \uACF5\uACA9\uC744 \uBC1B\uC740 \uB8E8\uBBF8\uB294
+      \uB208\uD1A0\uB07C\uB97C \uC7A1\uC73C\uB85C\uACE0 \uD55C\uB2E4."
+    Story_ID: 0
+    TargetName: "\uB208\uD1A0\uB07C"
+    TargetCount: 8
+    RewardExperience: 10
+    PreQuestID: 30004
+    FinishchackScene: 
+  - QuestID: 30006
+    QuestName: "\uB208\uD1A0\uB07C\uB97C \uB193\uCE5C \uB8E8\uBBF81"
+    QuestType: Story
+    QuestLevel: 3
+    Is_success: 0
+    QuestDescription: "\uB208\uD1A0\uB07C\uAC00 \uB3C4\uB9DD\uAC04\uB2E4."
+    Story_ID: 30301
+    TargetName: 
+    TargetCount: 0
+    RewardExperience: 0
+    PreQuestID: 30005
+    FinishchackScene: 
+  - QuestID: 30007
+    QuestName: "\uC544\uC774\uC2DC\uD074\uACF5\uC6D02\uB85C \uAC00\uAE30"
+    QuestType: Move
+    QuestLevel: 3
+    Is_success: 0
+    QuestDescription: "\uC544\uC774\uC2DC\uD074\uACF5\uC6D0 2\uB85C \uAC04\uB2E4."
+    Story_ID: 0
+    TargetName: 
+    TargetCount: 0
+    RewardExperience: 0
+    PreQuestID: 30006
+    FinishchackScene: IcIcleCityPark2
+  - QuestID: 30008
+    QuestName: "\uB208\uD1A0\uB07C\uB97C \uCAD2\uC544\uC628 \uB8E8\uBBF81"
+    QuestType: Story
+    QuestLevel: 3
+    Is_success: 0
+    QuestDescription: "\uB208\uD1A0\uB07C\uB97C \uCAD2\uC544\uC628 \uB8E8\uBBF8\uB294
+      \uBC14\uB85C \uC7A1\uC73C\uB824\uACE0 \uD55C\uB2E4."
+    Story_ID: 30210
+    TargetName: 
+    TargetCount: 0
+    RewardExperience: 0
+    PreQuestID: 30007
+    FinishchackScene: 
+  - QuestID: 30009
+    QuestName: "\uB208\uD1A0\uB07C 8\uB9C8\uB9AC \uC7A1\uAE30"
+    QuestType: Battle
+    QuestLevel: 3
+    Is_success: 0
+    QuestDescription: "\uBCF5\uBD80 \uACF5\uACA9\uC744 \uBC1B\uC740 \uB8E8\uBBF8\uB294
+      \uB208\uD1A0\uB07C\uB97C \uC7A1\uC73C\uB85C\uACE0 \uD55C\uB2E4."
+    Story_ID: 0
+    TargetName: "\uB208\uD1A0\uB07C"
+    TargetCount: 8
+    RewardExperience: 10
+    PreQuestID: 30008
+    FinishchackScene: 
+  - QuestID: 30010
+    QuestName: "\uB208\uD1A0\uB07C\uB97C \uB193\uCE5C \uB8E8\uBBF82"
+    QuestType: Story
+    QuestLevel: 3
+    Is_success: 0
+    QuestDescription: "\uB208\uD1A0\uB07C\uAC00 \uB3C4\uB9DD\uAC04\uB2E4."
+    Story_ID: 30301
+    TargetName: 
+    TargetCount: 0
+    RewardExperience: 0
+    PreQuestID: 30009
+    FinishchackScene: 
+  - QuestID: 30011
+    QuestName: "\uC544\uC774\uC2DC\uD074\uACF5\uC6D01\uB85C \uAC00\uAE30"
+    QuestType: Move
+    QuestLevel: 3
+    Is_success: 0
+    QuestDescription: "\uC544\uC774\uC2DC\uD074\uACF5\uC6D01\uB85C \uAC04\uB2E4."
+    Story_ID: 0
+    TargetName: 
+    TargetCount: 0
+    RewardExperience: 0
+    PreQuestID: 30010
+    FinishchackScene: IcIcleCityPark1
+  - QuestID: 30012
+    QuestName: "\uB208\uD1A0\uB07C\uB97C \uCAD2\uC544\uC628 \uB8E8\uBBF82"
+    QuestType: Story
+    QuestLevel: 3
+    Is_success: 0
+    QuestDescription: "\uB208\uD1A0\uB07C\uB97C \uCAD2\uC544\uC628 \uB8E8\uBBF8\uB294
+      \uBC14\uB85C \uC7A1\uC73C\uB824\uACE0 \uD55C\uB2E4."
+    Story_ID: 30210
+    TargetName: 
+    TargetCount: 0
+    RewardExperience: 0
+    PreQuestID: 30011
+    FinishchackScene: 
+  - QuestID: 30013
+    QuestName: "\uB208\uD1A0\uB07C 8\uB9C8\uB9AC \uC7A1\uAE30"
+    QuestType: Battle
+    QuestLevel: 3
+    Is_success: 0
+    QuestDescription: "\uBCF5\uBD80 \uACF5\uACA9\uC744 \uBC1B\uC740 \uB8E8\uBBF8\uB294
+      \uB208\uD1A0\uB07C\uB97C \uC7A1\uC73C\uB85C\uACE0 \uD55C\uB2E4."
+    Story_ID: 0
+    TargetName: "\uB208\uD1A0\uB07C"
+    TargetCount: 8
+    RewardExperience: 10
+    PreQuestID: 30012
+    FinishchackScene: 
+  - QuestID: 30014
+    QuestName: "\uB208\uD1A0\uB07C\uB97C \uB193\uCE5C \uB8E8\uBBF83"
+    QuestType: Story
+    QuestLevel: 3
+    Is_success: 0
+    QuestDescription: "\uB208\uD1A0\uB07C\uAC00 \uB3C4\uB9DD\uAC04\uB2E4."
+    Story_ID: 30301
+    TargetName: 
+    TargetCount: 0
+    RewardExperience: 0
+    PreQuestID: 30013
+    FinishchackScene: 
+  - QuestID: 30015
+    QuestName: "\uC544\uC774\uC2DC\uD074\uACF5\uC6D02\uB85C \uAC00\uAE30"
+    QuestType: Move
+    QuestLevel: 3
+    Is_success: 0
+    QuestDescription: "\uC544\uC774\uC2DC\uD074\uACF5\uC6D02\uB85C \uAC04\uB2E4."
+    Story_ID: 0
+    TargetName: 
+    TargetCount: 0
+    RewardExperience: 0
+    PreQuestID: 30014
+    FinishchackScene: IcIcleCityPark2
+  - QuestID: 30016
+    QuestName: "\uB208\uD1A0\uB07C\uB97C \uCAD2\uC544\uC628 \uB8E8\uBBF83"
+    QuestType: Story
+    QuestLevel: 3
+    Is_success: 0
+    QuestDescription: "\uB208\uD1A0\uB07C\uB97C \uCAD2\uC544\uC628 \uB8E8\uBBF8\uB294
+      \uBC14\uB85C \uC7A1\uC73C\uB824\uACE0 \uD55C\uB2E4."
+    Story_ID: 30210
+    TargetName: 
+    TargetCount: 0
+    RewardExperience: 0
+    PreQuestID: 30015
+    FinishchackScene: 
+  - QuestID: 30017
+    QuestName: "\uB208\uD1A0\uB07C 8\uB9C8\uB9AC \uC7A1\uAE30"
+    QuestType: Move
+    QuestLevel: 3
+    Is_success: 0
+    QuestDescription: "\uBCF5\uBD80 \uACF5\uACA9\uC744 \uBC1B\uC740 \uB8E8\uBBF8\uB294
+      \uB208\uD1A0\uB07C\uB97C \uC7A1\uC73C\uB85C\uACE0 \uD55C\uB2E4."
+    Story_ID: 0
+    TargetName: "\uB208\uD1A0\uB07C"
+    TargetCount: 8
+    RewardExperience: 0
+    PreQuestID: 30016
+    FinishchackScene: 
+  - QuestID: 30018
+    QuestName: "\uB208\uD1A0\uB07C\uB97C \uC7A1\uC740 \uB8E8\uBBF8"
+    QuestType: Story
+    QuestLevel: 3
+    Is_success: 0
+    QuestDescription: "\uB208\uD1A0\uB07C\uB97C \uC7A1\uC740\uB2E4."
+    Story_ID: 30401
+    TargetName: 
+    TargetCount: 0
+    RewardExperience: 10
+    PreQuestID: 30017
+    FinishchackScene: 
+  - QuestID: 30019
+    QuestName: "\uC544\uC774\uC2DC\uD074\uC2DC\uD2F0\uB85C \uAC00\uAE30"
+    QuestType: Move
+    QuestLevel: 3
+    Is_success: 0
+    QuestDescription: "\uC544\uC774\uC2DC\uD074 \uC2DC\uD2F0\uB85C \uAC04\uB2E4."
+    Story_ID: 0
+    TargetName: 
+    TargetCount: 0
+    RewardExperience: 0
+    PreQuestID: 30018
+    FinishchackScene: IcIcleCity
+  - QuestID: 30020
+    QuestName: "\uB9E4\uC9C1\uCEEC \uC13C\uD130 \uB4E4\uC5B4\uAC00\uAE30"
+    QuestType: Move
+    QuestLevel: 3
+    Is_success: 0
+    QuestDescription: "\uB9E4\uC9C1\uCEEC \uC13C\uD130\uB85C \uB4E4\uC5B4\uAC04\uB2E4."
+    Story_ID: 0
+    TargetName: 
+    TargetCount: 0
+    RewardExperience: 0
+    PreQuestID: 30019
+    FinishchackScene: 
+  - QuestID: 30021
+    QuestName: "\uC810\uC2EC\uC744 \uBA39\uB294 \uB8E8\uBBF8\uC640 \uB77C\uC774"
+    QuestType: Story
+    QuestLevel: 3
+    Is_success: 0
+    QuestDescription: "\uC810\uC2EC\uC744 \uBA39\uC73C\uBA74\uC11C \uB8E8\uBBF8\uB294
+      \uC790\uC2E0\uC758 \uAC00\uD2B8 \uC794\uACE0\uB97C \uC870\uD68C\uD55C\uB2E4."
+    Story_ID: 30701
+    TargetName: 
+    TargetCount: 0
+    RewardExperience: 60
+    PreQuestID: 30020
+    FinishchackScene: MaigicurlHotel
+  - QuestID: 30022
+    QuestName: "3\uC7A5 \uC6D4\uB4DC \uCC54\uD53C\uC5B8\uC758 \uAFC8\uACFC \uCD08\uCF5C\uB9BF
+      \uD50C\uB799\uC2A4 \uC885\uB8CC"
+    QuestType: Finish
+    QuestLevel: 3
+    Is_success: 0
+    QuestDescription: "3\uC7A5 \uC6D4\uB4DC \uCC54\uD53C\uC5B8\uC758 \uAFC8\uACFC
+      \uCD08\uCF5C\uB9BF \uD50C\uB799\uC2A4 \uC885\uB8CC"
+    Story_ID: 0
+    TargetName: 
+    TargetCount: 0
+    RewardExperience: 0
+    PreQuestID: 30021
+    FinishchackScene: 

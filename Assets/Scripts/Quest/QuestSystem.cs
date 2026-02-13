@@ -188,32 +188,30 @@ public class QuestSystem : MonoBehaviour
         {
             currentQuestIndex += 1;
 
-            if (currentQuestIndex < questData.quests.Count)
-            {
-                QuestData nextQuest = questData.quests[currentQuestIndex];
-                playerquerstID = nextQuest.QuestID;
-                playerquestName = nextQuest.QuestName;
-                playerStory_Id = nextQuest.Story_ID;
-                playerTargetName = nextQuest.TargetName;
-                playerEnemyTargetCount = nextQuest.TargetCount;
-                giftExperience = nextQuest.RewardExperience;
-                currnetQuestType = nextQuest.QuestType;
-                FinishchackScene = nextQuest.FinishchackScene;
-                questText.text = playerquestName;
-                playerEnmeyDieCount = 0;
-                Debug.Log($"현재 플레이어 퀘스트 ID: {playerquerstID}, 이름: {playerquestName}, 진행될 스토리 ID: {playerStory_Id}, 처치할 몬스터 수: {playerEnemyTargetCount}");
-                storySystem.QuestStory(playerStory_Id);
-                playerquest_Is_success = false;
-                finishQuest = false;
-            }
-            else
+            if (currentQuestIndex >= questData.quests.Count)
             {
                 Debug.Log("챕터 완료");
                 finishQuest = true;
                 storySystem.StoryUI.gameObject.SetActive(false);
-                _characterLevelSystem.UpdateLevel();
-                
+                return;
             }
+
+            QuestData nextQuest = questData.quests[currentQuestIndex];
+            playerquerstID = nextQuest.QuestID;
+            playerquestName = nextQuest.QuestName;
+            playerStory_Id = nextQuest.Story_ID;
+            playerTargetName = nextQuest.TargetName;
+            playerEnemyTargetCount = nextQuest.TargetCount;
+            giftExperience = nextQuest.RewardExperience;
+            currnetQuestType = nextQuest.QuestType;
+            FinishchackScene = nextQuest.FinishchackScene;
+            questText.text = playerquestName;
+            playerEnmeyDieCount = 0;
+            Debug.Log($"현재 플레이어 퀘스트 ID: {playerquerstID}, 이름: {playerquestName}, 진행될 스토리 ID: {playerStory_Id}, 처치할 몬스터 수: {playerEnemyTargetCount}");
+            storySystem.QuestStory(playerStory_Id);
+            playerquest_Is_success = false;
+            finishQuest = false;
+            
         }
         else
         {
@@ -224,6 +222,7 @@ public class QuestSystem : MonoBehaviour
 
     void ChangeQuest()
     {
+        _characterLevelSystem.UpdateLevel();
         currentQuestAndSotorys += 1;
 
         int nextIndex = currentQuestAndSotorys;

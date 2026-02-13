@@ -4645,7 +4645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4981266b090932498bb85e4b5d1b571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questDataSO: {fileID: 11400000, guid: bd424e715b7a09140a085e942e61a130, type: 2}
+  questDataSO: {fileID: 11400000, guid: 2cabd90f79d55bf4cbb89e26725d0357, type: 2}
 --- !u!4 &1711151263
 Transform:
   m_ObjectHideFlags: 0
@@ -5571,7 +5571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 201aadd1c091bc2418cee2bebf7008a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _questSystem: {fileID: 0}
+  _questSystem: {fileID: 1930947427}
   _characterHealthSystem: {fileID: 0}
   MaxplayerExperience: 100
 --- !u!1 &1942412054

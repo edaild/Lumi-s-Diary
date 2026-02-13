@@ -33,8 +33,14 @@ EditorBuildSettings:
     path: "Assets/Scenes/\uB208\uC758 \uB9C8\uC744/SnowVillageRoad.unity"
     guid: 0f90fb157cbf5b3499e9a052a5ba49ed
   - enabled: 1
+    path: "Assets/Scenes/\uC544\uC774\uC2DC\uD074 \uC2DC\uD2F0/IcIcleCityParkSquare.unity"
+    guid: c5664d599e9aa7a4e96c4d8dd7f32733
+  - enabled: 1
     path: "Assets/Scenes/\uC544\uC774\uC2DC\uD074 \uC2DC\uD2F0/IcIcleCityPark1.unity"
     guid: a58e903ca980aac43bc8f113f59cf40b
+  - enabled: 1
+    path: "Assets/Scenes/\uC544\uC774\uC2DC\uD074 \uC2DC\uD2F0/IcIcleCityPark2.unity"
+    guid: 56564b0be23835d4eb1cf877fe2cff58
   - enabled: 1
     path: "Assets/Scenes/\uBBF8\uB2C8\uAC8C\uC784/MathScene.unity"
     guid: 0c4cf8a0851dd6042a699cc1fb3ab0bd

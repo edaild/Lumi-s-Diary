@@ -18,13 +18,11 @@ public class CharacterLevelSystem : MonoBehaviour
 
     public void UpdateLevel()
     {
+   
         _characterHealthSystem = UnityEngine.Object.FindObjectOfType<CharacterHealthSystem>();
-        if (!_characterHealthSystem || !_questSystem || _questSystem.playerExperience != MaxplayerExperience) return;
-
-        MaxplayerExperience += 100;
+        if ( !_questSystem || _questSystem.playerExperience != MaxplayerExperience) return;
+        Debug.Log("함수 실행 확인");
         _questSystem.playerLevel += 1;
-        _characterHealthSystem.character_Health += 100;
-
         _questSystem.playerExperience = 0;
     }
 }

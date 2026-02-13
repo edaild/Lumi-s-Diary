@@ -49,20 +49,20 @@ public class CharacterHealthSystem : MonoBehaviour
     }
     void Die()
     {
-        if (_questSystem.playerLevel >= 2 || !_characterMoveSystem || !_characterSkillSystem ||current_Character_Health >= 0) return;
-        _characterMoveSystem.animator.SetBool("isDie", true);
-        _characterSkillSystem.audioSource.clip = DieAudio;
-
-        _characterSkillSystem.audioSource.Play();
+        Debug.Log("Die 호출 확인");
+        if (_questSystem.playerLevel >= 2 && current_Character_Health > 0) return;
+        //_characterMoveSystem.animator.SetBool("isDie", true);
+        //_characterSkillSystem.audioSource.clip = DieAudio;
+        //_characterSkillSystem.audioSource.Play();
         StartCoroutine(DiePlayer());
     }
 
     IEnumerator DiePlayer()
     {
         yield return new WaitForSeconds(1f);
-        _characterMoveSystem.animator.SetBool("isDie", false);
-        _characterSkillSystem.audioSource.Stop();
-        _characterSkillSystem.audioSource.clip = null;
+        //_characterMoveSystem.animator.SetBool("isDie", false);
+        //_characterSkillSystem.audioSource.Stop();
+        //_characterSkillSystem.audioSource.clip = null;
         _characterMoveSystem.fadeManager.StartFadeOut(1.5f);
 
         yield return new WaitForSeconds(3f);
