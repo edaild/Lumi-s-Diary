@@ -272,7 +272,7 @@ MonoBehaviour:
     Is_success: 0
     QuestDescription: "\uC810\uC2EC\uC744 \uBA39\uC73C\uBA74\uC11C \uB8E8\uBBF8\uB294
       \uC790\uC2E0\uC758 \uCE74\uB4DC \uC794\uACE0\uB97C \uC870\uD68C\uD55C\uB2E4."
-    Story_ID: 30701
+    Story_ID: 30501
     TargetName: 
     TargetCount: 0
     RewardExperience: 60

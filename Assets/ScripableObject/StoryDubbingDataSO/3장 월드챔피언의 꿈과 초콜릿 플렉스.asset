@@ -13,4 +13,29 @@ MonoBehaviour:
   m_Name: "3\uC7A5 \uC6D4\uB4DC\uCC54\uD53C\uC5B8\uC758 \uAFC8\uACFC \uCD08\uCF5C\uB9BF
     \uD50C\uB809\uC2A4"
   m_EditorClassIdentifier: 
-  dubbingaudioClip: []
+  dubbingaudioClip:
+  - {fileID: 8300000, guid: dc96c0e4891e45c4d9811921d20d2784, type: 3}
+  - {fileID: 8300000, guid: 899fc27b1fb41da4e841858f7e7dd7b6, type: 3}
+  - {fileID: 8300000, guid: 68e1d9fe4bdeaac4c8de6c76656d2dce, type: 3}
+  - {fileID: 8300000, guid: 7579053474229de48abe1a4788ef1c21, type: 3}
+  - {fileID: 8300000, guid: 892dac370aca1684fbb02c080258bf7b, type: 3}
+  - {fileID: 8300000, guid: d1139e57f4f3a6c41b997356dc12a20a, type: 3}
+  - {fileID: 8300000, guid: 37c17f7228d1f2944aecd0a325843b68, type: 3}
+  - {fileID: 8300000, guid: db46ce8918157ef498fb91277963c33b, type: 3}
+  - {fileID: 8300000, guid: a39b0cc027250f04ab0204d0a1f34d03, type: 3}
+  - {fileID: 8300000, guid: b4ec94dc70dc6744a95e8a7fe18259f3, type: 3}
+  - {fileID: 8300000, guid: ce095748c08c0884aaf42167764d132d, type: 3}
+  - {fileID: 8300000, guid: 47bf4f29b07be6b439bf4b96dbf25d0e, type: 3}
+  - {fileID: 8300000, guid: dd4845ed4cac0b041a483210f2ef90bf, type: 3}
+  - {fileID: 8300000, guid: 8942c8c2ae177ae4b9a0aa7245085f64, type: 3}
+  - {fileID: 8300000, guid: 8942c8c2ae177ae4b9a0aa7245085f64, type: 3}
+  - {fileID: 8300000, guid: 6206b9091d4aa794392053299d9875e0, type: 3}
+  - {fileID: 8300000, guid: 7c204d17444056f458f59b165bcf1318, type: 3}
+  - {fileID: 8300000, guid: 93bdaac3886912f40b5140f391b2c267, type: 3}
+  - {fileID: 8300000, guid: 459b27e9d44d19844b9b6f37376b863f, type: 3}
+  - {fileID: 8300000, guid: a89e1933dc21bb147bb553cc5dad2644, type: 3}
+  - {fileID: 8300000, guid: 46a7dc981fd718c42853b9f01e3a05f6, type: 3}
+  - {fileID: 8300000, guid: bff3bd2d8a423cf4ca25b20777896be9, type: 3}
+  - {fileID: 8300000, guid: 037aa36a6755f974db792ac9db3897fe, type: 3}
+  - {fileID: 8300000, guid: db11341afdc26064195b310e4165415a, type: 3}
+  - {fileID: 8300000, guid: 8ac1d80186be51f41a4a7d51a15997a0, type: 3}

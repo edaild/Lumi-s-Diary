@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Drawing.Design;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.EventSystems.EventTrigger;
 
@@ -30,7 +31,6 @@ public class EnemySystem : MonoBehaviour
     public bool isPlayerAttack;
 
     private GameObject player;
-    private bool isPlayer;
     private bool isPlayerAttackTime;
     private bool isBackPoition;
     private bool isFollowing = false;
@@ -91,10 +91,13 @@ public class EnemySystem : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player") || player != null)
+        if (other != null && other.gameObject.CompareTag("Player"))
         {
             if (stopCoroutine != null) StopCoroutine(stopCoroutine);
-            stopCoroutine = StartCoroutine(StopFollowingAfterDelay());
+            if (gameObject.activeInHierarchy)
+            {
+                stopCoroutine = StartCoroutine(StopFollowingAfterDelay());
+            }
         }
     }
 
@@ -111,7 +114,7 @@ public class EnemySystem : MonoBehaviour
     {
         Transform targetPlayer = player.gameObject.transform;
 
-        if (!_storySystem || !_storySystem.isStoryEndPoint || isPlayer || isBackPoition) return;
+        if (!_storySystem || !_storySystem.isStoryEndPoint || isBackPoition) return;
 
         float Distance = 1f;
 
