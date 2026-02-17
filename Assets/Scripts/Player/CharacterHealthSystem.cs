@@ -4,25 +4,23 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class CharacterHealthSystem : MonoBehaviour
 {
     public int character_Health = 1000;
-    public int character_stemina = 1000;
-
     public int current_Character_Health;
-    public int current_Character_stemina;
+
     [Header("체력과 슬라이드 UI")]
     public GameObject HeaderUI;
-    public Slider character_health_slider;
-    public Slider character_stemina_slider;
+    public TextMeshProUGUI character_health_Text;
 
     public AudioClip DieAudio;
-
     public QuestSystem _questSystem;
     public CharacterMoveSystem _characterMoveSystem;
     public CharacterSkillSystem _characterSkillSystem;
 
+    private bool isHealth;
 
     [Tooltip("2장 바이탈 벤드 수령  퀘스트")] public int Quest1_lastQuest = 20004;
 
@@ -33,19 +31,26 @@ public class CharacterHealthSystem : MonoBehaviour
         _characterSkillSystem = UnityEngine.Object.FindAnyObjectByType<CharacterSkillSystem>();
 
         current_Character_Health = character_Health;
-        current_Character_stemina = character_stemina;
     }
 
     private void Update()
     {
         ShowHeader();
+        if(isHealth) character_health_Text.text = $"{current_Character_Health}";
     }
     void ShowHeader()
     {
-        if(_questSystem.playerLevel >= 2 ||_questSystem.playerPreQuestID >= Quest1_lastQuest)
+        if(_questSystem.playerLevel >= 2 && _questSystem.playerPreQuestID >= Quest1_lastQuest)
+        {
             HeaderUI.gameObject.SetActive(true);
+            isHealth = true;
+        }
         else
+        {
             HeaderUI.gameObject.SetActive(false);
+            isHealth = false;
+        }
+
     }
     public void Die()
     {
@@ -68,6 +73,5 @@ public class CharacterHealthSystem : MonoBehaviour
         yield return new WaitForSeconds(3f);
         SceneManager.LoadScene("MaigicurlHotel");
         current_Character_Health = character_Health;
-        current_Character_stemina = character_stemina;
     }
 }
