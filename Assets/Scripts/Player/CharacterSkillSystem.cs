@@ -92,11 +92,10 @@ public class CharacterSkillSystem : MonoBehaviour
 
     IEnumerator AttackTime()
     {
-        yield return new WaitForSeconds(1f);
-        Shoot(AttackType.Nomal);
+        yield return new WaitForSeconds(0.6f);
         Debug.Log("애니매이션 종료");
         _characterMoveSystem.animator.SetBool("IsAttack", false);
-        yield return new WaitForSeconds(1.0001f);
+        Shoot(AttackType.Nomal);
         isNomalAttack = false;
         audioSource.Stop();
         audioSource.clip = null;
@@ -112,7 +111,7 @@ public class CharacterSkillSystem : MonoBehaviour
         audioSource.time = 0;
         audioSource.Play();
 
-        _characterMoveSystem.animator.SetBool("IsAttack", true);
+        _characterMoveSystem.animator.SetBool("IsSkillAttack", true);
         StartCoroutine(SkillAttackTime());
     }
 
@@ -121,7 +120,7 @@ public class CharacterSkillSystem : MonoBehaviour
         yield return new WaitForSeconds(1f);
         Shoot(AttackType.Skill);
         Debug.Log("애니매이션 종료");
-        _characterMoveSystem.animator.SetBool("IsAttack", false);
+        _characterMoveSystem.animator.SetBool("IsSkillAttack", false);
 
         yield return new WaitForSeconds(2f);
         audioSource.Stop();

@@ -16,7 +16,7 @@ MonoBehaviour:
   - EnemyID: 1001
     EnemyName: "\uB208\uD1A0\uB07C"
     EnemyLevel: 1
-    EnmeyHP: 100
+    EnmeyHP: 200
     EnemyDamage: 1
     EnemySpeed: 3
     GiftCoin: 100

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a8313af0927672f4bb64032b68e0b473
+guid: e0a3c03cc3b460543a6135e2d996574f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -94,6 +94,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -110,211 +123,211 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NomalAttack_0
+      name: Attack_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 198
-        width: 77
-        height: 157
+        x: 20
+        y: 202
+        width: 79
+        height: 152
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81b828d3452a4d544a928afdc2444917
-      internalID: 1980370644
+      spriteID: 0efe1a4fa3672624d847c2e15112725a
+      internalID: -1027659258
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NomalAttack_1
+      name: Attack_1
       rect:
         serializedVersion: 2
-        x: 148
+        x: 152
         y: 202
-        width: 81
+        width: 73
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a33bf92eac7580c44a22fdd2bc041cdc
-      internalID: 2008962951
+      spriteID: f478774ba513ecc45a5bad07bf732767
+      internalID: 1693055323
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NomalAttack_2
+      name: Attack_2
       rect:
         serializedVersion: 2
-        x: 272
+        x: 273
+        y: 200
+        width: 86
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b70fe6e11ffeff048b5bf6e2335cdf7e
+      internalID: 100707781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_5
+      rect:
+        serializedVersion: 2
+        x: 398
         y: 202
-        width: 83
-        height: 149
+        width: 101
+        height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a674f8c58f8dce047ab6523eee91d8c8
-      internalID: 2146735775
+      spriteID: 253307360ff353642b57d96a2516e836
+      internalID: -512851086
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NomalAttack_4
+      name: Attack_6
       rect:
         serializedVersion: 2
-        x: 364
-        y: 198
-        width: 160
-        height: 149
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a65e2d7b93d11624aa7a7809140d27af
-      internalID: -2073885968
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NomalAttack_5
-      rect:
-        serializedVersion: 2
-        x: 535
+        x: 539
         y: 203
-        width: 74
-        height: 153
+        width: 91
+        height: 152
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a95634f22ebbed648b6e1f0674008596
-      internalID: -1998807441
+      spriteID: 6b71999b5afa8444ebe8fe9ddbc7079c
+      internalID: 245363792
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NomalAttack_6
+      name: Attack_8
       rect:
         serializedVersion: 2
-        x: 4
+        x: 24
         y: 24
-        width: 108
+        width: 88
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 984dab645c5ef89468dc931f7921d60d
+      internalID: -1712940951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_9
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 24
+        width: 85
         height: 155
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c5e67dca9ac60f4e862855a27d1d4e9
-      internalID: -1494767030
+      spriteID: 32bd2cb2c20fd744dac0aa02d16353b7
+      internalID: 861593159
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NomalAttack_7
+      name: Attack_10
       rect:
         serializedVersion: 2
-        x: 146
-        y: 24
-        width: 99
-        height: 154
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fe5f262a446ab5c45adb6959ddcd241b
-      internalID: 1533434843
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NomalAttack_8
-      rect:
-        serializedVersion: 2
-        x: 271
+        x: 278
         y: 24
         width: 83
-        height: 153
+        height: 152
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17ee86df4b0686c4a96f4ff961f2e8e9
-      internalID: -1305446731
+      spriteID: 85f641e00aabc8f4d904f2956294f090
+      internalID: 47858311
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NomalAttack_9
+      name: Attack_11
       rect:
         serializedVersion: 2
-        x: 389
-        y: 27
-        width: 102
-        height: 149
+        x: 413
+        y: 23
+        width: 86
+        height: 155
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 738390729c926c04d8d92213e919063f
-      internalID: 1087869493
+      spriteID: dd3d4a0154368ce46b0161d3aa31d0b9
+      internalID: -621491560
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NomalAttack_10
+      name: Attack_12
       rect:
         serializedVersion: 2
-        x: 536
+        x: 550
         y: 24
-        width: 93
-        height: 154
+        width: 84
+        height: 155
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3af6645399f0c9e4c9c859c6f90f119c
-      internalID: -177413107
+      spriteID: 868745760a4027c45ba6df695ff0b4f8
+      internalID: -1177179092
       vertices: []
       indices: 
       edges: []
@@ -330,17 +343,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      NomalAttack_0: 1980370644
-      NomalAttack_1: 2008962951
-      NomalAttack_10: -177413107
-      NomalAttack_2: 2146735775
-      NomalAttack_3: -460239296
-      NomalAttack_4: -2073885968
-      NomalAttack_5: -1998807441
-      NomalAttack_6: -1494767030
-      NomalAttack_7: 1533434843
-      NomalAttack_8: -1305446731
-      NomalAttack_9: 1087869493
+      Attack_0: -1027659258
+      Attack_1: 1693055323
+      Attack_10: 47858311
+      Attack_11: -621491560
+      Attack_12: -1177179092
+      Attack_2: 100707781
+      Attack_3: 765075814
+      Attack_4: -677714113
+      Attack_5: -512851086
+      Attack_6: 245363792
+      Attack_7: -1410293976
+      Attack_8: -1712940951
+      Attack_9: 861593159
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

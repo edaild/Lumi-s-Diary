@@ -3043,7 +3043,7 @@ MonoBehaviour:
   videoPlayer: {fileID: 734443498927509927}
   ultimateVidioClip: {fileID: 32900000, guid: b903142f91e061f4581663fa6cdda882, type: 3}
   audioSource: {fileID: 4526433280815392981}
-  nomalAtttackVoice: {fileID: 8300000, guid: 0cec2f073cdcfdc41931fc1d32d8292b, type: 3}
+  nomalAtttackVoice: {fileID: 8300000, guid: 40fcd678b74596948852e562eaea849a, type: 3}
   skillAttackVoice: {fileID: 8300000, guid: 43b18e7087cbda54c8d907cc99d771ea, type: 3}
   skillCrystarGardenVoice: {fileID: 8300000, guid: 1a2ec32cc066d0a49ac9f6354d15493a, type: 3}
   _characterMoveSystem: {fileID: 0}
