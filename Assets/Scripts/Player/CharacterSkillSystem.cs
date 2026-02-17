@@ -152,7 +152,7 @@ public class CharacterSkillSystem : MonoBehaviour
     void Teleport()
     {
         if (isTeleport) return;
-        int offset = (_characterMoveSystem.isHorizontalInput_xManus == false) ? 5 : -5;
+        int offset = (_characterMoveSystem.isHorizontalInput_xManus == false) ? 8 : -8;
         transform.position = new Vector3(transform.position.x + offset, transform.position.y, transform.position.z);
     }
 
