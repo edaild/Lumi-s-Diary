@@ -12,10 +12,12 @@ public class CharacterMoveSystem : MonoBehaviour
     public Collider2D cd;
     public Animator animator;
     public Button JumpButton;
-  
+    public RectTransform fakeHandle;
+
     public PortalSystem portalSystem;
     public GameObject currentPortal;
     public FadeManager fadeManager;
+
 
     public bool isHorizontalInput_xManus;
     public bool isNotInGameScene;
@@ -61,6 +63,11 @@ public class CharacterMoveSystem : MonoBehaviour
         {
             MovePartal();
         }
+
+        if (joy.Horizontal != 0f || joy.Vertical != 0f)
+            fakeHandle.gameObject.SetActive(false);
+        else
+            fakeHandle.gameObject.SetActive(true);
     }
 
     private void FixedUpdate()

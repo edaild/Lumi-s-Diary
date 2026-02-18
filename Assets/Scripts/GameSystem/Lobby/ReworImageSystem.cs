@@ -7,12 +7,14 @@ public class ReworImageSystem : MonoBehaviour
     public GameObject ImageType01;
     public GameObject ImageType02;
     public GameObject ImageType03;
+    public GameObject ImageType04;
+    public GameObject ImageType05;
     public FadeManager fadeManager;
     public int isImage;
 
     private void Start()
     {
-        isImage = Random.Range(0, 3);
+        isImage = Random.Range(0, 5);
        
         if(isImage == 0)
             ImageType01.gameObject.SetActive(true);
@@ -20,8 +22,12 @@ public class ReworImageSystem : MonoBehaviour
             ImageType02.gameObject.SetActive(true);
         else if(isImage ==2)
             ImageType03.gameObject.SetActive(true);
+        else if (isImage == 3)
+            ImageType04.gameObject.SetActive(true);
+        else if (isImage == 4)
+            ImageType05.gameObject.SetActive(true);
 
-            StartCoroutine(IngameIn());
+        StartCoroutine(IngameIn());
         
     }
 

@@ -20,8 +20,8 @@ public class VariableJoystick : Joystick
             background.anchoredPosition = fixedPosition;
             background.gameObject.SetActive(true);
         }
-        //else
-        //    background.gameObject.SetActive(false);
+        else
+            background.gameObject.SetActive(false);
     }
 
     protected override void Start()
