@@ -51,6 +51,30 @@ MonoBehaviour:
     PreQuestID: 10002
     FinishchackScene: 
   - QuestID: 10004
+    QuestName: "\uB208\uC758 \uB9C8\uC744\uB85C \uAC00\uAE30"
+    QuestType: Move
+    QuestLevel: 1
+    Is_success: 0
+    QuestDescription: "\uB208\uC758 \uB9C8\uC744\uB85C \uC774\uB3D9\uD55C\uB2E4."
+    Story_ID: 0
+    TargetName: 
+    TargetCount: 0
+    RewardExperience: 0
+    PreQuestID: 10003
+    FinishchackScene: Snowvillage
+  - QuestID: 10005
+    QuestName: "\uC810\uD504\uC640 \uC544\uB798 \uC810\uD504 \uBC30\uC6B0\uAE30"
+    QuestType: Story
+    QuestLevel: 1
+    Is_success: 0
+    QuestDescription: "\uC810\uD504\uC640 \uC544\uB798 \uC810\uD504\uB97C \uBC30\uC6B4\uB2E4."
+    Story_ID: 10213
+    TargetName: 
+    TargetCount: 0
+    RewardExperience: 0
+    PreQuestID: 10004
+    FinishchackScene: 
+  - QuestID: 10006
     QuestName: "\uB208\uC758 \uB9C8\uC744\uAE38 3\uBC88\uC9C0\uB85C \uAC00\uAE30"
     QuestType: Move
     QuestLevel: 1
@@ -60,10 +84,10 @@ MonoBehaviour:
     TargetName: 
     TargetCount: 0
     RewardExperience: 10
-    PreQuestID: 10003
+    PreQuestID: 10005
     FinishchackScene: SnowVillageRoad3
-  - QuestID: 10005
-    QuestName: 
+  - QuestID: 10007
+    QuestName: "\uB208\uD1A0\uB07C\uC640 \uB9CC\uB09C \uB8E8\uBBF8"
     QuestType: Story
     QuestLevel: 1
     Is_success: 0
@@ -72,21 +96,21 @@ MonoBehaviour:
     TargetName: 
     TargetCount: 0
     RewardExperience: 10
-    PreQuestID: 10004
+    PreQuestID: 10006
     FinishchackScene: 
-  - QuestID: 10006
-    QuestName: "\uB208 \uD1A0\uB07C 1\uB9C8\uB9AC \uCC98\uCE58\uD558\uAE30"
+  - QuestID: 10008
+    QuestName: "\uB208 \uD1A0\uB07C 3\uB9C8\uB9AC \uCC98\uCE58\uD558\uAE30"
     QuestType: Battle
     QuestLevel: 1
     Is_success: 0
     QuestDescription: "\uC804\uD22C\uB97C \uBC30\uC6B4\uB2E4"
     Story_ID: 0
     TargetName: "\uB208\uD1A0\uB07C"
-    TargetCount: 1
+    TargetCount: 3
     RewardExperience: 10
-    PreQuestID: 10005
+    PreQuestID: 10007
     FinishchackScene: 
-  - QuestID: 10007
+  - QuestID: 10009
     QuestName: 
     QuestType: Story
     QuestLevel: 1
@@ -96,9 +120,9 @@ MonoBehaviour:
     TargetName: 
     TargetCount: 0
     RewardExperience: 0
-    PreQuestID: 10006
+    PreQuestID: 10008
     FinishchackScene: 
-  - QuestID: 10008
+  - QuestID: 10010
     QuestName: "\uB208\uC758 \uB9C8\uC744\uAE38 \uAC00\uAE30"
     QuestType: Move
     QuestLevel: 1
@@ -108,9 +132,9 @@ MonoBehaviour:
     TargetName: 
     TargetCount: 0
     RewardExperience: 10
-    PreQuestID: 10007
+    PreQuestID: 10009
     FinishchackScene: SnowVillageRoad
-  - QuestID: 10009
+  - QuestID: 10011
     QuestName: 
     QuestType: Story
     QuestLevel: 1
@@ -120,9 +144,9 @@ MonoBehaviour:
     TargetName: 
     TargetCount: 0
     RewardExperience: 0
-    PreQuestID: 10008
+    PreQuestID: 10010
     FinishchackScene: 
-  - QuestID: 10010
+  - QuestID: 10012
     QuestName: "1\uC7A5 \uBAA8\uD5D8\uC758 \uC2DC\uC791 \uC885\uB8CC"
     QuestType: Finish
     QuestLevel: 1
@@ -132,5 +156,5 @@ MonoBehaviour:
     TargetName: 
     TargetCount: 0
     RewardExperience: 50
-    PreQuestID: 10009
+    PreQuestID: 10011
     FinishchackScene: 

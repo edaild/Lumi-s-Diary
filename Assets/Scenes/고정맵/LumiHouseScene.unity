@@ -4839,7 +4839,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1711151262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4852,7 +4852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4981266b090932498bb85e4b5d1b571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questDataSO: {fileID: 11400000, guid: 2cabd90f79d55bf4cbb89e26725d0357, type: 2}
+  questDataSO: {fileID: 11400000, guid: bd424e715b7a09140a085e942e61a130, type: 2}
 --- !u!4 &1711151263
 Transform:
   m_ObjectHideFlags: 0
@@ -4880,7 +4880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c65e16f3dc3a0d4db286208d780bcb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storyDataSO: {fileID: 11400000, guid: d02d7c2cbf22d8a46805e8dbd347ae04, type: 2}
+  storyDataSO: {fileID: 11400000, guid: 4b413a6e60f4f9343bd4e0622f63beb0, type: 2}
 --- !u!114 &1711151265
 MonoBehaviour:
   m_ObjectHideFlags: 0

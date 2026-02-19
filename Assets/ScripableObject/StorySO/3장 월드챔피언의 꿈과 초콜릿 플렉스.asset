@@ -200,9 +200,7 @@ MonoBehaviour:
     Audio: 1
     EndPoint: 0
     TargetImageName: 
-    TargetAudio: "3\uC7A5 4.\uC5ED\uC2DC \uC6B0\uB9AC \uC5B8\uB2C8! \uADF8\uB7FC
-      \uC6B0\uB9AC\uB3C4 \uC774\uC81C \uCC54\uD53C\uC5B8\uC2ED\uC73C\uB85C '\uC7A0\uC218
-      \uC900\uBE44' \uC644\uB8CC\uC778 \uAC70\uC9C0 \uAC00\uC790, \uC5B8\uB2C8!"
+    TargetAudio: 
     TargetMusic: 
   - Story_ID: 30016
     Speaker: "\uB8E8\uBBF8"
