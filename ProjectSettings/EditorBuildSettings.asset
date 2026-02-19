@@ -48,6 +48,9 @@ EditorBuildSettings:
     path: "Assets/Scenes/\uC778\uAC8C\uC784 \uC678/EndingScene.unity"
     guid: 3e52d7dfc5acda545a2b19014eba6cf0
   - enabled: 1
+    path: "Assets/Scenes/\uBCF4\uC2A4\uC804/RayBossScene/RayBossScene.unity"
+    guid: 91355a6b019f3f043ae0e68a1eb2af7f
+  - enabled: 1
     path: "Assets/Scenes/\uBA5C\uB85C\uB514\uC544/Melodya.unity"
     guid: 0555046de816f1c48b78549a7a7e3086
   m_configObjects: {}

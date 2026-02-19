@@ -951,6 +951,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 23041552f1991594ca3645d64d48f576, type: 3}
   - {fileID: 8300000, guid: d6392a382217388498c8df0d4c9e9989, type: 3}
   - {fileID: 8300000, guid: 94ea787d65e0c1f45bb38aa6355bf53e, type: 3}
+  - {fileID: 8300000, guid: e286391329649ab49bd10691e6e7d2e2, type: 3}
   currentMusic: 
 --- !u!4 &233521371
 Transform:
@@ -2262,6 +2263,10 @@ PrefabInstance:
     - target: {fileID: 4911397839479213752, guid: 784750093e140db40adc295a736c8035, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6537219476071524827, guid: 784750093e140db40adc295a736c8035, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8156943007492683228, guid: 784750093e140db40adc295a736c8035, type: 3}
       propertyPath: m_Name
