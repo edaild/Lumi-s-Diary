@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e2e75bd5bcf55548a8a97edffaf0fcc, type: 3}
-  m_Name: "\uB208\uC758\uB9C8\uC744 \uC8FC\uBBFC\uC13C\uD130(\uB208\uC758\uB9C8\uC744)"
+  m_Name: "\uB208\uC758\uB9C8\uC744\uAE38 3\uBC88\uC9C0 \uBC29\uD5A5 \uD3EC\uD0C8(\uB208\uC758
+    \uB9C8\uC744 \uAE38)"
   m_EditorClassIdentifier: 
-  portalID: 2
-  portalName: "\uC8FC\uBBFC\uC13C\uD130"
-  targetSceneName: Communitycenter
-  spawnPosition: {x: 1.19, y: -1.48, z: 0}
+  portalID: 5
+  portalName: "\uB208\uC758 \uB9C8\uC744\uAE38 3\uBC88\uC9C0"
+  targetSceneName: SnowVillageRoad3
+  spawnPosition: {x: 26.13, y: -1.48, z: 0}

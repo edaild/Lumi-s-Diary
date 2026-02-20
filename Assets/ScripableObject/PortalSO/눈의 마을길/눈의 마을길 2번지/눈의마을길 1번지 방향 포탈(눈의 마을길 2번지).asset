@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e2e75bd5bcf55548a8a97edffaf0fcc, type: 3}
-  m_Name: "\uC544\uC774\uC2DC\uD074 \uC2DC\uD2F0(\uB208\uC758\uB9C8\uC744 1\uBC88\uAE38)"
+  m_Name: "\uB208\uC758\uB9C8\uC744\uAE38 1\uBC88\uC9C0 \uBC29\uD5A5 \uD3EC\uD0C8(\uB208\uC758
+    \uB9C8\uC744\uAE38 2\uBC88\uC9C0)"
   m_EditorClassIdentifier: 
-  portalID: 6
-  portalName: "\uC544\uC774\uC2DC\uD074 \uC2DC\uD2F0"
-  targetSceneName: IcIcleCity
-  spawnPosition: {x: -27.4, y: -1.48, z: 0}
+  portalID: 0
+  portalName: "\uB208\uC758\uB9C8\uC744\uAE38 1\uBC88\uC9C0"
+  targetSceneName: SnowVillageRoad1
+  spawnPosition: {x: -29.77829, y: -1.48, z: 0}
