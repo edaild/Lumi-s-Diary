@@ -117,9 +117,17 @@ public class RayPatternSystem : MonoBehaviour
                 else
                     light.SetActive(false);
                 
-                StartCoroutine(lightningRainTime(light));
+                StartCoroutine(lightningRain01Time(light));
             }
         }
+    }
+
+    IEnumerator lightningRain01Time(GameObject light)
+    {
+
+        yield return new WaitForSeconds(1f);
+        light.gameObject.SetActive(false);
+        StartCoroutine(IsPattern());  
     }
 
     void lightningRain02()
@@ -131,39 +139,46 @@ public class RayPatternSystem : MonoBehaviour
 
     IEnumerator PlaylightningRain02()
     {
+        int lightCount = 0;
+
         Debug.Log("1번부터 8번까지 패턴 진행");
         for (int i = 0; i < lightningRainObejct.Count; i++)
         {
-           
+
             GameObject light = lightningRainObejct[i];
             if (light != null)
             {
                 light.SetActive(true);
-                StartCoroutine(lightningRainTime(light));
+                lightCount++;
+                StartCoroutine(lightningRain02Time(light, lightCount));
                 yield return new WaitForSeconds(0.2f);
             }
         }
-     
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
+
+
         Debug.Log(" 8번부터 1번까지 패턴 진행");
-        for (int i = 7; i > lightningRainObejct.Count; i--)
+        for (int i = lightningRainObejct.Count - 1; i >= 0; i--)
         {
- 
             GameObject light = lightningRainObejct[i];
             if (light != null)
             {
                 light.SetActive(true);
-                StartCoroutine(lightningRainTime(light));
+                lightCount++;
+                StartCoroutine(lightningRain02Time(light, lightCount));
                 yield return new WaitForSeconds(0.2f);
             }
         }
     }
 
-    IEnumerator lightningRainTime(GameObject light)
+    IEnumerator lightningRain02Time(GameObject light, int lightCount)
     {
-        yield return new WaitForSeconds(1f);
+
+        yield return new WaitForSeconds(0.3f);
         light.gameObject.SetActive(false);
-        StartCoroutine(IsPattern());
+
+        if (lightCount >= 16) StartCoroutine(IsPattern());
+        else Debug.Log($"현재 번개 Count : 16 / {lightCount}");
     }
 
     private void RatageLightning()
@@ -217,8 +232,8 @@ public class RayPatternSystem : MonoBehaviour
         int shieldNumber = UnityEngine.Random.Range(0, 3);
 
         if(shieldNumber == 1) ShieldObject01.SetActive(true);
-        else if (shieldNumber == 2) ShieldObject01.SetActive(true);
-        else if (shieldNumber == 3) ShieldObject01.SetActive(true);
+        else if (shieldNumber == 2) ShieldObject02.SetActive(true);
+        else if (shieldNumber == 3) ShieldObject03.SetActive(true);
 
         informationText.gameObject.SetActive(true);
         timeText.gameObject.SetActive(true);
