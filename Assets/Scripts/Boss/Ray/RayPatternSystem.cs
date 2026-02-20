@@ -32,7 +32,6 @@ public class RayPatternSystem : MonoBehaviour
     public bool isInstantDeath;
 
     private bool isPatternTime;
-    private bool isDeath;
 
     private void Start()
     {
@@ -225,8 +224,6 @@ public class RayPatternSystem : MonoBehaviour
 
     IEnumerator InstantDeath()
     {
-        if (_enemySystem._currentHealth >= 5000 || isDeath) yield break;
-
         _enemySystem.isPattern = true;
 
         int shieldNumber = UnityEngine.Random.Range(0, 3);
@@ -262,19 +259,18 @@ public class RayPatternSystem : MonoBehaviour
     {
         yield return new WaitForSeconds(3.5f);
         _characterMoveSystem.fadeManager.StartFadeOut(0.5f);
-        videoPlayer.Stop();
-        videoPlayer.clip = null;
         isInstantDeath = true;
 
-        yield return new  WaitForSeconds(1.5f);
+        yield return new  WaitForSeconds(2f);
+        videoPlayer.Stop();
+        videoPlayer.clip = null;
         if (shieldNumber == 1) ShieldObject01.SetActive(false);
-        else if (shieldNumber == 2) ShieldObject01.SetActive(false);
-        else if (shieldNumber == 3) ShieldObject01.SetActive(false);
+        else if (shieldNumber == 2) ShieldObject02.SetActive(false);
+        else if (shieldNumber == 3) ShieldObject03.SetActive(false);
 
         VidioImage.gameObject.SetActive(false);
         _characterMoveSystem.fadeManager.StartFadeIn(0.5f);
         isInstantDeath = false;
-        isDeath = true;
         StartCoroutine(IsPattern());
     }
 
