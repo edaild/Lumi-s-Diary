@@ -226,11 +226,11 @@ public class RayPatternSystem : MonoBehaviour
     {
         _enemySystem.isPattern = true;
 
-        int shieldNumber = UnityEngine.Random.Range(0, 3);
+        int shieldNumber = UnityEngine.Random.Range(1, 4);
 
         if(shieldNumber == 1) ShieldObject01.SetActive(true);
         else if (shieldNumber == 2) ShieldObject02.SetActive(true);
-        else if (shieldNumber == 3) ShieldObject03.SetActive(true);
+        else if(shieldNumber == 3) ShieldObject03.SetActive(true);
 
         informationText.gameObject.SetActive(true);
         timeText.gameObject.SetActive(true);
