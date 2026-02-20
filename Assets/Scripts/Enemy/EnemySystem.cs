@@ -27,12 +27,12 @@ public class EnemySystem : MonoBehaviour
     public CharacterHealthSystem _characterHealthSystem;
     public QuestSystem _questSystem;
     public StorySystem _storySystem;
-
+    public GameObject player;
     public bool isPlayerAttack;
     public bool isDistance;
     public bool isPattern;
 
-    private GameObject player;
+
     private bool isPlayerAttackTime;
     private bool isBackPoition;
     private bool isFollowing = false;
