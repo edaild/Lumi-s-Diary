@@ -16,6 +16,7 @@ TagManager:
   - Bullet
   - EnemyAttackCollider
   - Navi
+  - Shield
   layers:
   - Default
   - TransparentFX

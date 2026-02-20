@@ -2,28 +2,48 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
+using TMPro;
+
 
 public class RayPatternSystem : MonoBehaviour
 {
     public EnemySystem _enemySystem;
+    public CharacterHealthSystem _characterHealthSystem;
+    public CharacterMoveSystem _characterMoveSystem;
     public int patternCount;
+
+
 
     [Header("패턴 진행시 오브젝트")]
     public GameObject rightrotateLightningObject;
     public GameObject leftrotateLightningObject;
-
     public List<GameObject> lightningRainObejct = new List<GameObject>();
 
+    [Header("궁극기 전용")]
+    public GameObject ShieldObject01;
+    public GameObject ShieldObject02;
+    public GameObject ShieldObject03;
+    public TextMeshProUGUI informationText;
+    public TextMeshProUGUI timeText;
+    public VideoPlayer videoPlayer;
+    public VideoClip clip;
+    public GameObject VidioImage;
+    public bool isInstantDeath;
+
     private bool isPatternTime;
+    private bool isDeath;
 
     private void Start()
     {
         _enemySystem = UnityEngine.Object.FindAnyObjectByType<EnemySystem>();
+        _characterHealthSystem = UnityEngine.Object.FindAnyObjectByType<CharacterHealthSystem>();
+        _characterMoveSystem = UnityEngine.Object.FindAnyObjectByType<CharacterMoveSystem>();
     }
 
     private void Update()
     {
-        if (!_enemySystem.isDistance || _enemySystem.isPattern || _enemySystem == null || isPatternTime) return;
+        if (!_enemySystem.isDistance || _enemySystem.isPattern || _enemySystem == null || isPatternTime || _enemySystem.gameObject == null) return;
         RandomPattern();
     }
 
@@ -53,7 +73,7 @@ public class RayPatternSystem : MonoBehaviour
                 break;
             case 4:
                 Debug.Log("즉사키");
-                Teleport();
+                StartCoroutine(InstantDeath());
                 break;
         }
     }
@@ -188,14 +208,68 @@ public class RayPatternSystem : MonoBehaviour
         StartCoroutine(IsPattern());
     }
 
+    IEnumerator InstantDeath()
+    {
+        if (_enemySystem._currentHealth >= 5000 || isDeath) yield break;
 
-    
+        _enemySystem.isPattern = true;
+
+        int shieldNumber = UnityEngine.Random.Range(0, 3);
+
+        if(shieldNumber == 1) ShieldObject01.SetActive(true);
+        else if (shieldNumber == 2) ShieldObject01.SetActive(true);
+        else if (shieldNumber == 3) ShieldObject01.SetActive(true);
+
+        informationText.gameObject.SetActive(true);
+        timeText.gameObject.SetActive(true);
+
+        videoPlayer.clip = clip;
+        videoPlayer.time = 0;
+
+        float remainingTime = 10f;
+
+        while (remainingTime > 0)
+        {
+            remainingTime -= Time.deltaTime;
+            timeText.text = remainingTime.ToString("0");
+            yield return null;
+        }
+
+        informationText.gameObject.SetActive(false);
+        timeText.gameObject.SetActive(false);
+        VidioImage.gameObject.SetActive(true);
+
+        videoPlayer.Play();
+        yield return StartCoroutine(InstantDeathTIme(shieldNumber));
+    }
+
+    IEnumerator InstantDeathTIme(int shieldNumber)
+    {
+        yield return new WaitForSeconds(3.5f);
+        _characterMoveSystem.fadeManager.StartFadeOut(0.5f);
+        videoPlayer.Stop();
+        videoPlayer.clip = null;
+        isInstantDeath = true;
+
+        yield return new  WaitForSeconds(1.5f);
+        if (shieldNumber == 1) ShieldObject01.SetActive(false);
+        else if (shieldNumber == 2) ShieldObject01.SetActive(false);
+        else if (shieldNumber == 3) ShieldObject01.SetActive(false);
+
+        VidioImage.gameObject.SetActive(false);
+        _characterMoveSystem.fadeManager.StartFadeIn(0.5f);
+        isInstantDeath = false;
+        isDeath = true;
+        StartCoroutine(IsPattern());
+    }
+
 
     IEnumerator IsPattern()
     {
        _enemySystem.isPattern = false;
        isPatternTime = true;
-       yield return new WaitForSeconds(10f);
+
+       yield return new WaitForSeconds(5f);
        isPatternTime = false;
        Debug.Log("패턴 종료");
     }
