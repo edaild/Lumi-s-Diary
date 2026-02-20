@@ -29,11 +29,10 @@ MonoBehaviour:
       \uB77C\uC774"
     Is_Image: 1
     Image_Command: KEEP
-    Audio: 1
+    Audio: 0
     EndPoint: 0
     TargetImageName: 
-    TargetAudio: "2\uC7A5 2.\uBC8C\uC368 \uC544\uCE68\uC774\uC57C \uC88B\uC740 \uC544\uCE68\uC774\uC57C
-      \uB77C\uC774"
+    TargetAudio: 
     TargetMusic: 
   - Story_ID: 20003
     Speaker: "\uB77C\uC774"

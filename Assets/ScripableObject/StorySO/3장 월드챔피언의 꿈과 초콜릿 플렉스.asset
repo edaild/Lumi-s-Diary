@@ -21,13 +21,11 @@ MonoBehaviour:
       \uC7AC\uBBF8\uC788\uB294 \uAC70 \uC5C6\uC5B4?"
     Is_Image: 1
     Image_Command: SHOW
-    Audio: 1
+    Audio: 0
     EndPoint: 0
     TargetImageName: "3\uC7A5 1.\uC544\uCE68\uC5D0 TV\uB97C \uBCF4\uB294 \uB8E8\uBBF8\uC640
       \uB77C\uC774"
-    TargetAudio: "3\uC7A5 1.\uC544\uC774\uC2DC\uD074 \uC2DC\uD2F0\uC758 \uC544\uCE68\uC740
-      \uC815\uB9D0 \uD3C9\uD654\uB86D\uB124. \uB77C\uC774, \uBB50 \uC7AC\uBBF8\uC788\uB294
-      \uAC70 \uC5C6\uC5B4?"
+    TargetAudio: 
     TargetMusic: "\uB208\uC758\uAE38"
   - Story_ID: 30002
     Speaker: 
@@ -894,7 +892,7 @@ MonoBehaviour:
     EndPoint: 0
     TargetImageName: "3\uC7A5 5.\uB208\uD1A0\uB07C\uC5D0\uAC8C \uACF5\uACA9\uBC1B\uC740
       \uB8E8\uBBF8"
-    TargetAudio: "3\uC7A5 17.\uC73D...?!"
+    TargetAudio: "3\uC7A5 17.\uC73D..."
     TargetMusic: 
   - Story_ID: 30207
     Speaker: "\uB77C\uC774"
@@ -1004,7 +1002,7 @@ MonoBehaviour:
     Audio: 1
     EndPoint: 0
     TargetImageName: "3\uC7A5 6-1.\uC4F0\uB7EC\uC9C4 \uB208\uD1A0\uB07C"
-    TargetAudio: "3\uC7A5 19.\uD750\uC74C... \uC774 \uC815\uB3C4\uBA74 \uB410\uACA0\uC9C0?
+    TargetAudio: "3\uC7A5 19.\uD750\uC74C... \uC774 \uC815\uB3C4\uBA74 \uB410\uACA0\uC9C0
       \uC58C\uC804\uD788 \uC788\uC5B4\uC918\uC11C \uACE0\uB9D9\uB2E4, \uC19C\uBB49\uCE58\uC57C."
     TargetMusic: 
   - Story_ID: 30402
