@@ -126,7 +126,7 @@ public class RayPatternSystem : MonoBehaviour
      
         yield return new WaitForSeconds(1f);
         Debug.Log(" 8번부터 1번까지 패턴 진행");
-        for (int i = 0; i > lightningRainObejct.Count; i--)
+        for (int i = 7; i > lightningRainObejct.Count; i--)
         {
  
             GameObject light = lightningRainObejct[i];
