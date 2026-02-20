@@ -160,7 +160,7 @@ public class StorySystem : MonoBehaviour
 
     void PlayDubbing()
     {
-        if (current_TargetAudio == null) return;
+        if (string.IsNullOrEmpty(current_TargetAudio)) return;
 
         AudioClip DubbingAudio = DubbingDatabase.dubbingaudioClip.Find(Do => Do.name == current_TargetAudio);
 

@@ -57,12 +57,10 @@ MonoBehaviour:
       \uBCF4\uC790, \uC751?"
     Is_Image: 1
     Image_Command: KEEP
-    Audio: 1
+    Audio: 0
     EndPoint: 0
     TargetImageName: 
-    TargetAudio: "3\uC7A5 2.\uC5B8\uB2C8! \uC800\uAC70\uC57C! \uBC29\uAE08 '\uC7A0\uC218
-      \uC900\uBE44'\uB77C\uACE0 \uD588\uC5B4. \uBC14\uB2F7\uC18D \uCE5C\uAD6C\uB4E4
-      \uB098\uC624\uB294 \uAC70 \uBCF4\uC790, \uC751"
+    TargetAudio: 
     TargetMusic: 
   - Story_ID: 30005
     Speaker: "\uB8E8\uBBF8"
