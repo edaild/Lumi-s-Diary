@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,11 +12,13 @@ public class RayPatternSystem : MonoBehaviour
     public GameObject rightrotateLightningObject;
     public GameObject leftrotateLightningObject;
 
+    public List<GameObject> lightningRainObejct = new List<GameObject>();
+
     private bool isPatternTime;
 
     private void Start()
     {
-        _enemySystem = Object.FindAnyObjectByType<EnemySystem>();
+        _enemySystem = UnityEngine.Object.FindAnyObjectByType<EnemySystem>();
     }
 
     private void Update()
@@ -26,7 +29,7 @@ public class RayPatternSystem : MonoBehaviour
 
     private void RandomPattern()
     {
-        patternCount = Random.Range(0, 4);
+        patternCount = UnityEngine.Random.Range(0, 5);
         Debug.Log($"현제 패턴 카운트 {patternCount}");
 
         switch(patternCount)
@@ -36,14 +39,19 @@ public class RayPatternSystem : MonoBehaviour
                 Teleport();
                 break;
             case 1:
-                Debug.Log("번개비");
-                Teleport();
+                Debug.Log("번개비1");
+                lightningRain01();
                 break;
             case 2:
+                Debug.Log("번개비2");
+                lightningRain02();
+                break;
+
+            case 3:
                 Debug.Log("회전 광성");
                 RatageLightning();
                 break;
-            case 3:
+            case 4:
                 Debug.Log("즉사키");
                 Teleport();
                 break;
@@ -70,6 +78,73 @@ public class RayPatternSystem : MonoBehaviour
         StartCoroutine(IsPattern());
     }
 
+
+    void lightningRain01()
+    {
+        _enemySystem.isPattern = true;
+        Debug.Log("번개비1 패턴 진행");
+
+        int luckyNumber = UnityEngine.Random.Range(0, 2);
+
+        for (int i = 0; i < lightningRainObejct.Count; i++)
+        {
+            GameObject light = lightningRainObejct[i];
+
+            if (light != null)
+            {
+                if (i % 2 == luckyNumber)
+                    light.SetActive(true);
+                else
+                    light.SetActive(false);
+                
+                StartCoroutine(lightningRainTime(light));
+            }
+        }
+    }
+
+    void lightningRain02()
+    {
+        _enemySystem.isPattern = true;
+        Debug.Log("번개비2 패턴 진행");
+        StartCoroutine(PlaylightningRain02());
+    }
+
+    IEnumerator PlaylightningRain02()
+    {
+        Debug.Log("1번부터 8번까지 패턴 진행");
+        for (int i = 0; i < lightningRainObejct.Count; i++)
+        {
+           
+            GameObject light = lightningRainObejct[i];
+            if (light != null)
+            {
+                light.SetActive(true);
+                StartCoroutine(lightningRainTime(light));
+                yield return new WaitForSeconds(0.2f);
+            }
+        }
+     
+        yield return new WaitForSeconds(1f);
+        Debug.Log(" 8번부터 1번까지 패턴 진행");
+        for (int i = 0; i > lightningRainObejct.Count; i--)
+        {
+ 
+            GameObject light = lightningRainObejct[i];
+            if (light != null)
+            {
+                light.SetActive(true);
+                StartCoroutine(lightningRainTime(light));
+                yield return new WaitForSeconds(0.2f);
+            }
+        }
+    }
+
+    IEnumerator lightningRainTime(GameObject light)
+    {
+        yield return new WaitForSeconds(1f);
+        light.gameObject.SetActive(false);
+        StartCoroutine(IsPattern());
+    }
 
     private void RatageLightning()
     {
@@ -112,6 +187,9 @@ public class RayPatternSystem : MonoBehaviour
         yield return new WaitForSeconds(1f);
         StartCoroutine(IsPattern());
     }
+
+
+    
 
     IEnumerator IsPattern()
     {
