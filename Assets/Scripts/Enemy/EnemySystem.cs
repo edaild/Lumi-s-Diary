@@ -29,6 +29,8 @@ public class EnemySystem : MonoBehaviour
     public StorySystem _storySystem;
 
     public bool isPlayerAttack;
+    public bool isDistance;
+    public bool isPattern;
 
     private GameObject player;
     private bool isPlayerAttackTime;
@@ -78,7 +80,7 @@ public class EnemySystem : MonoBehaviour
                 StopCoroutine(stopCoroutine);
                 stopCoroutine = null;
             }
-            isFollowing = true;
+            isFollowing = true; 
         }
 
         if (other.gameObject.CompareTag("Navi"))
@@ -122,15 +124,18 @@ public class EnemySystem : MonoBehaviour
 
         if (currentDistance > Distance)
         {
+            isDistance = true;
             Vector2 targetDirection = (targetPlayer.position - transform.position).normalized;
             float enemyMoveX = targetDirection.x * _EnemySpeed * Time.deltaTime;
             transform.position = new Vector3(transform.position.x + enemyMoveX, transform.position.y, 0);
             EnemyAnimator.SetBool("isMove", true);
+
             if (targetDirection.x > 0) Flip(true);
             else Flip(false);
         }
         else
         {
+            isDistance = false;
             EnemyAnimator.SetBool("isMove", false);
             AttackPlayer();
         }
