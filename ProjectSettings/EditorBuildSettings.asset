@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: "Assets/Scenes/\uC544\uC774\uC2DC\uD074 \uC2DC\uD2F0/IcIcleCity.unity"
     guid: 3bbe129a489a4e94492a1daaf214a920
   - enabled: 1
+    path: "Assets/Scenes/\uC544\uC774\uC2DC\uD074 \uC2DC\uD2F0/IcIcleCityQuoin.unity"
+    guid: 16a6a61339bb727479f21e8ce0f2fcbe
+  - enabled: 1
     path: "Assets/Scenes/\uB208\uC758 \uB9C8\uC744/SnowVillageRoad.unity"
     guid: 0f90fb157cbf5b3499e9a052a5ba49ed
   - enabled: 1
@@ -41,6 +44,9 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/\uB208\uC758 \uB9C8\uC744/SnowVillageRoad2.unity"
     guid: f23da063439868f468466b32daa7847d
+  - enabled: 1
+    path: "Assets/Scenes/\uACE0\uC815\uB9F5/IcIcleCityLibrary.unity"
+    guid: e9876999b9cb2d347993005ebb162b9e
   - enabled: 1
     path: "Assets/Scenes/\uC544\uC774\uC2DC\uD074 \uC2DC\uD2F0/IcIcleCityPark1.unity"
     guid: a58e903ca980aac43bc8f113f59cf40b

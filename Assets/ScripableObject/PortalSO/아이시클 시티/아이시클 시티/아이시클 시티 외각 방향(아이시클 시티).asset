@@ -15,5 +15,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   portalID: 0
   portalName: "\uC544\uC774\uC2DC\uD074 \uC2DC\uD2F0 \uC678\uAC01"
-  targetSceneName: 
+  targetSceneName: IcIcleCityQuoin
   spawnPosition: {x: -29.77829, y: 0, z: 0}

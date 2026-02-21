@@ -110,7 +110,7 @@ public class HallMathSystem : MonoBehaviour
         if (QuestanswerCount >= 6)
         {
             Debug.Log("미니 게임 종료");
-            SceneManager.LoadScene("MaigicurlHotel");
+            SceneManager.LoadScene("IcIcleCityLibrary");
         }
     }
 

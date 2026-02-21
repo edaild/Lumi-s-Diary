@@ -952,6 +952,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d6392a382217388498c8df0d4c9e9989, type: 3}
   - {fileID: 8300000, guid: 94ea787d65e0c1f45bb38aa6355bf53e, type: 3}
   - {fileID: 8300000, guid: e286391329649ab49bd10691e6e7d2e2, type: 3}
+  - {fileID: 8300000, guid: 20aa7e104cf76414b9b2e7e23d56e907, type: 3}
+  - {fileID: 8300000, guid: 95ad5d8e1c4f1554c8a49ddcc272b039, type: 3}
   currentMusic: 
 --- !u!4 &233521371
 Transform:
@@ -4297,6 +4299,7 @@ MonoBehaviour:
   spawnPont:
   - {fileID: 530171047336438979, guid: c2fcc3bae21df804aaa3b18b976806e7, type: 3}
   - {fileID: 3728950367295839018, guid: fe67930d57ccd4a49bb3649619ad23dd, type: 3}
+  - {fileID: 8926060590482134715, guid: 1e53419726b014b41918c0753914042c, type: 3}
   questSystem: {fileID: 1930947427}
   isPlayer: 0
 --- !u!4 &1420492112

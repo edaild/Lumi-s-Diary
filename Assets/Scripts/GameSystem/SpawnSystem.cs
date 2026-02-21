@@ -41,7 +41,7 @@ public class SpawnSystem : MonoBehaviour
     void IsNotInGameScene(Scene scene, LoadSceneMode mode)
     {
 
-        if (scene.name == "LumiHouseScene" || scene.name == "MaigicurlHotel" || scene.name == "LobbyScene" || scene.name == "Communitycenter" || scene.name == "EndingScene")
+        if (scene.name == "LumiHouseScene" || scene.name == "MaigicurlHotel" || scene.name == "LobbyScene" || scene.name == "Communitycenter" || scene.name == "EndingScene" || scene.name == "IcIcleCityLibrary")
         {
             isPlayer = false;
             return;
@@ -67,11 +67,14 @@ public class SpawnSystem : MonoBehaviour
         string currentScene = SceneManager.GetActiveScene().name;
         string targetPointName = "";
 
-        if (currentScene == "IcIcleCity") 
+        if (currentScene == "IcIcleCity")
             targetPointName = "아이시클 시티 스폰 포인트";
 
-        else if (currentScene == "Snowvillage") 
+        else if (currentScene == "Snowvillage")
             targetPointName = "눈의 마을 스폰 포인트";
+
+        else if (currentScene == "IcIcleCityQuoin")
+            targetPointName = "아이시클 시티 외각  스폰 포인트";
 
         if (string.IsNullOrEmpty(targetPointName)) return;
 

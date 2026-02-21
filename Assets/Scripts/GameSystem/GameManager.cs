@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
         if (Instance != null)
             isInstance = true;
 
-        if (scene.name == "LumiHouseScene" || scene.name == "LobbyScene" || scene.name == "MaigicurlHotel" || scene.name == "Communitycenter" || scene.name == "EndingScene")
+        if (scene.name == "LumiHouseScene" || scene.name == "LobbyScene" || scene.name == "MaigicurlHotel" || scene.name == "Communitycenter" || scene.name == "EndingScene" || scene.name == "IcIcleCityLibrary")
         {
             isInGame = false;
             Destroy(gameObject);

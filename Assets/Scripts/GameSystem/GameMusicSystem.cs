@@ -41,19 +41,25 @@ public class GameMusicSystem : MonoBehaviour
         string sceneName = SceneManager.GetActiveScene().name;
         Debug.Log($"현재씬: {sceneName}");
 
+        // 눈의 마을 지역----------------------------------------------------------------
         if (sceneName == "Snowvillage") targetMusicName = "눈의 마을";
 
-        else if(sceneName == "MaigicurlHotel") targetMusicName = "매직컬센터";
-     
-        else if(sceneName == "Melodya") targetMusicName = "멜로디아";
-        
         else if (sceneName == "SnowVillageRoad" || sceneName == "SnowVillageRoad3" || sceneName == "SnowVillageRoad2" || sceneName == "SnowVillageRoad1") targetMusicName = "눈의 마을 길";
-  
-        else if (sceneName == "IcIcleCity") targetMusicName = "아이시클 시티";
-       
+
+        // 아이시클 시티 지역------------------------------------------------------------
+        else if (sceneName == "IcIcleCity" || sceneName == "IcIcleCityQuoin") targetMusicName = "아이시클 시티";
+
+        else if (sceneName == "IcIcleCityPark1" || sceneName == "IcIcleCityParkSquare" || sceneName == "IcIcleCityPark2") targetMusicName = "아이시클 시티 공원";
+
+        else if (sceneName == "IcIcleCityLibrary") targetMusicName = "아이시클 시티 도서관";
+
+        else if (sceneName == "MaigicurlHotel") targetMusicName = "매직컬센터";
+
+        // 멜로디아 지역------------------------------------------------------------------
+        else if (sceneName == "Melodya") targetMusicName = "멜로디아";
+
+      // 보스전---------------------------------------------------------------------------
         else if (sceneName == "RayBossScene") targetMusicName = "레이 보스전";
-  
-        else if(sceneName == "IcIcleCityPark1" || sceneName == "IcIcleCityParkSquare" || sceneName == "IcIcleCityPark2") targetMusicName = "아이시클 시티 공원";
 
         else Debug.Log($"GameMusicSystem : {sceneName}씬 미존재.");
 
