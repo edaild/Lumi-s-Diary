@@ -177,9 +177,8 @@ public class EnemySystem : MonoBehaviour
 
     void PlayerAttack()
     {
-
         if (isPlayerAttack) return;
-        if (_questSystem.playerLevel < 2)
+        if (_questSystem.playerLevel < 2 && _questSystem.playerPreQuestID >= _characterHealthSystem.Quest1_lastQuest)
         {
             Debug.Log("현재 플레이어 체력 감소 전투 시스템 미오픈 (레벨 2 이상 필요)");
         }
