@@ -53,6 +53,10 @@ public class GameMusicSystem : MonoBehaviour
 
         else if (sceneName == "IcIcleCityLibrary") targetMusicName = "아이시클 시티 도서관";
 
+        else if (sceneName == "IcIcleStadiumSquare") targetMusicName = "아이시클 스타디움 광장";
+
+        else if (sceneName == "IcIcleStadium") targetMusicName = "아이시클 스타디움";
+
         else if (sceneName == "MaigicurlHotel") targetMusicName = "매직컬센터";
 
         // 멜로디아 지역------------------------------------------------------------------

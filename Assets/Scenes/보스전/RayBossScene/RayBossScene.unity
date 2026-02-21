@@ -8119,7 +8119,23 @@ PrefabInstance:
     - target: {fileID: 8801714059702863708, guid: 377e7985d883abb44a08013b8169704b, type: 3}
       propertyPath: portalData
       value: 
-      objectReference: {fileID: 11400000, guid: 718d3e5fc7e21cd428b8491552cbb42d, type: 2}
+      objectReference: {fileID: 11400000, guid: 376783e93a90c104d87b3ae139d6ef3a, type: 2}
+    - target: {fileID: 8838482309272700209, guid: 377e7985d883abb44a08013b8169704b, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838482309272700209, guid: 377e7985d883abb44a08013b8169704b, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838482309272700209, guid: 377e7985d883abb44a08013b8169704b, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838482309272700209, guid: 377e7985d883abb44a08013b8169704b, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

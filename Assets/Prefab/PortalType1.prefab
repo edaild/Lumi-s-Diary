@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7329464881732273869}
   - component: {fileID: 5514605531065584760}
   m_Layer: 0
-  m_Name: Portal
+  m_Name: PortalType1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -263,6 +263,22 @@ PrefabInstance:
     - target: {fileID: 8619811500075284779, guid: 784750093e140db40adc295a736c8035, type: 3}
       propertyPath: m_text
       value: "\uC774\uB984\uD45C"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619811500075284779, guid: 784750093e140db40adc295a736c8035, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619811500075284779, guid: 784750093e140db40adc295a736c8035, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619811500075284779, guid: 784750093e140db40adc295a736c8035, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619811500075284779, guid: 784750093e140db40adc295a736c8035, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4281545523
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

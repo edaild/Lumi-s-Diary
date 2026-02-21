@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e2e75bd5bcf55548a8a97edffaf0fcc, type: 3}
-  m_Name: "\uC544\uC774\uC2DC\uD074 \uC2A4\uD0C0\uB514\uC6C0(\uB808\uC774 \uBCF4\uC2A4\uC804)"
+  m_Name: "\uC2A4\uD328\uC15C \uB9E4\uCE58(\uC544\uC774\uC2DC\uD074 \uC2A4\uD0C0\uB514\uC6C0)"
   m_EditorClassIdentifier: 
   portalID: 0
-  portalName: 
-  targetSceneName: 
+  portalName: "\uC2A4\uD328\uC15C \uB9E4\uCE58 \uACBD\uAE30 \uCC38\uAC00 \uD558\uAE30"
+  targetSceneName: RayBossScene
   spawnPosition: {x: -27.38, y: 0, z: 0}

@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e2e75bd5bcf55548a8a97edffaf0fcc, type: 3}
-  m_Name: "\uC544\uC774\uC2DC\uD074 \uC2A4\uD0C0\uB514\uC6C0 \uAD11\uC7A5(\uC544\uC774\uC2DC\uD074
-    \uC2DC\uD2F0 \uC678\uAC01)"
+  m_Name: "\uB9C8\uC2A4\uD130 \uD1A0\uB108\uBA3C\uD2B8 \uD30C\uC774\uB110(\uC544\uC774\uC2DC\uD074
+    \uC2A4\uD0C0\uB514\uC6C0)"
   m_EditorClassIdentifier: 
   portalID: 0
-  portalName: "\uC544\uC774\uC2DC\uD074 \uC2A4\uD0C0\uB514\uC6C0 \uAD11\uC7A5"
-  targetSceneName: IcIcleStadiumSquare
-  spawnPosition: {x: -29.77829, y: 0, z: 0}
+  portalName: "\uB9C8\uC2A4\uD130 \uD1A0\uB108\uBA3C\uD2B8 \uD30C\uC774\uB110 \uACBD\uAE30
+    \uCC38\uAC00 \uD558\uAE30"
+  targetSceneName: RayBossScene
+  spawnPosition: {x: -27.38, y: 0, z: 0}
