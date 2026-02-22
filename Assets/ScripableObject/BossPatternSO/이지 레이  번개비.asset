@@ -9,14 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a504398d2dcd6254793a8927e7c901d5, type: 3}
-  m_Name: EnemyDatabase
+  m_Script: {fileID: 11500000, guid: 262e3c4da22a4a0439d9c218b3be2e2f, type: 3}
+  m_Name: "\uC774\uC9C0 \uB808\uC774  \uBC88\uAC1C\uBE44"
   m_EditorClassIdentifier: 
-  Enemys:
-  - EnemyID: 1001
-    EnemyName: "\uB208\uD1A0\uB07C"
-    EnemyLevel: 1
-    EnmeyHP: 200
-    EnemyDamage: 10
-    EnemySpeed: 3
-    GiftCoin: 100
+  BossName: "\uC774\uC9C0 \uB808\uC774"
+  BossPatternName: "\uBC88\uAC1C"
+  BossPatternDamege: 10

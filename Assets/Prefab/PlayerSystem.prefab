@@ -178,15 +178,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.2909861, g: 0.6708208, b: 0.90188676, a: 0.41568628}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: d3d57f4ac7ed8f749bb00137c99d0644, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3121,7 +3121,7 @@ MonoBehaviour:
   ultimateButtonUI: {fileID: 1373735037853500627}
   ultimateVidio: {fileID: 4138168513350288218}
   videoPlayer: {fileID: 734443498927509927}
-  ultimateVidioClip: {fileID: 32900000, guid: b903142f91e061f4581663fa6cdda882, type: 3}
+  ultimateVidioClip: {fileID: 32900000, guid: 9d638015d1297ef44bef4dcdea781230, type: 3}
   audioSource: {fileID: 4526433280815392981}
   nomalAtttackVoice: {fileID: 8300000, guid: 40fcd678b74596948852e562eaea849a, type: 3}
   skillAttackVoice: {fileID: 8300000, guid: 43b18e7087cbda54c8d907cc99d771ea, type: 3}

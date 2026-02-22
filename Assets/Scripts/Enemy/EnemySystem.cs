@@ -31,7 +31,7 @@ public class EnemySystem : MonoBehaviour
     public bool isPlayerAttack;
     public bool isDistance;
     public bool isPattern;
-
+    public bool isStopPattern;
 
     private bool isPlayerAttackTime;
     private bool isBackPoition;
@@ -116,7 +116,7 @@ public class EnemySystem : MonoBehaviour
     {
         Transform targetPlayer = player.gameObject.transform;
 
-        if (!_storySystem || !_storySystem.isStoryEndPoint || isBackPoition) return;
+        if (!_storySystem || !_storySystem.isStoryEndPoint || isBackPoition || isStopPattern || _characterSkillSystem.isCrystarGarden) return;
 
         float Distance = 1f;
 
@@ -178,7 +178,7 @@ public class EnemySystem : MonoBehaviour
     void PlayerAttack()
     {
         if (isPlayerAttack) return;
-        if (_questSystem.playerLevel < 2 && _questSystem.playerPreQuestID >= _characterHealthSystem.Quest1_lastQuest)
+        if (_questSystem.playerLevel < 2 && _questSystem.playerPreQuestID <= _characterHealthSystem.Quest1_lastQuest)
         {
             Debug.Log("현재 플레이어 체력 감소 전투 시스템 미오픈 (레벨 2 이상 필요)");
         }

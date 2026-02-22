@@ -11,11 +11,11 @@ public class RayPatternSystem : MonoBehaviour
     public EnemySystem _enemySystem;
     public CharacterHealthSystem _characterHealthSystem;
     public CharacterMoveSystem _characterMoveSystem;
+    public CharacterSkillSystem _characterSkillSystem;
     public int patternCount;
 
 
-
-    [Header("패턴 진행시 오브젝트")]
+    [Header("패턴 진행시 필요한 오브젝트")]
     public GameObject rightrotateLightningObject;
     public GameObject leftrotateLightningObject;
     public List<GameObject> lightningRainObejct = new List<GameObject>();
@@ -29,7 +29,6 @@ public class RayPatternSystem : MonoBehaviour
     public VideoPlayer videoPlayer;
     public VideoClip clip;
     public GameObject VidioImage;
-    public bool isInstantDeath;
 
     private bool isPatternTime;
 
@@ -38,11 +37,12 @@ public class RayPatternSystem : MonoBehaviour
         _enemySystem = UnityEngine.Object.FindAnyObjectByType<EnemySystem>();
         _characterHealthSystem = UnityEngine.Object.FindAnyObjectByType<CharacterHealthSystem>();
         _characterMoveSystem = UnityEngine.Object.FindAnyObjectByType<CharacterMoveSystem>();
+        _characterSkillSystem = UnityEngine.Object.FindAnyObjectByType<CharacterSkillSystem>();
     }
 
     private void Update()
     {
-        if (!_enemySystem.isDistance || _enemySystem.isPattern || _enemySystem == null || isPatternTime || _enemySystem.gameObject == null) return;
+        if (!_enemySystem.isDistance || _enemySystem.isPattern || _enemySystem == null || isPatternTime || _enemySystem.gameObject == null || _characterSkillSystem.isCrystarGarden) return;
         RandomPattern();
     }
 
@@ -53,23 +53,23 @@ public class RayPatternSystem : MonoBehaviour
 
         switch(patternCount)
         {
-            case 0:
-                Debug.Log("텔레포트");
-                Teleport();
-                break;
-            case 1:
-                Debug.Log("번개비1");
-                lightningRain01();
-                break;
-            case 2:
-                Debug.Log("번개비2");
-                lightningRain02();
-                break;
+            //case 0:
+            //    Debug.Log("텔레포트");
+            //    Teleport();
+            //    break;
+            //case 1:
+            //    Debug.Log("번개비1");
+            //    lightningRain01();
+            //    break;
+            //case 2:
+            //    Debug.Log("번개비2");
+            //    lightningRain02();
+            //    break;
 
-            case 3:
-                Debug.Log("회전 광성");
-                RatageLightning();
-                break;
+            //case 3:
+            //    Debug.Log("회전 광성");
+            //    RatageLightning();
+            //    break;
             case 4:
                 Debug.Log("즉사키");
                 StartCoroutine(InstantDeath());
@@ -101,6 +101,7 @@ public class RayPatternSystem : MonoBehaviour
     void lightningRain01()
     {
         _enemySystem.isPattern = true;
+        _enemySystem.isStopPattern = true;
         Debug.Log("번개비1 패턴 진행");
 
         int luckyNumber = UnityEngine.Random.Range(0, 2);
@@ -132,6 +133,7 @@ public class RayPatternSystem : MonoBehaviour
     void lightningRain02()
     {
         _enemySystem.isPattern = true;
+        _enemySystem.isStopPattern = true;
         Debug.Log("번개비2 패턴 진행");
         StartCoroutine(PlaylightningRain02());
     }
@@ -225,6 +227,7 @@ public class RayPatternSystem : MonoBehaviour
     IEnumerator InstantDeath()
     {
         _enemySystem.isPattern = true;
+        _enemySystem.isStopPattern = true;
 
         int shieldNumber = UnityEngine.Random.Range(1, 4);
 
@@ -259,9 +262,10 @@ public class RayPatternSystem : MonoBehaviour
     {
         yield return new WaitForSeconds(3.5f);
         _characterMoveSystem.fadeManager.StartFadeOut(0.5f);
-        isInstantDeath = true;
+        _characterHealthSystem.isDeath = true;
 
         yield return new  WaitForSeconds(2f);
+        _characterHealthSystem.isDeath = false;
         videoPlayer.Stop();
         videoPlayer.clip = null;
         if (shieldNumber == 1) ShieldObject01.SetActive(false);
@@ -270,7 +274,6 @@ public class RayPatternSystem : MonoBehaviour
 
         VidioImage.gameObject.SetActive(false);
         _characterMoveSystem.fadeManager.StartFadeIn(0.5f);
-        isInstantDeath = false;
         StartCoroutine(IsPattern());
     }
 
@@ -278,9 +281,10 @@ public class RayPatternSystem : MonoBehaviour
     IEnumerator IsPattern()
     {
        _enemySystem.isPattern = false;
-       isPatternTime = true;
+        _enemySystem.isStopPattern = false;
+        isPatternTime = true;
 
-       yield return new WaitForSeconds(5f);
+       yield return new WaitForSeconds(3f);
        isPatternTime = false;
        Debug.Log("패턴 종료");
     }

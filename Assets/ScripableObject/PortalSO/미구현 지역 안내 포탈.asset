@@ -9,14 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a504398d2dcd6254793a8927e7c901d5, type: 3}
-  m_Name: EnemyDatabase
+  m_Script: {fileID: 11500000, guid: 3e2e75bd5bcf55548a8a97edffaf0fcc, type: 3}
+  m_Name: "\uBBF8\uAD6C\uD604 \uC9C0\uC5ED \uC548\uB0B4 \uD3EC\uD0C8"
   m_EditorClassIdentifier: 
-  Enemys:
-  - EnemyID: 1001
-    EnemyName: "\uB208\uD1A0\uB07C"
-    EnemyLevel: 1
-    EnmeyHP: 200
-    EnemyDamage: 10
-    EnemySpeed: 3
-    GiftCoin: 100
+  portalID: 2
+  portalName: "\uCD94\uD6C4 \uB4F1\uB85D\uC608\uC815"
+  targetSceneName: 
+  spawnPosition: {x: 1.19, y: -1.48, z: 0}

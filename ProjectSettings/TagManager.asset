@@ -16,6 +16,7 @@ TagManager:
   - Bullet
   - EnemyAttackCollider
   - Navi
+  - BossPattern
   - Shield
   layers:
   - Default

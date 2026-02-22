@@ -16,7 +16,7 @@ MonoBehaviour:
   - EnemyID: 10001
     EnemyName: "\uB808\uC774"
     EnemyLevel: 6
-    EnmeyHP: 10000
-    EnemyDamage: 10
+    EnmeyHP: 150000
+    EnemyDamage: 50
     EnemySpeed: 3
     GiftCoin: 0

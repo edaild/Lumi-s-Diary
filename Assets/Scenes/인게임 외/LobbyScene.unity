@@ -237,7 +237,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 406596484}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: d7eae47b455f26a4d8b84fea5dabf2bc, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 14c84048acb334c41a8a1ea5c035a9f3, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 1134828432}
@@ -1056,8 +1056,8 @@ MonoBehaviour:
   Logo: {fileID: 1222555597}
   fade: {fileID: 735372278}
   videoPlayer: {fileID: 406596486}
-  Lobbyclip: {fileID: 32900000, guid: d7eae47b455f26a4d8b84fea5dabf2bc, type: 3}
-  OPclip: {fileID: 32900000, guid: d5b3bc40d9288db4d9dec71709959794, type: 3}
+  Lobbyclip: {fileID: 32900000, guid: 14c84048acb334c41a8a1ea5c035a9f3, type: 3}
+  OPclip: {fileID: 32900000, guid: 2b096c7d1fdc9774790a5e47120b5ae4, type: 3}
   LobbyMusic: {fileID: 2123926225}
 --- !u!4 &1685936281
 Transform:

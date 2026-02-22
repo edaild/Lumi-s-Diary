@@ -26,7 +26,7 @@ public class EnemyHealthSystem : MonoBehaviour
                 _enemySystem._currentHealth -= ball.BallDamage;
             else
             {
-                int isCrystarGardDamage = ball.BallDamage += 100;
+                int isCrystarGardDamage = ball.BallDamage += 200;
                 _enemySystem._currentHealth -= isCrystarGardDamage;
                 Debug.Log("크리스탈 가든 버프 적용");
             }
@@ -42,9 +42,9 @@ public class EnemyHealthSystem : MonoBehaviour
 
     void DIe()
     {
-        
+        _enemySystem._currentHealth = 0;
         Destroy(_enemySystem.gameObject);
-        Debug.Log($"{_enemySystem._EnemyName} 처치 완료. 루나 {_enemySystem._GiftCoin} 만큼 증가");
+        Debug.Log($"{_enemySystem._EnemyName} 처치 완료.");
 
         if(_questSystem.playerTargetName == _enemySystem._EnemyName)
             _enemySystem._questSystem.playerEnmeyDieCount++;
